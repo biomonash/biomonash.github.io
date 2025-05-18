@@ -305,7 +305,7 @@ section p:not(.hero-wrapper p) {
     flex: 1 1 300px;
     /* grows, shrinks, min width */
     max-width: 500px;
-    background-color: rgba(206, 223, 255, 0.8);
+    background-color:  rgba(236, 238, 244, 0.5);
     width: 50%;
     float: left;
     padding: 20px;
@@ -505,7 +505,7 @@ ul li {
 }
 
 .feed-container {
-  background-color: rgba(206, 223, 255, 0.8);
+  background-color: rgba(236, 238, 244, 0.5);
   padding: 60px 20px;
   font-family: 'Segoe UI', sans-serif;
 }
