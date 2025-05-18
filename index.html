@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBEO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+    <div class="hero-wrapper">
+        <header>
+            <a href="#top" class="logo">
+                <div class="logo">MBE <img src="img/planet-earth.png" alt="Earth"></div>
+            </a>
+
+            <nav>
+                <a href="#about-us">About us</a>
+                <a href="#project">Project</a>
+                <a href="#partners">Partners</a>
+                <a href="#feed">Feed</a>
+                <a href="#contact-us">Contact Us</a>
+                <button class="join-us">Join Us</button>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-text">
+                <p>Monash Student Team</p>
+                <div class="line"></div>
+                <h1>Biological<br>Earth Observation</h1>
+            </div>
+        </section>
+    </div>
+
+    <div class="wave-divider">
+        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 
+        58-18 88-18s
+        58 18 88 18 
+        58-18 88-18 
+        58 18 88 18
+        v44h-352z" />
+            </defs>
+            <g class="parallax1">
+                <use xlink:href="#gentle-wave" x="50" y="3" fill="#013A63" />
+            </g>
+            <g class="parallax2">
+                <use xlink:href="#gentle-wave" x="50" y="0" fill="#005AA7" />
+            </g>
+            <g class="parallax3">
+                <use xlink:href="#gentle-wave" x="50" y="9" fill="#0078D4" />
+            </g>
+            <g class="parallax4">
+                <use xlink:href="#gentle-wave" x="50" y="6" fill="rgba(255, 255, 255, 0.6)" />
+            </g>
+        </svg>
+    </div>
+
+
+    <main>
+        <div class="content">
+
+            <!-- Section 1 -->
+            <section class="about-us" id="about-us" data-aos="fade-up">
+                <h1 data-aos="fade-right">About Us</h1>
+                <p data-aos="zoom-in">Biological Earth Observation is a student team that aspires to develop
+                    technological solutions and
+                    support for conservation action. We bring together students from AI, IT, and Engineering with
+                    Students in Biology, Ecology, and Conservation Science, and anyone from other disciplines who wants
+                    to contribute their skills to building and running such a team (e.g. project management, publicity,
+                    social media, etc).
+                </p>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="project" id="project" data-aos="fade-up">
+                <h1 data-aos="fade-right">Projects</h1>
+                <p data-aos="fade-left"></p>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="partners" id="partners" data-aos="fade-up">
+                <h1 data-aos="fade-right">Partners</h1>
+                <div class="partner-cols">
+                    <div class="col" data-aos="zoom-in">
+                        <h2>Nillumbik Shire</h2>
+                        <img
+                            src="https://images.pexels.com/photos/326900/pexels-photo-326900.jpeg?cs=srgb&dl=wood-flight-bird-326900.jpg&fm=jpg">
+                        <p><i>details of partner</i></p>
+                    </div>
+
+                    <div class="col" data-aos="zoom-in" data-aos-delay="100">
+                        <h2>Museum Victoria</h2>
+                        <img src="https://th.bing.com/th/id/OIP.sG7xMaZFwVaqYTZJ6CZILwAAAA?cb=iwc2&rs=1&pid=ImgDetMain">
+                        <p><i>details of partner</i></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="feed" data-aos="fade-up">
+                <h1 data-aos="fade-right">Feed</h1>
+                <div class="feed-container">
+                    <h2 data-aos="fade-right">Latest Updates</h2>
+
+                    <article class="feed-item" data-aos="zoom-in">
+                        <div class="posts">
+                            <img src="img/project.launch.png">
+                        </div>
+                        <h3>Project Launch</h3>
+                        <p>We just launched our new initiative! Check out what’s in store...</p>
+                        <span class="timestamp">May 18, 2025</span>
+                    </article>
+
+                    <article class="feed-item" data-aos="zoom-in" data-aos-delay="100">
+                        <h3>Partner Spotlight</h3>
+                        <p>Meet one of our newest partners helping to drive innovation.</p>
+                        <span class="timestamp">May 14, 2025</span>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="contact-us" id="contact-us">
+                <h1 data-aos="fade-right">Contact Us</h1>
+                <div class="contact-form">
+                    <h4>Enquiries</h4>
+                    <form>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your name..."><br><br>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your email..."><br><br>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message"
+                            placeholder="Write your message here..."></textarea><br><br>
+
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+            </section>
+
+            <!-- Social Media -->
+            <h4 >Social media</h4>
+            <div class="line" ></div>
+            <div class="icons"">
+                <ul>
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook" tabindex="0"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram" tabindex="0"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-github" tabindex="0"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube" tabindex="0" target="_blank"></i></a></li>
+                </ul>
+            </div>
+            </section>
+
+
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    
+</body>
+
+</html>
