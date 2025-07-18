@@ -11,14 +11,14 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <link rel="icon" href="img/BiOM-Logo.png" type="image/x-icon">
 </head>
 
 <body>
     <div class="hero-wrapper">
         <header>
             <a href="#top" class="logo">
-                <div class="logo">MBE <img src="./planet-earth.png" alt="Earth"></div>
+                <div class="logo">BI <img src="img/BiOM-Logo.png" alt="Earth"> M</div>
             </a>
 
             <nav>
@@ -27,15 +27,17 @@
                 <a href="#partners">Partners</a>
                 <a href="#feed">Feed</a>
                 <a href="#contact-us">Contact Us</a>
-                <button class="join-us">Join Us</button>
+                <button class="join-us"><a target="_blank"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdpG9CNy_7ON8ZSbiKuBT7MQBOTzoKbmd_TGPA4p5bUOa2hBA/viewform">Join
+                        Us</a></button>
             </nav>
         </header>
 
         <section class="hero">
-            <div class="hero-text">
+            <div class="hero-texts">
                 <p>Monash Student Team</p>
                 <div class="line"></div>
-                <h1>Biological<br>Earth Observation</h1>
+                <h1>Biological<br>Observation Monash</h1>
             </div>
         </section>
     </div>
@@ -69,7 +71,12 @@
 
     <main>
         <div class="content">
-
+            <section class="hero-section">
+                <div class="globe-container">
+                    <img src="img/BiOM-Logo.png" class="globe" alt="biom logo" />
+                </div>
+                <h4 class="hero-text">Students Powering the Future of Conservation</h4>
+            </section>
             <!-- Section 1 -->
             <section class="about-us" id="about-us" data-aos="fade-up">
                 <h1 data-aos="fade-right">About Us</h1>
@@ -83,12 +90,12 @@
             </section>
 
             <!-- Section 2 -->
-            <section class="project" id="project" data-aos="fade-up">
-                <h1 data-aos="fade-right">Projects</h1>
+            <section class="mission" id="mission" data-aos="fade-up">
+                <h1 data-aos="fade-right">Our Mission</h1>
                 <p data-aos="fade-left"></p>
             </section>
-
-            <!-- Section 3 -->
+            <!--
+            Section 3
             <section class="partners" id="partners" data-aos="fade-up">
                 <h1 data-aos="fade-right">Partners</h1>
                 <div class="partner-cols">
@@ -107,6 +114,7 @@
                 </div>
             </section>
 
+        -->
             <!-- Section 4 -->
             <section id="feed" data-aos="fade-up">
                 <h1 data-aos="fade-right">Feed</h1>
@@ -115,18 +123,37 @@
 
                     <article class="feed-item" data-aos="zoom-in">
                         <div class="posts">
-                            <img src="./project.launch.png">
+                            <img src="img/project.launch.png">
                         </div>
                         <h3>Project Launch</h3>
-                        <p>We just launched our new initiative! Check out what’s in store...</p>
-                        <span class="timestamp">May 18, 2025</span>
+                        <p>We’re developing a collaborative tool with conservation partners—more details coming soon!
+                        </p>
+                        <span class="timestamp">July 23, 2025</span>
                     </article>
-
+                    <!--
                     <article class="feed-item" data-aos="zoom-in" data-aos-delay="100">
                         <h3>Partner Spotlight</h3>
                         <p>Meet one of our newest partners helping to drive innovation.</p>
                         <span class="timestamp">May 14, 2025</span>
                     </article>
+                </div>
+-->
+            </section>
+
+            <section class="members" id="members">
+                <h1 data-aos="fade-right">Our Team</h1>
+                <div class="team-cols">
+                    <div class="tcol" data-aos="zoom-in" data-aos-delay="100">
+                        <h2>Full Name</h2>
+                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
+                        <p><i>Position title</i></p>
+                    </div>
+
+                    <div class="tcol" data-aos="zoom-in" data-aos-delay="100">
+                        <h2>Full Name</h2>
+                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
+                        <p><i>Position title</i></p>
+                    </div>
                 </div>
             </section>
 
@@ -135,7 +162,7 @@
                 <h1 data-aos="fade-right">Contact Us</h1>
                 <div class="contact-form">
                     <h4>Enquiries</h4>
-                    <form>
+                    <form action="mailto:biom@monash.edu" method="post" enctype="text/plain">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" placeholder="Your name..."><br><br>
 
@@ -152,14 +179,16 @@
             </section>
 
             <!-- Social Media -->
-            <h4 >Social media</h4>
-            <div class="line" ></div>
+            <h4>Social media</h4>
+            <div class="line"></div>
             <div class="icons"">
                 <ul>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook" tabindex="0"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram" tabindex="0"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-github" tabindex="0"></i></a></li>
-                    <li><a href="#"><i class="fab fa-youtube" tabindex="0" target="_blank"></i></a></li>
+                    <li><a href=" mailto:biom@monash.edu" target="_blank"><i class="fas fa-envelope"
+                    tabindex="0"></i></a></li>
+                <li><a href="https://www.instagram.com/biomonash/?utm_source=ig_web_button_share_sheet"
+                        target="_blank"><i class="fab fa-instagram" tabindex="0"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/biological-observation-monash" target="_blank"><i class="fab fa-linkedin"
+                            tabindex="0"></i></a></li>
                 </ul>
             </div>
             </section>
@@ -171,9 +200,18 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelector('.globe-container').classList.add('after-spin');
+            }, 2500); // after 2.5s = 0.5 fade + 2s spin
+        });
+
+
     </script>
 
-    
+
 </body>
 
 </html>
