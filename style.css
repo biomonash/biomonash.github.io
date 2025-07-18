@@ -99,7 +99,7 @@ main {
 }
 
 .hero {
-    background: url("https://raw.githubusercontent.com/Minseyy/MBEO/refs/heads/main/turtle.png") no-repeat center center/cover;
+    background: url("/img/turtle.png") no-repeat center center/cover;
     min-height: 100vh;
     text-align: center;
     font-family: 'Work Sans', sans-serif;
@@ -133,6 +133,7 @@ h1 {
     height: 24px;
     vertical-align: middle;
     /* Works as a fallback */
+    margin-right: 5px;
 }
 
 
@@ -305,7 +306,7 @@ section p:not(.hero-wrapper p) {
     flex: 1 1 300px;
     /* grows, shrinks, min width */
     max-width: 500px;
-    background-color:  rgba(236, 238, 244, 0.5);
+    background-color: rgba(236, 238, 244, 0.5);
     width: 50%;
     float: left;
     padding: 20px;
@@ -446,32 +447,24 @@ ul li {
 }
 
 /* transition for social icon hover animation */
-.fa-facebook,
+.fa-envelope,
 .fa-codepen,
-.fa-youtube,
+.fa-linkedin,
 .fa-instagram,
-.fa-github,
-.fa-pinterest {
+.fa-github {
     transition: 0.4s;
     cursor: pointer;
 }
 
 /* social media icons hover color */
-.fa-facebook:hover,
-.fa-facebook:focus {
-    color: #1877f2;
-    transform: scale(1.1);
+
+.fa-envelope {
+    font-size: 43px;
 }
 
-.fa-twitter:hover,
-.fa-twitter:focus {
-    color: #1da1f2;
-    transform: scale(1.1);
-}
-
-.fa-youtube:hover,
-.fa-youtube:focus {
-    color: #df2426;
+.fa-envelope:hover,
+.fa-envelope:focus {
+    color: #c71610; /* Gmail red */
     transform: scale(1.1);
 }
 
@@ -481,31 +474,14 @@ ul li {
     transform: scale(1.1);
 }
 
-.fa-github:hover,
-.fa-github:focus {
-    color: #000;
+.fa-linkedin:hover,
+.fa-linkedin:focus {
+    color: #0077b5;
     transform: scale(1.1);
-}
-
-.fa-github:hover,
-.fa-github:focus {
-    color: #000;
-    transform: scale(1.1);
-}
-
-.fa-codepen:hover,
-.fa-codepen:focus {
-    color: #000;
-    transform: scale(1.1);
-}
-
-.fa-pinterest:hover,
-.fa-pinterest:focus {
-    color: #b3001b;
 }
 
 .feed-container {
-  background-color: rgba(236, 238, 244, 0.5);
+  background-color:  rgba(236, 238, 244, 0.5);
   padding: 60px 20px;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -559,4 +535,118 @@ ul li {
 
 [data-aos="zoom-in"] {
   transition-duration: 0.5s !important;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Keep the globe perfectly centered */
+.globe-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    width: 300px;
+    height: 300px;
+}
+
+/* Start with fade-in + single spin */
+.globe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards, spinYOnce 2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* After initial spin, slow transparent rotation */
+.globe-container.after-spin .globe {
+    animation: spinYSlow 15s linear infinite, dimFade 2s forwards;
+    opacity: 0.2;
+}
+
+/* Text reveal */
+.hero-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 3.5rem;
+    opacity: 0;
+    animation: showText 2.5s ease-in forwards;
+    animation-delay: 1.5s;
+    font-style: italic;
+    text-shadow:3px 3px 6px #ccc;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes spinYOnce {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(720deg); }
+}
+
+@keyframes spinYSlow {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+@keyframes dimFade {
+    0%   { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+
+@keyframes showText {
+    to { opacity: 1; }
+}
+
+.team-cols {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    
+}
+
+.tcol {
+    text-align: center;
+    width: 200px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.tcol h2 {
+    padding: 20px;
+}
+
+.tcol img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes the image a circle */
+    border: 3px solid #ccc;
+    margin-bottom: 10px;
+    transition: transform 0.4s ease;
+}
+
+.tcol img:hover {
+    transform: scale(1.1);
 }
