@@ -1,2 +1,1 @@
-# MBEO
-Draft website for MBEO
+Source for the official BiOM (Biological Observation Monash) Website.
