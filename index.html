@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MBEO</title>
+    <title>BiOM</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap" rel="stylesheet">
     <!-- Font Awesome CDN -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" href="img/BiOM-Logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -23,9 +26,9 @@
 
             <nav>
                 <a href="#about-us">About us</a>
-                <a href="#project">Project</a>
-                <a href="#partners">Partners</a>
+                <a href="#projects">Project</a>
                 <a href="#feed">Feed</a>
+                <a href="#members">Our Team</a>
                 <a href="#contact-us">Contact Us</a>
                 <button class="join-us"><a target="_blank"
                         href="https://docs.google.com/forms/d/e/1FAIpQLSdpG9CNy_7ON8ZSbiKuBT7MQBOTzoKbmd_TGPA4p5bUOa2hBA/viewform">Join
@@ -35,10 +38,13 @@
 
         <section class="hero">
             <div class="hero-texts">
-                <p>Monash Student Team</p>
+                <h3>Monash Student Team</h3>
                 <div class="line"></div>
                 <h1>Biological<br>Observation Monash</h1>
             </div>
+            <p class="norm-p">Welcome to BiOM!<br>
+                We are a student team passionate about protecting nature through
+                cutting-edge science, data, and environmental technology.</p>
         </section>
     </div>
 
@@ -80,20 +86,78 @@
             <!-- Section 1 -->
             <section class="about-us" id="about-us" data-aos="fade-up">
                 <h1 data-aos="fade-right">About Us</h1>
-                <p data-aos="zoom-in">Biological Earth Observation is a student team that aspires to develop
-                    technological solutions and
-                    support for conservation action. We bring together students from AI, IT, and Engineering with
-                    Students in Biology, Ecology, and Conservation Science, and anyone from other disciplines who wants
-                    to contribute their skills to building and running such a team (e.g. project management, publicity,
-                    social media, etc).
+                <p data-aos="zoom-in">
+                    BiOM (Biological Observation Monash) is a student-led team at the intersection of
+                    conservation and technology. We create innovative, accessible tools to support real-world
+                    environmental solutions.
+                    <br><br>
+                    Bringing together students from <span class="sc">science</span>, <span
+                        class="eng">engineering</span> and <span class="cs">computer science</span>. We design and
+                    prototype
+                    technologies for ecological monitoring — from environmental sensors to machine learning in the
+                    field.
                 </p>
             </section>
 
             <!-- Section 2 -->
             <section class="mission" id="mission" data-aos="fade-up">
                 <h1 data-aos="fade-right">Our Mission</h1>
-                <p data-aos="fade-left"></p>
+                <p data-aos="fade-left">
+                    BiOM is more than just a project team, it’s a collaborative space for students
+                    to build skills, form industry connections and contribute meaningfully to environmental causes.
+                    <br><br>As
+                    we grow, so too does our commitment to learning, curiosity, and action in the face of ecological
+                    challenges.
+                </p>
             </section>
+
+
+            <section class="projects" id="projects" data-aos="fade-up">
+                <h1 data-aos="fade-right">Projects</h1>
+                <div class="projects-content">
+                    <div class="project" id="project1" data-aos="zoom-in">
+                        <h2 data-aos="zoom-in">St Kilda Penguin Project</h2>
+
+                        <div class="project-flex">
+                            <div class="proj-left">
+                                <img
+                                    src="https://stkildapenguins.com.au/wp-content/uploads/2022/10/St-Kilda-Penguins-Logo-300x300-1.jpeg">
+                            </div>
+
+                            <div class="proj-right">
+                                <p>
+                                    Nestled along Melbourne’s coastline, this project focuses on developing compact
+                                    AI-powered acoustic monitors to detect and identify penguin calls for population and
+                                    health tracking.
+                                </p>
+                            </div>
+                        </div>
+
+                        <button id="stkilda-info"><a href="stkilda.html">Learn More</a></button>
+
+                    </div>
+
+
+                    <div class="project" id="project2" data-aos="zoom-in" data-aos-delay="100">
+                        <h2>Nillumbik Shire Project</h2>
+                        <div class="project-flex">
+                            <div class="proj-left">
+                                <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjeNIuUTZxiaBQxJlUtilXdOE8odOz33-nNg&s">
+                            </div>
+                            <div class="proj-right">
+                                <p>An ongoing forest monitoring initiative using AI tools and community outreach to
+                                    support conservation through research and innovation.</p>
+
+                            </div>
+                        </div>
+
+                        <button id="shire-info"><a href="nilumbik.html">Learn More</a></button>
+
+
+                    </div>
+            </section>
+
             <!--
             Section 3
             <section class="partners" id="partners" data-aos="fade-up">
@@ -142,20 +206,46 @@
 
             <section class="members" id="members">
                 <h1 data-aos="fade-right">Our Team</h1>
+                <p>At BiOM, we believe that technology has the power to drive meaningful change for the planet. Our team
+                    brings together students from varying disciplines to develop tools that support conservation.
+                    <br><br>
+                    Meet
+                    the students behind the mission…
+                </p>
                 <div class="team-cols">
                     <div class="tcol" data-aos="zoom-in" data-aos-delay="100">
-                        <h2>Full Name</h2>
-                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
-                        <p><i>Position title</i></p>
+                        <h2>Danielle Kent</h2>
+                        <img src="img/Dani.jpg">
+                        <p><i>CEO/Team Lead</i></p>
                     </div>
 
                     <div class="tcol" data-aos="zoom-in" data-aos-delay="100">
-                        <h2>Full Name</h2>
+                        <h2>Renee Douma</h2>
+                        <img src="img/Renee.JPG">
+                        <p><i>COO/Operations Lead</i></p>
+                    </div>
+
+                    <div class="tcol" data-aos="zoom-in" data-aos-delay="100">
+                        <h2>James Pinter</h2>
                         <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
-                        <p><i>Position title</i></p>
+                        <p><i>CFO/Finance Lead</i></p>
                     </div>
                 </div>
+                <p><i>(Other executive team members to be named after recruitment…)</i></p>
             </section>
+
+            <section class="join-section">
+                <h2 class="fly-in animate__animated animate__lightSpeedInLeft">Ready to make a difference?</h2>
+                <h2 class="slide-up animate__animated animate__slideInUp">Join BiOM and help shape the future of
+                    conservation through technological innovation.</h2>
+                <div class="join-btn animate__animated animate__zoomIn">
+                    <button id="join-us"
+                        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdpG9CNy_7ON8ZSbiKuBT7MQBOTzoKbmd_TGPA4p5bUOa2hBA/viewform', '_blank')">Join
+                        Us
+                        Today</button>
+                </div>
+            </section>
+
 
             <!-- Section 5 -->
             <section class="contact-us" id="contact-us">
@@ -176,25 +266,36 @@
                         <input type="submit" value="Send">
                     </form>
                 </div>
+
+
             </section>
 
-            <!-- Social Media -->
-            <h4>Social media</h4>
-            <div class="line"></div>
-            <div class="icons"">
+            <section>
+                <h4>Social media</h4>
+                <div class="line"></div>
+                <div class="icons"">
                 <ul>
                     <li><a href=" mailto:biom@monash.edu" target="_blank"><i class="fas fa-envelope"
-                    tabindex="0"></i></a></li>
-                <li><a href="https://www.instagram.com/biomonash/?utm_source=ig_web_button_share_sheet"
-                        target="_blank"><i class="fab fa-instagram" tabindex="0"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/biological-observation-monash" target="_blank"><i class="fab fa-linkedin"
-                            tabindex="0"></i></a></li>
-                </ul>
-            </div>
+                        tabindex="0"></i></a></li>
+                    <li><a href="https://www.instagram.com/biomonash/?utm_source=ig_web_button_share_sheet"
+                            target="_blank"><i class="fab fa-instagram" tabindex="0"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/biological-observation-monash" target="_blank"><i
+                                class="fab fa-linkedin" tabindex="0"></i></a></li>
+                    </ul>
+                </div>
+
+
+
             </section>
 
 
+            <footer>
+                <p>&copy; 2025 BiOM. All rights reserved.</p>
+            </footer>
         </div>
+
+
+
     </main>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -208,7 +309,61 @@
             }, 2500); // after 2.5s = 0.5 fade + 2s spin
         });
 
+        const modals = document.querySelectorAll(".modal");
 
+        document.querySelectorAll("button").forEach(button => {
+            if (button.id === "learnMoreBtn") {
+                button.addEventListener("click", () => {
+                    // Find closest modal inside the same project div
+                    const projectDiv = button.closest(".project");
+                    const modal = projectDiv.querySelector(".modal");
+                    const modalTitle = modal.querySelector("h2");
+                    const modalContent = modal.querySelector("p");
+
+                    // You can grab the title/content from modal's current h2 and p or from data-attributes on button (preferred)
+                    // If you want to use the modal's content:
+                    // Just show the modal
+                    modal.style.display = "block";
+                });
+            }
+        });
+
+        // Close buttons inside each modal
+        document.querySelectorAll(".modal .close").forEach(closeBtn => {
+            closeBtn.onclick = function () {
+                this.closest(".modal").style.display = "none";
+            };
+        });
+
+        // Close modal when clicking outside content
+        window.onclick = function (event) {
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        };
+
+
+
+    </script>
+
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target); // trigger only once
+                }
+            });
+        }, {
+            threshold: 0.5 // adjust when to trigger
+        });
+
+        const flyIn = document.querySelector('.fly-in');
+        if (flyIn) {
+            observer.observe(flyIn);
+        }
     </script>
 
 
