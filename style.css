@@ -360,7 +360,7 @@ input[type="submit"]:hover {
 
 .contact-form {
   width: 40rem; /* Set width */
-  height: 40rem; /* Match height to width */
+  height: 45rem; /* Match height to width */
   border-radius: 10px;
   border-style: dashed;
   padding: 2rem;
@@ -917,3 +917,4 @@ footer {
     color: rgb(156, 156, 156);
     font-size: x-small;
 }
+
