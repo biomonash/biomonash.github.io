@@ -15,7 +15,7 @@
 
 .banner-text {
   font-size: 3rem;
-  background-color: rgba(186, 180, 180, 0.5);
+  background-color: #518B05;
   font-family: "Work Sans", sans-serif;
   padding: 10px 20px;
   border-radius: 8px;
@@ -196,3 +196,4 @@ h3 {
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(34, 61, 106, 0.5);
 }
+
