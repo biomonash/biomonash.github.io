@@ -87,9 +87,8 @@
   object-fit: cover;
   display: block;
 }
-
 .row.align-items-stretch {
-  min-height: 300px;
+  min-height: 300px; 
 }
 .group-photo {
   width: 100%;
@@ -129,6 +128,22 @@
   display: block;
   object-position: 40% 80%;
 }
+
+/* Stack images on screens smaller than 768px */
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column; 
+    max-height: none;       
+    gap: 1em;              
+  }
+
+  .proj-left img,
+  .proj-right img {
+    height: auto;          
+    object-fit: cover;     
+  }
+}
+
 
 /*WE CAN REMOVE THE FRAME BOX BEHIND PIC*/
 .project-card {
