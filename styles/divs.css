@@ -1,60 +1,63 @@
 #home {
-    background-color: var(--main);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  background-color: var(--main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .main-container {
-    max-width: 600px;
-    width: 100%;
+  max-width: 600px;
+  width: 100%;
 }
 
 .main-logo {
-    width: 100%;
-    height: 100%;
-    display: block;
-    padding-top: 1.8em;
-    max-width: 800px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-top: 1.8em;
+  max-width: 800px;
 }
 
 .banner-wrapper {
-    width: 100vw;
-    overflow: hidden;
-    white-space: nowrap;
-    border-radius: 10px;
+  width: 100vw;
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: 10px;
 }
 
 .banner-text {
-    display: inline-block;
-    animation: scroll 40s linear infinite;
-    font-family: "Calistoga", sans-serif;
-    font-size: 3rem;
-    color: var(--dark1);
+  display: inline-block;
+  animation: scroll 40s linear infinite;
+  font-family: "Calistoga", sans-serif;
+  font-size: 3rem;
+  color: var(--dark1);
 }
 
 .banner-text span {
-    display: inline-block;
+  display: inline-block;
 }
 
 /* Smooth scrolling */
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-
 
 /*VIDEO SECTION*/
 .video-frame {
-  width: min(70vw, 40em);       
-  max-width: 900px;    
-  aspect-ratio: 16 / 9;  
-  margin: 50px auto;     
-  border-radius: 15px;   
-  overflow: hidden;      
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+  width: min(70vw, 40em);
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  margin: 50px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .video {
@@ -66,32 +69,32 @@
 
 /*PENGUIN IMAGE (IN OUR MISSION)*/
 #mission {
-    color: var(--neutral) !important;
-    margin: 1em;
+  color: var(--neutral) !important;
+  margin: 1em;
 }
 
-.mission-card  {
-     max-width: 80vw;
-     min-width: 100vh;
-     background-color: #59883D;
-     border-radius: 10px;
-     overflow: hidden; 
+.mission-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #59883d;
+  border-radius: 10px;
+  overflow: hidden;
 }
-
 
 .mission-img {
-    width: 100%;          
-    height: 100%;         
-    object-fit: cover;    
-    border-radius: 0 0.25rem 0.25rem 0; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 0.25rem 0.25rem 0;
 }
 
 .group-photo {
-    width: 100%;        
-    max-width: 800px;  
-    height: auto;       
-    display: block;
-    margin: 0 auto;    
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 .project-row {
   display: flex;
@@ -122,16 +125,15 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  object-position: 40% 80%; 
+  object-position: 40% 80%;
 }
 
 /*WE CAN REMOVE THE FRAME BOX BEHIND PIC*/
-.project-card { 
-    padding: 3px 10px;
-    border-radius: 8px;
-    background-color: #518b0513;
+.project-card {
+  padding: 3px 10px;
+  border-radius: 8px;
+  background-color: #518b0513;
 }
-
 
 ul {
   display: flex;

@@ -2,7 +2,7 @@
 body {
     background-color: var(--main) !important;
     margin: 0;
-    padding: 0 1em;
+    padding: 0;
     color: white important;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,9 @@ header {
     padding: 0;
     text-align: left;
     position: fixed;
+    background-color: var(--main);
     width: 100%;
+    z-index: 1000;
 }
 
 section{
