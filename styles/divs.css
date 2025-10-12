@@ -81,14 +81,16 @@
   border-radius: 10px;
   overflow: hidden;
 }
-
-.mission-img {
+#mission img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0 0.25rem 0.25rem 0;
+  display: block;
 }
 
+.row.align-items-stretch {
+  min-height: 300px;
+}
 .group-photo {
   width: 100%;
   max-width: 800px;
