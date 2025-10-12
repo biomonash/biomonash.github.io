@@ -144,6 +144,15 @@
   }
 }
 
+.mission-card .card-body {
+    padding: 80px;          
+}
+
+@media (max-width: 768px) {
+  .mission-card .card-body {
+    padding: 2.5em;          
+}
+}
 
 /*WE CAN REMOVE THE FRAME BOX BEHIND PIC*/
 .project-card {
