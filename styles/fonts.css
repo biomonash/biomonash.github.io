@@ -1,0 +1,103 @@
+
+body, h1, h2, h3, p, a {
+    color: var(--neutral) !important;
+}
+
+.header1-txt {
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 36px;
+}
+
+.header2-txt {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "width" 100;
+    text-decoration: none;
+    
+}
+
+.body-txt {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.nav-text {
+    font-family: "Fredoka", sans-serif;
+}
+
+.mission-title-txt {
+    font-family: "Calistoga", serif;
+    color: var(--neutral) !important;
+    margin-bottom: 30px;
+    font-size: 40px;
+    
+}
+
+.mission-txt {
+    font-family: "Fredoka", serif;
+    font-size: 20px;
+
+}
+
+.mission-card .card-body {
+    padding: 80px;          
+}
+
+
+.sc {
+  color: #dee582 !important;
+  background-color: #80882e48;
+}
+
+.eng {
+  color: #0097b2;
+  background-color: #c5f5fe25;
+}
+
+.cs {
+  color: #d38748;
+  background-color: #a9470a2c;
+
+}
+
+.subjects{
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+#join h1 {
+    font-size: 4em;
+}
+
+.footer p {
+    color: rgba(190, 189, 189, 0.404);
+    font-size: 0.7em;
+}
+
+#main-info h1 {
+   margin-top: 0.8em; 
+}
+
+.project-title {
+    font-size: 20px;
+    font-family: "Calistoga", sans-serif;
+}
+
+.project-link {
+  transition: color 0.5s ease;
+}
+
+.project-link:hover {
+    color: #B4CE1F !important;
+}
+
+.project-text {
+    font-size: 18px;
+}

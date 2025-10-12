@@ -1,0 +1,186 @@
+#home {
+    background-color: var(--main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.main-logo {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-top: 1.8em;
+    max-width: 800px;
+}
+
+.banner-wrapper {
+    width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 10px;
+}
+
+.banner-text {
+    display: inline-block;
+    animation: scroll 40s linear infinite;
+    font-family: "Calistoga", sans-serif;
+    font-size: 3rem;
+    color: var(--dark1);
+}
+
+.banner-text span {
+    display: inline-block;
+}
+
+/* Smooth scrolling */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+/*VIDEO SECTION*/
+.video-frame {
+  width: min(70vw, 40em);       
+  max-width: 900px;    
+  aspect-ratio: 16 / 9;  
+  margin: 50px auto;     
+  border-radius: 15px;   
+  overflow: hidden;      
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*PENGUIN IMAGE (IN OUR MISSION)*/
+#mission {
+    color: var(--neutral) !important;
+    margin: 1em;
+}
+
+.mission-card  {
+     max-width: 80vw;
+     min-width: 100vh;
+     background-color: #59883D;
+     border-radius: 10px;
+     overflow: hidden; 
+}
+
+
+.mission-img {
+    width: 100%;          
+    height: 100%;         
+    object-fit: cover;    
+    border-radius: 0 0.25rem 0.25rem 0; 
+}
+
+.group-photo {
+    width: 100%;        
+    max-width: 800px;  
+    height: auto;       
+    display: block;
+    margin: 0 auto;    
+}
+.project-row {
+  display: flex;
+  width: 100%;
+  max-height: 300px;
+  gap: 1em;
+}
+
+.proj-left {
+  flex: 1;
+  min-width: 250px;
+  aspect-ratio: 1 / 1; /* Makes it a square */
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.proj-right {
+  flex: 2;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.proj-left img,
+.proj-right img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: 40% 80%; 
+}
+
+/*WE CAN REMOVE THE FRAME BOX BEHIND PIC*/
+.project-card { 
+    padding: 3px 10px;
+    border-radius: 8px;
+    background-color: #518b0513;
+}
+
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+ul li {
+  padding: 1rem;
+}
+
+.fab {
+  font-size: 3rem;
+}
+
+/* transition for social icon hover animation */
+.fa-envelope,
+.fa-codepen,
+.fa-linkedin,
+.fa-instagram,
+.fa-github {
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+/* social media icons hover color */
+
+.fa-envelope {
+  font-size: 43px;
+}
+
+.fa-envelope:hover,
+.fa-envelope:focus {
+  color: #c71610; /* Gmail red */
+  transform: scale(1.1);
+}
+
+.fa-instagram:hover,
+.fa-instagram:focus {
+  color: #bd22a2;
+  transform: scale(1.1);
+}
+
+.fa-linkedin:hover,
+.fa-linkedin:focus {
+  color: #0077b5;
+  transform: scale(1.1);
+}

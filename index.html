@@ -2,389 +2,273 @@
 <html lang="en">
 
 <head>
+    <!-- Setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BiOM</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap" rel="stylesheet">
-    <!-- Font Awesome CDN -->
+
+    <!-- Tab logo -->
+    <link rel="icon" href="img/BiOM-Logo.png" type="image/x-icon">
+
+    <!-- Color setup -->
+    <style>
+        :root {
+            --main: #172415;
+            --secondary: #b4ce1f;
+            --secondary2: #dee582;
+            --neutral: #fff4cf;
+            --dark1: #0c2103;
+            --dark2: #13330d;
+
+            --accent1: #d38748;
+            --accent2: #a74d36;
+            --accent3: #0097b2;
+        }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="icon" href="img/BiOM-Logo.png" type="image/x-icon">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/divs.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/header.css">
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calistoga&family=Fredoka:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calistoga&family=IBM+Plex+Sans:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="hero-wrapper">
-        <header>
-            <a href="#top" class="logo">
-                <div class="logo">BI <img src="img/BiOM-Logo.png" alt="Earth"> M</div>
-            </a>
+    <!-- Header - this is the navigation bar at the top of the page -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="/index.html">
+                    <img src="img/BiOM-LogoTrans.png" alt="BiOM Logo" style="width:90px; height:auto;">
+                </a>
 
-            <nav>
-                <a href="#about-us">About us</a>
-                <a href="#projects">Project</a>
-                <a href="#feed">Feed</a>
-                <a href="#members">Our Team</a>
-                <a href="#contact-us">Contact Us</a>
-                <button class="join-us"><a target="_blank"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSdpG9CNy_7ON8ZSbiKuBT7MQBOTzoKbmd_TGPA4p5bUOa2hBA/viewform">Join
-                        Us</a></button>
-            </nav>
-        </header>
+                <div class="mx-auto d-flex ">
+                    <a class="nav-link nav-text mx-3" href="#st-kilda">ST KILDA</a>
+                    <a class="nav-link nav-text mx-3" href="#nillumbik">NILLUMBIK</a>
 
-        <section class="hero">
-            <div class="hero-texts">
-                <h3>Monash Student Team</h3>
-                <div class="line"></div>
-                <h1>Biological<br>Observation Monash</h1>
+                </div>
             </div>
-            <p class="norm-p">Welcome to BiOM!<br>
-                We are a student team passionate about protecting nature through
-                cutting-edge science, data, and environmental technology.</p>
-        </section>
-    </div>
-
-    <div class="wave-divider">
-        <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28" preserveAspectRatio="none">
-            <defs>
-                <path id="gentle-wave" d="M-160 44c30 0 
-        58-18 88-18s
-        58 18 88 18 
-        58-18 88-18 
-        58 18 88 18
-        v44h-352z" />
-            </defs>
-            <g class="parallax1">
-                <use xlink:href="#gentle-wave" x="50" y="3" fill="#013A63" />
-            </g>
-            <g class="parallax2">
-                <use xlink:href="#gentle-wave" x="50" y="0" fill="#005AA7" />
-            </g>
-            <g class="parallax3">
-                <use xlink:href="#gentle-wave" x="50" y="9" fill="#0078D4" />
-            </g>
-            <g class="parallax4">
-                <use xlink:href="#gentle-wave" x="50" y="6" fill="rgba(255, 255, 255, 0.6)" />
-            </g>
-        </svg>
-    </div>
-
+        </nav>
+    </header>
 
     <main>
-        <div class="content">
-            <section class="hero-section">
+        <!-- main image -- Hero -->
+        <section id="home">
+            <img src="img/logorec2.png" alt="BiOM Logo" class="main-logo">
 
-                <div class="globe-container">
-                    <img src="img/BiOM-Logo.png" class="globe" alt="biom logo" />
-                </div>
-                <h4 class="hero-text container">Students Powering the Future of Conservation</h4>
-            </section>
-            <!-- Section 1 -->
-            <section class="about-us" id="about-us" data-aos="fade-up">
-                <div class="container">
-                    <h1 data-aos="fade-right">About Us</h1>
-                    <p data-aos="zoom-in">
-                        BiOM (Biological Observation Monash) is a student-led team at the intersection of
-                        conservation and technology. We create innovative, accessible tools to support real-world
-                        environmental solutions.
-                        <br><br>
-                        Bringing together students from <span class="sc">science</span>, <span
-                            class="eng">engineering</span> and <span class="cs">computer science</span>. We design and
-                        prototype
-                        technologies for ecological monitoring — from environmental sensors to machine learning in the
-                        field.
-                    </p>
-                </div>
-            </section>
+            <div class="banner-wrapper">
+                <p class="banner-text">
+                    <span>Student Powering the Future of Conservation &nbsp; <img src="img/green-flw.png"
+                            style="width:48px;"> &nbsp;</span>
+                    <span>Student Powering the Future of Conservation &nbsp; <img src="img/green-flw.png"
+                            style="width:48px;"> &nbsp;</span>
+                    <span>Student Powering the Future of Conservation &nbsp; <img src="img/green-flw.png"
+                            style="width:48px;"> &nbsp;</span>
+                    <span>Student Powering the Future of Conservation &nbsp; <img src="img/green-flw.png"
+                            style="width:48px;"> &nbsp;</span>
+                </p>
+            </div>
+        </section>
 
-            <!-- Section 2 -->
-            <section class="mission" id="mission" data-aos="fade-up">
-                <div class="container">
-                    <h1 data-aos="fade-right">Our Mission</h1>
-                    <p data-aos="fade-left">
-                        BiOM is more than just a project team, it’s a collaborative space for students
-                        to build skills, form industry connections and contribute meaningfully to environmental causes.
-                        <br><br>As
-                        we grow, so too does our commitment to learning, curiosity, and action in the face of ecological
-                        challenges.
-                    </p>
-                </div>
-            </section>
+        <!-- Info directly underneath main image -->
+        <section id="main-info">
+            <img src="img/about-us.png" alt="BiOM Group Photo" class="group-photo">
+            <h1 class="header1-txt">Who we are</h1>
 
+            <p class="body-txt p-3">
+                BiOM (Biological Observation Monash) is a student-led team at the intersection of Conservation and
+                Technology. We create innovative, accessible tools to support real-world environmental solutions.
+                <br><br>
+                Bringing together students from <span class="sc subjects">science</span>, <span
+                    class="eng subjects">engineering</span>
+                and <span class="cs subjects">computer science</span>. We design and prototype
+                technologies for Ecological Monitoring — from Environmental Sensors to machine learning in the field.
+            </p>
+        </section>
 
-            <section class="projects" id="projects" data-aos="fade-up">
-                <h1 data-aos="fade-right">Projects</h1>
-                <div class="projects-content">
-                    <div class="project" id="project1" data-aos="zoom-in">
-                        <h2 data-aos="zoom-in">St Kilda Penguin Project</h2>
+        <!-- Mission section -->
+        <section id="mission" class="d-flex justify-content-center my-5">
+            <div class="mission-card card mb-3">
+                <div class="row g-0 align-items-stretch">
 
-                        <div class="project-flex">
-                            <div class="proj-left">
-                                <img
-                                    src="https://stkildapenguins.com.au/wp-content/uploads/2022/10/St-Kilda-Penguins-Logo-300x300-1.jpeg">
-                            </div>
-
-                            <div class="proj-right">
-                                <p>
-                                    Nestled along Melbourne’s coastline, this project focuses on developing compact
-                                    AI-powered acoustic monitors to detect and identify penguin calls for population and
-                                    health tracking.
-                                </p>
-                            </div>
-                        </div>
-
-                        <button id="stkilda-info"><a href="stkilda.html">Learn More</a></button>
-
-                    </div>
-
-
-                    <div class="project" id="project2" data-aos="zoom-in" data-aos-delay="100">
-                        <h2>Nillumbik Shire Project</h2>
-                        <div class="project-flex">
-                            <div class="proj-left">
-                                <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjeNIuUTZxiaBQxJlUtilXdOE8odOz33-nNg&s">
-                            </div>
-                            <div class="proj-right">
-                                <p>An ongoing forest monitoring initiative using AI tools and community outreach to
-                                    support conservation through research and innovation.</p>
-
-                            </div>
-                        </div>
-
-                        <button id="shire-info"><a href="nilumbik.html">Learn More</a></button>
-
-
-                    </div>
-            </section>
-
-            <!--
-            Section 3
-            <section class="partners" id="partners" data-aos="fade-up">
-                <h1 data-aos="fade-right">Partners</h1>
-                <div class="partner-cols">
-                    <div class="col" data-aos="zoom-in">
-                        <h2>Nillumbik Shire</h2>
-                        <img
-                            src="https://images.pexels.com/photos/326900/pexels-photo-326900.jpeg?cs=srgb&dl=wood-flight-bird-326900.jpg&fm=jpg">
-                        <p><i>details of partner</i></p>
-                    </div>
-
-                    <div class="col" data-aos="zoom-in" data-aos-delay="100">
-                        <h2>Museum Victoria</h2>
-                        <img src="https://th.bing.com/th/id/OIP.sG7xMaZFwVaqYTZJ6CZILwAAAA?cb=iwc2&rs=1&pid=ImgDetMain">
-                        <p><i>details of partner</i></p>
-                    </div>
-                </div>
-            </section>
-
-        -->
-            <!-- Section 4 -->
-            <section id="feed" data-aos="fade-up">
-                <div class="container">
-                    <h1 data-aos="fade-right">Feed</h1>
-                    <div class="feed-container">
-                        <h2 data-aos="fade-right">Latest Updates</h2>
-
-                        <article class="feed-item" data-aos="zoom-in">
-                            <div class="posts">
-                                <img src="img/project.launch.png">
-                            </div>
-                            <h3>Project Launch</h3>
-                            <p>We’re developing a collaborative tool with conservation partners—more details coming
-                                soon!
+                    <!-- Text column -->
+                    <div class="col-md-8 d-flex flex-column justify-content-center">
+                        <div class="card-body text-start">
+                            <h5 class="card-title header1-txt mission-title-txt">Our Mission</h5>
+                            <p class="card-text mission-txt">
+                                BiOM is more than just a student team. It’s a collaborative space where young
+                                conservationists build skills, form industry connections, and contribute meaningfully
+                                to environmental causes. As we grow, so too does our commitment to learning, curiosity,
+                                and action in the face of ecological challenges.
                             </p>
-                            <span class="timestamp">July 23, 2025</span>
-                        </article>
-                        <!--
-                    <article class="feed-item" data-aos="zoom-in" data-aos-delay="100">
-                        <h3>Partner Spotlight</h3>
-                        <p>Meet one of our newest partners helping to drive innovation.</p>
-                        <span class="timestamp">May 14, 2025</span>
-                    </article>
-                </div>
--->
+                        </div>
                     </div>
-            </section>
+                    <div class="col-md-4">
+                        <img src="img/penguin.png" class="img-fluid h-100" style="object-fit: cover;"
+                            alt="Two Penguins">
+                    </div>
 
-            <section class="members" id="members">
-                <div class="container">
-                    <h1 data-aos="fade-right">Our Team</h1>
-                    <p>At BiOM, we believe that technology has the power to drive meaningful change for the planet. Our
-                        team
-                        brings together students from varying disciplines to develop tools that support conservation.
-                        <br><br>
-                        Meet
-                        the students behind the mission…
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects">
+
+            <h1 class="header1-txt">Projects</h1>
+            <div id="st-kilda" class="my-5">
+                <div id="st-kilda" class="project-card">
+                    <div class="project-row">
+                        <div class="project-row py-3">
+                            <div class="proj-left">
+                                <img src="https://stkildapenguins.com.au/wp-content/uploads/2022/10/St-Kilda-Penguins-Logo-300x300-1.jpeg"
+                                    alt="St Kilda Penguin Logo">
+                            </div>
+                            <div class="proj-right">
+                                <img src="https://media.timeout.com/images/105858374/image.jpg" alt="St Kilda Penguins">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="project-title">
+                        <a class="project-link" href="articles/stkilda-article.html">St Kilda Penguins</a>
+                    </h3>
+                    <p class="project-text body-txt">
+                        St Kilda Penguins
+                        Nestled along Melbourne’s coastline, this project focuses on developing compact AI-powered
+                        acoustic monitors to detect and identify penguin calls for population and health tracking.
                     </p>
-                    <div class="team-cols">
-                        <div class="tcol" data-aos="zoom-in" data-aos-delay="100">
-                            <h2>Danielle Kent</h2>
-                            <img src="img/Dani.jpg">
-                            <p><i>CEO/Team Lead</i></p>
-                        </div>
+                </div>
+            </div>
 
-                        <div class="tcol" data-aos="zoom-in" data-aos-delay="100">
-                            <h2>Renee Douma</h2>
-                            <img src="img/Renee.JPG">
-                            <p><i>COO/Operations Lead</i></p>
-                        </div>
-
-                        <div class="tcol" data-aos="zoom-in" data-aos-delay="100">
-                            <h2>James Pinter</h2>
-                            <img
-                                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
-                            <p><i>CFO/Finance Lead</i></p>
+            <!--PROJECT2-NIL-->
+            <div id="nillumbik" class="my-5">
+                <div id="st-kilda" class="project-card">
+                    <div class="project-row">
+                        <div class="project-row py-3">
+                            <div class="proj-left">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjeNIuUTZxiaBQxJlUtilXdOE8odOz33-nNg&s"
+                                    alt="Nillumbik Shire Council Logo">
+                            </div>
+                            <div class="proj-right">
+                                <img src="https://www.nillumbik.vic.gov.au/files/assets/public/v/2/image-resources/0a0a2787a.jpg?w=480"
+                                    alt="Leaves picture">
+                            </div>
                         </div>
                     </div>
-                    <p><i>(Other executive team members to be named after recruitment…)</i></p>
+                    <h3 class="project-title">
+                        <a class="project-link" href="articles/nillumbik-article.html">Nillumbik Shire Project</a>
+                    </h3>
+                    <p class="project-text body-txt">
+                        An ongoing forest monitoring initiative using AI tools and community outreach
+                        to support conservation through research and innovation.
+                    </p>
                 </div>
-            </section>
+            </div>
 
-            <section class="join-section">
-                <h2 class="fly-in animate__animated animate__lightSpeedInLeft">Ready to make a difference?</h2>
-                <div class="container">
-                    <h2 class="slide-up animate__animated animate__slideInUp">Join BiOM and help shape the future of
-                        conservation through technological innovation.</h2>
-                    <div class="join-btn animate__animated animate__zoomIn">
-                        <button id="join-us"
-                            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdpG9CNy_7ON8ZSbiKuBT7MQBOTzoKbmd_TGPA4p5bUOa2hBA/viewform', '_blank')">Join
-                            Us
-                            Today</button>
-                    </div>
-                </div>
-            </section>
+        </section>
 
+        <!-- Our Team section 
+        <section id="team">
 
-            <!-- Section 5 -->
-            <section class="contact-us" id="contact-us">
-                <h1 data-aos="fade-right">Contact Us</h1>
-                <div class="contact-form">
-                    <h4>Enquiries</h4>
-                    <form action="mailto:biom@monash.edu" method="post" enctype="text/plain">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Your name..."><br><br>
+            <h1 class="header1-txt">Our Team</h1>
 
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Your email..."><br><br>
+            <p class="body-txt">
+                At BiOM, we believe that technology has the power to drive meaningful change for the
+                planet. Our team brings together students from varying disciplines to develop tools
+                that support conservation. <br><br> Meet the students behind the mission…
+            </p>
 
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message"
-                            placeholder="Write your message here..."></textarea><br><br>
+            <div id="members">
 
-                        <input type="submit" value="Send">
-                    </form>
+                <div id="team-lead">
+                    <h3 class="header1-txt">Danielle Kent</h3>
                 </div>
 
-
-            </section>
-
-            <section>
-                <h4>Social media</h4>
-                <div class="line"></div>
-                <div class="icons"">
-                <ul>
-                    <li><a href=" mailto:biom@monash.edu" target="_blank"><i class="fas fa-envelope"
-                        tabindex="0"></i></a></li>
-                    <li><a href="https://www.instagram.com/biomonash/?utm_source=ig_web_button_share_sheet"
-                            target="_blank"><i class="fab fa-instagram" tabindex="0"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/biological-observation-monash" target="_blank"><i
-                                class="fab fa-linkedin" tabindex="0"></i></a></li>
-                    </ul>
+                <div id="deputy-lead">
+                    <h3 class="header1-txt">Peter Cooper</h3>
                 </div>
 
+            </div>
+
+        </section>
+        -->
+
+        <!-- Join us section 
+        <section id="join">
+            <h1 class="header1-txt text-center">Join Us Today</h1>
+            <p class="body-txt">
+                We're always looking for new members! If you're a Monash Student interested
+                in ecology, conservation, computer science, or you just really like our vibe,
+                feel free to fill out our recruitment interest form. If you're not a Monash
+                student and would love to get involved, shoot us an email and we'll get back
+                to you!
+            </p>
+            <button class="btn"><a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdpG9CNy_7ON8ZSbiKuBT7MQBOTzoKbmd_TGPA4p5bUOa2hBA/viewform"
+                    target="_blank" class="button">
+                    Recruitment Interest Form
+                </a>
+            </button>
+        </section>
+        -->
+
+        <!-- Video section -Can be removed-->
+        <section>
+            <h1 class="header1-txt text-center">Our journey</h1>
+            <div class="ratio ratio-16x9">
+                <iframe src="https://drive.google.com/file/d/1mxev1DmYMrx1Ak6z5Q7YigROlI0n4gJJ/preview" allow="autoplay"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
 
 
-            </section>
 
-
-            <footer>
-                <p>&copy; 2025 BiOM. All rights reserved.</p>
-            </footer>
-        </div>
-
-
-
+        <!-- Contact Us section -->
+        <section id="contact" class="py-3">
+            <h1 class="header1-txt text-center py-4">Connect With Us</h1>
+            <div class="container">
+                <div class="d-flex justify-content-center gap-4">
+                    <a href="https://www.instagram.com/biomonash/?utm_source=ig_web_button_share_sheet" target="_blank">
+                        <i class="fab fa-instagram fa-2x" tabindex="0"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/biological-observation-monash" target="_blank">
+                        <i class="fab fa-linkedin fa-2x" tabindex="0"></i>
+                    </a>
+                    <a href="mailto:biom@monash.edu" target="_blank">
+                        <i class="fas fa-envelope fa-2x" tabindex="0"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 BiOM. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-
-
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                document.querySelector('.globe-container').classList.add('after-spin');
-            }, 2500); // after 2.5s = 0.5 fade + 2s spin
-        });
-
-        const modals = document.querySelectorAll(".modal");
-
-        document.querySelectorAll("button").forEach(button => {
-            if (button.id === "learnMoreBtn") {
-                button.addEventListener("click", () => {
-                    // Find closest modal inside the same project div
-                    const projectDiv = button.closest(".project");
-                    const modal = projectDiv.querySelector(".modal");
-                    const modalTitle = modal.querySelector("h2");
-                    const modalContent = modal.querySelector("p");
-
-                    // You can grab the title/content from modal's current h2 and p or from data-attributes on button (preferred)
-                    // If you want to use the modal's content:
-                    // Just show the modal
-                    modal.style.display = "block";
-                });
-            }
-        });
-
-        // Close buttons inside each modal
-        document.querySelectorAll(".modal .close").forEach(closeBtn => {
-            closeBtn.onclick = function () {
-                this.closest(".modal").style.display = "none";
-            };
-        });
-
-        // Close modal when clicking outside content
-        window.onclick = function (event) {
-            modals.forEach(modal => {
-                if (event.target === modal) {
-                    modal.style.display = "none";
-                }
-            });
-        };
-
-
-
-    </script>
-
-    <script>
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                    observer.unobserve(entry.target); // trigger only once
-                }
-            });
-        }, {
-            threshold: 0.5 // adjust when to trigger
-        });
-
-        const flyIn = document.querySelector('.fly-in');
-        if (flyIn) {
-            observer.observe(flyIn);
-        }
-    </script>
-
-    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
