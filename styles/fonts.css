@@ -9,6 +9,7 @@ body, h1, h2, h3, p, a {
     font-style: normal;
     text-decoration: none;
     font-size: 36px;
+    margin-left: 15px;
 }
 
 .header2-txt {
@@ -17,6 +18,7 @@ body, h1, h2, h3, p, a {
     font-style: normal;
     font-variation-settings: "width" 100;
     text-decoration: none;
+    margin-left: 15px;
     
 }
 
@@ -25,6 +27,7 @@ body, h1, h2, h3, p, a {
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 20px;
+    text-align: justify;
 }
 
 .nav-text {
@@ -42,7 +45,7 @@ body, h1, h2, h3, p, a {
 .mission-txt {
     font-family: "Fredoka", serif;
     font-size: 20px;
-
+    text-align: justify;
 }
 
 
