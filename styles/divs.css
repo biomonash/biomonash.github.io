@@ -92,11 +92,17 @@
 }
 .group-photo {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   height: auto;
   display: block;
   margin: 0 auto;
+  transition: transform 0.5s ease;
 }
+
+.group-photo:hover {
+  transform: scale(1.1);
+}
+
 .project-row {
   display: flex;
   width: 100%;
@@ -211,4 +217,75 @@ ul li {
 .fa-linkedin:focus {
   color: #0077b5;
   transform: scale(1.1);
+}
+
+.fade-in-logo {
+    animation: logoBounce 1s cubic-bezier(0.34, 1.56, 0.64, 1),
+               logoIdle 2.5s ease-in-out 1s infinite;
+}
+
+@keyframes logoIdle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes logoBounce {
+    0% {
+        transform: scale(0.7) translateY(40px);
+        filter: blur(6px);
+    }
+
+    40% {
+        transform: scale(1.15) translateY(-20px);
+        filter: blur(0);
+    }
+
+    60% {
+        transform: scale(0.95) translateY(10px);
+    }
+
+    80% {
+        transform: scale(1.05) translateY(-5px);
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+.join-card {
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--neutral), #4c7f0a);
+    
+}
+
+.join-eyebrow {
+    color: var(--accent2);
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px black;
+  
+}
+
+.join-btn {
+    background-color: var(--secondary);
+    color: var(--main);
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(180, 206, 31, 0.4);
+    transition: all 0.25s ease;
+}
+
+.join-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(180, 206, 31, 0.6);
+    color: var(--main);
+}
+
+.card-content {
+  text-shadow: 1px 1px 2px rgb(120, 120, 120);
 }

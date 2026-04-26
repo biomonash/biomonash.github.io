@@ -9,11 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentScroll > lastScrollTop && currentScroll > 100) {
       navbar.style.backgroundColor = "transparent";
       navbar.classList.add("fade-out");
-      
     } else {
       navbar.classList.remove("fade-out");
     }
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 120,
   });
 });
