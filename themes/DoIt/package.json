@@ -1,0 +1,41 @@
+{
+  "name": "doit-src",
+  "version": "0.2.13",
+  "description": "DoIt theme source file",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run server:tailwind --watch\"",
+    "build": "hugo --logLevel info --minify --source=exampleSite --themesDir ../.. --gc",
+    "build:preview": "hugo --logLevel info --source=exampleSite --themesDir ../.. -D --gc",
+    "server": "hugo server --source=exampleSite --themesDir ../.. -D --disableFastRender --noHTTPCache",
+    "server:production": "hugo server --source=exampleSite --themesDir ../.. --disableFastRender -e production",
+    "server:tailwind": "npx @tailwindcss/cli --watch -i ./assets/css/tailwind.css -o ./assets/css/main.css",
+    "algolia": "atomic-algolia",
+    "pagefind": "npx pagefind --site ./exampleSite/public",
+    "build:tailwind": "npx @tailwindcss/cli -i ./assets/css/tailwind.css -o ./assets/css/main.css",
+    "format": "npx prettier . --write",
+    "validate": "npm run build:preview && docker run --rm -v \"$(pwd)/exampleSite/public\":/check ghcr.io/validator/validator:latest vnu --skip-non-html --format json /check/ 2>&1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HEIGE-PCloud/DoIt.git"
+  },
+  "keywords": [
+    "hugo",
+    "theme"
+  ],
+  "author": "PCloud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HEIGE-PCloud/DoIt/issues"
+  },
+  "homepage": "https://github.com/HEIGE-PCloud/DoIt#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@tailwindcss/cli": "^4.2.2",
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "atomic-algolia": "^0.3.19"
+  }
+}

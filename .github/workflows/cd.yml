@@ -1,0 +1,59 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - 'main'
+
+  schedule:
+    - cron: '0 0 * * *' # run everyday at 00:00 UTC https://crontab.guru/every-day-at-midnight
+  workflow_dispatch:
+  repository_dispatch:
+
+# Allow one concurrent deployment
+concurrency:
+  group: "deploy"
+  cancel-in-progress: false
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+env:
+  NODE_VERSION: 23.x
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # env:
+    #   CLOUDFLARE_PAGES_DEPLOY_HOOK: ${{ secrets.CLOUDFLARE_PAGES_DEPLOY_HOOK }}
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Sync content with Notion
+        env:
+         NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: |
+          npm install
+          npm start
+
+      - name: Commit updated content
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: Sync content with Notion
+
+      # - name: Trigger Cloudflare Pages build
+      #   if: startsWith(env.CLOUDFLARE_PAGES_DEPLOY_HOOK, 'https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/') && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+      #   run: curl -X POST ${{ secrets.CLOUDFLARE_PAGES_DEPLOY_HOOK }}
