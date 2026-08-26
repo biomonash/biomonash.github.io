@@ -4,7 +4,7 @@ const userConfig: UserConfig = {
     base_url: "https://notion-hugo.pages.dev",
     mount: {
         manual: false,
-        page_url: 'https://pcloud.notion.site/Notion-DoIt-04bcc51cfe4c49938229c35e4f0a6fb6',
+        page_url: 'https://app.notion.com/p/BiOM-Website-CMS-7106e8cb553e82229a25017dad35b257?source=copy_link',
         pages: [
             // {
             //     page_id: '<page_id>',
