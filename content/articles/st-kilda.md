@@ -1,4 +1,4 @@
 ---
 title: "St Kilda Penguins"
-layout: "st-kilda"
+layout: "stkilda-article"
 ---

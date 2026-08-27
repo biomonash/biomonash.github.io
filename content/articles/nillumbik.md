@@ -1,4 +1,4 @@
 ---
 title: "Nillumbik"
-layout: "nillumbik"
+layout: "nillumbik-article"
 ---
