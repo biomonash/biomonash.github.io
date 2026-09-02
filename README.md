@@ -55,6 +55,30 @@ Open the local address shown in the terminal. This will usually be:
 http://localhost:1313/
 ```
 
+## Project structure
+
+The main directories and files are:
+
+- `assets/` — source files processed by Hugo, such as CSS and JavaScript
+- `content/` — website content generated from or associated with Notion
+- `layouts/` — Hugo HTML templates that control how pages are displayed
+- `static/` — files copied directly into the generated website, including images
+- `config/_default/config.toml` — general Hugo configuration
+- `notion-hugo.config.ts` — Notion connection and content sync configuration
+- `.github/workflows/` — automated content sync and deployment workflows
+- `public/` — generated website output created by Hugo
+
+Avoid manually editing files inside `public/`, as Hugo regenerates this directory when the site is built.
+
+## URLs and `relURL`
+
+Use Hugo's `relURL` function when linking to internal pages or static assets:
+
+```go-html-template
+{{ "images/example.webp" | relURL }}
+```
+For example, in `index.html` which is located in `layouts/index.html` it needs to access `images/penguin.webp`, for hugo to access this file it must access the `/images` folder from the `/static` folder, to do this you must type `src="{{"images/penguin.webp" | relURL}}"` instead of `src="images/penguin.webp"` as Hugo will treat `/static` as the root of the project when the website is generated.
+
 ## Notion integration
 
 The website reads content using an internal Notion integration.
