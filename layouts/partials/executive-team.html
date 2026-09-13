@@ -1,0 +1,36 @@
+<section class="team-people-section">
+
+  <h2 class="header1-txt team-section-title">
+    {{ .title }}
+  </h2>
+
+  <div class="people-grid">
+
+    {{ range .members }}
+
+      <div class="person-card">
+
+        <div class="person-photo">
+          {{ if .image }}
+            <img
+              src="{{ .image | relURL }}"
+              alt="{{ .name }}"
+            >
+          {{ end }}
+        </div>
+
+        <p class="person-name">
+          {{ .name }}
+        </p>
+
+        <p class="person-role">
+          {{ .role }}
+        </p>
+
+      </div>
+
+    {{ end }}
+
+  </div>
+
+</section>

@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="{{"css/fonts.css" }}"/>
     <link rel="stylesheet" href="{{"css/main.css" }}"/>
     <link rel="stylesheet" href="{{"css/header.css" }}"/>
+    <link rel="stylesheet" href="{{ "css/team.css" | relURL }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -262,31 +263,169 @@
         </div>
       </section>
 
-      <!-- Our Team section
+      <!-- Our Team section -->
         <section id="team">
 
-            <h1 class="header1-txt">Our Team</h1>
+      <!-- Team introduction -->
+
+      <section class="team-intro">
+
+        <div class="team-intro-content">
+
+          <div class="team-intro-text">
+
+            <h1 class="header1-txt">
+              The Team
+            </h1>
 
             <p class="body-txt">
-                At BiOM, we believe that technology has the power to drive meaningful change for the
-                planet. Our team brings together students from varying disciplines to develop tools
-                that support conservation. <br><br> Meet the students behind the mission…
+              At BiOM, we believe that technology has the power to drive
+              meaningful change for the planet. Our team brings together
+              students from varying disciplines to develop tools that
+              support conservation.
+              <br><br>
+              Meet the students behind the mission.
             </p>
 
-            <div id="members">
+          </div>
 
-                <div id="team-lead">
-                    <h3 class="header1-txt">Danielle Kent</h3>
-                </div>
 
-                <div id="deputy-lead">
-                    <h3 class="header1-txt">Peter Cooper</h3>
-                </div>
+          <div class="team-intro-image">
 
-            </div>
+            <img
+              src="{{ "images/about-us.webp" | relURL }}"
+              alt="BiOM Team"
+            >
 
-        </section>
-        -->
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- Executive Team -->
+
+      {{ $executiveMembers := slice
+
+          (dict
+            "name" "Name xyz"
+            "role" "President"
+            "image" ""
+          )
+
+          (dict
+            "name" "Name xyz"
+            "role" "Vice President"
+            "image" ""
+          )
+
+          (dict
+            "name" "Name xyz"
+            "role" "Secretary"
+            "image" ""
+          )
+
+          (dict
+            "name" "Name xyz"
+            "role" "Treasurer"
+            "image" ""
+          )
+
+          (dict
+            "name" "Name xyz"
+            "role" "Executive Member"
+            "image" ""
+          )
+
+          (dict
+            "name" "Name xyz"
+            "role" "Executive Member"
+            "image" ""
+          )
+
+      }}
+
+      {{ partial "executive-team.html"
+          (dict
+            "title" "Executive Team"
+            "members" $executiveMembers
+          )
+      }}
+
+
+
+      <!-- Academic Advisors-->
+
+      {{ $advisors := slice
+
+          (dict
+            "name" "Name xyz"
+            "role" "Academic Advisor"
+            "image" ""
+          )
+
+          (dict
+            "name" "Name xyz"
+            "role" "Academic Advisor"
+            "image" ""
+          )
+
+          (dict
+            "name" "Name xyz"
+            "role" "Academic Advisor"
+            "image" ""
+          )
+
+      }}
+
+      {{ partial "executive-team.html"
+          (dict
+            "title" "Academic Advisors"
+            "members" $advisors
+          )
+      }}
+
+
+
+      <!-- Department Teams-->
+
+      {{ $teamFile := readFile "data/team.txt" }}
+
+      {{ range split $teamFile "\n" }}
+
+        {{ $line := trim . " \r\n" }}
+
+        {{ if $line }}
+
+          {{ $fields := split $line "|" }}
+
+          {{ if ge (len $fields) 3 }}
+
+            {{ $departmentName := trim (index $fields 0) " " }}
+            {{ $teamLeads := split (index $fields 1) "," }}
+            {{ $teamMembers := split (index $fields 2) "," }}
+
+
+            {{ partial "department-team.html"
+                (dict
+                  "name" $departmentName
+                  "leads" $teamLeads
+                  "members" $teamMembers
+                  "image" "images/about-us.webp"
+                )
+            }}
+
+
+          {{ end }}
+
+        {{ end }}
+
+      {{ end }}
+
+
+</section>
 
       <!-- Join us section-->
       <section id="join-us" data-aos="fade-appear" class="py-5">
