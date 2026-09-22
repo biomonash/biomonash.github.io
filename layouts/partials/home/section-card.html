@@ -1,0 +1,48 @@
+<div class="mission-card card mb-3">
+    <div class="row g-0 align-items-stretch">
+
+        {{ if .Params.Image }}
+        <div class="col-12 col-md-4 order-1 order-md-2">
+            <img
+                src="{{ .Params.Image }}"
+                class="img-fluid h-100"
+                style="object-fit: cover"
+                alt="{{ .Params.ImageAlt }}" />
+        </div>
+        {{ end }}
+
+        <div
+            class="col-12 col-md-8 order-2 order-md-1 d-flex flex-column justify-content-center">
+            <div class="card-body text-start">
+
+                {{ if index .Params "Eyebrow" }}
+                <p class="text-uppercase fw-bold mb-2 join-eyebrow">
+                    {{ index .Params "Eyebrow" }}
+                </p>
+                {{ end }}
+
+                <h5 class="card-title header1-txt mission-title-txt">
+                    {{ index .Params "Title" }}
+                </h5>
+
+                <p class="card-text mission-txt">
+                    {{ index .Params "Description" }}
+                </p>
+
+                {{ if index .Params "Button Enabled" }}
+                <div class="mt-3 text-center nav-text">
+                    <a
+                        class="donate-btn btn-style btn"
+                        href="{{ index .Params "Button Link" }}"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        {{ index .Params "Button Text" }}
+                    </a>
+                </div>
+                {{ end }}
+
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -51,31 +51,47 @@ export async function loadConfig(): Promise<Config> {
       throw Error(
         `[Error] When mount.manual is false, a page_url must be set.`,
       );
+
     const url = new URL(userConfig.mount.page_url);
     const len = url.pathname.length;
-    if (len < 32) throw Error(`[Error] The page_url ${url.href} is invalid`);
+
+    if (len < 32)
+      throw Error(`[Error] The page_url ${url.href} is invalid`);
+
     const pageId = url.pathname.slice(len - 32, len);
+
     const notion = new Client({
       auth: process.env.NOTION_TOKEN,
     });
 
-    for await (const block of iteratePaginatedAPI(notion.blocks.children.list, {
-      block_id: pageId,
-    })) {
-      if (!isFullBlock(block)) continue;
-      if (block.type === "child_database") {
-        config.mount.databases.push({
-          database_id: block.id,
-          target_folder: block.child_database.title,
-        });
-      }
-      if (block.type === "child_page") {
-        config.mount.pages.push({
-          page_id: block.id,
-          target_folder: ".",
-        });
+    async function processPage(pageId: string) {
+      for await (const block of iteratePaginatedAPI(
+        notion.blocks.children.list,
+        {
+          block_id: pageId,
+        },
+      )) {
+        if (!isFullBlock(block)) continue;
+
+        if (block.type === "child_database") {
+          config.mount.databases.push({
+            database_id: block.id,
+            target_folder: block.child_database.title,
+          });
+        }
+
+        if (block.type === "child_page") {
+          config.mount.pages.push({
+            page_id: block.id,
+            target_folder: ".",
+          });
+
+          await processPage(block.id);
+        }
       }
     }
+
+    await processPage(pageId);
   }
 
   return config;

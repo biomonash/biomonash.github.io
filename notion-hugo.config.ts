@@ -14,7 +14,10 @@ const userConfig: UserConfig = {
       {
         page_id: "45eb121158b9489480ec000fd25c812b",
         target_folder: ".",
-      },
+      },{
+    page_id: "3e36e8cb553e8073ba48ef35ff8dd97f",
+    target_folder: ".",
+  },
     ],
     databases: [
       // {
@@ -27,6 +30,10 @@ const userConfig: UserConfig = {
       },
       {
         database_id: "3da6e8cb553e80e4b1cfdcabc77e6f75",
+        target_folder: ".",
+      },
+      {
+        database_id: "3e36e8cb553e80449fb3e43b5851a87e",
         target_folder: ".",
       },
     ],

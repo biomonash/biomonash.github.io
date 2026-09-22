@@ -7,39 +7,63 @@
     {{ partial "navbar.html" . }}
 
     <main>
-      <!-- main image -- Hero -->
+
+      <!-- Hero section -->
       <section id="home">
         <img
-          src="{{"images/logorec2.webp" }}"
+          src="{{ "images/logorec2.webp" }}"
           alt="BiOM Logo"
           class="main-logo fade-in-logo" />
 
         <div class="banner-wrapper" data-aos="fade-up">
           <p class="banner-text">
-            <span>Student Powering the Future of Conservation &nbsp;
-              <img src="{{"images/green-flw.webp" | relURL }}" style="width: 48px" />
-              &nbsp;</span>
-            <span>Student Powering the Future of Conservation &nbsp;
-              <img src="{{"images/green-flw.webp" | relURL }}" style="width: 48px" />
-              &nbsp;</span>
-            <span>Student Powering the Future of Conservation &nbsp;
-              <img src="{{"images/green-flw.webp" | relURL }}" style="width: 48px" />
-              &nbsp;</span>
-            <span>Student Powering the Future of Conservation &nbsp;
-              <img src="{{"images/green-flw.webp" | relURL }}" style="width: 48px" />
-              &nbsp;</span>
+            <span>
+              Student Powering the Future of Conservation &nbsp;
+              <img
+                src="{{ "images/green-flw.webp" | relURL }}"
+                style="width: 48px" />
+              &nbsp;
+            </span>
+
+            <span>
+              Student Powering the Future of Conservation &nbsp;
+              <img
+                src="{{ "images/green-flw.webp" | relURL }}"
+                style="width: 48px" />
+              &nbsp;
+            </span>
+
+            <span>
+              Student Powering the Future of Conservation &nbsp;
+              <img
+                src="{{ "images/green-flw.webp" | relURL }}"
+                style="width: 48px" />
+              &nbsp;
+            </span>
+
+            <span>
+              Student Powering the Future of Conservation &nbsp;
+              <img
+                src="{{ "images/green-flw.webp" | relURL }}"
+                style="width: 48px" />
+              &nbsp;
+            </span>
           </p>
         </div>
       </section>
 
-      <!-- Info directly underneath main image -->
+
+      <!-- Who we are section -->
       <section
-        id="main-info justify-content-center align-items-center"
+        id="main-info"
+        class="justify-content-center align-items-center"
         data-aos="fade-appear">
+
         <img
-          src="{{"images/about-us.webp" | relURL}}"
+          src="{{ "images/about-us.webp" | relURL }}"
           alt="BiOM Group Photo"
           class="group-photo" />
+
         <div class="p-5 mx-auto">
           <h1 class="header1-txt">Who we are</h1>
 
@@ -47,118 +71,95 @@
             BiOM (Biological Observation Monash) is a student-led team at the
             intersection of Conservation and Technology. We create innovative,
             accessible tools to support real-world environmental solutions.
+
             <br /><br />
+
             Bringing together students from
             <span class="sc subjects">science</span>,
             <span class="eng subjects">engineering</span> and
-            <span class="cs subjects">computer science</span>. We design and
-            prototype technologies for Ecological Monitoring — from
-            Environmental Sensors to machine learning in the field.
+            <span class="cs subjects">computer science</span>.
+            We design and prototype technologies for Ecological Monitoring —
+            from Environmental Sensors to machine learning in the field.
           </p>
         </div>
       </section>
+
 
       <!-- Mission section -->
       <section
         id="mission"
         class="d-flex justify-content-center my-5"
         data-aos="zoom-in">
-        <div class="mission-card card mb-3">
-          <div class="row g-0 align-items-stretch">
-            <div class="row g-0 align-items-stretch">
-              <div class="col-12 col-md-4 order-1 order-md-2">
-                <img
-                  src="{{"images/penguin.webp" | relURL}}"
-                  class="img-fluid h-100"
-                  style="object-fit: cover"
-                  alt="Two Penguins" />
-              </div>
-              <div
-                class="col-12 col-md-8 order-2 order-md-1 d-flex flex-column justify-content-center">
-                <div class="card-body text-start">
-                  <h5 class="card-title header1-txt mission-title-txt">
-                    Our Mission
-                  </h5>
-                  <p class="card-text mission-txt">
-                    BiOM is more than just a student team. It’s a collaborative
-                    space where young conservationists build skills, form
-                    industry connections, and contribute meaningfully to
-                    environmental causes. As we grow, so too does our commitment
-                    to learning, curiosity, and action in the face of ecological
-                    challenges.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        {{ range where .Site.RegularPages "Section" "sections-card" }}
+          {{ if eq .Title "Our Mission" }}
+            {{ partial "home/section-card.html" . }}
+          {{ end }}
+        {{ end }}
+
       </section>
+
 
       <!-- Projects section -->
       <section id="projects" data-aos="fade-up">
         <h1 class="header1-txt">Projects</h1>
 
         {{ range where .Site.RegularPages "Section" "projects-card" }}
-          {{ partial "project-card.html" . }}
+          {{ partial "home/project-card.html" . }}
         {{ end }}
+
       </section>
 
-      <!-- Our Team section
-        <section id="team">
 
-            <h1 class="header1-txt">Our Team</h1>
+      <!-- Our Team section -->
+      <!--
+      <section id="team">
 
-            <p class="body-txt">
-                At BiOM, we believe that technology has the power to drive meaningful change for the
-                planet. Our team brings together students from varying disciplines to develop tools
-                that support conservation. <br><br> Meet the students behind the mission…
-            </p>
+        <h1 class="header1-txt">Our Team</h1>
 
-            <div id="members">
+        <p class="body-txt">
+          At BiOM, we believe that technology has the power to drive meaningful
+          change for the planet. Our team brings together students from varying
+          disciplines to develop tools that support conservation.
+          <br /><br />
+          Meet the students behind the mission…
+        </p>
 
-                <div id="team-lead">
-                    <h3 class="header1-txt">Danielle Kent</h3>
-                </div>
+        <div id="members">
 
-                <div id="deputy-lead">
-                    <h3 class="header1-txt">Peter Cooper</h3>
-                </div>
+          <div id="team-lead">
+            <h3 class="header1-txt">Danielle Kent</h3>
+          </div>
 
-            </div>
+          <div id="deputy-lead">
+            <h3 class="header1-txt">Peter Cooper</h3>
+          </div>
 
-        </section>
-        -->
+        </div>
 
-      <!-- Join us section-->
-      <section id="join-us" data-aos="fade-appear" class="py-5">
+      </section>
+      -->
+
+
+      <!-- Join Us section -->
+      <section
+        id="join-us"
+        data-aos="fade-appear"
+        class="py-5">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-8">
-              <div class="card text-center border-0 shadow-lg join-card p-5">
-                <div class="card-content">
-                  <p class="text-uppercase fw-bold mb-2 join-eyebrow">
-                    Become part of BiOM
-                  </p>
-                  <h1 class="header1-txt mb-3">Join Us Today</h1>
-                  <p class="body-txt mb-4">
-                    We're always looking for new members! If you're a Monash
-                    student interested in ecology, conservation, computer
-                    science, or you just really like our vibe, fill out our
-                    recruitment interest form.
-                  </p>
-                </div>
-                <div>
-                  <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSdpG9CNy_7ON8ZSbiKuBT7MQBOTzoKbmd_TGPA4p5bUOa2hBA/viewform"
-                    target="_blank"
-                    class="btn btn-lg join-btn px-4 py-2">
-                    Application Form
-                  </a>
-                </div>
-              </div>
+
+              {{ range where .Site.RegularPages "Section" "sections-card" }}
+                {{ if eq .Title "Join Us Today" }}
+                  {{ partial "home/section-card.html" . }}
+                {{ end }}
+              {{ end }}
+
             </div>
           </div>
         </div>
+
       </section>
 
       <!-- Donate section -->
@@ -166,49 +167,24 @@
         id="donate"
         class="d-flex justify-content-center my-5"
         data-aos="zoom-out">
-        <div class="mission-card card mb-3">
-          <div class="row g-0 align-items-stretch">
-            <div class="row g-0 align-items-stretch">
-              <div class="col-12 col-md-4 order-1 order-md-2">
-                <img
-                  src="{{"images/annie.webp" }}"
-                  class="img-fluid h-100"
-                  style="object-fit: cover"
-                  alt="Two Penguins" />
-              </div>
-              <div
-                class="col-12 col-md-8 order-2 order-md-1 d-flex flex-column justify-content-center">
-                <div class="card-body text-start">
-                  <h5 class="card-title header1-txt mission-title-txt">
-                    Support Our Mission
-                  </h5>
-                  <p class="card-text mission-txt">
-                    Help us power the future of conservation! Your donation
-                    directly supports our student-led environmental projects,
-                    from AI-powered penguin monitoring to forest conservation
-                    initiatives. Every contribution helps us develop innovative
-                    technologies that make a real difference for our planet's
-                    ecosystems.
-                  </p>
-                  <div class="mt-3 text-center nav-text">
-                    <a class="donate-btn btn-style btn"
-                      href="https://alumni-friends.monash.edu/s/itstudentteams"
-                      target="_blank">
-                      Donate Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        {{ range where .Site.RegularPages "Section" "sections-card" }}
+          {{ if eq .Title "Support Our Mission" }}
+            {{ partial "home/section-card.html" . }}
+          {{ end }}
+        {{ end }}
+
       </section>
 
-      <!-- Video section -Can be removed-->
+      <!-- Video section -->
       <section>
-        <h1 class="header1-txt text-center" data-aos="fade-appear">
+
+        <h1
+          class="header1-txt text-center"
+          data-aos="fade-appear">
           Our journey
         </h1>
+
         <div class="ratio ratio-16x9">
           <iframe
             src="https://drive.google.com/file/d/1mxev1DmYMrx1Ak6z5Q7YigROlI0n4gJJ/preview"
@@ -216,13 +192,23 @@
             allowfullscreen>
           </iframe>
         </div>
+
       </section>
 
+
       <!-- Contact Us section -->
-      <section id="contact" class="py-3" data-aos="fade-appear">
+      <section
+        id="contact"
+        class="py-3"
+        data-aos="fade-appear">
+
         {{ partial "contacts.html" . }}
+
       </section>
+
     </main>
+
     {{ partial "footer.html" . }}
+
   </body>
 </html>
