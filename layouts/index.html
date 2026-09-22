@@ -17,16 +17,16 @@
         <div class="banner-wrapper" data-aos="fade-up">
           <p class="banner-text">
             <span>Student Powering the Future of Conservation &nbsp;
-              <img src="{{"images/green-flw.webp" }}" style="width: 48px" />
+              <img src="{{"images/green-flw.webp" | relURL }}" style="width: 48px" />
               &nbsp;</span>
             <span>Student Powering the Future of Conservation &nbsp;
-              <img src="{{"images/green-flw.webp" }}" style="width: 48px" />
+              <img src="{{"images/green-flw.webp" | relURL }}" style="width: 48px" />
               &nbsp;</span>
             <span>Student Powering the Future of Conservation &nbsp;
-              <img src="{{"images/green-flw.webp" }}" style="width: 48px" />
+              <img src="{{"images/green-flw.webp" | relURL }}" style="width: 48px" />
               &nbsp;</span>
             <span>Student Powering the Future of Conservation &nbsp;
-              <img src="{{"images/green-flw.webp" }}" style="width: 48px" />
+              <img src="{{"images/green-flw.webp" | relURL }}" style="width: 48px" />
               &nbsp;</span>
           </p>
         </div>
@@ -97,63 +97,10 @@
       <!-- Projects section -->
       <section id="projects" data-aos="fade-up">
         <h1 class="header1-txt">Projects</h1>
-        <div id="st-kilda" class="my-5">
-          <div id="st-kilda" class="project-card" data-aos="fade-right">
-            <div class="project-row">
-              <div class="project-row py-3">
-                <div class="proj-left">
-                  <img
-                    src="https://stkildapenguins.com.au/wp-content/uploads/2022/10/St-Kilda-Penguins-Logo-300x300-1.jpeg"
-                    alt="St Kilda Penguin Logo" />
-                </div>
-                <div class="proj-right">
-                  <img
-                    src="https://media.timeout.com/images/105858374/image.jpg"
-                    alt="St Kilda Penguins" />
-                </div>
-              </div>
-            </div>
-            <h3 class="project-title">
-              <a class="project-link" href="{{"articles/st-kilda" }}">St Kilda
-                Penguins</a>
-            </h3>
-            <p class="project-text body-txt">
-              St Kilda Penguins Nestled along Melbourne’s coastline, this
-              project focuses on developing compact AI-powered acoustic monitors
-              to detect and identify penguin calls for population and health
-              tracking.
-            </p>
-          </div>
-        </div>
 
-        <!--PROJECT2-NIL-->
-        <div id="nillumbik" class="my-5">
-          <div id="nillumbik" class="project-card" data-aos="fade-left">
-            <div class="project-row">
-              <div class="project-row py-3">
-                <div class="proj-left">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjeNIuUTZxiaBQxJlUtilXdOE8odOz33-nNg&s"
-                    alt="Nillumbik Shire Council Logo" />
-                </div>
-                <div class="proj-right">
-                  <img
-                    src="https://www.nillumbik.vic.gov.au/files/assets/public/v/2/image-resources/0a0a2787a.jpg?w=480"
-                    alt="Leaves picture" />
-                </div>
-              </div>
-            </div>
-            <h3 class="project-title">
-              <a class="project-link" href="{{"articles/nillumbik" }}">Nillumbik
-                Shire Project</a>
-            </h3>
-            <p class="project-text body-txt">
-              An ongoing forest monitoring initiative using AI tools and
-              community outreach to support conservation through research and
-              innovation.
-            </p>
-          </div>
-        </div>
+        {{ range where .Site.RegularPages "Section" "projects-card" }}
+          {{ partial "project-card.html" . }}
+        {{ end }}
       </section>
 
       <!-- Our Team section
