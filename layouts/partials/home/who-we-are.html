@@ -1,0 +1,71 @@
+<section
+  id="main-info"
+  class="justify-content-center align-items-center"
+  data-aos="fade-appear"
+>
+  {{ $images := .Params.Images }} {{ if $images }}
+  <div
+    id="whoWeAreCarousel"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    data-bs-interval="5000"
+  >
+    <!-- Indicators -->
+    {{ if gt (len $images) 1 }}
+    <div class="carousel-indicators">
+      {{ range $index, $image := $images }}
+      <button
+        type="button"
+        data-bs-target="#whoWeAreCarousel"
+        data-bs-slide-to="{{ $index }}"
+        class="{{ if eq $index 0 }}active{{ end }}"
+        aria-label="Slide {{ add $index 1 }}"
+      ></button>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Images -->
+    <div class="carousel-inner">
+      {{ range $index, $image := $images }}
+      <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
+        <img
+          src="{{ $image }}"
+          class="d-block w-100 group-photo"
+          alt="{{ path.Base $image }}"
+        />
+      </div>
+      {{ end }}
+    </div>
+
+    <!-- Controls -->
+    {{ if gt (len $images) 1 }}
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#whoWeAreCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#whoWeAreCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <div class="p-2 mx-auto">
+    <h1 class="header1-txt">{{ index .Params "Title" }}</h1>
+
+    <p class="body-txt p-3">{{ index .Params "Description" }}</p>
+  </div>
+</section>

@@ -1,15 +1,18 @@
 ---
 title: "Forest Portal"
 date: "2026-09-22T20:17:00.000Z"
-lastmod: "2026-09-22T21:06:00.000Z"
+lastmod: "2026-09-27T22:56:00.000Z"
 draft: false
 featuredImage: "https://notion-hugo.pages.dev/api?page_id=3e36e8cb-553e-80f2-98\
   f2-cdd4b09296f4"
 banner: "https://www.nillumbik.vic.gov.au/files/assets/public/v/2/image-resourc\
   es/0a0a2787a.jpg?w=480"
+TechStack: []
 link: "articles/nillumbik"
 authors:
   - "Yenn "
+  - "Jadyn Leon"
+Status: "Active"
 logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjeNIuUTZxiaBQxJlU\
   tilXdOE8odOz33-nNg&s"
 description: "An ongoing forest monitoring initiative using AI tools and
@@ -18,7 +21,7 @@ NOTION_METADATA:
   object: "page"
   id: "3e36e8cb-553e-80f2-98f2-cdd4b09296f4"
   created_time: "2026-09-22T20:17:00.000Z"
-  last_edited_time: "2026-09-22T21:06:00.000Z"
+  last_edited_time: "2026-09-27T22:56:00.000Z"
   created_by:
     object: "user"
     id: "25dd872b-594c-818a-8ef5-0002a724b085"
@@ -31,28 +34,27 @@ NOTION_METADATA:
       url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/1c26e8cb-553e-8110-8\
         f76-000345ab9bad/5751897a-3cab-4539-a441-37bb8a02c5d4/image.png?X-Amz-A\
         lgorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-C\
-        redential=ASIAZI2LB4663YAEKWL5%2F20260922%2Fus-west-2%2Fs3%2Faws4_reque\
-        st&X-Amz-Date=20260922T220656Z&X-Amz-Expires=3600&X-Amz-Security-Token=\
-        IQoJb3JpZ2luX2VjEOX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEY\
-        CIQCNsrw%2BhxCWoRRhUCzBADjCHxAvrmnDgMO32GaTf0Ik7QIhAMAnyGiBW8aM8776jxvC\
-        1gZUR9cvGx%2FO%2BV5xIQhkPXlIKogECK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABo\
-        MNjM3NDIzMTgzODA1IgyCvwMAZ9%2FkJLK4FF8q3APk6A3Tk6MTgByhqIx3l2oT4vXuvwd%\
-        2B7FWOIwH0z5c2R9pkprxiYnpFl55hwecXHJasUXFJs%2BpUhCDjEIcwOOuyYjr2Zy7oEQ1\
-        GADsdh0x1MsLM3UEzMkuFRenJZEjhmRJO1XYiwm2LPkZvYqPjwVQWxrYbnTDv9TreIyKgGx\
-        Ke9EK9Em0T52b2hCVwSQ%2BFpNt3Ffrd9oyPOQYAdxQWbqbQq%2B4XfChn0%2BdAsuTnGG8\
-        ze%2BIUMI%2Bi9sqFd741xvFJe7QW%2BS0olzbLg2tixHuOcCc9%2B%2BqY3ASUTwoVCFOo\
-        iT5CmzOFsYr74okTBinnBtxXngg9jth0VpF%2BD7w4k3n3agcX3rfaoUY3AaX2G%2BYgYiZ\
-        uDXpU93%2BhrlDZp%2B3CCGZJ3A%2B0ZUE6TpNJdZKFJJ%2BcA6iHPGvfAM8sQPJ2diR2hX\
-        ID7pPJ5opAJVLEirTB5tOYffZWwWFQLTvheurx8ybzGObizKivVZn0LRXUCZ%2FmrFRAfIn\
-        CKi8sCMaww%2BzgVtRFdk%2FS%2BPnDKOz0v%2Bk1n3Ymdgm9AslTJfHhswFrh4HOTeW31b\
-        M4GQwhbW%2BTT71dNi2ACb%2FEcWBqyq6Y%2FPcSExSb6k7wajmlhqrLt5tQn6iArjlP%2F\
-        YdzZehHOrINKpU37zDz08vVBjqkAbpBPiGb9VmzE%2BW3C6v3VTtrImx0p3Lvy8SK5NYakD\
-        hYoPwtvRf0QyZGmcBS1CQGaSi4GLLRQb0rs%2BKWOy0FX0%2FC897%2Bg6WOuHFc6hIGipf\
-        thriH2WBDMFZjUB%2BiWlyQA3EW8RHnQF%2F5hGqf5jmF4pCq9dqiDqQXEamyafkPmsFnrz\
-        QBdMTqq%2FZfTr5KCdr0Gv2ojJYSImICJdcnPPmTbmVfXiR8&X-Amz-Signature=944a6b\
-        37ab024ce310a51929fad96646a2ddca64d8ed5d7965fae981ec9a2b47&X-Amz-Signed\
-        Headers=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
-      expiry_time: "2026-09-22T23:06:56.435Z"
+        redential=ASIAZI2LB4663CBFOB44%2F20260927%2Fus-west-2%2Fs3%2Faws4_reque\
+        st&X-Amz-Date=20260927T225647Z&X-Amz-Expires=3600&X-Amz-Security-Token=\
+        IQoJb3JpZ2luX2VjEF0aCXVzLXdlc3QtMiJIMEYCIQCeydQzl%2Fp9K5kPZLCXtYx%2Fj0j\
+        9LJ3XKJ1dJIMOTaNhYgIhANDf7yEK0zh%2BtTUsz38j92zcq%2B2WUC%2BlyqnOVw3GvZgh\
+        Kv8DCCYQABoMNjM3NDIzMTgzODA1IgwFD1VzGhCaR1hdCysq3AMVdrkAfeHt90rR%2Fp6RQ\
+        XRLjVA1YAsGguepEDg9hv8eZ7gPEnvAkmCegEEnLsuSvFgcg8ybCrtFBOVl6vfO34QiOYhS\
+        6avBY%2BxhTFGhEUk7Wh44Ul9Ab93kQm5j%2FW%2FLxaUiFmcX%2B6Ibk7RiPmaVoqAp42p\
+        iOOCnYanp6z1O%2BAAVIL01mH6ge134GUNQK2qdgM1OUPZcOxFQVCezvKSd4ktSJCE9nAeg\
+        ogSFUE54MT%2FKkExldgkF73ko23MtjO3jRHFJBS4nkFkkAJ7H5a%2FHBWDYq95rgoJSKrZ\
+        fQuBWOqgZbRrDfM8XwGld3M0DxHsSgxW8aCQDpo%2FyVgwQhnx6k9vU%2BdroqxMUsnoz3A\
+        NywUzg74E6DmtQKCsir5KNEWvR8%2FJxUxe%2BP9oezXh%2F6GeOGMgF2ybHQVvkGq3Wimm\
+        X8UbY%2FKWZ%2BW%2B8a%2FnsnL0ozbm%2FDRsHkC8hwYmUuE9m4T1sliBoUY3Lu2syQJ3p\
+        Mk%2FoI0zLdnRAKs5aQRHRdAkvSSPF7YjClA3pAeozuf0pa1%2Bkuk3haXT5DYqZmUrG%2F\
+        apGi2WFSPVb4iABlNHDAsUc1JaI9ffQuQEy0I4gLtNyrd7o3shxkEAPJqz%2BLV27RZFJdI\
+        7%2BJq1YBq0EcVz5f%2FNLYjDBh%2BbVBjqkAe09z3F2BfW8WrxN7ter6eiZGcshZKGmIAf\
+        m3NibznjYMM3MqyREn%2FEqu6o3jRRrAFBy83tmibHK5enwmgqSsHi2ui4KHwz1%2BwK6wK\
+        nekt%2BrTKSRdqs9iC4weD4Zw72knDToHPJtClOnnAsqgfXxOyehpBmiGSybaztOWCJjir%\
+        2BB6K0R74ANCvw%2FBILjgukdaQqebZ%2BZ0ol3GNpuZIrBRxOUioVS&X-Amz-Signature\
+        =054ea37d177d86f62af50b98026b9e9685b50e325c484abfb6219986b4977668&X-Amz\
+        -SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      expiry_time: "2026-09-27T23:56:47.711Z"
   icon: null
   parent:
     type: "data_source_id"
@@ -62,19 +64,43 @@ NOTION_METADATA:
   is_archived: false
   is_locked: false
   properties:
+    Location:
+      id: "%3D_Jr"
+      type: "rich_text"
+      rich_text: []
     banner:
       id: "B%3C%3FS"
       type: "url"
       url: "https://www.nillumbik.vic.gov.au/files/assets/public/v/2/image-resources/\
         0a0a2787a.jpg?w=480"
+    TechStack:
+      id: "FH%7D~"
+      type: "multi_select"
+      multi_select: []
+    Challenge:
+      id: "IRI%3F"
+      type: "rich_text"
+      rich_text: []
     draft:
       id: "JiWU"
       type: "checkbox"
       checkbox: false
+    Tagline:
+      id: "JklQ"
+      type: "rich_text"
+      rich_text: []
     link:
       id: "S%40HA"
       type: "url"
       url: "articles/nillumbik"
+    LearnMoreTitle:
+      id: "YLbn"
+      type: "rich_text"
+      rich_text: []
+    FuturePlanning:
+      id: "Yy%3Cn"
+      type: "rich_text"
+      rich_text: []
     authors:
       id: "bK%3B%5B"
       type: "people"
@@ -88,15 +114,46 @@ NOTION_METADATA:
           person:
             email: "yyan0404@student.monash.edu"
             email_verified: true
+        - object: "user"
+          id: "3c6d872b-594c-81a2-9346-0002d76e52db"
+          name: "Jadyn Leon"
+          avatar_url: null
+          type: "person"
+          person:
+            email: "jleo0068@student.monash.edu"
+            email_verified: true
+    Solution:
+      id: "hLHT"
+      type: "rich_text"
+      rich_text: []
+    Status:
+      id: "hbQN"
+      type: "select"
+      select:
+        id: "[]oS"
+        name: "Active"
+        color: "yellow"
     logo:
       id: "nbY%3F"
       type: "url"
       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjeNIuUTZxiaBQxJlUt\
         ilXdOE8odOz33-nNg&s"
+    ImpactStats:
+      id: "tDIu"
+      type: "rich_text"
+      rich_text: []
     Last edited time:
       id: "vbGE"
       type: "last_edited_time"
-      last_edited_time: "2026-09-22T21:06:00.000Z"
+      last_edited_time: "2026-09-27T22:56:00.000Z"
+    LearnMoreImage:
+      id: "vtTl"
+      type: "url"
+      url: null
+    LearnMoreLink:
+      id: "w%3C%7B%3A"
+      type: "url"
+      url: null
     description:
       id: "x%3AlD"
       type: "rich_text"

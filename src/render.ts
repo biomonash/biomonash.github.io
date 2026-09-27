@@ -8,6 +8,39 @@ import { DatabaseMount, PageMount } from "./config";
 import { getPageTitle, getCoverLink, getFileName } from "./helpers";
 import path from "path";
 import { getContentFile } from "./file";
+import https from "https";
+
+async function downloadFile(url: string, outputPath: string) {
+  return new Promise<void>((resolve, reject) => {
+    const file = fs.createWriteStream(outputPath);
+
+    https.get(url, (response) => {
+      if (response.statusCode !== 200) {
+        file.close();
+        fs.unlinkSync(outputPath);
+        reject(
+          new Error(
+            `Failed to download ${url}: HTTP ${response.statusCode}`,
+          ),
+        );
+        return;
+      }
+
+      response.pipe(file);
+
+      file.on("finish", () => {
+        file.close();
+        resolve();
+      });
+    }).on("error", (error) => {
+      file.close();
+      if (fs.existsSync(outputPath)) {
+        fs.unlinkSync(outputPath);
+      }
+      reject(error);
+    });
+  });
+}
 
 export async function renderPage(page: PageObjectResponse, notion: Client) {
   // load formatter config
@@ -22,7 +55,7 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   const title = getPageTitle(page);
   const frontMatter: Record<
     string,
-    string | string[] | number | boolean | PageObjectResponse
+    string | string[] | number | boolean | object | PageObjectResponse
   > = {
     title,
     date: page.created_time,
@@ -74,11 +107,17 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
           break;
         case "status":
           if (response.status) frontMatter[property] = response.status.name;
+          break;
+        case "files": {
+          frontMatter[property] = response.files.map(
+            (file) => `/images/${file.name}`,
+          );
+          break;
+        }
         // ignore these properties
         case "last_edited_by":
         case "last_edited_time":
         case "rollup":
-        case "files":
         case "formula":
         case "created_by":
         case "created_time":
@@ -151,11 +190,48 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   };
 }
 
+async function downloadImages(
+  page: PageObjectResponse,
+  notion: Client,
+) {
+  for (const property in page.properties) {
+    const id = page.properties[property].id;
+
+    const response = await notion.pages.properties.retrieve({
+      page_id: page.id,
+      property_id: id,
+    });
+
+    if (response.object !== "property_item") continue;
+    if (response.type !== "files") continue;
+
+    for (const file of response.files) {
+      const url =
+        file.type === "file"
+          ? file.file.url
+          : file.external.url;
+
+      const fileName = file.name;
+      const outputPath = path.join("static", "images", fileName);
+
+      await fs.ensureDir(path.dirname(outputPath));
+
+      if (!fs.existsSync(outputPath)) {
+        console.log(`[Info] Downloading image: ${fileName}`);
+        await downloadFile(url, outputPath);
+      } else {
+        console.log(`[Info] Image already exists: ${fileName}`);
+      }
+    }
+  }
+}
+
 export async function savePage(
   page: PageObjectResponse,
   notion: Client,
   mount: DatabaseMount | PageMount,
 ) {
+  await downloadImages(page, notion);
   const postpath = path.join(
     "content",
     mount.target_folder,

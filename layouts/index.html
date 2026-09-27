@@ -52,38 +52,12 @@
         </div>
       </section>
 
-
       <!-- Who we are section -->
-      <section
-        id="main-info"
-        class="justify-content-center align-items-center"
-        data-aos="fade-appear">
-
-        <img
-          src="{{ "images/about-us.webp" | relURL }}"
-          alt="BiOM Group Photo"
-          class="group-photo" />
-
-        <div class="p-5 mx-auto">
-          <h1 class="header1-txt">Who we are</h1>
-
-          <p class="body-txt p-3">
-            BiOM (Biological Observation Monash) is a student-led team at the
-            intersection of Conservation and Technology. We create innovative,
-            accessible tools to support real-world environmental solutions.
-
-            <br /><br />
-
-            Bringing together students from
-            <span class="sc subjects">science</span>,
-            <span class="eng subjects">engineering</span> and
-            <span class="cs subjects">computer science</span>.
-            We design and prototype technologies for Ecological Monitoring —
-            from Environmental Sensors to machine learning in the field.
-          </p>
-        </div>
-      </section>
-
+      {{ range where .Site.RegularPages "Title" "Who we are" }}
+      {{ if index .Params "Enabled" }}
+      {{ partial "home/who-we-are.html" . }}
+      {{ end }}
+      {{ end }}
 
       <!-- Mission section -->
       <section
@@ -92,54 +66,22 @@
         data-aos="zoom-in">
 
         {{ range where .Site.RegularPages "Section" "sections-card" }}
-          {{ if eq .Title "Our Mission" }}
-            {{ partial "home/section-card.html" . }}
-          {{ end }}
+        {{ if eq .Title "Our Mission" }}
+        {{ partial "home/section-card.html" . }}
+        {{ end }}
         {{ end }}
 
       </section>
-
 
       <!-- Projects section -->
       <section id="projects" data-aos="fade-up">
         <h1 class="header1-txt">Projects</h1>
 
         {{ range where .Site.RegularPages "Section" "projects-card" }}
-          {{ partial "home/project-card.html" . }}
+        {{ partial "home/project-card.html" . }}
         {{ end }}
 
       </section>
-
-
-      <!-- Our Team section -->
-      <!--
-      <section id="team">
-
-        <h1 class="header1-txt">Our Team</h1>
-
-        <p class="body-txt">
-          At BiOM, we believe that technology has the power to drive meaningful
-          change for the planet. Our team brings together students from varying
-          disciplines to develop tools that support conservation.
-          <br /><br />
-          Meet the students behind the mission…
-        </p>
-
-        <div id="members">
-
-          <div id="team-lead">
-            <h3 class="header1-txt">Danielle Kent</h3>
-          </div>
-
-          <div id="deputy-lead">
-            <h3 class="header1-txt">Peter Cooper</h3>
-          </div>
-
-        </div>
-
-      </section>
-      -->
-
 
       <!-- Join Us section -->
       <section
@@ -151,9 +93,9 @@
             <div class="col-lg-8">
 
               {{ range where .Site.RegularPages "Section" "sections-card" }}
-                {{ if eq .Title "Join Us Today" }}
-                  {{ partial "home/section-card.html" . }}
-                {{ end }}
+              {{ if eq .Title "Join Us Today" }}
+              {{ partial "home/section-card.html" . }}
+              {{ end }}
               {{ end }}
 
             </div>
@@ -169,25 +111,29 @@
         data-aos="zoom-out">
 
         {{ range where .Site.RegularPages "Section" "sections-card" }}
-          {{ if eq .Title "Support Our Mission" }}
-            {{ partial "home/section-card.html" . }}
-          {{ end }}
+        {{ if eq .Title "Support Our Mission" }}
+        {{ partial "home/section-card.html" . }}
+        {{ end }}
         {{ end }}
 
       </section>
 
-      <!-- Video section -->
-      <section>
+    <!-- Video section -->
+    {{ range where .Site.RegularPages "Section" "sections-card" }}
+      {{ if and (eq .Title "Our Journey") (index .Params "Enabled") }}
 
-        <h1
-          class="header1-txt text-center"
-          data-aos="fade-appear">
-          Our journey
+      <section
+        id="video"
+        data-aos="fade-appear">
+
+        <h1 class="header1-txt text-center">
+          {{ index .Params "Title" }}
         </h1>
 
         <div class="ratio ratio-16x9">
           <iframe
-            src="https://drive.google.com/file/d/1mxev1DmYMrx1Ak6z5Q7YigROlI0n4gJJ/preview"
+            src="{{ index .Params "Video URL" }}?autoplay=1"
+            data-video-url="{{ index .Params "Video URL" }}"
             allow="autoplay"
             allowfullscreen>
           </iframe>
@@ -195,6 +141,8 @@
 
       </section>
 
+      {{ end }}
+    {{ end }}
 
       <!-- Contact Us section -->
       <section
