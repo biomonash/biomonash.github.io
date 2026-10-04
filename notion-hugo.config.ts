@@ -23,6 +23,10 @@ const userConfig: UserConfig = {
             {
                 database_id: 'b7b1816c05ec464391c8c111fa242985',
                 target_folder: '.'
+            },
+            {
+                database_id: '3256e8cb553e80d8a8ecee6d08f57933',
+                target_folder: 'members'
             }
         ],
     }

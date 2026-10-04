@@ -1,8 +1,8 @@
 ---
 title: "test post 2"
 date: "2026-08-26T11:37:00.000Z"
-lastmod: "2026-08-26T11:38:00.000Z"
-draft: false
+lastmod: "2026-09-02T12:09:00.000Z"
+draft: true
 series: []
 authors:
   - "Kal"
@@ -12,7 +12,7 @@ NOTION_METADATA:
   object: "page"
   id: "3c86e8cb-553e-8099-8ea7-ecdad17f7d3c"
   created_time: "2026-08-26T11:37:00.000Z"
-  last_edited_time: "2026-08-26T11:38:00.000Z"
+  last_edited_time: "2026-09-02T12:09:00.000Z"
   created_by:
     object: "user"
     id: "25bd872b-594c-813c-8421-0002881bb25c"
@@ -36,7 +36,7 @@ NOTION_METADATA:
     draft:
       id: "JiWU"
       type: "checkbox"
-      checkbox: false
+      checkbox: true
     authors:
       id: "bK%3B%5B"
       type: "people"
@@ -64,7 +64,7 @@ NOTION_METADATA:
     Last edited time:
       id: "vbGE"
       type: "last_edited_time"
-      last_edited_time: "2026-08-26T11:38:00.000Z"
+      last_edited_time: "2026-09-02T12:09:00.000Z"
     summary:
       id: "x%3AlD"
       type: "rich_text"

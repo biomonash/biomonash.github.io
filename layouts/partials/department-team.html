@@ -1,60 +1,51 @@
 <section class="department-section">
 
-  <div class="department-team">
+    <div class="department-team">
 
-    <h2 class="header1-txt team-section-title">
-      {{ .name }}
-    </h2>
+        <h2 class="header1-txt team-section-title">
+            {{ .name }} Team
+        </h2>
 
-
-    {{ if .image }}
-
-      <img
-        class="department-image"
-        src="{{ .image | relURL }}"
-        alt="{{ .name }}"
-      >
-
-    {{ end }}
-
-
-    <div class="team-leads">
-
-      <h3 class="department-label">
-        Team Leads
-      </h3>
-
-      {{ range .leads }}
-
-        <p class="body-txt team-name">
-          {{ . }}
-        </p>
-
-      {{ end }}
-
-    </div>
-
-
-    <div class="department-members">
-
-      <h3 class="department-label">
-        Members
-      </h3>
-
-      <div class="members-grid">
-
-        {{ range .members }}
-
-          <p class="body-txt team-name">
-            {{ . }}
-          </p>
-
+        {{ if .image }}
+            <img
+                class="department-image"
+                src="{{ .image | relURL }}"
+                alt="{{ .name }} Team"
+            >
         {{ end }}
 
-      </div>
+        <div class="team-leads">
+
+            <h3 class="department-label">
+                Team Leads
+            </h3>
+
+            {{ range .leads }}
+                <p class="body-txt team-name">
+                    {{ . }}
+                </p>
+            {{ end }}
+
+        </div>
+
+        <div class="department-members">
+
+            <h3 class="department-label">
+                Members
+            </h3>
+
+            <div class="members-grid">
+
+                {{ range .members }}
+                    <p class="body-txt team-name">
+                        {{ . }}
+                    </p>
+                {{ end }}
+
+            </div>
+
+        </div>
 
     </div>
-
-  </div>
 
 </section>

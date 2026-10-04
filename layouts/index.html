@@ -263,11 +263,10 @@
         </div>
       </section>
 
-      <!-- Our Team section -->
-        <section id="team">
+          <!-- Our Team section -->
+    <section id="team">
 
       <!-- Team introduction -->
-
       <section class="team-intro">
 
         <div class="team-intro-content">
@@ -289,7 +288,6 @@
 
           </div>
 
-
           <div class="team-intro-image">
 
             <img
@@ -304,161 +302,202 @@
       </section>
 
 
+      <!-- Members will be pulled from the Notion Members database.
+        database sync is not working, but it should fill pages with generated content/members.
+      -->
+
+      {{ $members := where .Site.RegularPages "Section" "members" }}
+
 
       <!-- Executive Team -->
 
-      {{ $executiveMembers := slice
+      {{ $executiveMembers := slice }}
 
-          (dict
-            "name" "Name xyz"
-            "role" "President"
-            "image" ""
-          )
+      {{ range $members }}
 
-          (dict
-            "name" "Name xyz"
-            "role" "Vice President"
-            "image" ""
-          )
+        {{ $statuses := index .Params "administrative status" }}
 
-          (dict
-            "name" "Name xyz"
-            "role" "Secretary"
-            "image" ""
-          )
+        {{ if or
+          (in $statuses "Executive")
+          (in $statuses "Top Executive")
+        }}
 
-          (dict
-            "name" "Name xyz"
-            "role" "Treasurer"
-            "image" ""
-          )
+          {{ $name := .Title }}
 
-          (dict
-            "name" "Name xyz"
-            "role" "Executive Member"
-            "image" ""
-          )
-
-          (dict
-            "name" "Name xyz"
-            "role" "Executive Member"
-            "image" ""
-          )
-
-      }}
-
-      {{ partial "executive-team.html"
-          (dict
-            "title" "Executive Team"
-            "members" $executiveMembers
-          )
-      }}
-
-
-
-      <!-- Academic Advisors-->
-
-      {{ $advisors := slice
-
-          (dict
-            "name" "Name xyz"
-            "role" "Academic Advisor"
-            "image" ""
-          )
-
-          (dict
-            "name" "Name xyz"
-            "role" "Academic Advisor"
-            "image" ""
-          )
-
-          (dict
-            "name" "Name xyz"
-            "role" "Academic Advisor"
-            "image" ""
-          )
-
-      }}
-
-      {{ partial "executive-team.html"
-          (dict
-            "title" "Academic Advisors"
-            "members" $advisors
-          )
-      }}
-
-
-
-      <!-- Department Teams-->
-
-      {{ $teamFile := readFile "data/team.txt" }}
-
-      {{ range split $teamFile "\n" }}
-
-        {{ $line := trim . " \r\n" }}
-
-        {{ if $line }}
-
-          {{ $fields := split $line "|" }}
-
-          {{ if ge (len $fields) 3 }}
-
-            {{ $departmentName := trim (index $fields 0) " " }}
-            {{ $teamLeads := split (index $fields 1) "," }}
-            {{ $teamMembers := split (index $fields 2) "," }}
-
-
-            {{ partial "department-team.html"
-                (dict
-                  "name" $departmentName
-                  "leads" $teamLeads
-                  "members" $teamMembers
-                  "image" "images/about-us.webp"
-                )
-            }}
-
-
+          {{ with index .Params "preferred name" }}
+            {{ $name = . }}
           {{ end }}
+
+          {{ $executiveMembers = $executiveMembers | append
+            (dict
+              "name" $name
+              "role" .Params.role
+              "image" ""
+              "url" .Params.linkedin
+            )
+          }}
 
         {{ end }}
 
       {{ end }}
 
+      {{ partial "executive-team.html"
+        (dict
+          "title" "Executive Team"
+          "members" $executiveMembers
+        )
+      }}
 
-</section>
 
-      <!-- Join us section-->
-      <section id="join-us" data-aos="fade-appear" class="py-5">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="card text-center border-0 shadow-lg join-card p-5">
-                <div class="card-content">
-                  <p class="text-uppercase fw-bold mb-2 join-eyebrow">
-                    Become part of BiOM
-                  </p>
-                  <h1 class="header1-txt mb-3">Join Us Today</h1>
-                  <p class="body-txt mb-4">
-                    We're always looking for new members! If you're a Monash
-                    student interested in ecology, conservation, computer
-                    science, or you just really like our vibe, fill out our
-                    recruitment interest form.
-                  </p>
-                </div>
-                <div>
-                  <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSdpG9CNy_7ON8ZSbiKuBT7MQBOTzoKbmd_TGPA4p5bUOa2hBA/viewform"
-                    target="_blank"
-                    class="btn btn-lg join-btn px-4 py-2"
-                  >
-                    Application Form
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Academic Advisors -->
+
+      <!--
+        Advisors are kept here for now because the Members database
+        currently does not have an Academic Advisor administrative status.
+      -->
+
+      {{ $advisors := slice
+
+        (dict
+          "name" "Name xyz"
+          "role" "Academic Advisor"
+          "image" ""
+          "url" ""
+        )
+
+        (dict
+          "name" "Name xyz"
+          "role" "Academic Advisor"
+          "image" ""
+          "url" ""
+        )
+
+        (dict
+          "name" "Name xyz"
+          "role" "Academic Advisor"
+          "image" ""
+          "url" ""
+        )
+
+      }}
+
+      {{ partial "executive-team.html"
+        (dict
+          "title" "Academic Advisors"
+          "members" $advisors
+        )
+      }}
+
+
+      <!-- Department Teams -->
+
+      {{ $departments := slice
+        "Ecology"
+        "Engineering"
+        "Marketing"
+        "IT"
+      }}
+
+      {{ range $department := $departments }}
+
+        {{ $teamLeads := slice }}
+        {{ $teamMembers := slice }}
+
+        {{ range $members }}
+
+          {{ $memberDepartments := .Params.departments }}
+          {{ $statuses := index .Params "administrative status" }}
+
+          {{ if in $memberDepartments $department }}
+
+            {{ $name := .Title }}
+
+            {{ with index .Params "preferred name" }}
+              {{ $name = . }}
+            {{ end }}
+
+            {{ if in $statuses "Lead" }}
+              {{ $teamLeads = $teamLeads | append $name }}
+            {{ end }}
+
+            {{ if in $statuses "Member" }}
+              {{ $teamMembers = $teamMembers | append $name }}
+            {{ end }}
+
+          {{ end }}
+
+        {{ end }}
+
+        {{ partial "department-team.html"
+          (dict
+            "name" $department
+            "leads" $teamLeads
+            "members" $teamMembers
+            "image" "images/about-us.webp"
+          )
+        }}
+
+      {{ end }}
+
+    </section>
+
+    <!-- Join Us / Recruitment section -->
+
+    <section id="join-us">
+
+      <!-- Join Us CTA -->
+
+      {{ partial "join-us-cta.html" (dict
+          "enabled" true
+          "url" ""
+      ) }}
+
+
+      <!-- Join the BiOM Community -->
+
+      <section class="join-community">
+
+        <h2 class="header1-txt">
+          Join the BiOM Community
+        </h2>
+
+        <p class="body-txt">
+          Brief explanation of what joining BiOM means and what
+          undertaking a role involves.
+        </p>
+
       </section>
+
+
+      <!-- Available Roles -->
+
+      {{ $roles := where .Site.RegularPages "Section" "roles" }}
+
+      {{ $departments := slice }}
+
+      {{ range $roles }}
+
+        {{ $department := .Params.department }}
+
+        {{ if and $department (not (in $departments $department)) }}
+          {{ $departments = $departments | append $department }}
+        {{ end }}
+
+      {{ end }}
+
+
+      {{ range $department := $departments }}
+
+        {{ $departmentRoles := where $roles ".Params.department" $department }}
+
+        {{ partial "department-roles.html" (dict
+            "name" $department
+            "roles" $departmentRoles
+        ) }}
+
+      {{ end }}
+
+    </section>
 
       <!-- Donate section -->
       <section
