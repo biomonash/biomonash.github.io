@@ -1,0 +1,25 @@
+<section class="container my-5">
+    <div class="row text-center">
+        <!-- Status -->
+        <div class="col-md-4">
+            <div class="card p-3 bg-light">
+                <h5>Status</h5>
+                <p>{{ .Params.Status }}</p>
+            </div>
+        </div>
+        <!-- Tech -->
+        <div class="col-md-4">
+            <div class="card p-3 bg-light">
+                <h5>Tech Stack</h5>
+                <p>{{ range .Params.TechStack }}{{ . }} {{ end }}</p>
+            </div>
+        </div>
+        <!-- Location -->
+        <div class="col-md-4">
+            <div class="card p-3 bg-light">
+                <h5>Location</h5>
+                <p>{{ .Params.Location }}</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,15 @@
+<article class="link-card container py-5">
+    <div class="row g-0 bg-white rounded-4 overflow-hidden shadow">
+        <div class="col-md-4">
+            <img src="{{ .Params.LearnMoreImage }}" alt="Learn More" class="img-fluid w-100 h-100" style="object-fit: cover;">
+        </div>
+        <div class="col-md-8 p-4 d-flex flex-column justify-content-center">
+            <h5 class="fw-bold">{{ .Params.LearnMoreTitle }}</h5>
+            {{ if .Params.LearnMoreLink }}
+                <a href="{{ .Params.LearnMoreLink }}" target="_blank" class="btn btn-primary mt-2">Click here →</a>
+            {{ else }}
+                <p class="text-muted mt-2">Link coming soon.</p>
+            {{ end }}
+        </div>
+    </div>
+</article>

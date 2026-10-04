@@ -1,0 +1,56 @@
+<h1>TEST TEMPLATE</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | BiOM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="{{"images/BiOM-Logo.webp" | relURL }}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{{"css/divs.css" | relURL }}">
+    <link rel="stylesheet" href="{{"css/fonts.css" | relURL }}">
+    <link rel="stylesheet" href="{{"css/main.css" | relURL }}">
+    <link rel="stylesheet" href="{{"css/header.css" | relURL }}">
+    <link rel="stylesheet" href="{{"css/articles.css" | relURL }}">
+    <link rel="stylesheet" href="{{"css/articles-font.css" | relURL }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    {{ partial "navbar.html" . }}
+    <main>
+        <div class="d-flex justify-content-center flex-column align-items-center">
+            <div class="proj-des container py-5 mt-5">
+                <h1 class="header1-txt text-center">{{ .Title }}</h1>
+                <!-- Hero Image -->
+                <img src="{{ .Params.HeroImage }}" alt="{{ .Title }}" class="img-fluid rounded shadow mx-auto d-block mb-4" style="max-width: 800px;">
+                
+                {{ partial "projects/stats-card.html" . }}
+
+                <div class="card intro-card my-5">
+                    <div class="card-body">
+                        <h2>{{ .Params.Tagline }}</h2>
+                        <p class="body-txt">{{ .Content }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{ partial "projects/blog-card.html" . }}
+
+        <div class="future-section container py-5">
+            <h1 class="header1-txt py-3">Future Planning</h1>
+            <p>{{ .Params.FuturePlanning }}</p>
+        </div>
+    </main>
+    {{ partial "footer.html" . }}
+</body>
+</html>
