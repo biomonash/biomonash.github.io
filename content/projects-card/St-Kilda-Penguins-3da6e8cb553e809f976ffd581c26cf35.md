@@ -4,7 +4,6 @@ date: "2026-09-13T23:42:00.000Z"
 lastmod: "2026-09-27T03:39:00.000Z"
 type: "projects-card"
 layout: "single"
-lastmod: "2026-09-27T03:39:00.000Z"
 draft: false
 featuredImage: "https://notion-hugo.pages.dev/api?page_id=3da6e8cb-553e-809f-97\
   6f-fd581c26cf35"

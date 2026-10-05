@@ -2,7 +2,6 @@
 title: "Home Page"
 date: "2026-09-22T21:21:00.000Z"
 lastmod: "2026-09-27T23:06:00.000Z"
-lastmod: "2026-09-27T23:06:00.000Z"
 draft: false
 NOTION_METADATA:
   object: "page"
@@ -46,28 +45,20 @@ NOTION_METADATA:
   archived: false
   request_id: "f5bf64f3-2970-4026-b278-bd2b3a4802cf"
 MANAGED_BY_NOTION_HUGO: true
-
 ---
 
-
 ![](https://notion-hugo.pages.dev/api?block_id=3e86e8cb-553e-802c-9935-c6d3f84c185a)
-
 
 [Who-We-Are](3e86e8cb-553e-8019-a64d-de9826817f77)
 
 - Simply change the **Video URL** in
 
-	[Our Journey]({{% relref "Our-Journey-3e86e8cb553e80458b03e17089546418.md" %}})
-
+  [Our Journey]({{% relref "Our-Journey-3e86e8cb553e80458b03e17089546418.md" %}})
 
 ![](https://notion-hugo.pages.dev/api?block_id=3e36e8cb-553e-80e0-87f0-f1781f86f028)
 
-
 [sections-card](3e36e8cb-553e-8044-9fb3-e43b5851a87e)
-
 
 ![](https://notion-hugo.pages.dev/api?block_id=3e36e8cb-553e-80e3-89b3-c46600fa920b)
 
-
 [projects-card](3da6e8cb-553e-80e4-b1cf-dcabc77e6f75)
-
