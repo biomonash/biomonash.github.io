@@ -1,0 +1,32 @@
+<div class="role-card">
+
+    <h3 class="role-name">
+        {{ .Title }}
+    </h3>
+
+    <div class="role-details">
+
+        {{ with .Params.description }}
+            <div class="role-description">
+                <h4>Role Description</h4>
+                <p>{{ . }}</p>
+            </div>
+        {{ end }}
+
+        {{ with .Params.responsibilities }}
+            <div class="role-responsibilities">
+                <h4>Responsibilities</h4>
+                <p>{{ . }}</p>
+            </div>
+        {{ end }}
+
+        {{ with .Params.skills }}
+            <div class="role-skills">
+                <h4>Preferred Skills / Experience</h4>
+                <p>{{ . }}</p>
+            </div>
+        {{ end }}
+
+    </div>
+
+</div>

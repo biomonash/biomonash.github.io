@@ -1,6 +1,7 @@
 ---
 title: "St Kilda Penguins"
 date: "2026-09-13T23:42:00.000Z"
+lastmod: "2026-09-27T03:39:00.000Z"
 type: "projects-card"
 layout: "single"
 lastmod: "2026-09-27T03:39:00.000Z"
@@ -34,7 +35,8 @@ NOTION_METADATA:
   cover:
     type: "file"
     file:
-      url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/1c26e8cb-553e-8110-8\
+      url:
+        "https://prod-files-secure.s3.us-west-2.amazonaws.com/1c26e8cb-553e-8110-8\
         f76-000345ab9bad/9e881455-47b6-413b-b568-2a586fdad6ff/image.png?X-Amz-A\
         lgorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-C\
         redential=ASIAZI2LB466UE44PLLN%2F20260927%2Fus-west-2%2Fs3%2Faws4_reque\
@@ -124,7 +126,8 @@ NOTION_METADATA:
         - object: "user"
           id: "25dd872b-594c-818a-8ef5-0002a724b085"
           name: "Yenn "
-          avatar_url: "https://s3-us-west-2.amazonaws.com/public.notion-static.com/c5e972\
+          avatar_url:
+            "https://s3-us-west-2.amazonaws.com/public.notion-static.com/c5e972\
             79-1e08-48cb-b619-3350dd0f15ca/Screenshot_2026-08-06_180915.png"
           type: "person"
           person:
@@ -152,7 +155,8 @@ NOTION_METADATA:
     logo:
       id: "nbY%3F"
       type: "url"
-      url: "https://stkildapenguins.com.au/wp-content/uploads/2022/10/St-Kilda-Pengui\
+      url:
+        "https://stkildapenguins.com.au/wp-content/uploads/2022/10/St-Kilda-Pengui\
         ns-Logo-300x300-1.jpeg"
     ImpactStats:
       id: "tDIu"
@@ -176,7 +180,8 @@ NOTION_METADATA:
       rich_text:
         - type: "text"
           text:
-            content: "Nestled along Melbourne’s coastline, this project focuses on
+            content:
+              "Nestled along Melbourne’s coastline, this project focuses on
               developing compact AI-powered acoustic monitors to detect and
               identify penguin calls for population and health tracking."
             link: null
@@ -187,7 +192,8 @@ NOTION_METADATA:
             underline: false
             code: false
             color: "default"
-          plain_text: "Nestled along Melbourne’s coastline, this project focuses on
+          plain_text:
+            "Nestled along Melbourne’s coastline, this project focuses on
             developing compact AI-powered acoustic monitors to detect and
             identify penguin calls for population and health tracking."
           href: null
@@ -216,6 +222,4 @@ NOTION_METADATA:
   public_url: null
   archived: false
 MANAGED_BY_NOTION_HUGO: true
-
 ---
-

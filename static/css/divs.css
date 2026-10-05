@@ -311,3 +311,34 @@ ul li {
   transition: all 0.25s ease;
   text-shadow: 1px 1px 2px rgb(91, 91, 91);
 }
+
+#whoWeAreCarousel {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#whoWeAreCarousel .carousel-item {
+  min-height: 300px;
+}
+
+#whoWeAreCarousel .group-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  #whoWeAreCarousel .carousel-item {
+    height: 300px;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}

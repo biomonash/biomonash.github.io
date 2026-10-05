@@ -1,0 +1,279 @@
+/* JOIN US / RECRUITMENT */
+
+#join-us {
+    width: 100%;
+    background-color: #173f35;
+    overflow: hidden;
+}
+
+
+/* HERO */
+
+.join-us-hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    box-sizing: border-box;
+}
+
+.join-us-content {
+    max-width: 750px;
+}
+
+.join-us-title {
+    margin: 0 0 20px;
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: 0.95;
+}
+
+.join-us-subtitle {
+    max-width: 600px;
+    margin-bottom: 35px;
+    font-size: 1.4rem;
+}
+
+
+/* Apply button */
+
+.join-us-apply-btn {
+    display: inline-block;
+    padding: 14px 32px;
+
+    border-radius: 999px;
+
+    background-color: #e86f3d;
+    color: #fff;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.join-us-apply-btn:hover {
+    transform: translateY(-3px);
+}
+
+.join-us-apply-btn.disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.join-us-apply-btn.disabled:hover {
+    transform: none;
+}
+
+
+/* COMMUNITY INTRO */
+
+.join-community {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 30px 100px;
+    text-align: center;
+}
+
+.join-community h2 {
+    margin-bottom: 20px;
+}
+
+.join-community p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+/* DEPARTMENT SECTIONS */
+
+.department-roles {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 70px 0 110px;
+}
+
+.department-roles-title {
+    margin: 0 0 35px;
+    text-align: center;
+}
+
+.department-roles-image {
+    display: block;
+
+    width: 100%;
+    max-height: 500px;
+
+    margin: 0 auto 45px;
+
+    border-radius: 45px;
+
+    object-fit: cover;
+}
+
+
+/* ROLES */
+
+.roles-heading {
+    margin: 0 0 25px;
+
+    font-family: "Calistoga", serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.roles-list {
+    display: flex;
+    gap: 25px;
+
+    width: 100%;
+    padding: 10px 5px 25px;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    box-sizing: border-box;
+}
+
+
+/* Hide scrollbar while keeping horizontal scroll */
+
+.roles-list::-webkit-scrollbar {
+    height: 0;
+}
+
+.roles-list {
+    scrollbar-width: none;
+}
+
+
+/* ROLE CARDS */
+
+.role-card {
+    position: relative;
+
+    flex: 0 0 300px;
+    min-height: 300px;
+
+    padding: 30px;
+
+    border-radius: 35px;
+
+    background-color: #285c4c;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-6px);
+}
+
+.role-name {
+    margin: 0;
+
+    font-family: "Calistoga", serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+/* Details are hidden until hover */
+
+.role-details {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 30px;
+
+    background-color: #285c4c;
+
+    box-sizing: border-box;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.role-card:hover .role-details {
+    opacity: 1;
+    visibility: visible;
+}
+
+.role-details h4 {
+    margin: 0 0 5px;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.role-details p {
+    margin: 0 0 18px;
+
+    font-family: "Source Sans 3", sans-serif;
+    line-height: 1.4;
+}
+
+.role-details > div:last-child p {
+    margin-bottom: 0;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .join-us-hero {
+        min-height: 500px;
+        padding: 60px 7%;
+    }
+
+    .join-us-title {
+        font-size: clamp(3.5rem, 16vw, 6rem);
+    }
+
+    .join-us-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .join-community {
+        padding: 50px 25px 70px;
+    }
+
+    .department-roles {
+        width: 88%;
+        padding: 50px 0 80px;
+    }
+
+    .department-roles-image {
+        border-radius: 30px;
+        margin-bottom: 35px;
+    }
+
+    .roles-heading {
+        font-size: 2rem;
+    }
+
+    .role-card {
+        flex-basis: 260px;
+        min-height: 280px;
+    }
+}

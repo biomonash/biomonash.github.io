@@ -12,9 +12,7 @@ banner: "https://www.nillumbik.vic.gov.au/files/assets/public/v/2/image-resourc\
 TechStack: []
 link: "articles/nillumbik"
 authors:
-  - "Yenn"
-  - "Jadyn Leon"
-Status: "Active"
+  - "Yenn "
 logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjeNIuUTZxiaBQxJlU\
   tilXdOE8odOz33-nNg&s"
 description: "An ongoing forest monitoring initiative using AI tools and
@@ -36,28 +34,28 @@ NOTION_METADATA:
       url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/1c26e8cb-553e-8110-8\
         f76-000345ab9bad/5751897a-3cab-4539-a441-37bb8a02c5d4/image.png?X-Amz-A\
         lgorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-C\
-        redential=ASIAZI2LB466Y57LAB7A%2F20261004%2Fus-west-2%2Fs3%2Faws4_reque\
-        st&X-Amz-Date=20261004T013818Z&X-Amz-Expires=3600&X-Amz-Security-Token=\
-        IQoJb3JpZ2luX2VjEPD%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEU\
-        CIC60j6lDDeM0f3HzRhve09E3C4RTC8NV%2FIKy15Emg7hrAiEAm8wsymlk5vK14KKUIKP9\
-        X810dAVJUqQFU0X5KiaLYtQqiAQIuP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc\
-        0MjMxODM4MDUiDB67%2Bug9JqTMFZFlKSrcA2x%2BzcrljHuHp%2FJtpEiMZ3%2BH58Dqy4\
-        G%2FZYhkvc0BPcoByr2Lvty%2FbRav%2Bo18f6H4Dj2937uZRbAb9W%2BgkA59hOIe0wkhs\
-        X2yU5leb%2FqeVqZssZyHdG6qGeJx2SXv2sztQzbVutGzFEzN7d9HfB0WGCDr5OYsazr2ov\
-        Pcz3ayB7w32%2FRY9m9qmWc9Xh2RYoZEb6Z6GMsiRALOk1F6WBIOo5OVDlZS1c3Z1TH7Waa\
-        UyVk6wK8Sa1gmzSmGE8fZDlY%2BGflCLBGr2oM%2FyvSgu9KYVMIafw%2B0wuk0bkeMWss4\
-        QvMcqm1cH5UmpJNwhBKfukWjL4UjMpXf4BR5CbJhuvguhNWFW1rVXQBUjvDGWx%2Bwz2uqe\
-        4cUd%2FWmszEOpOafFnw8uOkkQlgF10c7vNkudwOuaWeRVmwzUbvyA9m0ycaAyM3etTjp%2\
-        FwSTs6vOFO4DqeGFLj%2BLWaMspOl3dURuRyBvHmCb7kBJxJrVfyl7x9RJVzjfcAaTjqDvx\
-        3gPgT8h0WqzN4Oq3uN8g8CcumEFpnDnF%2BLC1GTUh%2Ffs7NOYkiDZRsYidk%2Bp1PaTEc\
-        P9dneFzZ9HrhPKYNIKTgEC9r%2FV0FzIOt1RhZu4l5b0gsrtlcAKr2U4IiRZ2QjnDTUZQQ%\
-        2B2MPmnhtYGOqUBSKLF3%2BJz0qKaxr%2FpJLyDYj3O5bhRBrCrXoe%2B0VNPW%2B38FyZQ\
-        ZfjKZkmcaoypCS7nkUY84PNZTkvC9wrz4XKqVYktEhmMwrNURCihf5mPJ%2FRgZVCBKiS%2\
-        Fg4atuwUHHF%2BDJCmkYwNm4JnDEeSDP603fOqF6N9M9vX08sOMJ67ifUY7RjafXQrND6VD\
-        f0lnldGuuf8T5DuMGYQTwQg8g9t1%2FqZ7I0l7&X-Amz-Signature=1a6752c1cb2c46ba\
-        52622359f8857677e44f7373329db6465bb3982d1b812720&X-Amz-SignedHeaders=ho\
-        st&x-amz-checksum-mode=ENABLED&x-id=GetObject"
-      expiry_time: "2026-10-04T02:38:18.042Z"
+        redential=ASIAZI2LB4663YAEKWL5%2F20260922%2Fus-west-2%2Fs3%2Faws4_reque\
+        st&X-Amz-Date=20260922T220656Z&X-Amz-Expires=3600&X-Amz-Security-Token=\
+        IQoJb3JpZ2luX2VjEOX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEY\
+        CIQCNsrw%2BhxCWoRRhUCzBADjCHxAvrmnDgMO32GaTf0Ik7QIhAMAnyGiBW8aM8776jxvC\
+        1gZUR9cvGx%2FO%2BV5xIQhkPXlIKogECK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABo\
+        MNjM3NDIzMTgzODA1IgyCvwMAZ9%2FkJLK4FF8q3APk6A3Tk6MTgByhqIx3l2oT4vXuvwd%\
+        2B7FWOIwH0z5c2R9pkprxiYnpFl55hwecXHJasUXFJs%2BpUhCDjEIcwOOuyYjr2Zy7oEQ1\
+        GADsdh0x1MsLM3UEzMkuFRenJZEjhmRJO1XYiwm2LPkZvYqPjwVQWxrYbnTDv9TreIyKgGx\
+        Ke9EK9Em0T52b2hCVwSQ%2BFpNt3Ffrd9oyPOQYAdxQWbqbQq%2B4XfChn0%2BdAsuTnGG8\
+        ze%2BIUMI%2Bi9sqFd741xvFJe7QW%2BS0olzbLg2tixHuOcCc9%2B%2BqY3ASUTwoVCFOo\
+        iT5CmzOFsYr74okTBinnBtxXngg9jth0VpF%2BD7w4k3n3agcX3rfaoUY3AaX2G%2BYgYiZ\
+        uDXpU93%2BhrlDZp%2B3CCGZJ3A%2B0ZUE6TpNJdZKFJJ%2BcA6iHPGvfAM8sQPJ2diR2hX\
+        ID7pPJ5opAJVLEirTB5tOYffZWwWFQLTvheurx8ybzGObizKivVZn0LRXUCZ%2FmrFRAfIn\
+        CKi8sCMaww%2BzgVtRFdk%2FS%2BPnDKOz0v%2Bk1n3Ymdgm9AslTJfHhswFrh4HOTeW31b\
+        M4GQwhbW%2BTT71dNi2ACb%2FEcWBqyq6Y%2FPcSExSb6k7wajmlhqrLt5tQn6iArjlP%2F\
+        YdzZehHOrINKpU37zDz08vVBjqkAbpBPiGb9VmzE%2BW3C6v3VTtrImx0p3Lvy8SK5NYakD\
+        hYoPwtvRf0QyZGmcBS1CQGaSi4GLLRQb0rs%2BKWOy0FX0%2FC897%2Bg6WOuHFc6hIGipf\
+        thriH2WBDMFZjUB%2BiWlyQA3EW8RHnQF%2F5hGqf5jmF4pCq9dqiDqQXEamyafkPmsFnrz\
+        QBdMTqq%2FZfTr5KCdr0Gv2ojJYSImICJdcnPPmTbmVfXiR8&X-Amz-Signature=944a6b\
+        37ab024ce310a51929fad96646a2ddca64d8ed5d7965fae981ec9a2b47&X-Amz-Signed\
+        Headers=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      expiry_time: "2026-09-22T23:06:56.435Z"
   icon: null
   parent:
     type: "data_source_id"

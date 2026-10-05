@@ -1,0 +1,34 @@
+<section class="join-us-hero">
+
+    <div class="join-us-content">
+
+        <h1 class="header1-txt join-us-title">
+            Join the Team
+        </h1>
+
+        <p class="body-txt join-us-subtitle">
+            Help us build the future of biological observation
+        </p>
+
+        {{ if .enabled }}
+
+            <a
+                href="{{ .url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="join-us-apply-btn"
+            >
+                Apply Now!
+            </a>
+
+        {{ else }}
+
+            <span class="join-us-apply-btn disabled">
+                Apply Now!
+            </span>
+
+        {{ end }}
+
+    </div>
+
+</section>

@@ -1,0 +1,26 @@
+<div class="person-card">
+
+    <div class="person-photo">
+        {{ if .image }}
+            <img src="{{ .image | relURL }}" alt="{{ .name }}">
+        {{ end }}
+    </div>
+
+    {{ if .url }}
+        <a
+            href="{{ .url }}"
+            class="person-name person-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            {{ .name }}
+        </a>
+    {{ else }}
+        <p class="person-name">{{ .name }}</p>
+    {{ end }}
+
+    {{ if .role }}
+        <p class="person-role">{{ .role }}</p>
+    {{ end }}
+
+</div>

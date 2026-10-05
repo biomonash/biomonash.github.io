@@ -2,6 +2,7 @@
 title: "Home Page"
 date: "2026-09-22T21:21:00.000Z"
 lastmod: "2026-09-27T23:06:00.000Z"
+lastmod: "2026-09-27T23:06:00.000Z"
 draft: false
 NOTION_METADATA:
   object: "page"
@@ -43,7 +44,7 @@ NOTION_METADATA:
   url: "https://app.notion.com/p/Home-Page-3e36e8cb553e8073ba48ef35ff8dd97f"
   public_url: null
   archived: false
-  request_id: "7fbce19d-b998-4291-af70-b7368572146b"
+  request_id: "f5bf64f3-2970-4026-b278-bd2b3a4802cf"
 MANAGED_BY_NOTION_HUGO: true
 
 ---

@@ -1,0 +1,27 @@
+<section class="department-roles">
+
+    <h2 class="header1-txt department-roles-title">
+        {{ .name }}
+    </h2>
+
+    {{ if .image }}
+        <img
+            class="department-roles-image"
+            src="{{ .image | relURL }}"
+            alt="{{ .name }}"
+        >
+    {{ end }}
+
+    <h3 class="roles-heading">
+        Roles
+    </h3>
+
+    <div class="roles-list">
+
+        {{ range .roles }}
+            {{ partial "role-card.html" . }}
+        {{ end }}
+
+    </div>
+
+</section>

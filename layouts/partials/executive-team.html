@@ -1,0 +1,15 @@
+<section class="executive-team">
+
+    <h2 class="header1-txt team-section-title">
+        {{ .title }}
+    </h2>
+
+    <div class="executive-grid">
+
+        {{ range .members }}
+            {{ partial "person-card.html" . }}
+        {{ end }}
+
+    </div>
+
+</section>
