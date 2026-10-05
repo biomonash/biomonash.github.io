@@ -3,6 +3,8 @@ title: "Home Page"
 date: "2026-09-22T21:21:00.000Z"
 lastmod: "2026-09-27T23:06:00.000Z"
 draft: false
+authors:
+  - "Yenn"
 NOTION_METADATA:
   object: "page"
   id: "3e36e8cb-553e-8073-ba48-ef35ff8dd97f"
@@ -43,7 +45,7 @@ NOTION_METADATA:
   url: "https://app.notion.com/p/Home-Page-3e36e8cb553e8073ba48ef35ff8dd97f"
   public_url: null
   archived: false
-  request_id: "e97850ef-fbb5-46a4-90dd-88f99bcb154c"
+  request_id: "f8436c42-bdbe-4800-ad92-e1478b6e7373"
 MANAGED_BY_NOTION_HUGO: true
 
 ---

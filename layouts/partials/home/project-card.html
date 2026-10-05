@@ -1,0 +1,36 @@
+<div class="my-5">
+  <div class="project-card" data-aos="fade-right">
+
+    <div class="project-row py-3">
+
+      <div class="proj-left">
+        <img
+          src="{{ .Params.logo }}"
+          alt="{{ .Title }} Logo"
+        />
+      </div>
+
+      <div class="proj-right">
+        <img
+          src="{{ .Params.banner }}"
+          alt="{{ .Title }}"
+        />
+      </div>
+
+    </div>
+
+    <h3 class="project-title">
+      <a
+        class="project-link"
+        href="{{ .Params.link | relURL }}"
+      >
+        {{ .Title }}
+      </a>
+    </h3>
+
+    <p class="project-text body-txt">
+      {{ .Params.description }}
+    </p>
+
+  </div>
+</div>

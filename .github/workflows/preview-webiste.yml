@@ -39,11 +39,11 @@ jobs:
           extended: true
 
       - name: Build production website
-        run: hugo --minify
+        run: hugo --buildDrafts
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=biom-website --branch=main
+          command: pages deploy public --project-name=biom-website --branch=preview

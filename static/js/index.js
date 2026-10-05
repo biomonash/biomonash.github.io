@@ -21,4 +21,27 @@ document.addEventListener("DOMContentLoaded", () => {
     once: true,
     offset: 120,
   });
+
+  // Start the video when it enters the viewport
+  const video = document.querySelector("#video iframe");
+
+  if (!video) return;
+
+  const videoUrl = video.dataset.videoUrl;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          video.src = videoUrl + "?autoplay=1";
+          observer.unobserve(video);
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  observer.observe(video);
 });
