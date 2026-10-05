@@ -3,7 +3,7 @@
 
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand text-light" href="/">
+            <a class="navbar-brand text-light" href="{{ "/" | relURL }}">
                 <img
                     src="{{ "images/BiOM-Logo.webp" | relURL }}"
                     alt="BiOM Logo"
@@ -13,7 +13,9 @@
             <div class="mx-auto d-flex">
                 <a class="nav-link nav-text mx-3" href="#st-kilda">ST KILDA</a>
                 <a class="nav-link nav-text mx-3"
-                    href="#nillumbik">NILLUMBIK</a>
+                    href="#nillumbik">Forest Portal</a>
+                <a class="nav-link nav-text mx-3" href="{{ "/team/" | relURL
+                    }}">Team</a>
                 <a class="nav-link nav-text mx-3" href="{{ "posts/" | relURL
                     }}">POSTS</a>
                 <a class="nav-link nav-text mx-3" href="#donate">DONATE</a>
