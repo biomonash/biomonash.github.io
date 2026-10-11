@@ -1,11 +1,10 @@
 import fs from "fs-extra";
-import { Client, isFullUser, iteratePaginatedAPI } from "@notionhq/client";
+import { Client } from "@notionhq/client";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { NotionToMarkdown } from "./markdown/notion-to-md";
 import YAML from "yaml";
-import { sh } from "./sh";
 import { DatabaseMount, PageMount } from "./config";
-import { getPageTitle, getCoverLink, getFileName } from "./helpers";
+import { getPageTitle, getFileName } from "./helpers";
 import path from "path";
 import { getContentFile } from "./file";
 import https from "https";
@@ -42,7 +41,53 @@ async function downloadFile(url: string, outputPath: string) {
   });
 }
 
-export async function renderPage(page: PageObjectResponse, notion: Client) {
+// For the members folder, only these Notion columns are written to the files.
+// Everything else (emails, phone numbers, etc.) is left out because the repo is public.
+// Matching ignores case and extra spaces.
+const PUBLIC_PROPERTIES: Record<string, string[]> = {
+  members: [
+    "Preferred Name",
+    "Role",
+    "Departments",
+    "Administrative Status",
+    "LinkedIn",
+  ],
+  executives: ["FullName","Role", "Department", "Image", "Order"],
+  advisors: ["Role", "Department", "Link", "Image"],
+};
+
+// Folders whose photos are saved per person (static/images/<folder>/<page id>.jpg)
+// so two people uploading "photo.jpg" can't overwrite each other.
+const PER_PAGE_IMAGES = ["executives", "advisors", "members"];
+
+function imageWebPath(
+  folder: string,
+  pageId: string,
+  fileName: string,
+  index: number,
+): string {
+  if (!PER_PAGE_IMAGES.includes(folder)) return `/images/${fileName}`;
+  const ext = path.extname(fileName).toLowerCase() || ".jpg";
+  const suffix = index === 0 ? "" : `-${index}`;
+  return `/images/${folder}/${pageId.replaceAll("-", "")}${suffix}${ext}`;
+}
+
+function normalise(name: string) {
+  return name.trim().toLowerCase().replace(/\s+/g, " ");
+}
+
+function isAllowed(folder: string, property: string): boolean {
+  const allow = PUBLIC_PROPERTIES[folder];
+  if (!allow) return true; // other folders keep their existing behaviour
+  return allow.map(normalise).includes(normalise(property));
+}
+
+export async function renderPage(
+  page: PageObjectResponse,
+  notion: Client,
+  folder: string = ".",
+) {
+  const restricted = folder in PUBLIC_PROPERTIES;
   // load formatter config
   const n2m = new NotionToMarkdown({ notionClient: notion });
   n2m.setUnsupportedTransformer((type) => {
@@ -51,7 +96,6 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   let frontInjectString = "";
   const mdblocks = await n2m.pageToMarkdown(page.id);
   const mdString = n2m.toMarkdownString(mdblocks);
-  page.properties.Name;
   const title = getPageTitle(page);
   const frontMatter: Record<
     string,
@@ -64,101 +108,71 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   };
 
   // set featuredImage
-  const featuredImageLink = await getCoverLink(page.id, notion);
-  if (featuredImageLink) {
-    frontMatter.featuredImage = featuredImageLink;
+  // (the page object already has the cover, no need to fetch it again)
+  if (page.cover) {
+    frontMatter.featuredImage =
+      page.cover.type === "external"
+        ? page.cover.external.url
+        : pageIdToApiUrl(page.id);
   }
 
   // map page properties to front matter
+  // Values come straight from the page object returned by the query,
+  // no extra API calls!
   for (const property in page.properties) {
-    const id = page.properties[property].id;
-    const response = await notion.pages.properties.retrieve({
-      page_id: page.id,
-      property_id: id,
-    });
-    if (response.object === "property_item") {
-      switch (response.type) {
-        case "checkbox":
-          frontMatter[property] = response.checkbox;
-          break;
-        case "select":
-          if (response.select) frontMatter[property] = response.select.name;
-          break;
-        case "multi_select":
-          frontMatter[property] = response.multi_select.map(
-            (select) => select.name,
-          );
-          break;
-        case "email":
-          if (response.email) frontMatter[property] = response.email;
-          break;
-        case "url":
-          if (response.url) frontMatter[property] = response.url;
-          break;
-        case "date":
-          if (response.date) frontMatter[property] = response.date.start;
-          break;
-        case "number":
-          if (response.number) frontMatter[property] = response.number;
-          break;
-        case "phone_number":
-          if (response.phone_number)
-            frontMatter[property] = response.phone_number;
-          break;
-        case "status":
-          if (response.status) frontMatter[property] = response.status.name;
-          break;
-        case "files": {
-          frontMatter[property] = response.files.map(
-            (file) => `/images/${file.name}`,
-          );
-          break;
-        }
-        // ignore these properties
-        case "last_edited_by":
-        case "last_edited_time":
-        case "rollup":
-        case "formula":
-        case "created_by":
-        case "created_time":
-          break;
-        default:
-          break;
+    if (!isAllowed(folder, property)) continue;
+    const prop = page.properties[property];
+    switch (prop.type) {
+      case "checkbox":
+        frontMatter[property] = prop.checkbox;
+        break;
+      case "select":
+        if (prop.select) frontMatter[property] = prop.select.name;
+        break;
+      case "multi_select":
+        frontMatter[property] = prop.multi_select.map((o) => o.name);
+        break;
+      case "email":
+        if (prop.email) frontMatter[property] = prop.email;
+        break;
+      case "url":
+        if (prop.url) frontMatter[property] = prop.url;
+        break;
+      case "date":
+        if (prop.date) frontMatter[property] = prop.date.start;
+        break;
+      case "number":
+        if (prop.number !== null) frontMatter[property] = prop.number;
+        break;
+      case "phone_number":
+        if (prop.phone_number) frontMatter[property] = prop.phone_number;
+        break;
+      case "status":
+        if (prop.status) frontMatter[property] = prop.status.name;
+        break;
+      case "files":
+        frontMatter[property] = prop.files.map((f, i) =>
+          imageWebPath(folder, page.id, f.name, i),
+        );
+        break;
+      case "rich_text": {
+        const text = prop.rich_text.map((t) => t.plain_text).join("");
+        if (text) frontMatter[property] = text;
+        break;
       }
-    } else {
-      for await (const result of iteratePaginatedAPI(
-        // @ts-ignore
-        notion.pages.properties.retrieve,
-        {
-          page_id: page.id,
-          property_id: id,
-        },
-      )) {
-        switch (result.type) {
-          case "people":
-            frontMatter[property] = frontMatter[property] || [];
-            if (isFullUser(result.people)) {
-              const fm = frontMatter[property];
-              if (Array.isArray(fm) && result.people.name) {
-                fm.push(result.people.name);
-              }
-            }
-            break;
-          case "rich_text":
-            frontMatter[property] = frontMatter[property] || "";
-            frontMatter[property] += result.rich_text.plain_text;
-          // ignore these
-          case "relation":
-          case "title":
-          default:
-            break;
-        }
-      }
+      case "people":
+        frontMatter[property] = prop.people
+          .map((p) => ("name" in p ? p.name : null))
+          .filter((n): n is string => !!n);
+        break;
+      // title, relation, rollup, formula, created/edited metadata: ignored
+      default:
+        break;
     }
   }
 
-  // set default author
-  if (frontMatter.authors == null) {
+  // set default author (skipped for restricted folders)
+  if (!restricted && frontMatter.authors == null) {
     try {
       const response = await notion.users.retrieve({
         user_id: page.last_edited_by.id,
@@ -172,7 +186,11 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   }
 
   // save metadata
-  frontMatter.NOTION_METADATA = page;
+  // Restricted folders keep only what the sync needs to detect changes,
+  // so no hidden column values end up in the file.
+  frontMatter.NOTION_METADATA = restricted
+    ? { id: page.id, last_edited_time: page.last_edited_time }
+    : page;
   frontMatter.MANAGED_BY_NOTION_HUGO = true;
 
   return {
@@ -190,37 +208,27 @@ export async function renderPage(page: PageObjectResponse, notion: Client) {
   };
 }
 
-async function downloadImages(
-  page: PageObjectResponse,
-  notion: Client,
-) {
+async function downloadImages(page: PageObjectResponse, folder: string) {
+  const perPage = PER_PAGE_IMAGES.includes(folder);
   for (const property in page.properties) {
-    const id = page.properties[property].id;
+    if (!isAllowed(folder, property)) continue;
+    const prop = page.properties[property];
+    if (prop.type !== "files") continue;
 
-    const response = await notion.pages.properties.retrieve({
-      page_id: page.id,
-      property_id: id,
-    });
-
-    if (response.object !== "property_item") continue;
-    if (response.type !== "files") continue;
-
-    for (const file of response.files) {
-      const url =
-        file.type === "file"
-          ? file.file.url
-          : file.external.url;
-
-      const fileName = file.name;
-      const outputPath = path.join("static", "images", fileName);
+    for (const [i, file] of prop.files.entries()) {
+      const url = file.type === "file" ? file.file.url : file.external.url;
+      const outputPath = path.join(
+        "static",
+        imageWebPath(folder, page.id, file.name, i),
+      );
 
       await fs.ensureDir(path.dirname(outputPath));
 
-      if (!fs.existsSync(outputPath)) {
-        console.log(`[Info] Downloading image: ${fileName}`);
+      // per-person photos are refreshed whenever the row changes,
+      // so a new photo in Notion replaces the old one
+      if (perPage || !fs.existsSync(outputPath)) {
+        console.log(`[Info] Downloading image: ${outputPath}`);
         await downloadFile(url, outputPath);
-      } else {
-        console.log(`[Info] Image already exists: ${fileName}`);
       }
     }
   }
@@ -231,7 +239,6 @@ export async function savePage(
   notion: Client,
   mount: DatabaseMount | PageMount,
 ) {
-  await downloadImages(page, notion);
   const postpath = path.join(
     "content",
     mount.target_folder,
@@ -245,8 +252,14 @@ export async function savePage(
   // otherwise update the page
   console.info(`[Info] Updating ${postpath}`);
 
-  const { title, pageString } = await renderPage(page, notion);
+  await downloadImages(page, mount.target_folder);
+
+  const { title, pageString } = await renderPage(
+    page,
+    notion,
+    mount.target_folder,
+  );
   const fileName = getFileName(title, page.id);
-  await sh(`hugo new "${mount.target_folder}/${fileName}"`, false);
+  fs.ensureDirSync(`content/${mount.target_folder}`);
   fs.writeFileSync(`content/${mount.target_folder}/${fileName}`, pageString);
 }

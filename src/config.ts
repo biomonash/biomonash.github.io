@@ -92,6 +92,22 @@ export async function loadConfig(): Promise<Config> {
     }
 
     await processPage(pageId);
+
+    // Also mount anything listed manually (databases outside our main CMS page)
+    const dbIds = new Set(
+      config.mount.databases.map((d) => d.database_id.replaceAll("-", "")),
+    );
+    for (const db of userConfig.mount.databases ?? []) {
+      if (!dbIds.has(db.database_id.replaceAll("-", "")))
+        config.mount.databases.push(db);
+    }
+    const pageIds = new Set(
+      config.mount.pages.map((p) => p.page_id.replaceAll("-", "")),
+    );
+    for (const p of userConfig.mount.pages ?? []) {
+      if (!pageIds.has(p.page_id.replaceAll("-", "")))
+        config.mount.pages.push(p);
+    }
   }
 
   return config;

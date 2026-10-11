@@ -87,39 +87,30 @@
              EXECUTIVE TEAM
         ====================================================== -->
 
+        <!-- Executives come from their own Notion database (content/executives) -->
+
         {{ $executiveMembers := slice }}
 
 
-        {{ range $members }}
+        {{ range sort (where .Site.RegularPages "Section" "executives") "Params.order" }}
 
-          {{ $statuses := index .Params "administrative status" }}
+          {{ $image := "" }}
 
+          {{ with .Params.image }}
 
-          {{ if or
-            (in $statuses "Executive")
-            (in $statuses "Top Executive")
-          }}
-
-            {{ $name := .Title }}
-
-
-            {{ with index .Params "preferred name" }}
-
-              {{ $name = . }}
-
-            {{ end }}
-
-
-            {{ $executiveMembers = $executiveMembers | append
-              (dict
-                "name" $name
-                "role" .Params.role
-                "image" ""
-                "url" .Params.linkedin
-              )
-            }}
+            {{ $image = index . 0 }}
 
           {{ end }}
+
+
+          {{ $executiveMembers = $executiveMembers | append
+            (dict
+              "name" .Params.FullName
+              "role" .Params.RoleName
+              "image" $image
+              "url" ""
+            )
+          }}
 
         {{ end }}
 
@@ -136,30 +127,31 @@
              ACADEMIC ADVISORS
         ====================================================== -->
 
-        {{ $advisors := slice
+        {{ $advisors := slice }}
 
-          (dict
-            "name" "Name xyz"
-            "role" "Academic Advisor"
-            "image" ""
-            "url" ""
-          )
 
-          (dict
-            "name" "Name xyz"
-            "role" "Academic Advisor"
-            "image" ""
-            "url" ""
-          )
+        {{ range sort (where .Site.RegularPages "Section" "advisors") "Title" }}
 
-          (dict
-            "name" "Name xyz"
-            "role" "Academic Advisor"
-            "image" ""
-            "url" ""
-          )
+          {{ $image := "" }}
 
-        }}
+          {{ with .Params.image }}
+
+            {{ $image = index . 0 }}
+
+          {{ end }}
+
+
+          {{ $advisors = $advisors | append
+            (dict
+              "name" .Title
+              "role" .Params.role
+              "department" .Params.department
+              "image" $image
+              "url" .Params.link
+            )
+          }}
+
+        {{ end }}
 
 
         {{ partial "executive-team.html"
@@ -175,11 +167,11 @@
         ====================================================== -->
 
         {{ $departments := slice
-          "Ecology"
-          "Engineering"
-          "Marketing"
-          "IT"
-          "People & Culture"
+          (dict "label" "Ecology"     "display" "Ecology")
+          (dict "label" "Engineering" "display" "Engineering")
+          (dict "label" "Marketing"   "display" "Marketing")
+          (dict "label" "IT"          "display" "IT")
+          (dict "label" "P&C"         "display" "People & Culture")
         }}
 
 
@@ -205,19 +197,12 @@
             {{ $statuses := index .Params "administrative status" }}
 
 
-            {{ if in $memberDepartments $department }}
+            {{ if in $memberDepartments $department.label }}
 
 
-              <!-- PREFERRED NAME -->
+              <!-- FULL NAME (Notion title column) -->
 
               {{ $name := .Title }}
-
-
-              {{ with index .Params "preferred name" }}
-
-                {{ $name = . }}
-
-              {{ end }}
 
 
               <!-- TEAM LEAD -->
@@ -248,7 +233,7 @@
           {{ partial "department-team.html"
 
             (dict
-              "name" $department
+              "name" $department.display
               "leads" $teamLeads
               "members" $teamMembers
               "image" "images/about-us.webp"

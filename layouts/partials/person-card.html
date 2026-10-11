@@ -23,4 +23,10 @@
         <p class="person-role">{{ .role }}</p>
     {{ end }}
 
+    {{ with .department }}
+        <p class="person-role person-department">
+            {{ if reflect.IsSlice . }}{{ delimit . ", " }}{{ else }}{{ . }}{{ end }}
+        </p>
+    {{ end }}
+
 </div>
