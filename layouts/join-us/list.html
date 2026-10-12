@@ -1,0 +1,237 @@
+
+<!doctype html>
+<html lang="en">
+
+{{ partial "head.html" . }}
+
+<body>
+
+    {{ partial "navbar.html" . }}
+
+    <main id="join-us">
+
+        <!-- =========================================
+             HERO SECTION
+        ========================================== -->
+
+        <section class="join-hero">
+
+            <div class="join-hero-content">
+
+                <div class="join-hero-text">
+
+                    <h1>Join the Team</h1>
+
+                    <p>
+                        Help us build the future of biological
+                        observation
+                    </p>
+
+                    <a href="#join-departments"
+                       class="join-apply-button">
+                        Apply Now!
+                    </a>
+
+                </div>
+
+                <div class="join-hero-frog">
+
+                    <img
+                        src="{{ "images/frog.png" | relURL }}"
+                        alt="BiOM Frog">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             COMMUNITY INTRODUCTION
+        ========================================== -->
+
+        <section class="join-community">
+
+            <h2>Join the BiOM Community</h2>
+
+            <p>
+                Join a community of students passionate about
+                conservation, technology and creating meaningful
+                environmental impact.
+
+                Work alongside students from different disciplines,
+                develop new skills and contribute to projects
+                supporting biological observation.
+            </p>
+
+        </section>
+
+
+        <!-- =========================================
+             SVG WAVE DIVIDER
+        ========================================== -->
+
+        <div class="join-wave-wrapper">
+
+            <svg
+                viewBox="0 0 1440 180"
+                preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+
+                <!-- CREAM BOTTOM WAVE -->
+
+                <path
+                    fill="#FFF4CF"
+                    d="
+                        M 0 65
+                        C 180 44, 350 44, 520 65
+                        C 700 88, 860 88, 1040 65
+                        C 1200 45, 1320 47, 1440 65
+
+                        L 1440 120
+
+                        C 1280 100, 1140 100, 980 120
+                        C 810 142, 640 142, 470 120
+                        C 300 98, 150 98, 0 120
+                        Z
+                    ">
+                </path>
+
+                <!-- THIN ORANGE TOP WAVE -->
+
+                <path
+                    fill="#DB6912"
+                    d="
+                        M 0 45
+                        C 180 24, 350 24, 520 45
+                        C 700 68, 860 68, 1040 45
+                        C 1200 25, 1320 27, 1440 45
+
+                        L 1440 65
+
+                        C 1320 47, 1200 45, 1040 65
+                        C 860 88, 700 88, 520 65
+                        C 350 44, 180 44, 0 65
+                        Z
+                    ">
+                </path>
+
+            </svg>
+
+        </div>
+
+
+        <!-- =========================================
+             DEPARTMENT SECTIONS
+        ========================================== -->
+
+        <div id="join-departments">
+
+            {{ $departments := slice
+                "Engineering"
+                "IT"
+                "People & Culture"
+                "Marketing"
+                "Ecology"
+            }}
+
+            {{ range $department := $departments }}
+
+                <!-- TEMPORARY ROLE DATA -->
+
+                {{ $roles := slice
+
+                    (dict
+                        "name" "Role A"
+                        "skills" (slice "CAD" "3D Printing")
+                        "responsibilities" (slice
+                            "Building houses for penguin cameras"
+                        )
+                        "description" "Help develop conservation technology."
+                    )
+
+                    (dict
+                        "name" "Role B"
+                        "skills" (slice "Teamwork" "Programming")
+                        "responsibilities" (slice
+                            "Developing monitoring systems"
+                        )
+                        "description" "Work on engineering projects."
+                    )
+
+                    (dict
+                        "name" "Role C"
+                        "skills" (slice "Research" "Communication")
+                        "responsibilities" (slice
+                            "Supporting conservation projects"
+                        )
+                        "description" "Collaborate with the BiOM team."
+                    )
+
+                    (dict
+                        "name" "Role D"
+                        "skills" (slice "Design" "Problem Solving")
+                        "responsibilities" (slice
+                            "Helping develop new project ideas"
+                        )
+                        "description" "Contribute to environmental solutions."
+                    )
+
+                    (dict
+                        "name" "Role E"
+                        "skills" (slice "Collaboration" "Organisation")
+                        "responsibilities" (slice
+                            "Supporting project activities"
+                        )
+                        "description" "Work with other BiOM members."
+                    )
+
+                }}
+
+
+                <!-- TEMPORARY TAG DATA -->
+
+                {{ $tags := slice
+                    "Tag 1"
+                    "Tag 2"
+                    "Tag 3"
+                    "Tag 4"
+                    "Tag 5"
+                }}
+
+
+                <!-- REUSABLE DEPARTMENT PARTIAL -->
+
+                {{ partial "department-roles.html" (dict
+                    "name" $department
+                    "image" "images/about-us.webp"
+                    "tags" $tags
+                    "roles" $roles
+                ) }}
+
+            {{ end }}
+
+        </div>
+
+
+        <!-- =========================================
+             CONTACT SECTION
+        ========================================== -->
+
+        <section
+            id="contact"
+            class="py-3"
+            data-aos="fade-appear">
+
+            {{ partial "contacts.html" . }}
+
+        </section>
+
+    </main>
+
+    {{ partial "footer.html" . }}
+
+</body>
+</html>

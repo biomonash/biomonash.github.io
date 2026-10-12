@@ -277,3 +277,461 @@
         min-height: 280px;
     }
 }
+
+/* =========================================
+   REUSABLE ROLE TAGS
+========================================= */
+
+.role-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 20px;
+    min-width: 90px;
+
+    border-radius: 50px;
+    background-color: #DB6912;
+
+    color: #FFF4CF;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+.role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    margin: 15px 0 30px;
+}
+
+@media (max-width: 768px) {
+    .role-tag {
+        min-width: 65px;
+        padding: 5px 12px;
+        font-size: 11px;
+    }
+
+    .role-tags {
+        gap: 8px;
+    }
+}
+
+
+/* =========================================
+   DEPARTMENT ROLES
+========================================= */
+
+.department-roles {
+    width: 100%;
+    padding: 75px 5%;
+    background-color: #13330D;
+    box-sizing: border-box;
+}
+
+.department-roles-title {
+    margin: 0 0 35px;
+    text-align: center;
+    font-family: "Calistoga", serif;
+    font-size: clamp(40px, 5vw, 70px);
+    font-weight: 400;
+    color: #FFF4CF;
+}
+
+/* DEPARTMENT IMAGE */
+
+.department-roles-image-wrapper {
+    position: relative;
+    width: min(1200px, 100%);
+    margin: 0 auto 20px;
+}
+
+.department-roles-image {
+    display: block;
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.department-roles-frog {
+    position: absolute;
+    left: -45px;
+    bottom: -35px;
+    width: 150px;
+    height: auto;
+    pointer-events: none;
+}
+
+/* ROLES TITLE */
+
+.roles-heading {
+    margin: 25px 0 15px;
+    text-align: center;
+    font-family: "Calistoga", serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #FFF4CF;
+}
+
+/* ORANGE TAGS */
+
+.role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 15px 0 30px;
+}
+
+.role-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    padding: 6px 20px;
+    border-radius: 50px;
+    background-color: #DB6912;
+    color: #FFF4CF;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* ROLE CAROUSEL */
+
+.department-roles-carousel {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.roles-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 5px 0 15px;
+}
+
+.roles-list::-webkit-scrollbar {
+    display: none;
+}
+
+.roles-carousel-item {
+    flex: 0 0 260px;
+    min-width: 0;
+    scroll-snap-align: start;
+}
+
+.roles-carousel-item .role-flip-card {
+    width: 100%;
+    max-width: none;
+}
+
+/* ARROWS */
+
+.roles-carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 15px;
+}
+
+.roles-carousel-controls button {
+    border: none;
+    background: transparent;
+    color: #FFF4CF;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.roles-carousel-controls button:hover {
+    color: #DB6912;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .department-roles-image {
+        height: 390px;
+    }
+
+    .roles-carousel-item {
+        flex-basis: 230px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .department-roles {
+        padding: 55px 5%;
+    }
+
+    .department-roles-image {
+        height: 300px;
+    }
+
+    .department-roles-frog {
+        width: 105px;
+        left: -15px;
+        bottom: -25px;
+    }
+
+    .roles-heading {
+        font-size: 28px;
+    }
+
+    .roles-carousel-item {
+        flex-basis: min(260px, 75vw);
+    }
+}
+
+
+/* =========================================
+   JOIN US PAGE
+========================================= */
+
+#join-us {
+    width: 100%;
+    background-color: #0C2103;
+    color: #FFF4CF;
+    font-family: "Poppins", sans-serif;
+}
+
+/* HERO */
+
+.join-hero {
+    position: relative;
+    min-height: 650px;
+    background-color: #0C2103;
+    overflow: hidden;
+}
+
+.join-hero-content {
+    position: relative;
+    width: min(1450px, 90%);
+    min-height: 650px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.join-hero-text {
+    position: relative;
+    width: 60%;
+    z-index: 2;
+}
+
+.join-hero-text h1 {
+    margin: 0 0 25px;
+    font-family: "Calistoga", serif;
+    font-size: clamp(55px, 7vw, 110px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: #FFF4CF;
+}
+
+.join-hero-text p {
+    max-width: 560px;
+    margin: 0 0 35px;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(18px, 2vw, 26px);
+    line-height: 1.5;
+    color: #FFF4CF;
+}
+
+.join-apply-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 360px;
+    padding: 16px 35px;
+    border-radius: 16px;
+    background-color: #DB6912;
+    color: #FFF4CF;
+    font-family: "Calistoga", serif;
+    font-size: 44px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.join-apply-button:hover {
+    transform: translateY(-4px);
+    color: #FFF4CF;
+    text-decoration: none;
+}
+
+.join-hero-frog {
+    position: absolute;
+    right: -50px;
+    top: 10px;
+    width: 670px;
+    max-width: 55%;
+    pointer-events: none;
+}
+
+.join-hero-frog img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* COMMUNITY */
+
+.join-community {
+    padding: 50px 8% 65px;
+    background-color: #0C2103;
+    text-align: center;
+}
+
+.join-community h2 {
+    margin: 0 0 25px;
+    font-family: "Calistoga", serif;
+    font-size: clamp(32px, 4vw, 58px);
+    font-weight: 400;
+    color: #FFF4CF;
+}
+
+.join-community p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #FFF4CF;
+}
+
+/* WAVE DIVIDER */
+
+.join-wave-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    line-height: 0;
+    background-color: #13330D;
+}
+
+.join-wave-wrapper svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .join-hero,
+    .join-hero-content {
+        min-height: 550px;
+    }
+
+    .join-hero-frog {
+        width: 530px;
+    }
+
+    .join-apply-button {
+        min-width: 280px;
+        font-size: 34px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .join-hero,
+    .join-hero-content {
+        min-height: 480px;
+    }
+
+    .join-hero-text {
+        width: 70%;
+    }
+
+    .join-hero-text h1 {
+        font-size: 52px;
+    }
+
+    .join-hero-text p {
+        font-size: 16px;
+    }
+
+    .join-hero-frog {
+        right: -75px;
+        width: 380px;
+        max-width: 60%;
+    }
+
+    .join-apply-button {
+        min-width: 200px;
+        padding: 12px 20px;
+        font-size: 26px;
+    }
+
+    .join-community p {
+        font-size: 16px;
+    }
+
+    .join-wave-wrapper {
+        height: 120px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .join-hero,
+    .join-hero-content {
+        min-height: 390px;
+    }
+
+    .join-hero-text {
+        width: 75%;
+    }
+
+    .join-hero-text h1 {
+        font-size: 38px;
+    }
+
+    .join-hero-frog {
+        right: -80px;
+        top: 50px;
+        width: 280px;
+    }
+
+    .join-apply-button {
+        min-width: 155px;
+        font-size: 21px;
+    }
+
+    .join-community {
+        padding: 40px 7%;
+    }
+
+    .join-community h2 {
+        font-size: 30px;
+    }
+
+    .join-community p {
+        font-size: 14px;
+    }
+
+    .join-wave-wrapper {
+        height: 85px;
+    }
+
+}
