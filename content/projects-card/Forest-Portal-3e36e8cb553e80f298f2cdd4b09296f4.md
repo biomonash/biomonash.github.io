@@ -1,16 +1,18 @@
 ---
 title: "Forest Portal"
 date: "2026-09-22T20:17:00.000Z"
-lastmod: "2026-09-27T22:56:00.000Z"
+lastmod: "2026-10-12T01:46:00.000Z"
 draft: false
 featuredImage: "https://notion-hugo.pages.dev/api?page_id=3e36e8cb-553e-80f2-98\
   f2-cdd4b09296f4"
 banner: "https://www.nillumbik.vic.gov.au/files/assets/public/v/2/image-resourc\
   es/0a0a2787a.jpg?w=480"
 TechStack: []
+Logo:
+  - "/images/ForestPortal.webp"
 link: "articles/nillumbik"
 authors:
-  - "Yenn "
+  - "Yenn"
   - "Jadyn Leon"
 Status: "Active"
 logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjeNIuUTZxiaBQxJlU\
@@ -21,7 +23,7 @@ NOTION_METADATA:
   object: "page"
   id: "3e36e8cb-553e-80f2-98f2-cdd4b09296f4"
   created_time: "2026-09-22T20:17:00.000Z"
-  last_edited_time: "2026-09-27T22:56:00.000Z"
+  last_edited_time: "2026-10-12T01:46:00.000Z"
   created_by:
     object: "user"
     id: "25dd872b-594c-818a-8ef5-0002a724b085"
@@ -34,27 +36,28 @@ NOTION_METADATA:
       url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/1c26e8cb-553e-8110-8\
         f76-000345ab9bad/5751897a-3cab-4539-a441-37bb8a02c5d4/image.png?X-Amz-A\
         lgorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-C\
-        redential=ASIAZI2LB4663CBFOB44%2F20260927%2Fus-west-2%2Fs3%2Faws4_reque\
-        st&X-Amz-Date=20260927T225647Z&X-Amz-Expires=3600&X-Amz-Security-Token=\
-        IQoJb3JpZ2luX2VjEF0aCXVzLXdlc3QtMiJIMEYCIQCeydQzl%2Fp9K5kPZLCXtYx%2Fj0j\
-        9LJ3XKJ1dJIMOTaNhYgIhANDf7yEK0zh%2BtTUsz38j92zcq%2B2WUC%2BlyqnOVw3GvZgh\
-        Kv8DCCYQABoMNjM3NDIzMTgzODA1IgwFD1VzGhCaR1hdCysq3AMVdrkAfeHt90rR%2Fp6RQ\
-        XRLjVA1YAsGguepEDg9hv8eZ7gPEnvAkmCegEEnLsuSvFgcg8ybCrtFBOVl6vfO34QiOYhS\
-        6avBY%2BxhTFGhEUk7Wh44Ul9Ab93kQm5j%2FW%2FLxaUiFmcX%2B6Ibk7RiPmaVoqAp42p\
-        iOOCnYanp6z1O%2BAAVIL01mH6ge134GUNQK2qdgM1OUPZcOxFQVCezvKSd4ktSJCE9nAeg\
-        ogSFUE54MT%2FKkExldgkF73ko23MtjO3jRHFJBS4nkFkkAJ7H5a%2FHBWDYq95rgoJSKrZ\
-        fQuBWOqgZbRrDfM8XwGld3M0DxHsSgxW8aCQDpo%2FyVgwQhnx6k9vU%2BdroqxMUsnoz3A\
-        NywUzg74E6DmtQKCsir5KNEWvR8%2FJxUxe%2BP9oezXh%2F6GeOGMgF2ybHQVvkGq3Wimm\
-        X8UbY%2FKWZ%2BW%2B8a%2FnsnL0ozbm%2FDRsHkC8hwYmUuE9m4T1sliBoUY3Lu2syQJ3p\
-        Mk%2FoI0zLdnRAKs5aQRHRdAkvSSPF7YjClA3pAeozuf0pa1%2Bkuk3haXT5DYqZmUrG%2F\
-        apGi2WFSPVb4iABlNHDAsUc1JaI9ffQuQEy0I4gLtNyrd7o3shxkEAPJqz%2BLV27RZFJdI\
-        7%2BJq1YBq0EcVz5f%2FNLYjDBh%2BbVBjqkAe09z3F2BfW8WrxN7ter6eiZGcshZKGmIAf\
-        m3NibznjYMM3MqyREn%2FEqu6o3jRRrAFBy83tmibHK5enwmgqSsHi2ui4KHwz1%2BwK6wK\
-        nekt%2BrTKSRdqs9iC4weD4Zw72knDToHPJtClOnnAsqgfXxOyehpBmiGSybaztOWCJjir%\
-        2BB6K0R74ANCvw%2FBILjgukdaQqebZ%2BZ0ol3GNpuZIrBRxOUioVS&X-Amz-Signature\
-        =054ea37d177d86f62af50b98026b9e9685b50e325c484abfb6219986b4977668&X-Amz\
-        -SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
-      expiry_time: "2026-09-27T23:56:47.711Z"
+        redential=ASIAZI2LB4663MO44BPU%2F20261015%2Fus-west-2%2Fs3%2Faws4_reque\
+        st&X-Amz-Date=20261015T125019Z&X-Amz-Expires=3600&X-Amz-Security-Token=\
+        IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtMiJGMEQCIBnVAtrR%2Bp0o9UoIls7iAGYSctXfR\
+        Vd9gsuoBObXLoZ2AiBUwhxBS14qtiv5m9Nl7N5JkPNWY%2FrPE%2Fa1NPUY7lRLMSqIBAjM\
+        %2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMaCP3XfHFj00wnTD\
+        mKtwDUR2AzDZevQjL0CUIWpWXfvtiid%2FGuiCcJaYaGbgKeT%2FQq%2BU99oB1LoZfyI63\
+        YAc1zenEu2UM0%2Fbijgj0AyE4qLEtuMH0fDdVRTIMkNggdtDKosg90JSgZQWI9IzTv%2FD\
+        mfHuoaV3ERenIafkUELZOoXpplaHtMLl%2F%2BVlA2WtHnj8NrZMzeBdVFH4ftscmR5Gbf%\
+        2BLONKCmScGLHLDzUIWypVTHSfVjfixpYLmPjMMfsRvtW8XdqQ8LiyCk%2BM6ccQ2WWIApw\
+        n%2Fijz5NBQuHo7n16o8%2Bgz29bU6EJ4fXHsaKvg9c9abPvscuL9YJKzVNxjYhQ9Kr08wQ\
+        qlBV3hAhMngAltsQrJexJie9JwBE1sw%2BLg%2FW%2FTkd7gCqBTNfBZugGrreLbPuoQy3Q\
+        nGPiH0G8Fq42QNwFxvK%2B9D3KoMo87u0GO27VSP6DXyshVSor9NMZic%2BSSAuWQs6zOQd\
+        %2B1%2FDunOOijuiPGToUq9adEjefcWstVs0oU%2B2ZfhSkfyy7Kf%2F%2FoNnPgg4VJHAK\
+        4SWm0I0axL7SAMiBbraxxeBlxb88IEs%2F%2B27h%2FqsY5o%2F26DGjSzvZV75ixX486hX\
+        G5WPR2XTbbpF0KSjkKPbqMaFOENzdemU6pEgGVUKexttg7ml9Qsw2u%2FC1gY6pgHZTSqLv\
+        l1wtrZ4m8%2Fg0AV7snPJFvhj6YQP1lwyJwiBRbYfdUTxCGtulcMfw7ygjdJblhqRS8y6Z7\
+        Fk8a0cg7csm%2BHy82rO78yBCX9tq70wsjueUadnAvwt2s2uWaqAycIgNE6RHKpnREpYKq%\
+        2FJ9SCX4yXYpmPCAbyEaagyBMrJ90JL%2BzNCIHr0DO4mwPbvlJ4Apb09yVGvU0hGX3Opyz\
+        JVAiuxDUQM&X-Amz-Signature=c4b21cc904eb84e9cc9aed2e1c116526aa8129347cb3\
+        133f985064e2fb54f352&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABL\
+        ED&x-id=GetObject"
+      expiry_time: "2026-10-15T13:50:19.698Z"
   icon: null
   parent:
     type: "data_source_id"
@@ -81,6 +84,40 @@ NOTION_METADATA:
       id: "IRI%3F"
       type: "rich_text"
       rich_text: []
+    Logo:
+      id: "IY%5C%3F"
+      type: "files"
+      files:
+        - name: "ForestPortal.webp"
+          type: "file"
+          file:
+            url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/1c26e8cb-553e-8110-8\
+              f76-000345ab9bad/2b7cae3b-0ea2-43b5-892e-3eb532ec18f8/ForestPorta\
+              l.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSI\
+              GNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663MO44BPU%2F20261015%2Fu\
+              s-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261015T125019Z&X-Amz-Ex\
+              pires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtM\
+              iJGMEQCIBnVAtrR%2Bp0o9UoIls7iAGYSctXfRVd9gsuoBObXLoZ2AiBUwhxBS14q\
+              tiv5m9Nl7N5JkPNWY%2FrPE%2Fa1NPUY7lRLMSqIBAjM%2F%2F%2F%2F%2F%2F%2F\
+              %2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMaCP3XfHFj00wnTDmKtwDUR2AzDZevQ\
+              jL0CUIWpWXfvtiid%2FGuiCcJaYaGbgKeT%2FQq%2BU99oB1LoZfyI63YAc1zenEu\
+              2UM0%2Fbijgj0AyE4qLEtuMH0fDdVRTIMkNggdtDKosg90JSgZQWI9IzTv%2FDmfH\
+              uoaV3ERenIafkUELZOoXpplaHtMLl%2F%2BVlA2WtHnj8NrZMzeBdVFH4ftscmR5G\
+              bf%2BLONKCmScGLHLDzUIWypVTHSfVjfixpYLmPjMMfsRvtW8XdqQ8LiyCk%2BM6c\
+              cQ2WWIApwn%2Fijz5NBQuHo7n16o8%2Bgz29bU6EJ4fXHsaKvg9c9abPvscuL9YJK\
+              zVNxjYhQ9Kr08wQqlBV3hAhMngAltsQrJexJie9JwBE1sw%2BLg%2FW%2FTkd7gCq\
+              BTNfBZugGrreLbPuoQy3QnGPiH0G8Fq42QNwFxvK%2B9D3KoMo87u0GO27VSP6DXy\
+              shVSor9NMZic%2BSSAuWQs6zOQd%2B1%2FDunOOijuiPGToUq9adEjefcWstVs0oU\
+              %2B2ZfhSkfyy7Kf%2F%2FoNnPgg4VJHAK4SWm0I0axL7SAMiBbraxxeBlxb88IEs%\
+              2F%2B27h%2FqsY5o%2F26DGjSzvZV75ixX486hXG5WPR2XTbbpF0KSjkKPbqMaFOE\
+              NzdemU6pEgGVUKexttg7ml9Qsw2u%2FC1gY6pgHZTSqLvl1wtrZ4m8%2Fg0AV7snP\
+              JFvhj6YQP1lwyJwiBRbYfdUTxCGtulcMfw7ygjdJblhqRS8y6Z7Fk8a0cg7csm%2B\
+              Hy82rO78yBCX9tq70wsjueUadnAvwt2s2uWaqAycIgNE6RHKpnREpYKq%2FJ9SCX4\
+              yXYpmPCAbyEaagyBMrJ90JL%2BzNCIHr0DO4mwPbvlJ4Apb09yVGvU0hGX3OpyzJV\
+              AiuxDUQM&X-Amz-Signature=6f866b08dabab5b1017c89e000480a2a67fd1f1e\
+              66ed82d517ac6c87dad97fea&X-Amz-SignedHeaders=host&x-amz-checksum-\
+              mode=ENABLED&x-id=GetObject"
+            expiry_time: "2026-10-15T13:50:19.691Z"
     draft:
       id: "JiWU"
       type: "checkbox"
@@ -107,7 +144,7 @@ NOTION_METADATA:
       people:
         - object: "user"
           id: "25dd872b-594c-818a-8ef5-0002a724b085"
-          name: "Yenn "
+          name: "Yenn"
           avatar_url: "https://s3-us-west-2.amazonaws.com/public.notion-static.com/c5e972\
             79-1e08-48cb-b619-3350dd0f15ca/Screenshot_2026-08-06_180915.png"
           type: "person"
@@ -145,7 +182,7 @@ NOTION_METADATA:
     Last edited time:
       id: "vbGE"
       type: "last_edited_time"
-      last_edited_time: "2026-09-27T22:56:00.000Z"
+      last_edited_time: "2026-10-12T01:46:00.000Z"
     LearnMoreImage:
       id: "vtTl"
       type: "url"

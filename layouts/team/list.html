@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -10,7 +11,6 @@
     <main>
 
       <section id="team">
-
 
         <!-- =====================================================
              TEAM HERO
@@ -87,7 +87,7 @@
              EXECUTIVE TEAM
         ====================================================== -->
 
-        <!-- Executives come from their own Notion database (content/executives) -->
+        <!-- Executives come from their own Notion database -->
 
         {{ $executiveMembers := slice }}
 
@@ -215,8 +215,9 @@
 
 
               <!-- TEAM MEMBER -->
+              <!-- Includes Member and Probation statuses -->
 
-              {{ if in $statuses "Member" }}
+              {{ if or (in $statuses "Member") (in $statuses "Probation") }}
 
                 {{ $teamMembers = $teamMembers | append $name }}
 
@@ -292,9 +293,7 @@
                     1320 27,
                     1440 45
 
-
                   L 1440 65
-
 
                   C 1320 47,
                     1200 45,
@@ -316,8 +315,7 @@
               <!-- =============================================
                    CREAM / BEIGE BOTTOM RIBBON
 
-                   Notice the bottom edge is ALSO curved.
-                   There is no flat rectangle anymore.
+                   The bottom edge is also curved.
               ============================================== -->
 
               <path
@@ -337,9 +335,7 @@
                     1320 47,
                     1440 65
 
-
                   L 1440 120
-
 
                   C 1280 100,
                     1140 100,
