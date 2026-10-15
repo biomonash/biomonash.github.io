@@ -475,6 +475,7 @@
     max-width: 53vw;
     z-index: 4;
     pointer-events: none;
+    transform: scaleX(-1) rotate(-10deg);
 }
 
 .team-join-frog img {
@@ -482,7 +483,7 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-    transform: scaleX(-1);
+    transform: scaleX(-1) rotate(-10deg);
 }
 
 /* =========================================================
@@ -989,7 +990,7 @@
 }
 
 /* =========================================================
-   FIX: CENTER EXECUTIVE CARDS ON INCOMPLETE ROWS
+   CENTER EXECUTIVE CARDS ON INCOMPLETE ROWS
 ========================================================= */
 
 #team .executive-team .executive-grid {
