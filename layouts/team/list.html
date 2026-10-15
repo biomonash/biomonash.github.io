@@ -24,12 +24,20 @@
 
               <img
                 src="{{ "images/frog.png" | relURL }}"
-                alt="BiOM Frog">
+                alt="BiOM Frog"
+                data-aos="fade-in"
+                data-aos-duration="1100">
 
             </div>
 
             <h1 class="team-hero-title">
-              The Team
+              <span
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+                style="display: inline-block;">
+                The Team
+              </span>
             </h1>
 
           </div>
@@ -45,7 +53,10 @@
 
           <div class="team-intro-content">
 
-            <div class="team-intro-text">
+            <div
+              class="team-intro-text"
+              data-aos="fade-up"
+              data-aos-duration="900">
 
               <p class="body-txt">
 
@@ -62,8 +73,10 @@
 
             </div>
 
-
-            <div class="team-intro-image">
+            <div
+              class="team-intro-image"
+              data-aos="zoom-in"
+              data-aos-duration="1000">
 
               <img
                 src="{{ "images/about-us.webp" | relURL }}"
@@ -87,21 +100,15 @@
              EXECUTIVE TEAM
         ====================================================== -->
 
-        <!-- Executives come from their own Notion database -->
-
         {{ $executiveMembers := slice }}
-
 
         {{ range sort (where .Site.RegularPages "Section" "executives") "Params.order" }}
 
           {{ $image := "" }}
 
           {{ with .Params.image }}
-
             {{ $image = index . 0 }}
-
           {{ end }}
-
 
           {{ $executiveMembers = $executiveMembers | append
             (dict
@@ -113,7 +120,6 @@
           }}
 
         {{ end }}
-
 
         {{ partial "executive-team.html"
           (dict
@@ -129,17 +135,13 @@
 
         {{ $advisors := slice }}
 
-
         {{ range sort (where .Site.RegularPages "Section" "advisors") "Title" }}
 
           {{ $image := "" }}
 
           {{ with .Params.image }}
-
             {{ $image = index . 0 }}
-
           {{ end }}
-
 
           {{ $advisors = $advisors | append
             (dict
@@ -152,7 +154,6 @@
           }}
 
         {{ end }}
-
 
         {{ partial "executive-team.html"
           (dict
@@ -174,36 +175,28 @@
           (dict "label" "P&C"         "display" "People & Culture")
         }}
 
-
         {{ range $department := $departments }}
-
 
           <!-- TEAM LEADS -->
 
           {{ $teamLeads := slice }}
 
-
           <!-- TEAM MEMBERS -->
 
           {{ $teamMembers := slice }}
-
 
           <!-- FIND MEMBERS IN THIS DEPARTMENT -->
 
           {{ range $members }}
 
             {{ $memberDepartments := .Params.departments }}
-
             {{ $statuses := index .Params "administrative status" }}
-
 
             {{ if in $memberDepartments $department.label }}
 
-
-              <!-- FULL NAME (Notion title column) -->
+              <!-- FULL NAME -->
 
               {{ $name := .Title }}
-
 
               <!-- TEAM LEAD -->
 
@@ -213,9 +206,7 @@
 
               {{ end }}
 
-
-              <!-- TEAM MEMBER -->
-              <!-- Includes Member and Probation statuses -->
+              <!-- TEAM MEMBER OR PROBATION -->
 
               {{ if or (in $statuses "Member") (in $statuses "Probation") }}
 
@@ -223,25 +214,20 @@
 
               {{ end }}
 
-
             {{ end }}
 
           {{ end }}
 
-
           <!-- DISPLAY DEPARTMENT -->
 
           {{ partial "department-team.html"
-
             (dict
               "name" $department.display
               "leads" $teamLeads
               "members" $teamMembers
               "image" "images/about-us.webp"
             )
-
           }}
-
 
         {{ end }}
 
@@ -252,15 +238,7 @@
 
         <section class="team-join-section">
 
-
-          <!-- ===================================================
-               SVG WAVE DIVIDER
-
-               ORANGE = thin top ribbon
-               CREAM = larger bottom ribbon
-
-               BOTH edges of both ribbons are curved.
-          ==================================================== -->
+          <!-- SVG WAVE DIVIDER -->
 
           <div class="team-wave-wrapper">
 
@@ -271,10 +249,7 @@
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true">
 
-
-              <!-- =============================================
-                   ORANGE TOP RIBBON
-              ============================================== -->
+              <!-- ORANGE TOP RIBBON -->
 
               <path
                 class="team-wave-orange"
@@ -311,12 +286,7 @@
                 ">
               </path>
 
-
-              <!-- =============================================
-                   CREAM / BEIGE BOTTOM RIBBON
-
-                   The bottom edge is also curved.
-              ============================================== -->
+              <!-- CREAM BOTTOM RIBBON -->
 
               <path
                 class="team-wave-cream"
@@ -353,34 +323,29 @@
                 ">
               </path>
 
-
             </svg>
 
           </div>
 
 
-          <!-- ===================================================
+          <!-- =====================================================
                CTA CONTENT
-          ==================================================== -->
+          ====================================================== -->
 
           <div class="team-join-content">
 
+            <!-- LEFT SIDE -->
 
-            <!-- ===============================================
-                 LEFT SIDE
-            ================================================ -->
-
-            <div class="team-join-text">
-
+            <div
+              class="team-join-text"
+              data-aos="fade-up"
+              data-aos-duration="900">
 
               <h2 class="team-join-heading">
                 Interested in
               </h2>
 
-
-              <!-- =============================================
-                   BIOM LOGO + QUESTION MARK
-              ============================================== -->
+              <!-- BIOM LOGO + QUESTION MARK -->
 
               <div class="team-join-logo-row">
 
@@ -389,17 +354,13 @@
                   alt="BiOM"
                   class="team-join-biom-logo">
 
-
                 <span class="team-join-question">
                   ?
                 </span>
 
               </div>
 
-
-              <!-- =============================================
-                   JOIN BUTTON
-              ============================================== -->
+              <!-- JOIN BUTTON -->
 
               <a
                 href="/join-us/"
@@ -409,28 +370,23 @@
 
               </a>
 
-
             </div>
 
-
-            <!-- ===============================================
-                 FROG
-            ================================================ -->
+            <!-- FROG -->
 
             <div class="team-join-frog">
 
               <img
                 src="{{ "images/frog.png" | relURL }}"
-                alt="BiOM Frog">
+                alt="BiOM Frog"
+                data-aos="zoom-in"
+                data-aos-duration="1000">
 
             </div>
 
-
           </div>
 
-
         </section>
-
 
       </section>
 
@@ -448,9 +404,7 @@
 
       </section>
 
-
     </main>
-
 
     <!-- =====================================================
          FOOTER
@@ -458,7 +412,5 @@
 
     {{ partial "footer.html" . }}
 
-
   </body>
-
 </html>
