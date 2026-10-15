@@ -1,156 +1,103 @@
 <section class="department-roles">
 
+  <div class="department-roles-content">
+
     <!-- DEPARTMENT TITLE -->
-    <h2 class="header1-txt department-roles-title">
-        {{ .name }}
+
+    <h2 class="department-roles-title">
+      {{ .name }}
     </h2>
 
 
-    <!-- DEPARTMENT IMAGE AND FROG -->
+    <!-- DEPARTMENT IMAGE + FROG -->
+
     <div class="department-roles-image-wrapper">
 
-        {{ with .image }}
-            <img
-                class="department-roles-image"
-                src="{{ . | relURL }}"
-                alt="{{ $.name }} Department"
-            >
-        {{ end }}
+      {{ with .image }}
 
         <img
-            class="department-roles-frog"
-            src="{{ "images/frog.png" | relURL }}"
-            alt=""
-            aria-hidden="true"
-        >
+          class="department-roles-image"
+          src="{{ . | relURL }}"
+          alt="{{ $.name }} Department">
+
+      {{ end }}
+
+      <img
+        class="department-roles-frog"
+        src="{{ "images/frog.png" | relURL }}"
+        alt=""
+        aria-hidden="true">
 
     </div>
 
 
-    <!-- ROLES HEADING -->
+    <!-- ROLES TITLE -->
+
     <h3 class="roles-heading">
-        Roles
+      Roles
     </h3>
 
 
-    <!-- REUSABLE ORANGE TAGS -->
+    <!-- REUSABLE TAGS -->
+
     {{ with .tags }}
 
-        <div class="role-tags">
+      <div class="role-tags">
 
-            {{ range . }}
-                {{ partial "role-tag.html" . }}
-            {{ end }}
+        {{ range . }}
 
-        </div>
+          {{ partial "role-tag.html" . }}
+
+        {{ end }}
+
+      </div>
 
     {{ end }}
 
 
-    <!-- ROLE CAROUSEL -->
+    <!-- HORIZONTAL ROLE CAROUSEL -->
+
     <div class="department-roles-carousel">
 
-        <div class="roles-list">
+      <div class="roles-list">
 
-            {{ range .roles }}
+        {{ range .roles }}
 
-                <div class="roles-carousel-item">
-                    {{ partial "role-card.html" . }}
-                </div>
+          <div class="roles-carousel-item">
+            {{ partial "role-card.html" . }}
+          </div>
 
-            {{ end }}
+        {{ end }}
 
-        </div>
+      </div>
 
     </div>
 
 
-    <!-- CAROUSEL NAVIGATION -->
+    <!-- CAROUSEL ARROWS -->
+
     {{ if gt (len .roles) 0 }}
 
-        <div class="roles-carousel-controls">
+      <div class="roles-carousel-controls">
 
-            <button
-                type="button"
-                class="roles-carousel-prev"
-                aria-label="Previous roles">
-                &#10094;
-            </button>
+        <button
+          type="button"
+          class="roles-carousel-prev"
+          aria-label="Previous roles">
+          &#10094;
+        </button>
 
-            <button
-                type="button"
-                class="roles-carousel-next"
-                aria-label="Next roles">
-                &#10095;
-            </button>
+        <button
+          type="button"
+          class="roles-carousel-next"
+          aria-label="Next roles">
+          &#10095;
+        </button>
 
-        </div>
+      </div>
 
     {{ end }}
 
+  </div>
+
 </section>
-
-
-<!-- CAROUSEL FUNCTIONALITY -->
-<script>
-(function () {
-
-    const sections = document.querySelectorAll(
-        ".department-roles"
-    );
-
-    sections.forEach(function (section) {
-
-        if (section.dataset.carouselReady === "true") {
-            return;
-        }
-
-        section.dataset.carouselReady = "true";
-
-        const list = section.querySelector(".roles-list");
-        const previous = section.querySelector(".roles-carousel-prev");
-        const next = section.querySelector(".roles-carousel-next");
-
-        if (!list || !previous || !next) {
-            return;
-        }
-
-        function getScrollAmount() {
-
-            const card = list.querySelector(
-                ".roles-carousel-item"
-            );
-
-            if (!card) {
-                return 300;
-            }
-
-            const gap = parseFloat(
-                window.getComputedStyle(list).columnGap
-            ) || 0;
-
-            return card.getBoundingClientRect().width + gap;
-        }
-
-        previous.addEventListener("click", function () {
-
-            list.scrollBy({
-                left: -getScrollAmount(),
-                behavior: "smooth"
-            });
-
-        });
-
-        next.addEventListener("click", function () {
-
-            list.scrollBy({
-                left: getScrollAmount(),
-                behavior: "smooth"
-            });
-
-        });
-
-    });
-
-})();
-</script>

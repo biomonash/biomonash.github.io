@@ -11,44 +11,56 @@
         'aria-pressed',
         this.classList.contains('is-flipped')
       );
-    "
-  >
+    ">
 
     <!-- FRONT -->
-    <div class="role-flip-front">
-      <h3>{{ .name }}</h3>
-    </div>
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        {{ .name }}
+      </span>
+
+    </span>
+
 
     <!-- BACK -->
-    <div class="role-flip-back">
 
-      <div class="role-flip-details">
+    <span class="role-flip-back">
 
-        <h4>Expected Skills:</h4>
+      <span class="role-flip-details">
 
-        <ul>
-          {{ range .skills }}
-            <li>{{ . }}</li>
-          {{ end }}
-        </ul>
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
 
-        <h4>Responsibility:</h4>
-
-        <ul>
-          {{ range .responsibilities }}
-            <li>{{ . }}</li>
-          {{ end }}
-        </ul>
-
-        {{ with .description }}
-          <p class="role-flip-description">
-            {{ . }}
-          </p>
+        {{ range .skills }}
+          <span class="role-detail-item">
+            • {{ . }}
+          </span>
         {{ end }}
 
-      </div>
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
 
-    </div>
+        {{ range .responsibilities }}
+          <span class="role-detail-item">
+            • {{ . }}
+          </span>
+        {{ end }}
+
+        {{ with .description }}
+
+          <span class="role-flip-description">
+            {{ . }}
+          </span>
+
+        {{ end }}
+
+      </span>
+
+    </span>
 
   </button>
 
