@@ -1,16 +1,21 @@
 ---
 title: "St Kilda Penguins"
 date: "2026-09-13T23:42:00.000Z"
-lastmod: "2026-09-27T03:39:00.000Z"
+lastmod: "2026-10-17T08:40:00.000Z"
 draft: false
 featuredImage: "https://notion-hugo.pages.dev/api?page_id=3da6e8cb-553e-809f-97\
   6f-fd581c26cf35"
 banner: "https://media.timeout.com/images/105858374/image.jpg"
 TechStack: []
+Badge:
+  - "/images/transparent-Photoroom.png"
 Tagline: "AI-Powered Wildlife Monitoring"
 link: "articles/st-kilda"
+FuturePlanning: "Beyond St Kilda, we hope this technology can be adapted to
+  support other conservationists globally by offering a new way to monitor
+  elusive or vulnerable species through sound."
 authors:
-  - "Yenn "
+  - "Yenn"
   - "Jadyn Leon"
 Status: "Active"
 logo: "https://stkildapenguins.com.au/wp-content/uploads/2022/10/St-Kilda-Pengu\
@@ -22,7 +27,7 @@ NOTION_METADATA:
   object: "page"
   id: "3da6e8cb-553e-809f-976f-fd581c26cf35"
   created_time: "2026-09-13T23:42:00.000Z"
-  last_edited_time: "2026-09-27T03:39:00.000Z"
+  last_edited_time: "2026-10-17T08:40:00.000Z"
   created_by:
     object: "user"
     id: "25dd872b-594c-818a-8ef5-0002a724b085"
@@ -35,27 +40,28 @@ NOTION_METADATA:
       url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/1c26e8cb-553e-8110-8\
         f76-000345ab9bad/9e881455-47b6-413b-b568-2a586fdad6ff/image.png?X-Amz-A\
         lgorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-C\
-        redential=ASIAZI2LB46652OERZUB%2F20260927%2Fus-west-2%2Fs3%2Faws4_reque\
-        st&X-Amz-Date=20260927T123752Z&X-Amz-Expires=3600&X-Amz-Security-Token=\
-        IQoJb3JpZ2luX2VjEFEaCXVzLXdlc3QtMiJHMEUCIACMCJDyDMaYPBJov71WxRg%2Fc8nLc\
-        QvrbMp%2Fw4n%2FpC3ZAiEA%2ByfM81XpemP1pR0cjA7xWk3qZteDdptPDSidLlrS09Eq%2\
-        FwMIGhAAGgw2Mzc0MjMxODM4MDUiDLHBAFS7FUV0LpeubCrcA8GN943iRVg6ucT7VYksKkc\
-        8XknsyFjI2twqYLlZ3%2BdlBDGzWWfLZ2NWDbLXnkWxMUO1IdBoTBYKQV80CcmtZF1uwMDv\
-        Eokguzy%2FhbIn8DC6NuS8rfdd5kdgBWErX11eO8K7j4lNpETrJruDsvo8%2BjrwZ27ghPI\
-        BKs6jfAOxLdZ5HVq0eUFHlrhyyNgt9He8sds7udC2oEaPxLVU%2FLUZcxmXNTks0eLAmjVz\
-        %2FKXInGLGcOOJMoxuL7q2LLRDdw9oQ06jnrba%2BHl2I6LsDGrIBn1H8173zPqZ%2B2pJ1\
-        xtaA8dbyK2DGAcTWbBfhqsROfAVnU2GhsM15x2D4byefzGfhM868fMHoRB4Tfo9D0GEb557\
-        ApMIKwjiH8PctP3KRjthNGMj0qT%2BF%2B3zNjmoJ7up1N%2B%2FWEp1PBh5RWAvGOXhLTt\
-        Ct9NL5vj1p7hNDf2ZkPEFTKl7zT%2BFFdBDXhaFNEJPgQXsqeGmvW5DQT0O8Zzi2XyR4%2B\
-        QqUfNpV54nefLhGinI1bAFRjHfjVHhLZlfN3Njxv10XSMjtLOubFTrXOHK2St0o8bRXxcO4\
-        9JjWf5hgFuUapY65e4O1sNYf3iTfE2qyp%2Bn%2BRmnfi8%2FBBs%2Bo2GE4pbuohSt4Aju\
-        YtYkSKfaMIWu49UGOqUBQ1iV3M%2FkvbsMDzhjsbfZuiBXDSK3LlSCu6qyvbltaCqVb5Dst\
-        HwuOUyWo2yYCR743omMLlEBsBwLh9K7dqznfYJd9HImX%2BXUrSmehX0p5YhP%2BoR5r%2F\
-        VSiuvKG49rt%2BkVmX5d%2FFAn7ZWEPirdY6ZvTl1zkD4GBX6Gab0vpFzXAFtagDmvA8mja\
-        F4EekcZnm9ysk%2FRwo6wa4hxgyS67UaBWjmE99p7&X-Amz-Signature=bfed3749fa82a\
-        0ed9c00e36d11e0cf7fb7ec60abc2bf339e4df2ca48049615ba&X-Amz-SignedHeaders\
-        =host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
-      expiry_time: "2026-09-27T13:37:52.379Z"
+        redential=ASIAZI2LB46622PG76HU%2F20261017%2Fus-west-2%2Fs3%2Faws4_reque\
+        st&X-Amz-Date=20261017T085213Z&X-Amz-Expires=3600&X-Amz-Security-Token=\
+        IQoJb3JpZ2luX2VjEDAaCXVzLXdlc3QtMiJHMEUCICdBQtwebSiuZJVkcEWr5bGLsLxxU7V\
+        N8zlTYH9x1xt9AiEAkz5OzLf%2FXwQb73oK6aY0f%2FIJGfTiqcvFbjAfZfWNkDwqiAQI%2\
+        BP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDEvKnj8UUKud2%2\
+        BdSRyrcA0c698nrk6hdEC3OjWiln4SBf9U0LBlDmtK5ndaHfpHk%2F8gdyoDYR5l75dxCPA\
+        3%2Bz1OFE7rPAGq%2BskLkVa7%2BH%2BZJ1M5VNBIuddjKvhyYY4TGC3T4cA3WpBNf1WBQe\
+        aRJkJnVCeQYW%2B2nLSgs0Ef1cGETo%2Bovn1gJ7yigAZf02NU811E9kaiI%2FGOHTwgxau\
+        JZl3OQiI7F7zznEztfF9qIt%2BIYUd%2BzN2Fgnd8YR7nSPDVdCsr267gkYeghaZtYWDobS\
+        fIRsoCjxyZVjRQykHRr6Q8BUwb8SXtC2%2FyfhenZ0wbb1Eq%2FhxZDy1qydITv0TUXtE5i\
+        wv9x7wYjfOndoS8Wnf%2FA11WIwqB7ym2JcF1QLKBQTOzjbKQkJy4vefJAgN9m%2F4iMsYx\
+        oDIcnqlixJdx%2F93OMh9Pcm8LVqf9W5XJy8AaGTtQLwzZ9y1lIk5vlToBpza0Owy1Fwrxd\
+        dQaj%2Fv1m%2F5RCprj0m2RaC3e%2BcgXFf%2FFwNIiWfAZaBuIPZzisPZ88CvnX8bolgS8\
+        j0TTl%2FKw7T5mnI%2BxcHLLUrVsPpQ7OlqTRzi32YelVBK4ysQ4Z6X1VA9uwEgTJbxd47y\
+        308ngSq1rjWt36wFPEjOuv2s2te77q0GrU8X6maUF1ESCfMJnTzNYGOqUB3qVEEySCwOD66\
+        yGX09%2BDT3VrWeBbKc6pZT0Y8xl4WcjoodiES2oywwrkAsONABTXdMD%2BCXAo0HT2kKmc\
+        NX2U5lLefRKDO8upZ9Mbwt9Kus%2BJcE%2Bwww2ucGBgPIPcBJafGmxgLHXSkPkb6ncmLvz\
+        YjdBvagE0ezH2p7mWXqnOdyv8W1h94l3XD7%2F0f0t%2FdZCFzE%2BzAGn1NVNCP2DshsAP\
+        TEIEJBpf&X-Amz-Signature=e490f337ad8c474c0dab74664fedbd3feb659a257492b8\
+        89a6f5bd626a2e0a4e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED\
+        &x-id=GetObject"
+      expiry_time: "2026-10-17T09:52:13.223Z"
   icon: null
   parent:
     type: "data_source_id"
@@ -81,6 +87,40 @@ NOTION_METADATA:
       id: "IRI%3F"
       type: "rich_text"
       rich_text: []
+    Badge:
+      id: "IY%5C%3F"
+      type: "files"
+      files:
+        - name: "transparent-Photoroom.png"
+          type: "file"
+          file:
+            url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/1c26e8cb-553e-8110-8\
+              f76-000345ab9bad/f1fe96ac-de4f-4916-8631-7a3fd1e2a39b/transparent\
+              -Photoroom.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha\
+              256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46622PG76HU%2F2026\
+              1017%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261017T085213Z&\
+              X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDAaCXVzL\
+              Xdlc3QtMiJHMEUCICdBQtwebSiuZJVkcEWr5bGLsLxxU7VN8zlTYH9x1xt9AiEAkz\
+              5OzLf%2FXwQb73oK6aY0f%2FIJGfTiqcvFbjAfZfWNkDwqiAQI%2BP%2F%2F%2F%2\
+              F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDEvKnj8UUKud2%2BdSRyrc\
+              A0c698nrk6hdEC3OjWiln4SBf9U0LBlDmtK5ndaHfpHk%2F8gdyoDYR5l75dxCPA3\
+              %2Bz1OFE7rPAGq%2BskLkVa7%2BH%2BZJ1M5VNBIuddjKvhyYY4TGC3T4cA3WpBNf\
+              1WBQeaRJkJnVCeQYW%2B2nLSgs0Ef1cGETo%2Bovn1gJ7yigAZf02NU811E9kaiI%\
+              2FGOHTwgxauJZl3OQiI7F7zznEztfF9qIt%2BIYUd%2BzN2Fgnd8YR7nSPDVdCsr2\
+              67gkYeghaZtYWDobSfIRsoCjxyZVjRQykHRr6Q8BUwb8SXtC2%2FyfhenZ0wbb1Eq\
+              %2FhxZDy1qydITv0TUXtE5iwv9x7wYjfOndoS8Wnf%2FA11WIwqB7ym2JcF1QLKBQ\
+              TOzjbKQkJy4vefJAgN9m%2F4iMsYxoDIcnqlixJdx%2F93OMh9Pcm8LVqf9W5XJy8\
+              AaGTtQLwzZ9y1lIk5vlToBpza0Owy1FwrxddQaj%2Fv1m%2F5RCprj0m2RaC3e%2B\
+              cgXFf%2FFwNIiWfAZaBuIPZzisPZ88CvnX8bolgS8j0TTl%2FKw7T5mnI%2BxcHLL\
+              UrVsPpQ7OlqTRzi32YelVBK4ysQ4Z6X1VA9uwEgTJbxd47y308ngSq1rjWt36wFPE\
+              jOuv2s2te77q0GrU8X6maUF1ESCfMJnTzNYGOqUB3qVEEySCwOD66yGX09%2BDT3V\
+              rWeBbKc6pZT0Y8xl4WcjoodiES2oywwrkAsONABTXdMD%2BCXAo0HT2kKmcNX2U5l\
+              LefRKDO8upZ9Mbwt9Kus%2BJcE%2Bwww2ucGBgPIPcBJafGmxgLHXSkPkb6ncmLvz\
+              YjdBvagE0ezH2p7mWXqnOdyv8W1h94l3XD7%2F0f0t%2FdZCFzE%2BzAGn1NVNCP2\
+              DshsAPTEIEJBpf&X-Amz-Signature=8099165716fa89a74228582c74ba29cccf\
+              4d2562f00a1edfd2aa6bb24cb84eef&X-Amz-SignedHeaders=host&x-amz-che\
+              cksum-mode=ENABLED&x-id=GetObject"
+            expiry_time: "2026-10-17T09:52:13.211Z"
     draft:
       id: "JiWU"
       type: "checkbox"
@@ -113,14 +153,31 @@ NOTION_METADATA:
     FuturePlanning:
       id: "Yy%3Cn"
       type: "rich_text"
-      rich_text: []
+      rich_text:
+        - type: "text"
+          text:
+            content: "Beyond St Kilda, we hope this technology can be adapted to support
+              other conservationists globally by offering a new way to monitor
+              elusive or vulnerable species through sound."
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: "default"
+          plain_text: "Beyond St Kilda, we hope this technology can be adapted to support
+            other conservationists globally by offering a new way to monitor
+            elusive or vulnerable species through sound."
+          href: null
     authors:
       id: "bK%3B%5B"
       type: "people"
       people:
         - object: "user"
           id: "25dd872b-594c-818a-8ef5-0002a724b085"
-          name: "Yenn "
+          name: "Yenn"
           avatar_url: "https://s3-us-west-2.amazonaws.com/public.notion-static.com/c5e972\
             79-1e08-48cb-b619-3350dd0f15ca/Screenshot_2026-08-06_180915.png"
           type: "person"
@@ -158,7 +215,7 @@ NOTION_METADATA:
     Last edited time:
       id: "vbGE"
       type: "last_edited_time"
-      last_edited_time: "2026-09-27T03:39:00.000Z"
+      last_edited_time: "2026-10-17T08:40:00.000Z"
     LearnMoreImage:
       id: "vtTl"
       type: "url"

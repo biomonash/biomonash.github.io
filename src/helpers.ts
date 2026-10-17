@@ -27,10 +27,12 @@ export async function getCoverLink(
 }
 
 export function getFileName(title: string, page_id: string): string {
-  return (
-    title.replaceAll(" ", "-").replace(/--+/g, "-") +
-    "-" +
-    page_id.replaceAll("-", "") +
-    ".md"
-  );
+  // Characters that aren't allowed in file names on Windows/Mac/Linux
+  // (e.g. the "/" in "UI/UX Designer") are replaced with "-".
+  // Only affects how the .md file is named, not the title shown on the site.
+  const safeTitle = title
+    .replace(/[\\/:*?"<>|]/g, "-")
+    .replaceAll(" ", "-")
+    .replace(/--+/g, "-");
+  return safeTitle + "-" + page_id.replaceAll("-", "") + ".md";
 }

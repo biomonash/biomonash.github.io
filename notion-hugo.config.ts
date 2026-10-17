@@ -18,9 +18,13 @@ const userConfig: UserConfig = {
         database_id: "2696e8cb553e80c883cae7082d7f56f8",
         target_folder: "executives",
       },
-       {
+      {
         database_id: "3f66e8cb553e809e8f0becba38271668",
         target_folder: "advisors",
+      },
+      {
+        database_id: "3f06e8cb553e80f792a3fdc9a8fe7c6d",
+        target_folder: "roles",
       },
     ],
   },

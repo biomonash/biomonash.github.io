@@ -198,6 +198,7 @@
                     )
                     (dict
                         "name" "PNC"
+                        "label" "P&C"
                         "tags" (slice "Teamwork" "Recruitment" "Planning" "Communication")
                     )
                     (dict
@@ -212,61 +213,43 @@
 
                 {{ range $department := $departments }}
 
-                    <!-- TEMPORARY ROLE DATA -->
+                    <!-- ROLES FROM NOTION (content/roles) -->
+                    <!-- A role shows under this department when its Notion
+                         "Department" matches $department.label (or .name). -->
 
-                    {{ $roles := slice
+                    {{ $label := $department.label | default $department.name }}
 
-                        (dict
-                            "name" "Role A"
-                            "skills" (slice "Teamwork" "Communication")
-                            "responsibilities" (slice
-                                "Collaborating with the department"
-                                "Supporting ongoing projects"
-                            )
-                            "description" "Contribute to BiOM projects and develop new skills."
-                        )
+                    {{ $roles := slice }}
 
-                        (dict
-                            "name" "Role B"
-                            "skills" (slice "Problem Solving" "Organisation")
-                            "responsibilities" (slice
-                                "Assisting with project activities"
-                                "Working with team members"
-                            )
-                            "description" "Help the department achieve its goals."
-                        )
+                    {{ range sort (where site.RegularPages "Section" "roles") "Title" }}
 
-                        (dict
-                            "name" "Role C"
-                            "skills" (slice "Research" "Collaboration")
-                            "responsibilities" (slice
-                                "Researching project ideas"
-                                "Contributing to team discussions"
-                            )
-                            "description" "Support meaningful environmental projects."
-                        )
+                        {{ $roleDepartments := .Params.department }}
 
-                        (dict
-                            "name" "Role D"
-                            "skills" (slice "Creativity" "Communication")
-                            "responsibilities" (slice
-                                "Developing new ideas"
-                                "Supporting project delivery"
-                            )
-                            "description" "Work alongside other BiOM members."
-                        )
+                        {{ $match := false }}
+                        {{ if reflect.IsSlice $roleDepartments }}
+                            {{ $match = in $roleDepartments $label }}
+                        {{ else }}
+                            {{ $match = eq $roleDepartments $label }}
+                        {{ end }}
 
-                        (dict
-                            "name" "Role E"
-                            "skills" (slice "Teamwork" "Planning")
-                            "responsibilities" (slice
-                                "Supporting department tasks"
-                                "Collaborating on projects"
-                            )
-                            "description" "Help create positive environmental impact."
-                        )
+                        {{ if $match }}
 
-                    }}
+                            <!-- "Role Description" column, or the page's own text
+                                 in Notion when the column says "see within" -->
+                            {{ $description := index .Params "role description" }}
+                            {{ if or (not $description) (eq (lower (strings.TrimSpace $description)) "see within") }}
+                                {{ $description = .Plain | strings.TrimSpace }}
+                            {{ end }}
+
+                            {{ $roles = $roles | append (dict
+                                "name" .Title
+                                "skills" (partial "lines-to-list.html" (index .Params "expected skills"))
+                                "responsibilities" (partial "lines-to-list.html" .Params.responsibilities)
+                                "description" $description
+                            ) }}
+                        {{ end }}
+
+                    {{ end }}
 
                     <!-- RENDER DEPARTMENT -->
 

@@ -93,20 +93,21 @@ export async function loadConfig(): Promise<Config> {
 
     await processPage(pageId);
 
-    // Also mount anything listed manually (databases outside our main CMS page)
-    const dbIds = new Set(
-      config.mount.databases.map((d) => d.database_id.replaceAll("-", "")),
-    );
+    // Also mount anything listed manually. If a manually listed database or
+    // page was also auto-discovered under the CMS page, the manual entry wins,
+    // so its target_folder (and the privacy allowlist in render.ts) applies.
+    const norm = (id: string) => id.replaceAll("-", "");
     for (const db of userConfig.mount.databases ?? []) {
-      if (!dbIds.has(db.database_id.replaceAll("-", "")))
-        config.mount.databases.push(db);
+      config.mount.databases = config.mount.databases.filter(
+        (d) => norm(d.database_id) !== norm(db.database_id),
+      );
+      config.mount.databases.push(db);
     }
-    const pageIds = new Set(
-      config.mount.pages.map((p) => p.page_id.replaceAll("-", "")),
-    );
     for (const p of userConfig.mount.pages ?? []) {
-      if (!pageIds.has(p.page_id.replaceAll("-", "")))
-        config.mount.pages.push(p);
+      config.mount.pages = config.mount.pages.filter(
+        (x) => norm(x.page_id) !== norm(p.page_id),
+      );
+      config.mount.pages.push(p);
     }
   }
 

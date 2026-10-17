@@ -54,6 +54,13 @@ const PUBLIC_PROPERTIES: Record<string, string[]> = {
   ],
   executives: ["FullName","Role", "Department", "Image", "Order"],
   advisors: ["Role", "Department", "Link", "Image"],
+  // "Current Person(s)" is deliberately left out (names of people in roles)
+  roles: [
+    "Role Description",
+    "Department",
+    "Expected Skills",
+    "Responsibilities",
+  ],
 };
 
 // Folders whose photos are saved per person (static/images/<folder>/<page id>.jpg)
