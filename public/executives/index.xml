@@ -1,0 +1,56 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Executives -  - My New Hugo Site</title>
+        <link>http://localhost:1313/executives/</link>
+        <description>Executives -  - My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 23 Apr 2026 00:07:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/executives/" rel="self" type="application/rss+xml" /><item>
+    <title>@Udhay Ramdoss </title>
+    <link>http://localhost:1313/executives/@udhay-ramdoss--34b6e8cb553e80c3bc96e3eeed42bf0f/</link>
+    <pubDate>Thu, 23 Apr 2026 00:07:00 &#43;0000</pubDate><author>
+        <name>Author</name>
+    </author><guid>http://localhost:1313/executives/@udhay-ramdoss--34b6e8cb553e80c3bc96e3eeed42bf0f/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>@Katya </title>
+    <link>http://localhost:1313/executives/@katya--31f6e8cb553e801eb290c2005fb6b348/</link>
+    <pubDate>Tue, 10 Mar 2026 06:28:00 &#43;0000</pubDate><author>
+        <name>Author</name>
+    </author><guid>http://localhost:1313/executives/@katya--31f6e8cb553e801eb290c2005fb6b348/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>@Valerie Chionh </title>
+    <link>http://localhost:1313/executives/@valerie-chionh--26d6e8cb553e805b8452f0cf31de09db/</link>
+    <pubDate>Sat, 13 Sep 2025 02:38:00 &#43;0000</pubDate><author>
+        <name>Author</name>
+    </author><guid>http://localhost:1313/executives/@valerie-chionh--26d6e8cb553e805b8452f0cf31de09db/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>@Justin Lin</title>
+    <link>http://localhost:1313/executives/@justin-lin-2696e8cb553e805e9112e647f8cc4b09/</link>
+    <pubDate>Tue, 09 Sep 2025 05:54:00 &#43;0000</pubDate><author>
+        <name>Author</name>
+    </author><guid>http://localhost:1313/executives/@justin-lin-2696e8cb553e805e9112e647f8cc4b09/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>@Peter </title>
+    <link>http://localhost:1313/executives/@peter--2696e8cb553e8080b449e8046a70841f/</link>
+    <pubDate>Tue, 09 Sep 2025 05:50:00 &#43;0000</pubDate><author>
+        <name>Author</name>
+    </author><guid>http://localhost:1313/executives/@peter--2696e8cb553e8080b449e8046a70841f/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>@Charlie Imbert </title>
+    <link>http://localhost:1313/executives/@charlie-imbert--2696e8cb553e80d2b149c94029fc772a/</link>
+    <pubDate>Tue, 09 Sep 2025 05:48:00 &#43;0000</pubDate><author>
+        <name>Author</name>
+    </author><guid>http://localhost:1313/executives/@charlie-imbert--2696e8cb553e80d2b149c94029fc772a/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>@James Pinter </title>
+    <link>http://localhost:1313/executives/@james-pinter--2696e8cb553e8060bd71e62ff3db57ff/</link>
+    <pubDate>Tue, 09 Sep 2025 05:48:00 &#43;0000</pubDate><author>
+        <name>Author</name>
+    </author><guid>http://localhost:1313/executives/@james-pinter--2696e8cb553e8060bd71e62ff3db57ff/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.166.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>My New Hugo Site | BiOM</title>
+
+    
+    <link rel="icon" href="/images/BiOM-Logo.webp"
+        type="image/webp">
+
+    
+    <style>
+    :root {
+      --main: #172415;
+      --secondary: #b4ce1f;
+      --secondary2: #dee582;
+      --neutral: #fff4cf;
+      --dark1: #0c2103;
+      --dark2: #13330d;
+
+      --accent1: #d38748;
+      --accent2: #a74d36;
+      --accent3: #0097b2;
+    }
+  </style>
+
+    
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@next/dist/aos.css">
+
+    
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    
+    <link rel="stylesheet" href="/css/divs.css">
+    <link rel="stylesheet" href="/css/team.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/header.css">
+
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calistoga&family=Fredoka:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+</head>
+
+  <body>
+    
+    <header>
+    <style>
+        #projects-dropdown {
+            position: relative;
+        }
+
+        #projects-dropdown .nav-dropdown-btn {
+            background: none;
+            border: none;
+            padding-left: 0.4rem;
+            padding-right: 0.4rem;
+        }
+
+        #projects-dropdown .nav-dropdown-btn::after {
+            transition: transform 0.3s ease;
+        }
+
+        #projects-dropdown .nav-dropdown-btn.show::after {
+            transform: rotate(180deg);
+        }
+
+         
+        #projects-dropdown .nav-dropdown-menu {
+            display: block !important;
+            position: absolute !important;
+            top: 100% !important;
+            left: 50% !important;
+            right: auto !important;
+            inset: 100% auto auto 50% !important;
+            transform: translateX(-50%) !important;
+            margin: 0.4rem 0 0 0 !important;
+
+            min-width: 200px;
+            padding: 0.4rem 0 !important;
+            background-color: var(--main) !important;
+            border: none !important;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            z-index: 1050;
+
+            visibility: hidden;
+            opacity: 0;
+            clip-path: inset(0 0 100% 0);
+            transition:
+                clip-path 0.35s ease,
+                opacity 0.25s ease,
+                visibility 0s linear 0.35s;
+        }
+
+        #projects-dropdown .nav-dropdown-menu.show {
+            visibility: visible;
+            opacity: 1;
+            clip-path: inset(0 0 0 0);
+            transition:
+                clip-path 0.35s ease,
+                opacity 0.25s ease,
+                visibility 0s;
+        }
+
+        #projects-dropdown .nav-dropdown-menu li {
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none;
+        }
+
+        #projects-dropdown .dropdown-item {
+            display: block;
+            color: var(--neutral) !important;
+            background: transparent;
+            padding: 0.5rem 1.25rem !important;
+            margin: 0 !important;
+            line-height: 1.4;
+            text-align: center;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        #projects-dropdown .dropdown-item:hover,
+        #projects-dropdown .dropdown-item:focus {
+            background-color: var(--dark2) !important;
+            color: var(--secondary) !important;
+        }
+
+        #projects-dropdown .dropdown-divider {
+            margin: 0.3rem 1rem !important;
+            border-top: 1px solid rgba(255, 244, 207, 0.25) !important;
+            opacity: 1;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #projects-dropdown .nav-dropdown-menu,
+            #projects-dropdown .nav-dropdown-menu.show,
+            #projects-dropdown .nav-dropdown-btn::after {
+                transition: none;
+            }
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="/">
+                <img
+                    src="/images/BiOM-LogoTrans.webp"
+                    alt="BiOM Logo"
+                    style="width: 100px; height: auto; margin: 0.5em;" />
+            </a>
+
+            <div class="mx-auto d-flex align-items-center">
+
+                <div class="btn-group mx-3" id="projects-dropdown">
+                    <a class="nav-link nav-text"
+                        href="/projects/">Projects</a>
+
+                    <button type="button"
+                        class="nav-link nav-text dropdown-toggle dropdown-toggle-split nav-dropdown-btn"
+                        data-bs-toggle="dropdown"
+                        data-bs-display="static"
+                        aria-expanded="false">
+                        <span class="visually-hidden">Show projects</span>
+                    </button>
+
+                    <ul class="dropdown-menu nav-dropdown-menu">
+                        <li>
+                            <a class="dropdown-item nav-text"
+                                href="/projects/">All projects</a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+
+                        
+                            <li>
+                                <a class="dropdown-item nav-text"
+                                    href="/projects-card/forest-portal-3e36e8cb553e80f298f2cdd4b09296f4/">Forest Portal</a>
+                            </li>
+                        
+                            <li>
+                                <a class="dropdown-item nav-text"
+                                    href="/projects-card/st-kilda-penguins-3da6e8cb553e809f976ffd581c26cf35/">St Kilda Penguins</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+
+                <a class="nav-link nav-text mx-3"
+                    href="/team/">Team</a>
+                <a class="nav-link nav-text mx-3"
+                    href="/posts/">Posts</a>
+                <a class="nav-link nav-text mx-3"
+                    href="/#donate">Donate</a>
+            </div>
+
+            <a
+                href="/join-us/"
+                class="join-us-btn btn-style text-decoration-none nav-text mx-2">
+                Join Us
+            </a>
+        </div>
+    </nav>
+</header>
+
+    <main>
+
+      
+      <section id="home">
+        <img
+          src="images/logorec2.webp"
+          alt="BiOM Logo"
+          class="main-logo fade-in-logo" />
+
+        <div class="banner-wrapper" data-aos="fade-up">
+          <p class="banner-text">
+            <span>
+              Student Powering the Future of Conservation &nbsp;
+              <img
+                src="/images/green-flw.webp"
+                style="width: 48px" />
+              &nbsp;
+            </span>
+
+            <span>
+              Student Powering the Future of Conservation &nbsp;
+              <img
+                src="/images/green-flw.webp"
+                style="width: 48px" />
+              &nbsp;
+            </span>
+
+            <span>
+              Student Powering the Future of Conservation &nbsp;
+              <img
+                src="/images/green-flw.webp"
+                style="width: 48px" />
+              &nbsp;
+            </span>
+
+            <span>
+              Student Powering the Future of Conservation &nbsp;
+              <img
+                src="/images/green-flw.webp"
+                style="width: 48px" />
+              &nbsp;
+            </span>
+          </p>
+        </div>
+      </section>
+
+      
+      
+      
+      <section
+  id="main-info"
+  class="justify-content-center align-items-center"
+  data-aos="fade-appear"
+>
+   
+  <div
+    id="whoWeAreCarousel"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    data-bs-interval="5000"
+  >
+    
+    
+    <div class="carousel-indicators">
+      
+      <button
+        type="button"
+        data-bs-target="#whoWeAreCarousel"
+        data-bs-slide-to="0"
+        class="active"
+        aria-label="Slide 1"
+      ></button>
+      
+      <button
+        type="button"
+        data-bs-target="#whoWeAreCarousel"
+        data-bs-slide-to="1"
+        class=""
+        aria-label="Slide 2"
+      ></button>
+      
+    </div>
+    
+
+    
+    <div class="carousel-inner">
+      
+      <div class="carousel-item active">
+        <img
+          src="/images/about-us.webp"
+          class="d-block w-100 group-photo"
+          alt="about-us.webp"
+        />
+      </div>
+      
+      <div class="carousel-item ">
+        <img
+          src="/images/Breakwater.jpg"
+          class="d-block w-100 group-photo"
+          alt="Breakwater.jpg"
+        />
+      </div>
+      
+    </div>
+
+    
+    
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#whoWeAreCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#whoWeAreCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    
+  </div>
+  
+
+  <div class="p-2 mx-auto">
+    <h1 class="header1-txt">Who we are</h1>
+
+    <p class="body-txt p-3">BiOM (Biological Observation Monash) is a student-led team at the
+intersection of Conservation and Technology. We create innovative, accessible
+tools to support real-world environmental solutions. Bringing together
+students from science, engineering and computer science, we design and
+prototype technologies for Ecological Monitoring — from Environmental Sensors
+to machine learning in the field.</p>
+  </div>
+</section>
+
+      
+      
+
+      
+      <section
+        id="mission"
+        class="d-flex justify-content-center my-5"
+        data-aos="zoom-in">
+
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="mission-card card mb-3">
+    <div class="row g-0 align-items-stretch">
+
+        
+        <div class="col-12 col-md-4 order-1 order-md-2">
+            <img
+                src="/images/penguin.webp"
+                class="img-fluid h-100"
+                style="object-fit: cover"
+                alt="" />
+        </div>
+        
+
+        <div class="col-12 col-md-8 order-md-1 d-flex flex-column justify-content-center">
+            <div class="card-body text-start">
+
+                
+
+                <h5 class="card-title header1-txt mission-title-txt">
+                    Our Mission
+                </h5>
+
+                <p class="card-text mission-txt">
+                     BiOM is more than just a student team. It’s a collaborative
+
+
+space where young conservationists build skills, form
+
+
+industry connections, and contribute meaningfully to
+
+
+environmental causes. As we grow, so too does our commitment
+
+
+to learning, curiosity, and action in the face of ecological
+
+
+challenges.
+                </p>
+
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+        
+        
+
+      </section>
+
+      
+      <section id="projects" data-aos="fade-up">
+        <h1 class="header1-txt">Projects</h1>
+
+        
+        <div class="my-5">
+  <div class="project-card" data-aos="fade-right">
+
+    <div class="project-row py-3">
+
+      <div class="proj-left">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjeNIuUTZxiaBQxJlUtilXdOE8odOz33-nNg&amp;s"
+          alt="Forest Portal Logo"
+        />
+      </div>
+
+      <div class="proj-right">
+        <img
+          src="https://www.nillumbik.vic.gov.au/files/assets/public/v/2/image-resources/0a0a2787a.jpg?w=480"
+          alt="Forest Portal"
+        />
+      </div>
+
+    </div>
+
+    <h3 class="project-title">
+      <a
+        class="project-link"
+        href="/articles/nillumbik"
+      >
+        Forest Portal
+      </a>
+    </h3>
+
+    <p class="project-text body-txt">
+      An ongoing forest monitoring initiative using AI tools and community outreach to support conservation through research and innovation.
+    </p>
+
+  </div>
+</div>
+        
+        <div class="my-5">
+  <div class="project-card" data-aos="fade-right">
+
+    <div class="project-row py-3">
+
+      <div class="proj-left">
+        <img
+          src="https://stkildapenguins.com.au/wp-content/uploads/2022/10/St-Kilda-Penguins-Logo-300x300-1.jpeg"
+          alt="St Kilda Penguins Logo"
+        />
+      </div>
+
+      <div class="proj-right">
+        <img
+          src="https://media.timeout.com/images/105858374/image.jpg"
+          alt="St Kilda Penguins"
+        />
+      </div>
+
+    </div>
+
+    <h3 class="project-title">
+      <a
+        class="project-link"
+        href="/articles/st-kilda"
+      >
+        St Kilda Penguins
+      </a>
+    </h3>
+
+    <p class="project-text body-txt">
+      Nestled along Melbourne’s coastline, this project focuses on developing compact AI-powered acoustic monitors to detect and identify penguin calls for population and health tracking.
+    </p>
+
+  </div>
+</div>
+        
+
+      </section>
+
+      
+      <section
+        id="join-us"
+        data-aos="fade-appear"
+        class="py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+              
+              
+              
+              
+              <div class="mission-card card mb-3">
+    <div class="row g-0 align-items-stretch">
+
+        
+
+        <div class="col-12 col-md-10 mx-auto d-flex flex-column justify-content-center">
+            <div class="card-body text-start">
+
+                
+                <p class="text-uppercase fw-bold mb-2 join-eyebrow">
+                    Become part of BiOM
+                </p>
+                
+
+                <h5 class="card-title header1-txt mission-title-txt">
+                    Join Us Today
+                </h5>
+
+                <p class="card-text mission-txt">
+                    We&#39;re always looking for new members! If you&#39;re a Monash student
+interested in ecology, conservation, computer science, or you just really like
+our vibe, fill out our recruitment interest form.
+                </p>
+
+                
+                <div class="mt-3 text-center nav-text">
+                    <a
+                        class="donate-btn btn-style btn"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdpG9CNy_7ON8ZSbiKuBT7MQBOTzoKbmd_TGPA4p5bUOa2hBA/viewform"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Application Form
+                    </a>
+                </div>
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+              
+              
+              
+              
+              
+              
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      
+      <section
+        id="donate"
+        class="d-flex justify-content-center my-5"
+        data-aos="zoom-out">
+
+        
+        
+        
+        
+        
+        
+        <div class="mission-card card mb-3">
+    <div class="row g-0 align-items-stretch">
+
+        
+        <div class="col-12 col-md-4 order-1 order-md-2">
+            <img
+                src="/images/annie.webp"
+                class="img-fluid h-100"
+                style="object-fit: cover"
+                alt="" />
+        </div>
+        
+
+        <div class="col-12 col-md-8 order-md-1 d-flex flex-column justify-content-center">
+            <div class="card-body text-start">
+
+                
+
+                <h5 class="card-title header1-txt mission-title-txt">
+                    Support Our Mission
+                </h5>
+
+                <p class="card-text mission-txt">
+                    Help us power the future of conservation! Your donation
+
+
+directly supports our student-led environmental projects,
+
+
+from AI-powered penguin monitoring to forest conservation
+
+
+initiatives. Every contribution helps us develop innovative
+
+
+technologies that make a real difference for our planet&#39;s
+
+
+ecosystems.
+                </p>
+
+                
+                <div class="mt-3 text-center nav-text">
+                    <a
+                        class="donate-btn btn-style btn"
+                        href="https://alumni-friends.monash.edu/s/itstudentteams"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Donate Now
+                    </a>
+                </div>
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+        
+        
+        
+        
+
+      </section>
+
+    
+    
+      
+
+      <section
+        id="video"
+        data-aos="fade-appear">
+
+        <h1 class="header1-txt text-center">
+          Our Journey
+        </h1>
+
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://drive.google.com/file/d/1mxev1DmYMrx1Ak6z5Q7YigROlI0n4gJJ/preview?autoplay=1"
+            data-video-url="https://drive.google.com/file/d/1mxev1DmYMrx1Ak6z5Q7YigROlI0n4gJJ/preview"
+            allow="autoplay"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </section>
+
+      
+    
+      
+    
+      
+    
+      
+    
+
+      
+      <section
+        id="contact"
+        class="py-3"
+        data-aos="fade-appear">
+
+        <h1 class="header1-txt text-center py-4">Connect With Us</h1>
+<div class="container">
+    <div class="d-flex justify-content-center gap-4">
+        <a
+            href="https://www.instagram.com/biomonash/?utm_source=ig_web_button_share_sheet"
+            target="_blank">
+            <i class="fab fa-instagram fa-2x" tabindex="0"></i>
+        </a>
+        <a
+            href="https://www.linkedin.com/company/biological-observation-monash"
+            target="_blank">
+            <i class="fab fa-linkedin fa-2x" tabindex="0"></i>
+        </a>
+        <a href="mailto:biom@monash.edu" target="_blank">
+            <i class="fas fa-envelope fa-2x" tabindex="0"></i>
+        </a>
+    </div>
+</div>
+
+      </section>
+
+    </main>
+
+    <footer class="footer text-center">
+    <div class="container">
+        <p class="mb-0">&copy; 2025 BiOM. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/index.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,3731 @@
+<!doctype html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Join Us | BiOM</title>
+
+    
+    <link rel="icon" href="/images/BiOM-Logo.webp"
+        type="image/webp">
+
+    
+    <style>
+    :root {
+      --main: #172415;
+      --secondary: #b4ce1f;
+      --secondary2: #dee582;
+      --neutral: #fff4cf;
+      --dark1: #0c2103;
+      --dark2: #13330d;
+
+      --accent1: #d38748;
+      --accent2: #a74d36;
+      --accent3: #0097b2;
+    }
+  </style>
+
+    
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@next/dist/aos.css">
+
+    
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    
+    <link rel="stylesheet" href="/css/divs.css">
+    <link rel="stylesheet" href="/css/team.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/header.css">
+
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calistoga&family=Fredoka:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<link rel="stylesheet" href="/css/join-us.css">
+
+<body>
+
+    <header>
+    <style>
+        #projects-dropdown {
+            position: relative;
+        }
+
+        #projects-dropdown .nav-dropdown-btn {
+            background: none;
+            border: none;
+            padding-left: 0.4rem;
+            padding-right: 0.4rem;
+        }
+
+        #projects-dropdown .nav-dropdown-btn::after {
+            transition: transform 0.3s ease;
+        }
+
+        #projects-dropdown .nav-dropdown-btn.show::after {
+            transform: rotate(180deg);
+        }
+
+         
+        #projects-dropdown .nav-dropdown-menu {
+            display: block !important;
+            position: absolute !important;
+            top: 100% !important;
+            left: 50% !important;
+            right: auto !important;
+            inset: 100% auto auto 50% !important;
+            transform: translateX(-50%) !important;
+            margin: 0.4rem 0 0 0 !important;
+
+            min-width: 200px;
+            padding: 0.4rem 0 !important;
+            background-color: var(--main) !important;
+            border: none !important;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            z-index: 1050;
+
+            visibility: hidden;
+            opacity: 0;
+            clip-path: inset(0 0 100% 0);
+            transition:
+                clip-path 0.35s ease,
+                opacity 0.25s ease,
+                visibility 0s linear 0.35s;
+        }
+
+        #projects-dropdown .nav-dropdown-menu.show {
+            visibility: visible;
+            opacity: 1;
+            clip-path: inset(0 0 0 0);
+            transition:
+                clip-path 0.35s ease,
+                opacity 0.25s ease,
+                visibility 0s;
+        }
+
+        #projects-dropdown .nav-dropdown-menu li {
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none;
+        }
+
+        #projects-dropdown .dropdown-item {
+            display: block;
+            color: var(--neutral) !important;
+            background: transparent;
+            padding: 0.5rem 1.25rem !important;
+            margin: 0 !important;
+            line-height: 1.4;
+            text-align: center;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        #projects-dropdown .dropdown-item:hover,
+        #projects-dropdown .dropdown-item:focus {
+            background-color: var(--dark2) !important;
+            color: var(--secondary) !important;
+        }
+
+        #projects-dropdown .dropdown-divider {
+            margin: 0.3rem 1rem !important;
+            border-top: 1px solid rgba(255, 244, 207, 0.25) !important;
+            opacity: 1;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #projects-dropdown .nav-dropdown-menu,
+            #projects-dropdown .nav-dropdown-menu.show,
+            #projects-dropdown .nav-dropdown-btn::after {
+                transition: none;
+            }
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="/">
+                <img
+                    src="/images/BiOM-LogoTrans.webp"
+                    alt="BiOM Logo"
+                    style="width: 100px; height: auto; margin: 0.5em;" />
+            </a>
+
+            <div class="mx-auto d-flex align-items-center">
+
+                <div class="btn-group mx-3" id="projects-dropdown">
+                    <a class="nav-link nav-text"
+                        href="/projects/">Projects</a>
+
+                    <button type="button"
+                        class="nav-link nav-text dropdown-toggle dropdown-toggle-split nav-dropdown-btn"
+                        data-bs-toggle="dropdown"
+                        data-bs-display="static"
+                        aria-expanded="false">
+                        <span class="visually-hidden">Show projects</span>
+                    </button>
+
+                    <ul class="dropdown-menu nav-dropdown-menu">
+                        <li>
+                            <a class="dropdown-item nav-text"
+                                href="/projects/">All projects</a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+
+                        
+                            <li>
+                                <a class="dropdown-item nav-text"
+                                    href="/projects-card/forest-portal-3e36e8cb553e80f298f2cdd4b09296f4/">Forest Portal</a>
+                            </li>
+                        
+                            <li>
+                                <a class="dropdown-item nav-text"
+                                    href="/projects-card/st-kilda-penguins-3da6e8cb553e809f976ffd581c26cf35/">St Kilda Penguins</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+
+                <a class="nav-link nav-text mx-3"
+                    href="/team/">Team</a>
+                <a class="nav-link nav-text mx-3"
+                    href="/posts/">Posts</a>
+                <a class="nav-link nav-text mx-3"
+                    href="/#donate">Donate</a>
+            </div>
+
+            <a
+                href="/join-us/"
+                class="join-us-btn btn-style text-decoration-none nav-text mx-2">
+                Join Us
+            </a>
+        </div>
+    </nav>
+</header>
+
+    <main>
+
+        
+
+        
+
+        
+
+        
+
+
+        <section id="join-us">
+
+            
+
+            <section class="join-hero">
+
+                <div class="join-hero-content">
+
+                    <div class="join-hero-text">
+
+                        <div
+                            data-aos="fade-up"
+                            data-aos-duration="900">
+
+                            <h1 class="join-hero-title">
+                                Join the Team
+                            </h1>
+
+                            <p class="join-hero-subtitle">
+                                Help us build the future of biological observation
+                            </p>
+
+                            
+
+                            
+
+                                
+
+                                <a
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSdpG9CNy_7ON8ZSbiKuBT7MQBOTzoKbmd_TGPA4p5bUOa2hBA/viewform"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="join-apply-button">
+
+                                    Apply Now!
+
+                                </a>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                    
+
+                    <div class="join-hero-frog">
+
+                        <img
+                            src="/images/frog.png"
+                            alt="BiOM Frog"
+                            data-aos="fade-in"
+                            data-aos-duration="1100">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            
+
+            <section class="join-community">
+
+                <div
+                    class="join-community-content"
+                    data-aos="fade-up"
+                    data-aos-duration="900">
+
+                    <h2 class="join-community-title">
+                        Join the BiOM Community
+                    </h2>
+
+                    <p class="join-community-description">
+                        Join a community of students passionate about
+                        conservation, technology and creating meaningful
+                        environmental impact. Work alongside students
+                        from different disciplines, develop new skills
+                        and contribute to projects supporting
+                        biological observation.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            
+
+            <div class="join-wave-wrapper">
+
+                <svg
+                    class="join-wave"
+                    viewBox="0 0 1440 180"
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+
+                    
+
+                    <path
+                        class="join-wave-orange"
+                        d="
+                            M 0 45
+                            C 180 24, 350 24, 520 45
+                            C 700 68, 860 68, 1040 45
+                            C 1200 25, 1320 27, 1440 45
+                            L 1440 65
+                            C 1320 47, 1200 45, 1040 65
+                            C 860 88, 700 88, 520 65
+                            C 350 44, 180 44, 0 65
+                            Z
+                        ">
+                    </path>
+
+                    
+
+                    <path
+                        class="join-wave-cream"
+                        d="
+                            M 0 65
+                            C 180 44, 350 44, 520 65
+                            C 700 88, 860 88, 1040 65
+                            C 1200 45, 1320 47, 1440 65
+                            L 1440 120
+                            C 1280 100, 1140 100, 980 120
+                            C 810 142, 640 142, 470 120
+                            C 300 98, 150 98, 0 120
+                            Z
+                        ">
+                    </path>
+
+                </svg>
+
+            </div>
+
+
+            
+
+            <div id="join-departments">
+
+                
+
+                
+
+                    
+                    
+
+                    
+
+                    
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                    
+
+                    <section class="department-roles">
+
+  <div class="department-roles-content">
+
+    
+
+    <h2 class="department-roles-title">
+      Engineering
+    </h2>
+
+
+    
+
+    <div class="department-roles-image-wrapper">
+
+      
+
+        <img
+          class="department-roles-image"
+          src="/images/about-us.webp"
+          alt="Engineering Department">
+
+      
+
+      <img
+        class="department-roles-frog"
+        src="/images/frog.png"
+        alt=""
+        aria-hidden="true">
+
+    </div>
+
+
+    
+
+    <h3 class="roles-heading">
+      Roles
+    </h3>
+
+
+    
+
+    
+
+      <div class="role-tags">
+
+        
+
+          <span class="role-tag">
+    CAD
+</span>
+
+        
+
+          <span class="role-tag">
+    3D Printing
+</span>
+
+        
+
+          <span class="role-tag">
+    Design
+</span>
+
+        
+
+          <span class="role-tag">
+    Research
+</span>
+
+        
+
+      </div>
+
+    
+
+
+    
+
+    <div class="department-roles-carousel">
+
+      <div class="roles-list">
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Durable Systems Engineer"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Durable Systems Engineer
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Lead structural design and external encasement development across BiOM projects
+          </span>
+        
+          <span class="role-detail-item">
+            • Coordinate and request purchases for project sub-teams
+          </span>
+        
+          <span class="role-detail-item">
+            • Organise resources and documentation for leadership transitions
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Develop structural designs and external encasements
+          </span>
+        
+          <span class="role-detail-item">
+            • Design, prototype, fabricate, and test system components
+          </span>
+        
+          <span class="role-detail-item">
+            • Refine components based on testing results
+          </span>
+        
+          <span class="role-detail-item">
+            • Communicate project progress and issues to leads and project teams
+          </span>
+        
+
+        
+
+          <span class="role-flip-description">
+            see within (other persons: Vineth)
+          </span>
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Durable Systems Lead"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Durable Systems Lead
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • CAD software and material properties
+          </span>
+        
+          <span class="role-detail-item">
+            • Fabrication methods
+          </span>
+        
+          <span class="role-detail-item">
+            • Team and project leadership
+          </span>
+        
+          <span class="role-detail-item">
+            • Timeline and resource planning
+          </span>
+        
+          <span class="role-detail-item">
+            • Conflict resolution
+          </span>
+        
+          <span class="role-detail-item">
+            • Cross-team communication
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Lead structural design and external encasement development across BiOM projects
+          </span>
+        
+          <span class="role-detail-item">
+            • Coordinate and request purchases for project sub-teams
+          </span>
+        
+          <span class="role-detail-item">
+            • Organise resources and documentation for leadership transitions
+          </span>
+        
+
+        
+
+          <span class="role-flip-description">
+            Duties &amp;amp; Responsibilities Lead the research and development of internal structures and external encasements across various BiOM projects. Request and mobilise sub-team purchases relevant to various BiOM projects. Collect and organise various resources to ensure seamless leadership transition. What we’re looking for Familiarity with CAD software, material properties, and fabrication methods. An aptitude to lead and/or real experience leading a team or project: planning timelines, supporting members, allocating resources and resolving interpersonal conflicts. Reliable and consistent communications between leadership and sub-team members.
+          </span>
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Electronic Systems Engineer"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Electronic Systems Engineer
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Circuit design and electronic components
+          </span>
+        
+          <span class="role-detail-item">
+            • Microcontrollers and PCB design
+          </span>
+        
+          <span class="role-detail-item">
+            • Basic electronics manufacturing
+          </span>
+        
+          <span class="role-detail-item">
+            • Practical problem-solving
+          </span>
+        
+          <span class="role-detail-item">
+            • Team collaboration and communication
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Develop signal processing and sustainable power systems
+          </span>
+        
+          <span class="role-detail-item">
+            • Design, prototype, test, and integrate electronic systems
+          </span>
+        
+          <span class="role-detail-item">
+            • Communicate project progress and issues to leads and project teams
+          </span>
+        
+
+        
+
+          <span class="role-flip-description">
+            see within (other persons: kara)
+          </span>
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Electronic Systems Lead"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Electronic Systems Lead
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • System architecture and circuit design
+          </span>
+        
+          <span class="role-detail-item">
+            • Component selection and PCB design
+          </span>
+        
+          <span class="role-detail-item">
+            • Electronics manufacturing processes
+          </span>
+        
+          <span class="role-detail-item">
+            • Team and project leadership
+          </span>
+        
+          <span class="role-detail-item">
+            • Timeline and resource planning
+          </span>
+        
+          <span class="role-detail-item">
+            • Conflict resolution and communication
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Lead signal processing and sustainable power system development
+          </span>
+        
+          <span class="role-detail-item">
+            • Coordinate and request purchases for project sub-teams
+          </span>
+        
+          <span class="role-detail-item">
+            • Organise resources and documentation for leadership transitions
+          </span>
+        
+
+        
+
+          <span class="role-flip-description">
+            see within (actively considering far more qualified candidates - James)
+          </span>
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Engineering Lead"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Engineering Lead
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • BiOM values, vision, and mission
+          </span>
+        
+          <span class="role-detail-item">
+            • Team and project leadership
+          </span>
+        
+          <span class="role-detail-item">
+            • Timeline and resource planning
+          </span>
+        
+          <span class="role-detail-item">
+            • Conflict resolution
+          </span>
+        
+          <span class="role-detail-item">
+            • Cross-team communication
+          </span>
+        
+          <span class="role-detail-item">
+            • Stakeholder engagement
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Lead engineering sub-teams and conservation projects
+          </span>
+        
+          <span class="role-detail-item">
+            • Escalate requests and unresolved issues to senior leadership
+          </span>
+        
+          <span class="role-detail-item">
+            • Organise resources and documentation for leadership transitions
+          </span>
+        
+          <span class="role-detail-item">
+            • Engage with internal and external stakeholders, including academic advisors
+          </span>
+        
+
+        
+
+          <span class="role-flip-description">
+            Duties &amp;amp; Responsibilities Lead the research and development across all of BiOM’s engineering sub-teams and manage the technical efforts made towards conservation projects. Make/escalate purchase requests, complaints, suggestions, and unresolved problems with senior BiOM leadership. Collect and organise various resources and documents to ensure seamless leadership transition. Connect and engage with internal and external stakeholders including academic advisors. What we’re looking for Familiarity with BiOM values, vision, and mission. An aptitude to lead and/or real experience leading a range of teams or projects: planning timelines, supporting members, allocating resources and resolving interpersonal conflicts. Reliable and consistent communications between leadership and sub-team members.
+          </span>
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Software Integration Engineer"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Software Integration Engineer
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Embedded programming and software architecture
+          </span>
+        
+          <span class="role-detail-item">
+            • Version control and APIs
+          </span>
+        
+          <span class="role-detail-item">
+            • System integration and testing
+          </span>
+        
+          <span class="role-detail-item">
+            • Practical problem-solving
+          </span>
+        
+          <span class="role-detail-item">
+            • Reliable software development
+          </span>
+        
+          <span class="role-detail-item">
+            • Team collaboration and communication
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Develop embedded systems and digital ecosystems
+          </span>
+        
+          <span class="role-detail-item">
+            • Integrate, test, and troubleshoot software across projects
+          </span>
+        
+          <span class="role-detail-item">
+            • Communicate project progress and issues to leads and project teams
+          </span>
+        
+
+        
+
+          <span class="role-flip-description">
+            Duties &amp;amp; Responsibilities Assist with the research and development of embedded systems and digital ecosystems across in your allocated project. Contribute to software development, system integration, testing, and troubleshooting across BiOM projects. Communicate project requirements, progress, and issues with the Software Integration Lead and relevant project teams. What we’re looking for Familiarity with embedded programming, software architecture, version control, APIs, and system integration. An aptitude for practical problem-solving and developing reliable software solutions for real-world applications. Reliable and consistent communication, with a willingness to collaborate and contribute to a team environment.
+          </span>
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Software Integration Lead"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Software Integration Lead
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Embedded programming and software architecture
+          </span>
+        
+          <span class="role-detail-item">
+            • Version control and APIs
+          </span>
+        
+          <span class="role-detail-item">
+            • System integration
+          </span>
+        
+          <span class="role-detail-item">
+            • Team and project leadership
+          </span>
+        
+          <span class="role-detail-item">
+            • Timeline and resource planning
+          </span>
+        
+          <span class="role-detail-item">
+            • Conflict resolution and communication
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Lead embedded systems and digital ecosystem development
+          </span>
+        
+          <span class="role-detail-item">
+            • Coordinate and request purchases for project sub-teams
+          </span>
+        
+          <span class="role-detail-item">
+            • Organise resources and documentation for leadership transitions
+          </span>
+        
+
+        
+
+          <span class="role-flip-description">
+            Duties &amp;amp; Responsibilities Lead the research and development of embedded systems and digital ecosystems across various BiOM projects. Request and mobilise sub-team purchases relevant to various BiOM projects. Collect and organise various resources and documents to ensure seamless leadership transition. What we’re looking for Familiarity with embedded programming, software architecture, version control, APIs, and system integration. An aptitude to lead and/or real experience leading a team or project: planning timelines, supporting members, allocating resources and resolving interpersonal conflicts. Reliable and consistent communications between leadership and sub-team members.
+          </span>
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+      </div>
+
+    </div>
+
+
+    
+
+    
+
+      <div class="roles-carousel-controls">
+
+        <button
+          type="button"
+          class="roles-carousel-prev"
+          aria-label="Previous roles">
+          &#10094;
+        </button>
+
+        <button
+          type="button"
+          class="roles-carousel-next"
+          aria-label="Next roles">
+          &#10095;
+        </button>
+
+      </div>
+
+    
+
+  </div>
+
+</section>
+
+
+                
+
+                    
+                    
+
+                    
+
+                    
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                    
+
+                    <section class="department-roles">
+
+  <div class="department-roles-content">
+
+    
+
+    <h2 class="department-roles-title">
+      IT
+    </h2>
+
+
+    
+
+    <div class="department-roles-image-wrapper">
+
+      
+
+        <img
+          class="department-roles-image"
+          src="/images/about-us.webp"
+          alt="IT Department">
+
+      
+
+      <img
+        class="department-roles-frog"
+        src="/images/frog.png"
+        alt=""
+        aria-hidden="true">
+
+    </div>
+
+
+    
+
+    <h3 class="roles-heading">
+      Roles
+    </h3>
+
+
+    
+
+    
+
+      <div class="role-tags">
+
+        
+
+          <span class="role-tag">
+    Programming
+</span>
+
+        
+
+          <span class="role-tag">
+    Web Development
+</span>
+
+        
+
+          <span class="role-tag">
+    Data
+</span>
+
+        
+
+          <span class="role-tag">
+    UI/UX
+</span>
+
+        
+
+      </div>
+
+    
+
+
+    
+
+    <div class="department-roles-carousel">
+
+      <div class="roles-list">
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for AI Engineer"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        AI Engineer
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Python programming
+          </span>
+        
+          <span class="role-detail-item">
+            • Machine learning and data science
+          </span>
+        
+          <span class="role-detail-item">
+            • PyTorch, TensorFlow, or scikit-learn
+          </span>
+        
+          <span class="role-detail-item">
+            • Data cleaning and preprocessing
+          </span>
+        
+          <span class="role-detail-item">
+            • Real-world data analysis
+          </span>
+        
+          <span class="role-detail-item">
+            • Technical communication and collaboration
+          </span>
+        
+          <span class="role-detail-item">
+            • Independent problem-solving
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Research AI solutions for ecological problems
+          </span>
+        
+          <span class="role-detail-item">
+            • Design, train, and evaluate machine learning models
+          </span>
+        
+          <span class="role-detail-item">
+            • Clean, preprocess, and structure data for model training and evaluation
+          </span>
+        
+          <span class="role-detail-item">
+            • Communicate technical findings to non-technical stakeholders and cross-functional teams
+          </span>
+        
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Backend Developer"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Backend Developer
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Experience or interest in backend web development
+          </span>
+        
+          <span class="role-detail-item">
+            • Programming experience in any backend language
+          </span>
+        
+          <span class="role-detail-item">
+            • Go or Python
+          </span>
+        
+          <span class="role-detail-item">
+            • Familiarity with PostgreSQL or other relational databases
+          </span>
+        
+          <span class="role-detail-item">
+            • Understanding of APIs and client-server architecture
+          </span>
+        
+          <span class="role-detail-item">
+            • Familiarity with Docker or other development tools
+          </span>
+        
+          <span class="role-detail-item">
+            • Ability to learn and adapt to new technologies
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Experience or interest in backend web development
+          </span>
+        
+          <span class="role-detail-item">
+            • Programming experience in any backend language
+          </span>
+        
+          <span class="role-detail-item">
+            • Go or Python
+          </span>
+        
+          <span class="role-detail-item">
+            • Familiarity with PostgreSQL or other relational databases
+          </span>
+        
+          <span class="role-detail-item">
+            • Understanding of APIs and client-server architecture
+          </span>
+        
+          <span class="role-detail-item">
+            • Familiarity with Docker or other development tools
+          </span>
+        
+          <span class="role-detail-item">
+            • Ability to learn and adapt to new technologies
+          </span>
+        
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Data Science"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Data Science
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Experience or interest in data analysis and visualisation
+          </span>
+        
+          <span class="role-detail-item">
+            • Familiarity with SQL and data management
+          </span>
+        
+          <span class="role-detail-item">
+            • Proficiency in Python programming
+          </span>
+        
+          <span class="role-detail-item">
+            • Understanding of statistics and probability
+          </span>
+        
+          <span class="role-detail-item">
+            • Ability to interpret data and communicate insights clearly
+          </span>
+        
+          <span class="role-detail-item">
+            • Knowledge of data cleaning, preprocessing, and exploratory data analysis
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Plan and implement data collection, validation, cleaning, analysis, and visualisation for different projects
+          </span>
+        
+          <span class="role-detail-item">
+            • Perform exploratory data analysis to identify trends and relationships
+          </span>
+        
+          <span class="role-detail-item">
+            • Design visualisations and dashboards based on project requirements
+          </span>
+        
+          <span class="role-detail-item">
+            • Research new data science tools and techniques to improve existing project workflows
+          </span>
+        
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Frontend Developer"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Frontend Developer
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Experience or interest in frontend web development
+          </span>
+        
+          <span class="role-detail-item">
+            • JavaScript or TypeScript
+          </span>
+        
+          <span class="role-detail-item">
+            • HTML and CSS
+          </span>
+        
+          <span class="role-detail-item">
+            • React, Vue, or Angular
+          </span>
+        
+          <span class="role-detail-item">
+            • Ability to build responsive and user-friendly interfaces
+          </span>
+        
+          <span class="role-detail-item">
+            • Ability to learn and adapt to new technologies
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Develop and maintain frontend interfaces for web-based solutions
+          </span>
+        
+          <span class="role-detail-item">
+            • Collaborate with backend developers to integrate APIs and data
+          </span>
+        
+          <span class="role-detail-item">
+            • Build responsive and accessible user experiences
+          </span>
+        
+          <span class="role-detail-item">
+            • Test and troubleshoot frontend functionality
+          </span>
+        
+          <span class="role-detail-item">
+            • Explore frameworks and libraries to improve development workflows
+          </span>
+        
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for UI/UX Designer"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        UI/UX Designer
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Experience or interest in web design and website styling
+          </span>
+        
+          <span class="role-detail-item">
+            • Strong foundational knowledge of HTML and CSS
+          </span>
+        
+          <span class="role-detail-item">
+            • Familiarity with styling frameworks such as Bootstrap or Tailwind CSS
+          </span>
+        
+          <span class="role-detail-item">
+            • Interest in UI/UX design and responsive layouts
+          </span>
+        
+          <span class="role-detail-item">
+            • Familiarity with static site generators such as Hugo
+          </span>
+        
+          <span class="role-detail-item">
+            • Attention to visual detail and consistency
+          </span>
+        
+          <span class="role-detail-item">
+            • Ability to learn and adapt to new technologies
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Design and style website layouts in line with BiOM branding
+          </span>
+        
+          <span class="role-detail-item">
+            • Create responsive page layouts for different screen sizes
+          </span>
+        
+          <span class="role-detail-item">
+            • Improve website usability, accessibility, and visual consistency
+          </span>
+        
+          <span class="role-detail-item">
+            • Maintain and update website content and styling
+          </span>
+        
+          <span class="role-detail-item">
+            • Collaborate with developers to translate designs into functional web pages
+          </span>
+        
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+      </div>
+
+    </div>
+
+
+    
+
+    
+
+      <div class="roles-carousel-controls">
+
+        <button
+          type="button"
+          class="roles-carousel-prev"
+          aria-label="Previous roles">
+          &#10094;
+        </button>
+
+        <button
+          type="button"
+          class="roles-carousel-next"
+          aria-label="Next roles">
+          &#10095;
+        </button>
+
+      </div>
+
+    
+
+  </div>
+
+</section>
+
+
+                
+
+                    
+                    
+
+                    
+
+                    
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                            
+                            
+                            
+                                
+                            
+
+                            
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                    
+
+                    <section class="department-roles">
+
+  <div class="department-roles-content">
+
+    
+
+    <h2 class="department-roles-title">
+      PNC
+    </h2>
+
+
+    
+
+    <div class="department-roles-image-wrapper">
+
+      
+
+        <img
+          class="department-roles-image"
+          src="/images/about-us.webp"
+          alt="PNC Department">
+
+      
+
+      <img
+        class="department-roles-frog"
+        src="/images/frog.png"
+        alt=""
+        aria-hidden="true">
+
+    </div>
+
+
+    
+
+    <h3 class="roles-heading">
+      Roles
+    </h3>
+
+
+    
+
+    
+
+      <div class="role-tags">
+
+        
+
+          <span class="role-tag">
+    Teamwork
+</span>
+
+        
+
+          <span class="role-tag">
+    Recruitment
+</span>
+
+        
+
+          <span class="role-tag">
+    Planning
+</span>
+
+        
+
+          <span class="role-tag">
+    Communication
+</span>
+
+        
+
+      </div>
+
+    
+
+
+    
+
+    <div class="department-roles-carousel">
+
+      <div class="roles-list">
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for     Compliance Officer   "
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+            Compliance Officer   
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Detail-oriented written communication
+          </span>
+        
+          <span class="role-detail-item">
+            • Contract drafting and legal provisions
+          </span>
+        
+          <span class="role-detail-item">
+            • Policy and regulatory awareness
+          </span>
+        
+          <span class="role-detail-item">
+            • Organisation and discretion
+          </span>
+        
+          <span class="role-detail-item">
+            • Risk management
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Draft and issue contracts with external parties
+          </span>
+        
+          <span class="role-detail-item">
+            • Review and update team policies
+          </span>
+        
+          <span class="role-detail-item">
+            • Manage field safety compliance, biosafety regulations, hazard assessments, and emergency protocols
+          </span>
+        
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Mediation Officer"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Mediation Officer
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Confidentiality and discretion
+          </span>
+        
+          <span class="role-detail-item">
+            • Active listening
+          </span>
+        
+          <span class="role-detail-item">
+            • Impartial communication
+          </span>
+        
+          <span class="role-detail-item">
+            • Conflict resolution
+          </span>
+        
+          <span class="role-detail-item">
+            • Complaint-handling procedures
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Conduct confidential preliminary discussions to address interpersonal issues
+          </span>
+        
+          <span class="role-detail-item">
+            • Facilitate formal dispute resolution processes
+          </span>
+        
+          <span class="role-detail-item">
+            • Follow complaint policies and coordinate follow-ups with involved parties
+          </span>
+        
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Recruitment Officer"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Recruitment Officer
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Organisation and administration
+          </span>
+        
+          <span class="role-detail-item">
+            • Notion and Google Workspace
+          </span>
+        
+          <span class="role-detail-item">
+            • Objective judgment and evaluation
+          </span>
+        
+          <span class="role-detail-item">
+            • Interpersonal communication
+          </span>
+        
+          <span class="role-detail-item">
+            • Interview coordination
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Standardise interview questions for group interviews
+          </span>
+        
+          <span class="role-detail-item">
+            • Organise group interview activities
+          </span>
+        
+          <span class="role-detail-item">
+            • Summarise applications and update applicant statuses in Notion
+          </span>
+        
+          <span class="role-detail-item">
+            • Schedule interview time slots
+          </span>
+        
+          <span class="role-detail-item">
+            • Coordinate onboarding forms and applicant clearances
+          </span>
+        
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+          <div class="roles-carousel-item">
+            <div class="role-flip-card">
+
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for Relations Officer"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
+
+    
+
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        Relations Officer
+      </span>
+
+    </span>
+
+
+    
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Event planning and organisation
+          </span>
+        
+          <span class="role-detail-item">
+            • Logistics and attention to detail
+          </span>
+        
+          <span class="role-detail-item">
+            • Cross-team communication
+          </span>
+        
+          <span class="role-detail-item">
+            • Stakeholder management
+          </span>
+        
+          <span class="role-detail-item">
+            • Inclusive team culture
+          </span>
+        
+
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        
+          <span class="role-detail-item">
+            • Coordinate team culture events with sub-teams
+          </span>
+        
+          <span class="role-detail-item">
+            • Manage venue bookings, catering, and dietary requirements
+          </span>
+        
+          <span class="role-detail-item">
+            • Oversee on-site event execution
+          </span>
+        
+
+        
+
+      </span>
+
+    </span>
+
+  </button>
+
+</div>
+
+          </div>
+
+        
+
+      </div>
+
+    </div>
+
+
+    
+
+    
+
+      <div class="roles-carousel-controls">
+
+        <button
+          type="button"
+          class="roles-carousel-prev"
+          aria-label="Previous roles">
+          &#10094;
+        </button>
+
+        <button
+          type="button"
+          class="roles-carousel-next"
+          aria-label="Next roles">
+          &#10095;
+        </button>
+
+      </div>
+
+    
+
+  </div>
+
+</section>
+
+
+                
+
+                    
+                    
+
+                    
+
+                    
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                    
+
+                    <section class="department-roles">
+
+  <div class="department-roles-content">
+
+    
+
+    <h2 class="department-roles-title">
+      Marketing
+    </h2>
+
+
+    
+
+    <div class="department-roles-image-wrapper">
+
+      
+
+        <img
+          class="department-roles-image"
+          src="/images/about-us.webp"
+          alt="Marketing Department">
+
+      
+
+      <img
+        class="department-roles-frog"
+        src="/images/frog.png"
+        alt=""
+        aria-hidden="true">
+
+    </div>
+
+
+    
+
+    <h3 class="roles-heading">
+      Roles
+    </h3>
+
+
+    
+
+    
+
+      <div class="role-tags">
+
+        
+
+          <span class="role-tag">
+    Social Media
+</span>
+
+        
+
+          <span class="role-tag">
+    Design
+</span>
+
+        
+
+          <span class="role-tag">
+    Content
+</span>
+
+        
+
+          <span class="role-tag">
+    Events
+</span>
+
+        
+
+      </div>
+
+    
+
+
+    
+
+    <div class="department-roles-carousel">
+
+      <div class="roles-list">
+
+        
+
+      </div>
+
+    </div>
+
+
+    
+
+    
+
+  </div>
+
+</section>
+
+
+                
+
+                    
+                    
+
+                    
+
+                    
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                        
+
+                        
+                        
+                            
+                        
+
+                        
+
+                    
+
+                    
+
+                    <section class="department-roles">
+
+  <div class="department-roles-content">
+
+    
+
+    <h2 class="department-roles-title">
+      Ecology
+    </h2>
+
+
+    
+
+    <div class="department-roles-image-wrapper">
+
+      
+
+        <img
+          class="department-roles-image"
+          src="/images/about-us.webp"
+          alt="Ecology Department">
+
+      
+
+      <img
+        class="department-roles-frog"
+        src="/images/frog.png"
+        alt=""
+        aria-hidden="true">
+
+    </div>
+
+
+    
+
+    <h3 class="roles-heading">
+      Roles
+    </h3>
+
+
+    
+
+    
+
+      <div class="role-tags">
+
+        
+
+          <span class="role-tag">
+    Fieldwork
+</span>
+
+        
+
+          <span class="role-tag">
+    Research
+</span>
+
+        
+
+          <span class="role-tag">
+    Wildlife
+</span>
+
+        
+
+          <span class="role-tag">
+    Conservation
+</span>
+
+        
+
+      </div>
+
+    
+
+
+    
+
+    <div class="department-roles-carousel">
+
+      <div class="roles-list">
+
+        
+
+      </div>
+
+    </div>
+
+
+    
+
+    
+
+  </div>
+
+</section>
+
+
+                
+
+            </div>
+
+        </section>
+
+
+        
+
+        <section
+            id="contact"
+            class="py-3"
+            data-aos="fade-appear">
+
+            <h1 class="header1-txt text-center py-4">Connect With Us</h1>
+<div class="container">
+    <div class="d-flex justify-content-center gap-4">
+        <a
+            href="https://www.instagram.com/biomonash/?utm_source=ig_web_button_share_sheet"
+            target="_blank">
+            <i class="fab fa-instagram fa-2x" tabindex="0"></i>
+        </a>
+        <a
+            href="https://www.linkedin.com/company/biological-observation-monash"
+            target="_blank">
+            <i class="fab fa-linkedin fa-2x" tabindex="0"></i>
+        </a>
+        <a href="mailto:biom@monash.edu" target="_blank">
+            <i class="fas fa-envelope fa-2x" tabindex="0"></i>
+        </a>
+    </div>
+</div>
+
+        </section>
+
+    </main>
+
+
+    
+
+    <footer class="footer text-center">
+    <div class="container">
+        <p class="mb-0">&copy; 2025 BiOM. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/index.js"></script>
+
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.querySelectorAll(
+                "#join-us .department-roles"
+            ).forEach(function (section) {
+
+                const list = section.querySelector(".roles-list");
+                const previous = section.querySelector(".roles-carousel-prev");
+                const next = section.querySelector(".roles-carousel-next");
+
+                if (!list || !previous || !next) {
+                    return;
+                }
+
+                function scrollAmount() {
+
+                    const card = list.querySelector(".roles-carousel-item");
+
+                    if (!card) {
+                        return 280;
+                    }
+
+                    const gap = parseFloat(
+                        window.getComputedStyle(list).columnGap
+                    ) || 0;
+
+                    return card.getBoundingClientRect().width + gap;
+                }
+
+                previous.addEventListener("click", function () {
+
+                    list.scrollBy({
+                        left: -scrollAmount(),
+                        behavior: "smooth"
+                    });
+
+                });
+
+                next.addEventListener("click", function () {
+
+                    list.scrollBy({
+                        left: scrollAmount(),
+                        behavior: "smooth"
+                    });
+
+                });
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Projects-Cards -  - My New Hugo Site</title>
+        <link>http://localhost:1313/projects-card/</link>
+        <description>Projects-Cards -  - My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 22 Sep 2026 20:17:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/projects-card/" rel="self" type="application/rss+xml" /><item>
+    <title>Forest Portal</title>
+    <link>http://localhost:1313/projects-card/forest-portal-3e36e8cb553e80f298f2cdd4b09296f4/</link>
+    <pubDate>Tue, 22 Sep 2026 20:17:00 &#43;0000</pubDate><author>
+                    <name>Yenn</name>
+                </author><author>
+                    <name>Jadyn Leon</name>
+                </author><guid>http://localhost:1313/projects-card/forest-portal-3e36e8cb553e80f298f2cdd4b09296f4/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://notion-hugo.pages.dev/api?page_id=3e36e8cb-553e-80f2-98f2-cdd4b09296f4" referrerpolicy="no-referrer">
+            </div>An ongoing forest monitoring initiative using AI tools and community outreach to support conservation through research and innovation.]]></description>
+</item><item>
+    <title>St Kilda Penguins</title>
+    <link>http://localhost:1313/projects-card/st-kilda-penguins-3da6e8cb553e809f976ffd581c26cf35/</link>
+    <pubDate>Sun, 13 Sep 2026 23:42:00 &#43;0000</pubDate><author>
+                    <name>Yenn</name>
+                </author><author>
+                    <name>Jadyn Leon</name>
+                </author><guid>http://localhost:1313/projects-card/st-kilda-penguins-3da6e8cb553e809f976ffd581c26cf35/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://notion-hugo.pages.dev/api?page_id=3da6e8cb-553e-809f-976f-fd581c26cf35" referrerpolicy="no-referrer">
+            </div>Nestled along Melbourne’s coastline, this project focuses on developing compact AI-powered acoustic monitors to detect and identify penguin calls for population and health tracking.]]></description>
+</item></channel>
+</rss>

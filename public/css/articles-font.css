@@ -1,0 +1,51 @@
+
+.proj-des h1 {
+  font-size: 48px;
+  padding: 0.5em 0;
+}
+
+.card-title {
+  font-family: "Calistoga", sans-serif;
+  font-size: 40px;
+  font-weight: 550;
+
+}
+
+.card-text {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.09px;
+  word-break: break-word;
+  letter-spacing: -0.09px;
+}
+
+.future-section .card-text{
+    font-size: 20px;
+    font-weight: medium;
+}
+
+.link-card-text {
+    font-weight: 700px;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.involvement .card-title {
+    font-weight: 600;
+    font-size: 24px;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+.info-text {
+    font-weight: 500;
+    text-decoration-line: underline;
+    text-underline-position: from-font;
+    text-decoration-thickness: from-font;
+    text-decoration-style: solid;
+    cursor: pointer;
+}
+
+.info-text:hover {
+    color: #0097b2 !important;
+}
