@@ -1,7 +1,7 @@
 ---
 title: "Forest Portal"
 date: "2026-09-22T20:17:00.000Z"
-lastmod: "2026-10-17T09:17:00.000Z"
+lastmod: "2026-10-17T09:48:00.000Z"
 draft: false
 featuredImage: "https://notion-hugo.pages.dev/api?page_id=3e36e8cb-553e-80f2-98\
   f2-cdd4b09296f4"
@@ -24,10 +24,8 @@ Challenge: "Conservation efforts often rely on fragmented, manual data
   spreadsheet, limiting accessibility for both the public and council."
 Badge:
   - "/images/ForestPortal.webp"
-Tagline: "The Nillumbik Shire is home to one of Victoria’s longest-running
-  forest monitoring initiatives; an ongoing program that has collected rich
-  ecological data for over eight years. This long-term commitment makes
-  Nillumbik a uniquely valuable region for both research and innovation."
+Tagline: "Forest monitoring initiative using AI tools and community outreach to
+  support conservation through research and innovation."
 link: "articles/nillumbik"
 LearnMoreTitle: "For More Information About Nillumbik Shire"
 FuturePlanning: "By bridging technology, ecology, and public engagement, this
@@ -43,13 +41,15 @@ Status: "Active"
 logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjeNIuUTZxiaBQxJlU\
   tilXdOE8odOz33-nNg&s"
 LearnMoreLink: "https://www.nillumbik.vic.gov.au/"
-description: "An ongoing forest monitoring initiative using AI tools and
-  community outreach to support conservation through research and innovation."
+description: "The Nillumbik Shire is home to one of Victoria’s longest-running
+  forest monitoring initiatives; an ongoing program that has collected rich
+  ecological data for over eight years. This long-term commitment makes
+  Nillumbik a uniquely valuable region for both research and innovation."
 NOTION_METADATA:
   object: "page"
   id: "3e36e8cb-553e-80f2-98f2-cdd4b09296f4"
   created_time: "2026-09-22T20:17:00.000Z"
-  last_edited_time: "2026-10-17T09:17:00.000Z"
+  last_edited_time: "2026-10-17T09:48:00.000Z"
   created_by:
     object: "user"
     id: "25dd872b-594c-818a-8ef5-0002a724b085"
@@ -62,28 +62,28 @@ NOTION_METADATA:
       url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/1c26e8cb-553e-8110-8\
         f76-000345ab9bad/5751897a-3cab-4539-a441-37bb8a02c5d4/image.png?X-Amz-A\
         lgorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-C\
-        redential=ASIAZI2LB4665RQLTXZZ%2F20261017%2Fus-west-2%2Fs3%2Faws4_reque\
-        st&X-Amz-Date=20261017T092023Z&X-Amz-Expires=3600&X-Amz-Security-Token=\
-        IQoJb3JpZ2luX2VjEDAaCXVzLXdlc3QtMiJIMEYCIQCHyJyjbZcn2hPZl7cmCjYhiNOX5Nz\
-        %2BuN1wo18dnYHtDgIhAMwMuMPXkAu39EaAJX8SG7DXpwl9PC3sJl0zYEAzqEU%2BKogECP\
-        n%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1Igx5bcz27fhGcEAng\
-        4Eq3ANYHijW%2FVUlRFmHlw9JOcYNFPmjWm9fxMJakDM4TMDvmZplr8uF6kHZGxuMs8vEHd\
-        78wm5tvA13F%2ByNrjvofN%2BVj8ZMNUpTk0Y775Iezr%2BCB5ZI5FHChngP4StRRDYU%2F\
-        Nq9tt%2Fw81b%2F1YoW8WJSoMMvORJIysQA%2BpbQyK07TKpYEBHqfp4x9oqiX3aPtXuZVV\
-        G9avtxRSrPh8nIN3SmTdTUJJ9i86pHdJDmF4a32xJ1gzlzDgX8GYuWcb2R42TbADx6j4jca\
-        Wmvtcym37pyRRgyXkCHi%2FbQwfG0jFvkrLuVYvLoO3NWsk1sBOyXzjSqRJju9RXX7tbhwy\
-        diBUJwhopG6j59Zf3KMSPaWtEsu%2Fl7uS5Ums%2BP5CX4Gra7G9V5tTbVsHEkZ%2BCyv6A\
-        4LmYIxDX2tFOwspm%2FhtcBVFgg%2BdcM8mZeRy14haRCmOFFODxw7AbqpA06lYyrlZ41jj\
-        Au28OXjTC7tnyWSRW5kbCx%2BsDiBBDx0C%2BZRVYQ4ZGpYB5Y8GSSjcYtrv3IKAd94zieR\
-        rY4hacdEWKJVoB3ZKqSypxg%2BwM5lDwyO0xxUN4TdXNGJ2i6DHLq9XMXEiJOsnJaUUEw1P\
-        ReUxRrYU14tzRSqzDFIw9slcFreNrlWv6kBDDm08zWBjqkAaCHZ2Tu%2FIJ7%2FScCSjbDg\
-        FAujWZZ9DAJoxIwDb0%2BxsATvPg3ljbX91VthMaMa5WT0NmtFZxNa%2BJ%2F6nRXR48jTl\
-        7SbpvwevkuUDtN2hmjyDHvDH16%2BEM%2BCDjQeUAXqNuTf9UrMk%2BgKlJz%2BXIj651lz\
-        H62m2w5fPrBXuyOuInk0Uvr2KCQuy%2BFm8EWA3S%2F4B1POfcSgAEq6fLufAHsBTjkgnKB\
-        6mK1&X-Amz-Signature=9f395064b5b8f7972217253463c42f08bbbc3d9c5a08daa10f\
-        6e6fe60bda50fb&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-i\
-        d=GetObject"
-      expiry_time: "2026-10-17T10:20:23.534Z"
+        redential=ASIAZI2LB4662CZESUSQ%2F20261017%2Fus-west-2%2Fs3%2Faws4_reque\
+        st&X-Amz-Date=20261017T095001Z&X-Amz-Expires=3600&X-Amz-Security-Token=\
+        IQoJb3JpZ2luX2VjEDIaCXVzLXdlc3QtMiJHMEUCIA7cT7EL9C1L2%2BvvsGxcpKr8%2FSK\
+        rtPuw1N0FaFyIC3HKAiEAjoqZk%2FZjQDvOGPr%2FwR9lMp2W3oIW7XqagmBkBkTuFgsqiA\
+        QI%2Bv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKnpUuOEYnz\
+        y1OMlCCrcA1GhyBSldo0ufCSOtlR9rug6KaXd1ytfDl08aBbp3QeZTZua83W5suKPm22%2F\
+        HX0IvDFAWtL0LQFXeSvBkoVthZbMVppe0LFbrFGsPc4Ooj%2BjDWgvluAYDnF2VR1RgbCJv\
+        4lOVf4sfOlNRNTMITc%2BGl97wKG9vtJDOFLcVqRJ%2BtwMb1VAIJafDzhaS03Zurtwdd%2\
+        FInrq8cD6RURsP3e9K6sznaHlOXR2udfmkKjoxrwlQ5c727ZdEqu0qIc6ucRLjW5M47q6pP\
+        5xjcz%2FySq4tSEHsh3mzKD%2BU%2F2WbNTXs6uMWz7P0RA5xId6V68fCHPH0w4BoyZ3DiR\
+        qdxz0ziDfUuOC7HJH235mUCK5yzgGGuM3rH0pZ49yyoQ%2B31oG6aBoFauNxNwQ99g%2Brn\
+        escNbhlPBm7tJSa1IU6PWWsCx1iKEuYA1miM1Mpa6Cs7zVxr8Hp6wgKtTn1JQjpKiddkY5p\
+        t5HTt25GbrZ15anDoA34hb0%2B9WiC4oS%2FEiZgnMQ5qp%2B7cDFuiGNXFAf%2ByP%2FUv\
+        BGon72dU9wSoxe6U3qh9lGj3l95lus5GBkIGhN%2BB9qFMFuf5yPM7YOURxdta%2Baf0teb\
+        vqe26Arjbli9w7sf8Lmx%2FnmgIUINiQu6GI%2BKGMo2MKqGzdYGOqUB6Brwa0%2B%2BKSr\
+        mptd4lenFjzwgTrtT%2FJ4ut3VDvGe8zpGFasSzRdzJlo3mpCMS9E8GfNj59GG1HBtKcKqQ\
+        7ZNju9YdesGbmisy8TJSLkHDCrBcedSwN%2F%2F%2BRgp8aarPOMnlLuJ0he9rMJEoE0oW1\
+        VHiFKY93I1pIzFfIIUEzV2Em%2BQVpWrZZdwPZ7I9TdJ76OC17EeJkpuBNc6YfqrbIprFWX\
+        QX2%2BYu&X-Amz-Signature=15c4496d50c80e63356424b8f19f54ad25932ef4f47114\
+        9a584936ea0ea82472&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED\
+        &x-id=GetObject"
+      expiry_time: "2026-10-17T10:50:01.392Z"
   icon: null
   parent:
     type: "data_source_id"
@@ -181,30 +181,30 @@ NOTION_METADATA:
             url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/1c26e8cb-553e-8110-8\
               f76-000345ab9bad/2b7cae3b-0ea2-43b5-892e-3eb532ec18f8/ForestPorta\
               l.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSI\
-              GNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665RQLTXZZ%2F20261017%2Fu\
-              s-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261017T092023Z&X-Amz-Ex\
-              pires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDAaCXVzLXdlc3QtM\
-              iJIMEYCIQCHyJyjbZcn2hPZl7cmCjYhiNOX5Nz%2BuN1wo18dnYHtDgIhAMwMuMPX\
-              kAu39EaAJX8SG7DXpwl9PC3sJl0zYEAzqEU%2BKogECPn%2F%2F%2F%2F%2F%2F%2\
-              F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1Igx5bcz27fhGcEAng4Eq3ANYHijW%2FV\
-              UlRFmHlw9JOcYNFPmjWm9fxMJakDM4TMDvmZplr8uF6kHZGxuMs8vEHd78wm5tvA1\
-              3F%2ByNrjvofN%2BVj8ZMNUpTk0Y775Iezr%2BCB5ZI5FHChngP4StRRDYU%2FNq9\
-              tt%2Fw81b%2F1YoW8WJSoMMvORJIysQA%2BpbQyK07TKpYEBHqfp4x9oqiX3aPtXu\
-              ZVVG9avtxRSrPh8nIN3SmTdTUJJ9i86pHdJDmF4a32xJ1gzlzDgX8GYuWcb2R42Tb\
-              ADx6j4jcaWmvtcym37pyRRgyXkCHi%2FbQwfG0jFvkrLuVYvLoO3NWsk1sBOyXzjS\
-              qRJju9RXX7tbhwydiBUJwhopG6j59Zf3KMSPaWtEsu%2Fl7uS5Ums%2BP5CX4Gra7\
-              G9V5tTbVsHEkZ%2BCyv6A4LmYIxDX2tFOwspm%2FhtcBVFgg%2BdcM8mZeRy14haR\
-              CmOFFODxw7AbqpA06lYyrlZ41jjAu28OXjTC7tnyWSRW5kbCx%2BsDiBBDx0C%2BZ\
-              RVYQ4ZGpYB5Y8GSSjcYtrv3IKAd94zieRrY4hacdEWKJVoB3ZKqSypxg%2BwM5lDw\
-              yO0xxUN4TdXNGJ2i6DHLq9XMXEiJOsnJaUUEw1PReUxRrYU14tzRSqzDFIw9slcFr\
-              eNrlWv6kBDDm08zWBjqkAaCHZ2Tu%2FIJ7%2FScCSjbDgFAujWZZ9DAJoxIwDb0%2\
-              BxsATvPg3ljbX91VthMaMa5WT0NmtFZxNa%2BJ%2F6nRXR48jTl7SbpvwevkuUDtN\
-              2hmjyDHvDH16%2BEM%2BCDjQeUAXqNuTf9UrMk%2BgKlJz%2BXIj651lzH62m2w5f\
-              PrBXuyOuInk0Uvr2KCQuy%2BFm8EWA3S%2F4B1POfcSgAEq6fLufAHsBTjkgnKB6m\
-              K1&X-Amz-Signature=6f596ed56f834b65499df33178c5338a8c308924344940\
-              7e437958db2d84b835&X-Amz-SignedHeaders=host&x-amz-checksum-mode=E\
-              NABLED&x-id=GetObject"
-            expiry_time: "2026-10-17T10:20:23.523Z"
+              GNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662CZESUSQ%2F20261017%2Fu\
+              s-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261017T095001Z&X-Amz-Ex\
+              pires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDIaCXVzLXdlc3QtM\
+              iJHMEUCIA7cT7EL9C1L2%2BvvsGxcpKr8%2FSKrtPuw1N0FaFyIC3HKAiEAjoqZk%\
+              2FZjQDvOGPr%2FwR9lMp2W3oIW7XqagmBkBkTuFgsqiAQI%2Bv%2F%2F%2F%2F%2F\
+              %2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKnpUuOEYnzy1OMlCCrcA1GhyB\
+              Sldo0ufCSOtlR9rug6KaXd1ytfDl08aBbp3QeZTZua83W5suKPm22%2FHX0IvDFAW\
+              tL0LQFXeSvBkoVthZbMVppe0LFbrFGsPc4Ooj%2BjDWgvluAYDnF2VR1RgbCJv4lO\
+              Vf4sfOlNRNTMITc%2BGl97wKG9vtJDOFLcVqRJ%2BtwMb1VAIJafDzhaS03Zurtwd\
+              d%2FInrq8cD6RURsP3e9K6sznaHlOXR2udfmkKjoxrwlQ5c727ZdEqu0qIc6ucRLj\
+              W5M47q6pP5xjcz%2FySq4tSEHsh3mzKD%2BU%2F2WbNTXs6uMWz7P0RA5xId6V68f\
+              CHPH0w4BoyZ3DiRqdxz0ziDfUuOC7HJH235mUCK5yzgGGuM3rH0pZ49yyoQ%2B31o\
+              G6aBoFauNxNwQ99g%2BrnescNbhlPBm7tJSa1IU6PWWsCx1iKEuYA1miM1Mpa6Cs7\
+              zVxr8Hp6wgKtTn1JQjpKiddkY5pt5HTt25GbrZ15anDoA34hb0%2B9WiC4oS%2FEi\
+              ZgnMQ5qp%2B7cDFuiGNXFAf%2ByP%2FUvBGon72dU9wSoxe6U3qh9lGj3l95lus5G\
+              BkIGhN%2BB9qFMFuf5yPM7YOURxdta%2Baf0tebvqe26Arjbli9w7sf8Lmx%2Fnmg\
+              IUINiQu6GI%2BKGMo2MKqGzdYGOqUB6Brwa0%2B%2BKSrmptd4lenFjzwgTrtT%2F\
+              J4ut3VDvGe8zpGFasSzRdzJlo3mpCMS9E8GfNj59GG1HBtKcKqQ7ZNju9YdesGbmi\
+              sy8TJSLkHDCrBcedSwN%2F%2F%2BRgp8aarPOMnlLuJ0he9rMJEoE0oW1VHiFKY93\
+              I1pIzFfIIUEzV2Em%2BQVpWrZZdwPZ7I9TdJ76OC17EeJkpuBNc6YfqrbIprFWXQX\
+              2%2BYu&X-Amz-Signature=dc176a44e723933b7a3d0a206f5addab5e2c4acb58\
+              7382d64d951736c8e64a60&X-Amz-SignedHeaders=host&x-amz-checksum-mo\
+              de=ENABLED&x-id=GetObject"
+            expiry_time: "2026-10-17T10:50:01.378Z"
     draft:
       id: "JiWU"
       type: "checkbox"
@@ -215,11 +215,8 @@ NOTION_METADATA:
       rich_text:
         - type: "text"
           text:
-            content: "The Nillumbik Shire is home to one of Victoria’s longest-running
-              forest monitoring initiatives; an ongoing program that has
-              collected rich ecological data for over eight years. This
-              long-term commitment makes Nillumbik a uniquely valuable region
-              for both research and innovation."
+            content: "Forest monitoring initiative using AI tools and community outreach to
+              support conservation through research and innovation."
             link: null
           annotations:
             bold: false
@@ -228,11 +225,8 @@ NOTION_METADATA:
             underline: false
             code: false
             color: "default"
-          plain_text: "The Nillumbik Shire is home to one of Victoria’s longest-running
-            forest monitoring initiatives; an ongoing program that has collected
-            rich ecological data for over eight years. This long-term commitment
-            makes Nillumbik a uniquely valuable region for both research and
-            innovation."
+          plain_text: "Forest monitoring initiative using AI tools and community outreach
+            to support conservation through research and innovation."
           href: null
     link:
       id: "S%40HA"
@@ -339,7 +333,7 @@ NOTION_METADATA:
     Last edited time:
       id: "vbGE"
       type: "last_edited_time"
-      last_edited_time: "2026-10-17T09:17:00.000Z"
+      last_edited_time: "2026-10-17T09:48:00.000Z"
     LearnMoreImage:
       id: "vtTl"
       type: "url"
@@ -354,8 +348,11 @@ NOTION_METADATA:
       rich_text:
         - type: "text"
           text:
-            content: "An ongoing forest monitoring initiative using AI tools and community
-              outreach to support conservation through research and innovation."
+            content: "The Nillumbik Shire is home to one of Victoria’s longest-running
+              forest monitoring initiatives; an ongoing program that has
+              collected rich ecological data for over eight years. This
+              long-term commitment makes Nillumbik a uniquely valuable region
+              for both research and innovation."
             link: null
           annotations:
             bold: false
@@ -364,8 +361,10 @@ NOTION_METADATA:
             underline: false
             code: false
             color: "default"
-          plain_text: "An ongoing forest monitoring initiative using AI tools and
-            community outreach to support conservation through research and
+          plain_text: "The Nillumbik Shire is home to one of Victoria’s longest-running
+            forest monitoring initiatives; an ongoing program that has collected
+            rich ecological data for over eight years. This long-term commitment
+            makes Nillumbik a uniquely valuable region for both research and
             innovation."
           href: null
     Date:

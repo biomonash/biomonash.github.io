@@ -429,19 +429,44 @@
     {{ $heroImg := .Params.banner | default .Params.featuredImage | default .Params.HeroImage }}
 
     <!-- ==================== SECTION 1: HERO & SUMMARY ==================== -->
+
+    <!-- 1A: Top Band (Title + Tagline + Badge) -->
     <section class="hero-top-band">
         <div class="container" style="max-width: 1050px;">
             <div class="row align-items-center">
                 <div class="col-md-7">
                     <h1 class="project-title">{{ .Title }}</h1>
+                    {{/* 1. TAGLINE GOES HERE (Under Title) */}}
                     <p class="project-tagline">
-                        {{ with .Params.Tagline }}{{ . }}{{ else }}BiOM Conservation Technology Initiative{{ end }}
+                        {{ with .Params.tagline | default .Params.Tagline }}
+                            {{ . }}
+                        {{ else }}
+                            BiOM Conservation Technology Initiative
+                        {{ end }}
                     </p>
                 </div>
                 <div class="col-md-5 text-end">
-                    {{ $badge := .Params.Badge | default .Params.badge | default .Params.Logo | default .Params.illustration | default .Params.icon }}
-                    {{ if $badge }}
-                        <img src="{{ $badge }}" alt="{{ .Title }} Badge" class="hero-circle-illustration">
+                    {{/* 2. BADGE FIX (Extracts clean URL from list without brackets) */}}
+                    {{ $badge := .Params.badge | default .Params.Badge }}
+                    {{ $badgeUrl := "" }}
+
+                    {{ if reflect.IsSlice $badge }}
+                        {{ $first := index $badge 0 }}
+                        {{ if reflect.IsMap $first }}
+                            {{ $badgeUrl = $first.url | default ($first.file.url | default "") }}
+                        {{ else }}
+                            {{ $badgeUrl = $first }}
+                        {{ end }}
+                    {{ else if reflect.IsMap $badge }}
+                        {{ $badgeUrl = $badge.url | default ($badge.file.url | default "") }}
+                    {{ else }}
+                        {{ $badgeUrl = $badge }}
+                    {{ end }}
+
+                    {{ $badgeUrl = strings.TrimPrefix "[" (strings.TrimSuffix "]" (string $badgeUrl)) }}
+
+                    {{ if and $badgeUrl (ne $badgeUrl "") }}
+                        <img src="{{ $badgeUrl | relURL }}" alt="{{ .Title }} Badge" class="hero-circle-illustration">
                     {{ else }}
                         <img src="{{ "images/BiOM-LogoTrans.webp" | relURL }}" alt="BiOM Badge" class="hero-circle-illustration">
                     {{ end }}
@@ -457,7 +482,7 @@
         </svg>
     </div>
 
-    <!-- 1B: Bottom Band (Photo + Summary Text) -->
+    <!-- 1B: Bottom Band (Photo + Long Summary Description) -->
     <section class="hero-summary-band">
         <div class="container" style="max-width: 1050px;">
             <div class="row align-items-center g-5">
@@ -465,8 +490,11 @@
                     <img src="{{ $heroImg }}" alt="{{ .Title }}" class="summary-photo">
                 </div>
                 <div class="col-md-5">
+                    {{/* 3. LONG DESCRIPTION GOES HERE (Next to Photo) */}}
                     <p class="summary-text">
-                        {{ with .Params.description }}{{ . }}{{ end }}
+                        {{ with .Params.description | default .Params.Description }}
+                            {{ . }}
+                        {{ end }}
                     </p>
                 </div>
             </div>
