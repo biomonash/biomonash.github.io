@@ -1,13 +1,13 @@
 ---
 title: "Home Page"
 date: "2026-09-22T21:21:00.000Z"
-lastmod: "2026-09-27T23:06:00.000Z"
+lastmod: "2026-10-11T23:15:00.000Z"
 draft: false
 NOTION_METADATA:
   object: "page"
   id: "3e36e8cb-553e-8073-ba48-ef35ff8dd97f"
   created_time: "2026-09-22T21:21:00.000Z"
-  last_edited_time: "2026-09-27T23:06:00.000Z"
+  last_edited_time: "2026-10-11T23:15:00.000Z"
   created_by:
     object: "user"
     id: "25dd872b-594c-818a-8ef5-0002a724b085"
@@ -43,22 +43,39 @@ NOTION_METADATA:
   url: "https://app.notion.com/p/Home-Page-3e36e8cb553e8073ba48ef35ff8dd97f"
   public_url: null
   archived: false
-  request_id: "f5bf64f3-2970-4026-b278-bd2b3a4802cf"
+  request_id: "f147fafc-9682-437a-967a-c13eb30fc15c"
 MANAGED_BY_NOTION_HUGO: true
+
 ---
+
 
 ![](https://notion-hugo.pages.dev/api?block_id=3e86e8cb-553e-802c-9935-c6d3f84c185a)
 
+
 [Who-We-Are](3e86e8cb-553e-8019-a64d-de9826817f77)
+
+
+## 🌿<u>How to edit video link?</u>
 
 - Simply change the **Video URL** in
 
-  [Our Journey]({{% relref "Our-Journey-3e86e8cb553e80458b03e17089546418.md" %}})
+[Our Journey]({{% relref "Our-Journey-3e86e8cb553e80458b03e17089546418.md" %}})
+
+
+## 🌿<u>How to edit mission/donate-us card?</u>
+
 
 ![](https://notion-hugo.pages.dev/api?block_id=3e36e8cb-553e-80e0-87f0-f1781f86f028)
 
+
 [sections-card](3e36e8cb-553e-8044-9fb3-e43b5851a87e)
+
+
+## 🌿<u>How to edit projects card?</u>
+
 
 ![](https://notion-hugo.pages.dev/api?block_id=3e36e8cb-553e-80e3-89b3-c46600fa920b)
 
+
 [projects-card](3da6e8cb-553e-80e4-b1cf-dcabc77e6f75)
+
