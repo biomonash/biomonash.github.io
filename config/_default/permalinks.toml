@@ -2,3 +2,4 @@
 # https://gohugo.io/content-management/urls/#permalinks-configuration-example
 '/' = ":title"
 posts = ":sections/:title"
+projects-card = "/projects/:slug/"
