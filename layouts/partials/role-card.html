@@ -1,32 +1,67 @@
-<div class="role-card">
+<div class="role-flip-card">
 
-    <h3 class="role-name">
-        {{ .Title }}
-    </h3>
+  <button
+    type="button"
+    class="role-flip-inner"
+    aria-label="Flip card for {{ .name }}"
+    aria-pressed="false"
+    onclick="
+      this.classList.toggle('is-flipped');
+      this.setAttribute(
+        'aria-pressed',
+        this.classList.contains('is-flipped')
+      );
+    ">
 
-    <div class="role-details">
+    <!-- FRONT -->
 
-        {{ with .Params.description }}
-            <div class="role-description">
-                <h4>Role Description</h4>
-                <p>{{ . }}</p>
-            </div>
+    <span class="role-flip-front">
+
+      <span class="role-flip-title">
+        {{ .name }}
+      </span>
+
+    </span>
+
+
+    <!-- BACK -->
+
+    <span class="role-flip-back">
+
+      <span class="role-flip-details">
+
+        <span class="role-detail-heading">
+          Expected Skills:
+        </span>
+
+        {{ range .skills }}
+          <span class="role-detail-item">
+            • {{ . }}
+          </span>
         {{ end }}
 
-        {{ with .Params.responsibilities }}
-            <div class="role-responsibilities">
-                <h4>Responsibilities</h4>
-                <p>{{ . }}</p>
-            </div>
+        <span class="role-detail-heading">
+          Responsibilities:
+        </span>
+
+        {{ range .responsibilities }}
+          <span class="role-detail-item">
+            • {{ . }}
+          </span>
         {{ end }}
 
-        {{ with .Params.skills }}
-            <div class="role-skills">
-                <h4>Preferred Skills / Experience</h4>
-                <p>{{ . }}</p>
-            </div>
+        {{ with .description }}
+
+          <span class="role-flip-description">
+            {{ . }}
+          </span>
+
         {{ end }}
 
-    </div>
+      </span>
+
+    </span>
+
+  </button>
 
 </div>

@@ -2,44 +2,77 @@
 
     <div class="department-team">
 
-        <h2 class="header1-txt team-section-title">
+        <!-- DEPARTMENT TITLE -->
+
+        <h2
+            class="header1-txt team-section-title"
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aos-offset="80">
             {{ .name }} Team
         </h2>
 
+        <!-- DEPARTMENT IMAGE -->
+
         {{ if .image }}
-            <img
-                class="department-image"
-                src="{{ .image | relURL }}"
-                alt="{{ .name }} Team"
-            >
+
+            <div
+                data-aos-duration="1000"
+                data-aos-offset="80">
+
+                <img
+                    class="department-image"
+                    src="{{ .image | relURL }}"
+                    alt="{{ .name }} Team">
+
+            </div>
+
         {{ end }}
 
-        <div class="team-leads">
+        <!-- TEAM LEADS -->
+
+        <div
+            class="team-leads"
+            data-aos-duration="850"
+            data-aos-offset="60">
 
             <h3 class="department-label">
                 Team Leads
             </h3>
 
             {{ range .leads }}
+
                 <p class="body-txt team-name">
                     {{ . }}
                 </p>
+
             {{ end }}
 
         </div>
 
+        <!-- TEAM MEMBERS -->
+
         <div class="department-members">
 
-            <h3 class="department-label">
+            <h3
+                class="department-label"
+                data-aos-duration="850">
                 Members
             </h3>
 
             <div class="members-grid">
 
-                {{ range .members }}
-                    <p class="body-txt team-name">
-                        {{ . }}
+                {{ range $index, $member := .members }}
+
+                    <p
+                        class="body-txt team-name"
+                        data-aos-duration="700"
+                        data-aos-delay="{{ mod (mul $index 60) 300 }}">
+
+                        {{ $member }}
+
                     </p>
+
                 {{ end }}
 
             </div>

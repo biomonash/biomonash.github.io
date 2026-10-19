@@ -1,279 +1,783 @@
-/* JOIN US / RECRUITMENT */
+/* =========================================================
+   JOIN US PAGE
+========================================================= */
 
 #join-us {
+    --join-dark: #082500;
+    --join-light: #13330D;
+    --join-green: #4C7F0A;
+    --join-cream: #FFF4CF;
+    --join-orange: #DB6912;
+
     width: 100%;
-    background-color: #173f35;
+    margin: 0;
+    padding: 0;
+    background-color: var(--join-dark);
+    color: var(--join-cream);
+    font-family: "Poppins", sans-serif;
+}
+
+#join-us *,
+#join-us *::before,
+#join-us *::after {
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+#join-us h1,
+#join-us h2 {
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    color: var(--join-cream);
+}
+
+#join-us h3,
+#join-us p,
+#join-us a {
+    font-family: "Poppins", sans-serif;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+#join-us .join-hero {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    background-color: var(--join-dark);
     overflow: hidden;
 }
 
+#join-us .join-hero-content {
+    position: relative;
+    width: min(1600px, 100%);
+    height: 100%;
+    margin: 0 auto;
+}
 
-/* HERO */
+#join-us .join-hero-text {
+    position: absolute;
+    left: 7%;
+    top: 57%;
+    width: 70%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
 
-.join-us-hero {
-    min-height: 650px;
-    display: flex;
+#join-us .join-hero-title {
+    margin: 0 0 28px;
+    font-family: "Calistoga", serif;
+    font-size: clamp(85px, 9.5vw, 160px);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--join-cream);
+}
+
+#join-us .join-hero-subtitle {
+    max-width: 620px;
+    margin: 0 0 35px;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    color: var(--join-cream);
+}
+
+/* =========================================================
+   APPLY BUTTON
+========================================================= */
+
+#join-us .join-apply-button {
+    display: inline-flex;
     align-items: center;
-    padding: 80px 10%;
-    box-sizing: border-box;
-}
-
-.join-us-content {
-    max-width: 750px;
-}
-
-.join-us-title {
-    margin: 0 0 20px;
-    font-size: clamp(4rem, 8vw, 8rem);
-    line-height: 0.95;
-}
-
-.join-us-subtitle {
-    max-width: 600px;
-    margin-bottom: 35px;
-    font-size: 1.4rem;
-}
-
-
-/* Apply button */
-
-.join-us-apply-btn {
-    display: inline-block;
-    padding: 14px 32px;
-
-    border-radius: 999px;
-
-    background-color: #e86f3d;
-    color: #fff;
-
-    font-family: "Fredoka", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-
+    justify-content: center;
+    min-width: 370px;
+    min-height: 90px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 55px;
+    background-color: var(--join-orange);
+    color: var(--join-cream);
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
     text-decoration: none;
-
-    transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.join-us-apply-btn:hover {
-    transform: translateY(-3px);
+#join-us .join-apply-button:hover {
+    transform: translateY(-4px);
+    background-color: #c65e0f;
+    color: var(--join-cream);
+    text-decoration: none;
 }
 
-.join-us-apply-btn.disabled {
-    opacity: 0.45;
-    cursor: not-allowed;
+/* =========================================================
+   HERO FROG
+========================================================= */
+
+#join-us .join-hero-frog {
+    position: absolute;
+    right: -3%;
+    top: 45px;
+    width: 630px;
+    max-width: 49%;
+    z-index: 2;
+    pointer-events: none;
+    transform: scaleX(-1) rotate(-10deg);
 }
 
-.join-us-apply-btn.disabled:hover {
-    transform: none;
+#join-us .join-hero-frog img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
+/* =========================================================
+   COMMUNITY INTRODUCTION
+========================================================= */
 
-/* COMMUNITY INTRO */
+#join-us .join-community {
+    width: 100%;
+    padding: 45px 7% 80px;
+    background-color: var(--join-dark);
+    text-align: center;
+}
 
-.join-community {
+#join-us .join-community-content {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+#join-us .join-community-title {
+    margin: 0 0 35px;
+    font-family: "Calistoga", serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--join-cream);
+}
+
+#join-us .join-community-description {
     max-width: 900px;
     margin: 0 auto;
-    padding: 70px 30px 100px;
-    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    line-height: 1.7;
+    color: var(--join-cream);
 }
 
-.join-community h2 {
-    margin-bottom: 20px;
+/* =========================================================
+   SVG WAVE DIVIDER
+========================================================= */
+
+#join-us .join-wave-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    line-height: 0;
+    background-color: var(--join-light);
 }
 
-.join-community p {
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-
-/* DEPARTMENT SECTIONS */
-
-.department-roles {
-    width: min(1200px, 90%);
-    margin: 0 auto;
-    padding: 70px 0 110px;
-}
-
-.department-roles-title {
-    margin: 0 0 35px;
-    text-align: center;
-}
-
-.department-roles-image {
+#join-us .join-wave {
     display: block;
-
     width: 100%;
-    max-height: 500px;
-
-    margin: 0 auto 45px;
-
-    border-radius: 45px;
-
-    object-fit: cover;
+    height: 100%;
 }
 
+#join-us .join-wave-orange {
+    fill: var(--join-orange);
+}
 
-/* ROLES */
+#join-us .join-wave-cream {
+    fill: var(--join-cream);
+}
 
-.roles-heading {
-    margin: 0 0 25px;
+/* =========================================================
+   DEPARTMENT SECTIONS
+========================================================= */
 
+#join-us #join-departments {
+    width: 100%;
+    background-color: var(--join-light);
+}
+
+#join-us .department-roles {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 90px 7% 110px;
+    background-color: var(--join-light);
+}
+
+#join-us .department-roles-content {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+#join-us .department-roles-title {
+    margin: 0 0 55px;
+    text-align: center;
     font-family: "Calistoga", serif;
-    font-size: 2.5rem;
+    font-size: 64px;
     font-weight: 400;
+    line-height: 1.1;
+    color: var(--join-cream);
 }
 
-.roles-list {
-    display: flex;
-    gap: 25px;
+/* =========================================================
+   DEPARTMENT IMAGE + SMALL OVERLAY FROG
+========================================================= */
 
+#join-us .department-roles-image-wrapper {
+    position: relative;
     width: 100%;
-    padding: 10px 5px 25px;
+    margin: 0 0 45px;
+    isolation: isolate;
+}
 
+#join-us .department-roles-image {
+    display: block;
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/*
+   Frog stays ON TOP of the image,
+   inside the bottom-left corner.
+*/
+
+#join-us .department-roles-frog {
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    top: auto;
+    right: auto;
+    width: 85px;
+    height: auto;
+    max-width: none;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* =========================================================
+   ROLES HEADING
+========================================================= */
+
+#join-us .roles-heading {
+    margin: 0 0 20px;
+    text-align: center;
+    font-family: "Calistoga", serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--join-cream);
+}
+
+/* =========================================================
+   REUSABLE ORANGE TAGS
+========================================================= */
+
+#join-us .role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin: 0 0 40px;
+}
+
+#join-us .role-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    padding: 8px 22px;
+    border-radius: 50px;
+    background-color: var(--join-orange);
+    color: var(--join-cream);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   HORIZONTAL ROLE CAROUSEL
+========================================================= */
+
+#join-us .department-roles-carousel {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#join-us .roles-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 25px;
+    width: 100%;
+    padding: 5px 0 15px;
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
-
-    box-sizing: border-box;
-}
-
-
-/* Hide scrollbar while keeping horizontal scroll */
-
-.roles-list::-webkit-scrollbar {
-    height: 0;
-}
-
-.roles-list {
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
 }
 
+#join-us .roles-list::-webkit-scrollbar {
+    display: none;
+}
 
-/* ROLE CARDS */
+#join-us .roles-carousel-item {
+    flex: 0 0 275px;
+    width: 275px;
+    min-width: 275px;
+    scroll-snap-align: start;
+}
 
-.role-card {
+/* =========================================================
+   REUSABLE FLIPPING ROLE CARDS
+========================================================= */
+
+#join-us .role-flip-card {
+    width: 100%;
+    max-width: none;
+    height: 220px;
+    perspective: 1000px;
+}
+
+#join-us .role-flip-inner {
     position: relative;
-
-    flex: 0 0 300px;
-    min-height: 300px;
-
-    padding: 30px;
-
-    border-radius: 35px;
-
-    background-color: #285c4c;
-
-    box-sizing: border-box;
-    overflow: hidden;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 24px;
+    background: transparent;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.65s ease;
+    font-family: "Poppins", sans-serif;
+    color: inherit;
 }
 
-.role-card:hover {
-    transform: translateY(-6px);
+#join-us .role-flip-inner.is-flipped {
+    transform: rotateY(180deg);
 }
 
-.role-name {
-    margin: 0;
-
-    font-family: "Calistoga", serif;
-    font-size: 2rem;
-    font-weight: 400;
-}
-
-
-/* Details are hidden until hover */
-
-.role-details {
+#join-us .role-flip-front,
+#join-us .role-flip-back {
     position: absolute;
-
     inset: 0;
-
     display: flex;
-    flex-direction: column;
+    border-radius: 24px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+}
+
+#join-us .role-flip-front {
     justify-content: center;
-
-    padding: 30px;
-
-    background-color: #285c4c;
-
-    box-sizing: border-box;
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition:
-        opacity 0.25s ease,
-        visibility 0.25s ease;
+    align-items: center;
+    background-color: var(--join-green);
+    color: var(--join-cream);
+    padding: 20px;
 }
 
-.role-card:hover .role-details {
-    opacity: 1;
-    visibility: visible;
+#join-us .role-flip-title {
+    font-family: "Calistoga", serif;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--join-cream);
 }
 
-.role-details h4 {
+#join-us .role-flip-back {
+    align-items: flex-start;
+    background-color: var(--join-cream);
+    color: #0C2103;
+    transform: rotateY(180deg);
+    padding: 18px;
+    text-align: left;
+}
+
+#join-us .role-flip-details {
+    display: block;
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+#join-us .role-detail-heading {
+    display: block;
     margin: 0 0 5px;
-
-    font-family: "Fredoka", sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
 }
 
-.role-details p {
-    margin: 0 0 18px;
+#join-us .role-detail-heading:not(:first-child) {
+    margin-top: 12px;
+}
 
-    font-family: "Source Sans 3", sans-serif;
+#join-us .role-detail-item {
+    display: block;
+    margin-bottom: 3px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
     line-height: 1.4;
 }
 
-.role-details > div:last-child p {
-    margin-bottom: 0;
+#join-us .role-flip-description {
+    display: block;
+    margin-top: 12px;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
 }
 
+#join-us .role-flip-inner:focus-visible {
+    outline: 3px solid var(--join-orange);
+    outline-offset: 5px;
+}
 
-/* RESPONSIVE */
+/* =========================================================
+   CAROUSEL ARROWS
+========================================================= */
+
+#join-us .roles-carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+#join-us .roles-carousel-controls button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--join-cream);
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#join-us .roles-carousel-controls button:hover {
+    color: var(--join-orange);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    #join-us .join-hero {
+        height: 530px;
+    }
+
+    #join-us .join-hero-text {
+        left: 6%;
+        width: 60%;
+    }
+
+    #join-us .join-hero-title {
+        font-size: clamp(65px, 8vw, 100px);
+    }
+
+    #join-us .join-hero-subtitle {
+        font-size: 19px;
+    }
+
+    #join-us .join-hero-frog {
+        right: -5%;
+        width: 490px;
+        max-width: 53%;
+    }
+
+    #join-us .join-apply-button {
+        min-width: 290px;
+        min-height: 75px;
+        font-size: 30px;
+    }
+
+    #join-us .join-community-title,
+    #join-us .department-roles-title {
+        font-size: 54px;
+    }
+
+    #join-us .join-community-description {
+        font-size: 19px;
+    }
+
+    #join-us .department-roles-image {
+        height: 390px;
+    }
+
+    #join-us .roles-carousel-item {
+        flex-basis: 245px;
+        width: 245px;
+        min-width: 245px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
 
-    .join-us-hero {
-        min-height: 500px;
-        padding: 60px 7%;
+    #join-us .join-hero {
+        height: 440px;
     }
 
-    .join-us-title {
-        font-size: clamp(3.5rem, 16vw, 6rem);
+    #join-us .join-hero-text {
+        left: 6%;
+        width: 66%;
     }
 
-    .join-us-subtitle {
-        font-size: 1.1rem;
+    #join-us .join-hero-title {
+        font-size: clamp(42px, 8vw, 65px);
     }
 
-    .join-community {
-        padding: 50px 25px 70px;
+    #join-us .join-hero-subtitle {
+        font-size: 16px;
     }
 
-    .department-roles {
-        width: 88%;
-        padding: 50px 0 80px;
+    #join-us .join-hero-frog {
+        right: -12%;
+        top: 80px;
+        width: 340px;
+        max-width: 60%;
     }
 
-    .department-roles-image {
-        border-radius: 30px;
-        margin-bottom: 35px;
+    #join-us .join-apply-button {
+        min-width: 210px;
+        min-height: 60px;
+        padding: 12px 20px;
+        font-size: 24px;
     }
 
-    .roles-heading {
-        font-size: 2rem;
+    #join-us .join-community {
+        padding: 35px 7% 65px;
     }
 
-    .role-card {
-        flex-basis: 260px;
-        min-height: 280px;
+    #join-us .join-community-title {
+        font-size: 40px;
     }
+
+    #join-us .join-community-description {
+        font-size: 16px;
+    }
+
+    #join-us .join-wave-wrapper {
+        height: 115px;
+    }
+
+    #join-us .department-roles {
+        padding: 65px 8% 80px;
+    }
+
+    #join-us .department-roles-title {
+        margin-bottom: 40px;
+        font-size: 40px;
+    }
+
+    #join-us .department-roles-image {
+        height: 300px;
+    }
+
+    #join-us .department-roles-frog {
+        width: 65px;
+        left: 12px;
+        bottom: 10px;
+    }
+
+    #join-us .roles-heading {
+        font-size: 30px;
+    }
+
+    #join-us .role-tags {
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    #join-us .role-tag {
+        min-width: 65px;
+        padding: 6px 13px;
+        font-size: 11px;
+    }
+
+    #join-us .roles-carousel-item {
+        flex-basis: 230px;
+        width: 230px;
+        min-width: 230px;
+    }
+
+    #join-us .role-flip-card {
+        height: 210px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    #join-us .join-hero {
+        height: 390px;
+    }
+
+    #join-us .join-hero-text {
+        width: 72%;
+    }
+
+    #join-us .join-hero-title {
+        font-size: 42px;
+    }
+
+    #join-us .join-hero-subtitle {
+        font-size: 14px;
+    }
+
+    #join-us .join-hero-frog {
+        right: -15%;
+        top: 95px;
+        width: 270px;
+        max-width: 65%;
+    }
+
+    #join-us .join-apply-button {
+        min-width: 165px;
+        min-height: 50px;
+        font-size: 19px;
+    }
+
+    #join-us .join-community {
+        padding: 60px 7% 55px;
+    }
+
+    #join-us .join-community-title {
+        font-size: 32px;
+    }
+
+    #join-us .join-community-description {
+        font-size: 14px;
+    }
+
+    #join-us .join-wave-wrapper {
+        height: 85px;
+    }
+
+    #join-us .department-roles-title {
+        font-size: 32px;
+    }
+
+    #join-us .department-roles-image {
+        height: 220px;
+    }
+
+    #join-us .department-roles-frog {
+        width: 55px;
+        left: 10px;
+        bottom: 8px;
+    }
+
+    #join-us .roles-carousel-item {
+        flex: 0 0 75%;
+        width: 75%;
+        min-width: 75%;
+    }
+
+    #join-us .role-flip-title {
+        font-size: 21px;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #join-us .role-flip-inner {
+        transition: none;
+    }
+
+    #join-us .roles-list {
+        scroll-behavior: auto;
+    }
+}
+
+/* =========================================================
+   DYNAMIC APPLY / INSTAGRAM BUTTON
+========================================================= */
+
+#join-us .join-apply-button {
+    min-width: 0;
+    width: fit-content;
+    max-width: 100%;
+    padding: 20px 38px;
+    text-align: center;
+    line-height: 1.3;
+    white-space: normal;
+}
+
+@media (max-width: 768px) {
+    #join-us .join-apply-button {
+        font-size: 20px;
+        padding: 15px 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    #join-us .join-apply-button {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+}
+
+/* =========================================
+   ALLOW FROG TO OVERLAP SECTIONS
+========================================= */
+
+#join-us {
+    position: relative;
+    overflow-x: clip;
+}
+
+#join-us .join-hero {
+    overflow: visible;
+}
+
+#join-us .join-hero-frog {
+    z-index: 10;
+}
+
+#join-us .join-community {
+    z-index: 1;
 }

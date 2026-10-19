@@ -6,35 +6,25 @@ const userConfig: UserConfig = {
     manual: false,
     page_url:
       "https://app.notion.com/p/BiOM-Website-CMS-7106e8cb553e82229a25017dad35b257?source=copy_link",
-    pages: [
-      // {
-      //     page_id: '<page_id>',
-      //     target_folder: 'path/relative/to/content/folder'
-      // }
-      {
-        page_id: "45eb121158b9489480ec000fd25c812b",
-        target_folder: ".",
-      },{
-    page_id: "3e36e8cb553e8073ba48ef35ff8dd97f",
-    target_folder: ".",
-  },
-    ],
+    // Anything under the CMS page is found automatically.
+    // List here only pages/databases that live OUTSIDE the CMS page.
+    pages: [],
     databases: [
-      // {
-      //     database_id: '<database_id>',
-      //     target_folder: 'path/relative/to/content/folder'
-      // }
       {
-        database_id: "b7b1816c05ec464391c8c111fa242985",
-        target_folder: ".",
+        database_id: "3256e8cb553e80d289ffdd21f5618dca",
+        target_folder: "members",
       },
       {
-        database_id: "3da6e8cb553e80e4b1cfdcabc77e6f75",
-        target_folder: ".",
+        database_id: "2696e8cb553e80c883cae7082d7f56f8",
+        target_folder: "executives",
       },
       {
-        database_id: "3e36e8cb553e80449fb3e43b5851a87e",
-        target_folder: ".",
+        database_id: "3f66e8cb553e809e8f0becba38271668",
+        target_folder: "advisors",
+      },
+      {
+        database_id: "3f06e8cb553e80f792a3fdc9a8fe7c6d",
+        target_folder: "roles",
       },
     ],
   },

@@ -28,6 +28,7 @@ FuturePlanning: "Beyond St Kilda, we hope this technology can be adapted to
   elusive or vulnerable species through sound."
 authors:
   - "Yenn"
+  - "Yenn"
   - "Jadyn Leon"
 Solution: "We are building an AI-powered acoustic monitoring device that learns
   to identify individual calls, allowing us to estimate populations and monitor
@@ -250,12 +251,31 @@ NOTION_METADATA:
             other conservationists globally by offering a new way to monitor
             elusive or vulnerable species through sound."
           href: null
+      rich_text:
+        - type: "text"
+          text:
+            content: "Beyond St Kilda, we hope this technology can be adapted to support
+              other conservationists globally by offering a new way to monitor
+              elusive or vulnerable species through sound."
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: "default"
+          plain_text: "Beyond St Kilda, we hope this technology can be adapted to support
+            other conservationists globally by offering a new way to monitor
+            elusive or vulnerable species through sound."
+          href: null
     authors:
       id: "bK%3B%5B"
       type: "people"
       people:
         - object: "user"
           id: "25dd872b-594c-818a-8ef5-0002a724b085"
+          name: "Yenn"
           name: "Yenn"
           avatar_url: "https://s3-us-west-2.amazonaws.com/public.notion-static.com/c5e972\
             79-1e08-48cb-b619-3350dd0f15ca/Screenshot_2026-08-06_180915.png"

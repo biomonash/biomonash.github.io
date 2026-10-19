@@ -83,241 +83,26 @@
 
       </section>
 
- <!-- Our Team section -->
-    <section id="team">
+      <!-- Join Us section -->
+      <section
+        id="join-us"
+        data-aos="fade-appear"
+        class="py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
 
-      <!-- Team introduction -->
-      <section class="team-intro">
+              {{ range where .Site.RegularPages "Section" "sections-card" }}
+              {{ if eq .Title "Join Us Today" }}
+              {{ partial "home/section-card.html" . }}
+              {{ end }}
+              {{ end }}
 
-        <div class="team-intro-content">
-
-          <div class="team-intro-text">
-
-            <h1 class="header1-txt">
-              The Team
-            </h1>
-
-            <p class="body-txt">
-              At BiOM, we believe that technology has the power to drive
-              meaningful change for the planet. Our team brings together
-              students from varying disciplines to develop tools that
-              support conservation.
-              <br><br>
-              Meet the students behind the mission.
-            </p>
-
+            </div>
           </div>
-
-          <div class="team-intro-image">
-
-            <img
-              src="{{ "images/about-us.webp" | relURL }}"
-              alt="BiOM Team"
-            >
-
-          </div>
-
         </div>
 
       </section>
-
-
-      <!-- Members will be pulled from the Notion Members database.
-        database sync is not working, but it should fill pages with generated content/members.
-      -->
-
-      {{ $members := where .Site.RegularPages "Section" "members" }}
-
-
-      <!-- Executive Team -->
-
-      {{ $executiveMembers := slice }}
-
-      {{ range $members }}
-
-        {{ $statuses := index .Params "administrative status" }}
-
-        {{ if or
-          (in $statuses "Executive")
-          (in $statuses "Top Executive")
-        }}
-
-          {{ $name := .Title }}
-
-          {{ with index .Params "preferred name" }}
-            {{ $name = . }}
-          {{ end }}
-
-          {{ $executiveMembers = $executiveMembers | append
-            (dict
-              "name" $name
-              "role" .Params.role
-              "image" ""
-              "url" .Params.linkedin
-            )
-          }}
-
-        {{ end }}
-
-      {{ end }}
-
-      {{ partial "executive-team.html"
-        (dict
-          "title" "Executive Team"
-          "members" $executiveMembers
-        )
-      }}
-
-
-      <!-- Academic Advisors -->
-
-      <!--
-        Advisors are kept here for now because the Members database
-        currently does not have an Academic Advisor administrative status.
-      -->
-
-      {{ $advisors := slice
-
-        (dict
-          "name" "Name xyz"
-          "role" "Academic Advisor"
-          "image" ""
-          "url" ""
-        )
-
-        (dict
-          "name" "Name xyz"
-          "role" "Academic Advisor"
-          "image" ""
-          "url" ""
-        )
-
-        (dict
-          "name" "Name xyz"
-          "role" "Academic Advisor"
-          "image" ""
-          "url" ""
-        )
-
-      }}
-
-      {{ partial "executive-team.html"
-        (dict
-          "title" "Academic Advisors"
-          "members" $advisors
-        )
-      }}
-
-
-      <!-- Department Teams -->
-
-      {{ $departments := slice
-        "Ecology"
-        "Engineering"
-        "Marketing"
-        "IT"
-      }}
-
-      {{ range $department := $departments }}
-
-        {{ $teamLeads := slice }}
-        {{ $teamMembers := slice }}
-
-        {{ range $members }}
-
-          {{ $memberDepartments := .Params.departments }}
-          {{ $statuses := index .Params "administrative status" }}
-
-          {{ if in $memberDepartments $department }}
-
-            {{ $name := .Title }}
-
-            {{ with index .Params "preferred name" }}
-              {{ $name = . }}
-            {{ end }}
-
-            {{ if in $statuses "Lead" }}
-              {{ $teamLeads = $teamLeads | append $name }}
-            {{ end }}
-
-            {{ if in $statuses "Member" }}
-              {{ $teamMembers = $teamMembers | append $name }}
-            {{ end }}
-
-          {{ end }}
-
-        {{ end }}
-
-        {{ partial "department-team.html"
-          (dict
-            "name" $department
-            "leads" $teamLeads
-            "members" $teamMembers
-            "image" "images/about-us.webp"
-          )
-        }}
-
-      {{ end }}
-
-    </section>
-
-    <!-- Join Us / Recruitment section -->
-
-    <section id="join-us">
-
-      <!-- Join Us CTA -->
-
-      {{ partial "join-us-cta.html" (dict
-          "enabled" true
-          "url" ""
-      ) }}
-
-
-      <!-- Join the BiOM Community -->
-
-      <section class="join-community">
-
-        <h2 class="header1-txt">
-          Join the BiOM Community
-        </h2>
-
-        <p class="body-txt">
-          Brief explanation of what joining BiOM means and what
-          undertaking a role involves.
-        </p>
-
-      </section>
-
-
-      <!-- Available Roles -->
-
-      {{ $roles := where .Site.RegularPages "Section" "roles" }}
-
-      {{ $departments := slice }}
-
-      {{ range $roles }}
-
-        {{ $department := .Params.department }}
-
-        {{ if and $department (not (in $departments $department)) }}
-          {{ $departments = $departments | append $department }}
-        {{ end }}
-
-      {{ end }}
-
-
-      {{ range $department := $departments }}
-
-        {{ $departmentRoles := where $roles ".Params.department" $department }}
-
-        {{ partial "department-roles.html" (dict
-            "name" $department
-            "roles" $departmentRoles
-        ) }}
-
-      {{ end }}
-
-    </section>
 
       <!-- Donate section -->
       <section

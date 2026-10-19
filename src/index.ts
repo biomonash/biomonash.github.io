@@ -8,6 +8,13 @@ import { getFileName, getPageTitle } from "./helpers";
 
 dotenv.config();
 
+// Folders whose databases have an "Active" checkbox.
+// Only rows with Active ticked are fetched; unticked rows are skipped,
+// and their old files are removed by the cleanup step at the end.
+// Only list folders whose database really has an "Active" column,
+// otherwise Notion rejects the query.
+const ACTIVE_ONLY_FOLDERS = ["members"];
+
 async function main() {
   if (process.env.NOTION_TOKEN === "")
     throw Error("The NOTION_TOKEN environment vairable is not set.");
@@ -31,8 +38,12 @@ async function main() {
     }
     for (const data_source of database.data_sources) {
       console.info(`[Info] Processing data source: ${data_source.name} (${data_source.id})`);
+      const activeOnly = ACTIVE_ONLY_FOLDERS.includes(mount.target_folder);
       for await (const page of iteratePaginatedAPI(notion.dataSources.query, {
-        data_source_id: data_source.id
+        data_source_id: data_source.id,
+        ...(activeOnly && {
+          filter: { property: "Active", checkbox: { equals: true } },
+        }),
       })) {
         if (!isFullPage(page) || page.object !== "page") {
           continue;

@@ -2,11 +2,13 @@
 title: "Home Page"
 date: "2026-09-22T21:21:00.000Z"
 lastmod: "2026-10-11T23:15:00.000Z"
+lastmod: "2026-10-11T23:15:00.000Z"
 draft: false
 NOTION_METADATA:
   object: "page"
   id: "3e36e8cb-553e-8073-ba48-ef35ff8dd97f"
   created_time: "2026-09-22T21:21:00.000Z"
+  last_edited_time: "2026-10-11T23:15:00.000Z"
   last_edited_time: "2026-10-11T23:15:00.000Z"
   created_by:
     object: "user"
@@ -57,9 +59,16 @@ MANAGED_BY_NOTION_HUGO: true
 
 ## 🌿<u>How to edit video link?</u>
 
+
+## 🌿<u>How to edit video link?</u>
+
 - Simply change the **Video URL** in
 
 [Our Journey]({{% relref "Our-Journey-3e86e8cb553e80458b03e17089546418.md" %}})
+[Our Journey]({{% relref "Our-Journey-3e86e8cb553e80458b03e17089546418.md" %}})
+
+
+## 🌿<u>How to edit mission/donate-us card?</u>
 
 
 ## 🌿<u>How to edit mission/donate-us card?</u>
@@ -69,6 +78,9 @@ MANAGED_BY_NOTION_HUGO: true
 
 
 [sections-card](3e36e8cb-553e-8044-9fb3-e43b5851a87e)
+
+
+## 🌿<u>How to edit projects card?</u>
 
 
 ## 🌿<u>How to edit projects card?</u>

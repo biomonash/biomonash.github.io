@@ -33,6 +33,7 @@ FuturePlanning: "By bridging technology, ecology, and public engagement, this
   scalable model for other regions."
 authors:
   - "Yenn"
+  - "Yenn"
   - "Jadyn Leon"
 Solution: "We are developing an interactive digital twin platform integrating
   species sightings, acoustic recordings, and habitat reports into a
@@ -55,6 +56,7 @@ NOTION_METADATA:
     id: "25dd872b-594c-818a-8ef5-0002a724b085"
   last_edited_by:
     object: "user"
+    id: "3c6d872b-594c-81a2-9346-0002d76e52db"
     id: "3c6d872b-594c-81a2-9346-0002d76e52db"
   cover:
     type: "file"
@@ -270,12 +272,31 @@ NOTION_METADATA:
             project aspires to deepen community connections with nature and
             create a scalable model for other regions."
           href: null
+      rich_text:
+        - type: "text"
+          text:
+            content: "By bridging technology, ecology, and public engagement, this project
+              aspires to deepen community connections with nature and create a
+              scalable model for other regions."
+            link: null
+          annotations:
+            bold: false
+            italic: false
+            strikethrough: false
+            underline: false
+            code: false
+            color: "default"
+          plain_text: "By bridging technology, ecology, and public engagement, this
+            project aspires to deepen community connections with nature and
+            create a scalable model for other regions."
+          href: null
     authors:
       id: "bK%3B%5B"
       type: "people"
       people:
         - object: "user"
           id: "25dd872b-594c-818a-8ef5-0002a724b085"
+          name: "Yenn"
           name: "Yenn"
           avatar_url: "https://s3-us-west-2.amazonaws.com/public.notion-static.com/c5e972\
             79-1e08-48cb-b619-3350dd0f15ca/Screenshot_2026-08-06_180915.png"

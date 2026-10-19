@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+
+{{ partial "head.html" . }}
+
+<!-- JOIN US PAGE STYLES -->
+<link rel="stylesheet" href="{{ "css/join-us.css" | relURL }}">
+
+<body>
+
+    {{ partial "navbar.html" . }}
+
+    <main>
+
+        <!-- =========================================
+             APPLICATION SETTINGS
+        ========================================== -->
+
+        {{ $applicationsOpen := true }}
+
+        {{ $applicationURL := "https://docs.google.com/forms/d/e/1FAIpQLSdpG9CNy_7ON8ZSbiKuBT7MQBOTzoKbmd_TGPA4p5bUOa2hBA/viewform" }}
+
+        {{ $instagramURL := "https://www.instagram.com/biomonash/" }}
+
+
+        <section id="join-us">
+
+            <!-- =========================================
+                 HERO SECTION
+            ========================================== -->
+
+            <section class="join-hero">
+
+                <div class="join-hero-content">
+
+                    <div class="join-hero-text">
+
+                        <div
+                            data-aos="fade-up"
+                            data-aos-duration="900">
+
+                            <h1 class="join-hero-title">
+                                Join the Team
+                            </h1>
+
+                            <p class="join-hero-subtitle">
+                                Help us build the future of biological observation
+                            </p>
+
+                            <!-- DYNAMIC APPLICATION BUTTON -->
+
+                            {{ if $applicationsOpen }}
+
+                                <!-- APPLICATIONS OPEN -->
+
+                                <a
+                                    href="{{ $applicationURL }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="join-apply-button">
+
+                                    Apply Now!
+
+                                </a>
+
+                            {{ else }}
+
+                                <!-- APPLICATIONS CLOSED -->
+
+                                <a
+                                    href="{{ $instagramURL }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="join-apply-button">
+
+                                    Check Us Out on Instagram!
+
+                                </a>
+
+                            {{ end }}
+
+                        </div>
+
+                    </div>
+
+                    <!-- HERO FROG -->
+
+                    <div class="join-hero-frog">
+
+                        <img
+                            src="{{ "images/frog.png" | relURL }}"
+                            alt="BiOM Frog"
+                            data-aos="fade-in"
+                            data-aos-duration="1100">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 COMMUNITY INTRODUCTION
+            ========================================== -->
+
+            <section class="join-community">
+
+                <div
+                    class="join-community-content"
+                    data-aos="fade-up"
+                    data-aos-duration="900">
+
+                    <h2 class="join-community-title">
+                        Join the BiOM Community
+                    </h2>
+
+                    <p class="join-community-description">
+                        Join a community of students passionate about
+                        conservation, technology and creating meaningful
+                        environmental impact. Work alongside students
+                        from different disciplines, develop new skills
+                        and contribute to projects supporting
+                        biological observation.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 ORANGE AND CREAM WAVE DIVIDER
+            ========================================== -->
+
+            <div class="join-wave-wrapper">
+
+                <svg
+                    class="join-wave"
+                    viewBox="0 0 1440 180"
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+
+                    <!-- ORANGE TOP RIBBON -->
+
+                    <path
+                        class="join-wave-orange"
+                        d="
+                            M 0 45
+                            C 180 24, 350 24, 520 45
+                            C 700 68, 860 68, 1040 45
+                            C 1200 25, 1320 27, 1440 45
+                            L 1440 65
+                            C 1320 47, 1200 45, 1040 65
+                            C 860 88, 700 88, 520 65
+                            C 350 44, 180 44, 0 65
+                            Z
+                        ">
+                    </path>
+
+                    <!-- CREAM BOTTOM RIBBON -->
+
+                    <path
+                        class="join-wave-cream"
+                        d="
+                            M 0 65
+                            C 180 44, 350 44, 520 65
+                            C 700 88, 860 88, 1040 65
+                            C 1200 45, 1320 47, 1440 65
+                            L 1440 120
+                            C 1280 100, 1140 100, 980 120
+                            C 810 142, 640 142, 470 120
+                            C 300 98, 150 98, 0 120
+                            Z
+                        ">
+                    </path>
+
+                </svg>
+
+            </div>
+
+
+            <!-- =========================================
+                 DEPARTMENTS
+            ========================================== -->
+
+            <div id="join-departments">
+
+                {{ $departments := slice
+                    (dict
+                        "name" "Engineering"
+                        "tags" (slice "CAD" "3D Printing" "Design" "Research")
+                    )
+                    (dict
+                        "name" "IT"
+                        "tags" (slice "Programming" "Web Development" "Data" "UI/UX")
+                    )
+                    (dict
+                        "name" "PNC"
+                        "label" "P&C"
+                        "tags" (slice "Teamwork" "Recruitment" "Planning" "Communication")
+                    )
+                    (dict
+                        "name" "Marketing"
+                        "tags" (slice "Social Media" "Design" "Content" "Events")
+                    )
+                    (dict
+                        "name" "Ecology"
+                        "tags" (slice "Fieldwork" "Research" "Wildlife" "Conservation")
+                    )
+                }}
+
+                {{ range $department := $departments }}
+
+                    <!-- ROLES FROM NOTION (content/roles) -->
+                    <!-- A role shows under this department when its Notion
+                         "Department" matches $department.label (or .name). -->
+
+                    {{ $label := $department.label | default $department.name }}
+
+                    {{ $roles := slice }}
+
+                    {{ range sort (where site.RegularPages "Section" "roles") "Title" }}
+
+                        {{ $roleDepartments := .Params.department }}
+
+                        {{ $match := false }}
+                        {{ if reflect.IsSlice $roleDepartments }}
+                            {{ $match = in $roleDepartments $label }}
+                        {{ else }}
+                            {{ $match = eq $roleDepartments $label }}
+                        {{ end }}
+
+                        {{ if $match }}
+
+                            <!-- "Role Description" column, or the page's own text
+                                 in Notion when the column says "see within" -->
+                            {{ $description := index .Params "role description" }}
+                            {{ if or (not $description) (eq (lower (strings.TrimSpace $description)) "see within") }}
+                                {{ $description = .Plain | strings.TrimSpace }}
+                            {{ end }}
+
+                            {{ $roles = $roles | append (dict
+                                "name" .Title
+                                "skills" (partial "lines-to-list.html" (index .Params "expected skills"))
+                                "responsibilities" (partial "lines-to-list.html" .Params.responsibilities)
+                                "description" $description
+                            ) }}
+                        {{ end }}
+
+                    {{ end }}
+
+                    <!-- RENDER DEPARTMENT -->
+
+                    {{ partial "department-roles.html"
+                        (dict
+                            "name" $department.name
+                            "image" "images/about-us.webp"
+                            "tags" $department.tags
+                            "roles" $roles
+                        )
+                    }}
+
+                {{ end }}
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CONTACT
+        ========================================== -->
+
+        <section
+            id="contact"
+            class="py-3"
+            data-aos="fade-appear">
+
+            {{ partial "contacts.html" . }}
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    {{ partial "footer.html" . }}
+
+
+    <!-- =========================================
+         CAROUSEL FUNCTIONALITY
+    ========================================== -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.querySelectorAll(
+                "#join-us .department-roles"
+            ).forEach(function (section) {
+
+                const list = section.querySelector(".roles-list");
+                const previous = section.querySelector(".roles-carousel-prev");
+                const next = section.querySelector(".roles-carousel-next");
+
+                if (!list || !previous || !next) {
+                    return;
+                }
+
+                function scrollAmount() {
+
+                    const card = list.querySelector(".roles-carousel-item");
+
+                    if (!card) {
+                        return 280;
+                    }
+
+                    const gap = parseFloat(
+                        window.getComputedStyle(list).columnGap
+                    ) || 0;
+
+                    return card.getBoundingClientRect().width + gap;
+                }
+
+                previous.addEventListener("click", function () {
+
+                    list.scrollBy({
+                        left: -scrollAmount(),
+                        behavior: "smooth"
+                    });
+
+                });
+
+                next.addEventListener("click", function () {
+
+                    list.scrollBy({
+                        left: scrollAmount(),
+                        behavior: "smooth"
+                    });
+
+                });
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
