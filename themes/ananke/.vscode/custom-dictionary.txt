@@ -1,9 +1,0 @@
-Ananke
-demosite
-Disqus
-Errorf
-Kitchensink
-licenselink
-Philibert
-submod
-Warnf
