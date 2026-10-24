@@ -1,17 +1,17 @@
 ---
 title: "Hafsa Saleemi"
 date: "2026-09-14T08:07:00.000Z"
-lastmod: "2026-09-21T09:26:00.000Z"
+lastmod: "2026-10-21T12:59:00.000Z"
 draft: false
 Administrative status:
-  - "Probation"
+  - "Member"
 Departments:
   - "IT"
   - "Marketing"
 Preferred Name: "Hafsa"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8112-86bb-d9e72703bcb4"
-  last_edited_time: "2026-09-21T09:26:00.000Z"
+  last_edited_time: "2026-10-21T12:59:00.000Z"
 MANAGED_BY_NOTION_HUGO: true
 
 ---

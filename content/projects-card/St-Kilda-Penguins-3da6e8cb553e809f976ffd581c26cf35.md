@@ -28,7 +28,6 @@ FuturePlanning: "Beyond St Kilda, we hope this technology can be adapted to
   elusive or vulnerable species through sound."
 authors:
   - "Yenn"
-  - "Yenn"
   - "Jadyn Leon"
 Solution: "We are building an AI-powered acoustic monitoring device that learns
   to identify individual calls, allowing us to estimate populations and monitor
@@ -57,28 +56,28 @@ NOTION_METADATA:
       url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/1c26e8cb-553e-8110-8\
         f76-000345ab9bad/9e881455-47b6-413b-b568-2a586fdad6ff/image.png?X-Amz-A\
         lgorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-C\
-        redential=ASIAZI2LB4665RQLTXZZ%2F20261017%2Fus-west-2%2Fs3%2Faws4_reque\
-        st&X-Amz-Date=20261017T092023Z&X-Amz-Expires=3600&X-Amz-Security-Token=\
-        IQoJb3JpZ2luX2VjEDAaCXVzLXdlc3QtMiJIMEYCIQCHyJyjbZcn2hPZl7cmCjYhiNOX5Nz\
-        %2BuN1wo18dnYHtDgIhAMwMuMPXkAu39EaAJX8SG7DXpwl9PC3sJl0zYEAzqEU%2BKogECP\
-        n%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1Igx5bcz27fhGcEAng\
-        4Eq3ANYHijW%2FVUlRFmHlw9JOcYNFPmjWm9fxMJakDM4TMDvmZplr8uF6kHZGxuMs8vEHd\
-        78wm5tvA13F%2ByNrjvofN%2BVj8ZMNUpTk0Y775Iezr%2BCB5ZI5FHChngP4StRRDYU%2F\
-        Nq9tt%2Fw81b%2F1YoW8WJSoMMvORJIysQA%2BpbQyK07TKpYEBHqfp4x9oqiX3aPtXuZVV\
-        G9avtxRSrPh8nIN3SmTdTUJJ9i86pHdJDmF4a32xJ1gzlzDgX8GYuWcb2R42TbADx6j4jca\
-        Wmvtcym37pyRRgyXkCHi%2FbQwfG0jFvkrLuVYvLoO3NWsk1sBOyXzjSqRJju9RXX7tbhwy\
-        diBUJwhopG6j59Zf3KMSPaWtEsu%2Fl7uS5Ums%2BP5CX4Gra7G9V5tTbVsHEkZ%2BCyv6A\
-        4LmYIxDX2tFOwspm%2FhtcBVFgg%2BdcM8mZeRy14haRCmOFFODxw7AbqpA06lYyrlZ41jj\
-        Au28OXjTC7tnyWSRW5kbCx%2BsDiBBDx0C%2BZRVYQ4ZGpYB5Y8GSSjcYtrv3IKAd94zieR\
-        rY4hacdEWKJVoB3ZKqSypxg%2BwM5lDwyO0xxUN4TdXNGJ2i6DHLq9XMXEiJOsnJaUUEw1P\
-        ReUxRrYU14tzRSqzDFIw9slcFreNrlWv6kBDDm08zWBjqkAaCHZ2Tu%2FIJ7%2FScCSjbDg\
-        FAujWZZ9DAJoxIwDb0%2BxsATvPg3ljbX91VthMaMa5WT0NmtFZxNa%2BJ%2F6nRXR48jTl\
-        7SbpvwevkuUDtN2hmjyDHvDH16%2BEM%2BCDjQeUAXqNuTf9UrMk%2BgKlJz%2BXIj651lz\
-        H62m2w5fPrBXuyOuInk0Uvr2KCQuy%2BFm8EWA3S%2F4B1POfcSgAEq6fLufAHsBTjkgnKB\
-        6mK1&X-Amz-Signature=692add1332c2aafb835bdd0c594c362af8c6705b659a35ad4b\
-        ec3a4f68d2c987&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-i\
-        d=GetObject"
-      expiry_time: "2026-10-17T10:20:23.534Z"
+        redential=ASIAZI2LB466XOHG2W3F%2F20261024%2Fus-west-2%2Fs3%2Faws4_reque\
+        st&X-Amz-Date=20261024T051003Z&X-Amz-Expires=3600&X-Amz-Security-Token=\
+        IQoJb3JpZ2luX2VjENT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEU\
+        CIQDw4Q5cxyuHklepa1sA2fXhMFoKSVo5QzOUFlBh1WugVgIgLSSX4OWFNJkYDPNmMgKzls\
+        MShUyPwPbrJp8JOBH52hwqiAQInP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0M\
+        jMxODM4MDUiDB%2BXwad86YfrLpST4CrcA1s01Yw3LZn5QKC3FimaJGbgP96wqgovYJTfMw\
+        ERGuLXP3sIRnWhmb%2FWccNXzd8R29CLUp6xmDZU3HVuozOhGiNeDYpOi9xOtZk%2Fq%2Bl\
+        pyKfN415zlERIokWpgoGzMh4iVGfKMgmfnC6ZE9%2BPhlM3zXmiKr%2BVP5AYOgvYcqTkYX\
+        GarpSKHI9wZi3K7w5IclPi%2B3BeUFihN%2F%2Bpar3UAM2BSjwgpyNM%2BS9Gfx%2FgZ3U\
+        o34enLNxTTfgUkZRCg8np3ilo4hM5wTEBeZ6N8pJkNM2rJYOhPKaThWWaHFQEMKT1mLNA1a\
+        qlaFSu3snRnAOau94V6cEB9NgrI7GJuFlLslvRvvR%2BHy5ZDGEZ%2Fz%2FZyjyJH%2FqPT\
+        UU5DGtTA5lemtPcONQU%2BfhgAVQjSvNHUnNX5a3tGCXbuQLZe3e7jrTMbxTVZn03%2FJSz\
+        9oXIS5gRRtaGYpY0M%2F%2FPMbwtFpIWE2A1YyUlD4GD0HhBt1KWT9g7k5W1HRUud2ywSFO\
+        RDl3bH%2BRV%2Bo16QZPR6A%2BnyMvaTqmHUo80PQmPRy1HXi6QDaX7EEoR1KAtcZDPb5%2\
+        FfPoYOODe%2Fz%2B0iDxdBX8L9Ya8c3nrUn3KEZe08mA4AzapyUUqubtmWc0zNJHl0z2i0T\
+        FIBaZrkMKjI8NYGOqUB5i%2FqbUS5FrMLdYla%2BNqirokyvDvw9QGbap5lNCPRc3AqfZlj\
+        tiaY8ZwTrwGLveg6Kaop0Y0D1mpZ6AfGNCm93u6h0bVT8JKrrtBwgAzR6bLleCfSfEXo%2F\
+        IiQExbapYOttwGuKbB5VxwOeOuMTj9RJmVY5FFSTcEdWxRRh2Rjcc%2BI7YU6cLKkNAw0kN\
+        %2BwHx8l9KLYb%2Bd9K2NjaS7xgSUZAuqLOzeh&X-Amz-Signature=30be3d6f7a870752\
+        72608b2c817326165328af5d531d1fb92158a140bd356ac6&X-Amz-SignedHeaders=ho\
+        st&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      expiry_time: "2026-10-24T06:10:03.274Z"
   icon: null
   parent:
     type: "data_source_id"
@@ -164,30 +163,30 @@ NOTION_METADATA:
             url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/1c26e8cb-553e-8110-8\
               f76-000345ab9bad/f1fe96ac-de4f-4916-8631-7a3fd1e2a39b/transparent\
               -Photoroom.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha\
-              256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4665RQLTXZZ%2F2026\
-              1017%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261017T092023Z&\
-              X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDAaCXVzL\
-              Xdlc3QtMiJIMEYCIQCHyJyjbZcn2hPZl7cmCjYhiNOX5Nz%2BuN1wo18dnYHtDgIh\
-              AMwMuMPXkAu39EaAJX8SG7DXpwl9PC3sJl0zYEAzqEU%2BKogECPn%2F%2F%2F%2F\
-              %2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1Igx5bcz27fhGcEAng4Eq3ANY\
-              HijW%2FVUlRFmHlw9JOcYNFPmjWm9fxMJakDM4TMDvmZplr8uF6kHZGxuMs8vEHd7\
-              8wm5tvA13F%2ByNrjvofN%2BVj8ZMNUpTk0Y775Iezr%2BCB5ZI5FHChngP4StRRD\
-              YU%2FNq9tt%2Fw81b%2F1YoW8WJSoMMvORJIysQA%2BpbQyK07TKpYEBHqfp4x9oq\
-              iX3aPtXuZVVG9avtxRSrPh8nIN3SmTdTUJJ9i86pHdJDmF4a32xJ1gzlzDgX8GYuW\
-              cb2R42TbADx6j4jcaWmvtcym37pyRRgyXkCHi%2FbQwfG0jFvkrLuVYvLoO3NWsk1\
-              sBOyXzjSqRJju9RXX7tbhwydiBUJwhopG6j59Zf3KMSPaWtEsu%2Fl7uS5Ums%2BP\
-              5CX4Gra7G9V5tTbVsHEkZ%2BCyv6A4LmYIxDX2tFOwspm%2FhtcBVFgg%2BdcM8mZ\
-              eRy14haRCmOFFODxw7AbqpA06lYyrlZ41jjAu28OXjTC7tnyWSRW5kbCx%2BsDiBB\
-              Dx0C%2BZRVYQ4ZGpYB5Y8GSSjcYtrv3IKAd94zieRrY4hacdEWKJVoB3ZKqSypxg%\
-              2BwM5lDwyO0xxUN4TdXNGJ2i6DHLq9XMXEiJOsnJaUUEw1PReUxRrYU14tzRSqzDF\
-              Iw9slcFreNrlWv6kBDDm08zWBjqkAaCHZ2Tu%2FIJ7%2FScCSjbDgFAujWZZ9DAJo\
-              xIwDb0%2BxsATvPg3ljbX91VthMaMa5WT0NmtFZxNa%2BJ%2F6nRXR48jTl7Sbpvw\
-              evkuUDtN2hmjyDHvDH16%2BEM%2BCDjQeUAXqNuTf9UrMk%2BgKlJz%2BXIj651lz\
-              H62m2w5fPrBXuyOuInk0Uvr2KCQuy%2BFm8EWA3S%2F4B1POfcSgAEq6fLufAHsBT\
-              jkgnKB6mK1&X-Amz-Signature=9b3cdcaaf19e958e4db20961f4c7caa0d0a3a4\
-              587ef5efc5bf58d2d87606ae64&X-Amz-SignedHeaders=host&x-amz-checksu\
-              m-mode=ENABLED&x-id=GetObject"
-            expiry_time: "2026-10-17T10:20:23.524Z"
+              256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XOHG2W3F%2F2026\
+              1024%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261024T051003Z&\
+              X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjENT%2F%2F\
+              %2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQDw4Q5cxyuHklepa1\
+              sA2fXhMFoKSVo5QzOUFlBh1WugVgIgLSSX4OWFNJkYDPNmMgKzlsMShUyPwPbrJp8\
+              JOBH52hwqiAQInP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4\
+              MDUiDB%2BXwad86YfrLpST4CrcA1s01Yw3LZn5QKC3FimaJGbgP96wqgovYJTfMwE\
+              RGuLXP3sIRnWhmb%2FWccNXzd8R29CLUp6xmDZU3HVuozOhGiNeDYpOi9xOtZk%2F\
+              q%2BlpyKfN415zlERIokWpgoGzMh4iVGfKMgmfnC6ZE9%2BPhlM3zXmiKr%2BVP5A\
+              YOgvYcqTkYXGarpSKHI9wZi3K7w5IclPi%2B3BeUFihN%2F%2Bpar3UAM2BSjwgpy\
+              NM%2BS9Gfx%2FgZ3Uo34enLNxTTfgUkZRCg8np3ilo4hM5wTEBeZ6N8pJkNM2rJYO\
+              hPKaThWWaHFQEMKT1mLNA1aqlaFSu3snRnAOau94V6cEB9NgrI7GJuFlLslvRvvR%\
+              2BHy5ZDGEZ%2Fz%2FZyjyJH%2FqPTUU5DGtTA5lemtPcONQU%2BfhgAVQjSvNHUnN\
+              X5a3tGCXbuQLZe3e7jrTMbxTVZn03%2FJSz9oXIS5gRRtaGYpY0M%2F%2FPMbwtFp\
+              IWE2A1YyUlD4GD0HhBt1KWT9g7k5W1HRUud2ywSFORDl3bH%2BRV%2Bo16QZPR6A%\
+              2BnyMvaTqmHUo80PQmPRy1HXi6QDaX7EEoR1KAtcZDPb5%2FfPoYOODe%2Fz%2B0i\
+              DxdBX8L9Ya8c3nrUn3KEZe08mA4AzapyUUqubtmWc0zNJHl0z2i0TFIBaZrkMKjI8\
+              NYGOqUB5i%2FqbUS5FrMLdYla%2BNqirokyvDvw9QGbap5lNCPRc3AqfZljtiaY8Z\
+              wTrwGLveg6Kaop0Y0D1mpZ6AfGNCm93u6h0bVT8JKrrtBwgAzR6bLleCfSfEXo%2F\
+              IiQExbapYOttwGuKbB5VxwOeOuMTj9RJmVY5FFSTcEdWxRRh2Rjcc%2BI7YU6cLKk\
+              NAw0kN%2BwHx8l9KLYb%2Bd9K2NjaS7xgSUZAuqLOzeh&X-Amz-Signature=89e5\
+              5bc58971adf23f545173aba0a4a3f96da0fbd18a032443dc913ee24f8da7&X-Am\
+              z-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+            expiry_time: "2026-10-24T06:10:03.261Z"
     draft:
       id: "JiWU"
       type: "checkbox"
@@ -251,31 +250,12 @@ NOTION_METADATA:
             other conservationists globally by offering a new way to monitor
             elusive or vulnerable species through sound."
           href: null
-      rich_text:
-        - type: "text"
-          text:
-            content: "Beyond St Kilda, we hope this technology can be adapted to support
-              other conservationists globally by offering a new way to monitor
-              elusive or vulnerable species through sound."
-            link: null
-          annotations:
-            bold: false
-            italic: false
-            strikethrough: false
-            underline: false
-            code: false
-            color: "default"
-          plain_text: "Beyond St Kilda, we hope this technology can be adapted to support
-            other conservationists globally by offering a new way to monitor
-            elusive or vulnerable species through sound."
-          href: null
     authors:
       id: "bK%3B%5B"
       type: "people"
       people:
         - object: "user"
           id: "25dd872b-594c-818a-8ef5-0002a724b085"
-          name: "Yenn"
           name: "Yenn"
           avatar_url: "https://s3-us-west-2.amazonaws.com/public.notion-static.com/c5e972\
             79-1e08-48cb-b619-3350dd0f15ca/Screenshot_2026-08-06_180915.png"

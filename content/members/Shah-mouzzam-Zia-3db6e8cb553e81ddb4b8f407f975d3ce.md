@@ -1,16 +1,16 @@
 ---
 title: "Shah mouzzam Zia"
 date: "2026-09-14T08:07:00.000Z"
-lastmod: "2026-09-15T00:23:00.000Z"
+lastmod: "2026-10-21T13:00:00.000Z"
 draft: false
 Administrative status:
-  - "Probation"
+  - "Member"
 Departments:
   - "IT"
 Preferred Name: "Shah"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81dd-b4b8-f407f975d3ce"
-  last_edited_time: "2026-09-15T00:23:00.000Z"
+  last_edited_time: "2026-10-21T13:00:00.000Z"
 MANAGED_BY_NOTION_HUGO: true
 
 ---

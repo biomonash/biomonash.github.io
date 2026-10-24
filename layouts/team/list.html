@@ -1,12 +1,8 @@
 <!doctype html>
 <html lang="en">
-<<<<<<< HEAD
-  {{ partial "head.html" . }}
-=======
 
   {{ partial "head.html" . }}
 
->>>>>>> notion-hugo-migration
   <body>
 
     {{ partial "navbar.html" . }}
@@ -15,18 +11,6 @@
 
       <section id="team">
 
-<<<<<<< HEAD
-        <!-- Team introduction -->
-        <section class="team-intro">
-          <div class="team-intro-content">
-
-            <div class="team-intro-text">
-              <h1 class="header1-txt">
-                The Team
-              </h1>
-
-              <p class="body-txt">
-=======
         <!-- =====================================================
              TEAM HERO
         ====================================================== -->
@@ -75,57 +59,10 @@
 
               <p class="body-txt">
 
->>>>>>> notion-hugo-migration
                 At BiOM, we believe that technology has the power to drive
                 meaningful change for the planet. Our team brings together
                 students from varying disciplines to develop tools that
                 support conservation.
-<<<<<<< HEAD
-                <br><br>
-                Meet the students behind the mission.
-              </p>
-            </div>
-
-            <div class="team-intro-image">
-              <img
-                src="{{ "images/about-us.webp" | relURL }}"
-                alt="BiOM Team">
-            </div>
-
-          </div>
-        </section>
-
-        <!-- Members -->
-        {{ $members := where .Site.RegularPages "Section" "members" }}
-
-        <!-- Executive Team -->
-        {{ $executiveMembers := slice }}
-
-        {{ range $members }}
-          {{ $statuses := index .Params "administrative status" }}
-
-          {{ if or
-            (in $statuses "Executive")
-            (in $statuses "Top Executive")
-          }}
-
-            {{ $name := .Title }}
-
-            {{ with index .Params "preferred name" }}
-              {{ $name = . }}
-            {{ end }}
-
-            {{ $executiveMembers = $executiveMembers | append
-              (dict
-                "name" $name
-                "role" .Params.role
-                "image" ""
-                "url" .Params.linkedin
-              )
-            }}
-
-          {{ end }}
-=======
 
                 <br><br>
 
@@ -181,7 +118,6 @@
             )
           }}
 
->>>>>>> notion-hugo-migration
         {{ end }}
 
         {{ partial "executive-team.html"
@@ -191,29 +127,6 @@
           )
         }}
 
-<<<<<<< HEAD
-        <!-- Academic Advisors -->
-        {{ $advisors := slice
-          (dict
-            "name" "Name xyz"
-            "role" "Academic Advisor"
-            "image" ""
-            "url" ""
-          )
-          (dict
-            "name" "Name xyz"
-            "role" "Academic Advisor"
-            "image" ""
-            "url" ""
-          )
-          (dict
-            "name" "Name xyz"
-            "role" "Academic Advisor"
-            "image" ""
-            "url" ""
-          )
-        }}
-=======
 
         <!-- =====================================================
              ACADEMIC ADVISORS
@@ -240,7 +153,6 @@
           }}
 
         {{ end }}
->>>>>>> notion-hugo-migration
 
         {{ partial "executive-team.html"
           (dict
@@ -249,14 +161,6 @@
           )
         }}
 
-<<<<<<< HEAD
-        <!-- Department Teams -->
-        {{ $departments := slice
-          "Ecology"
-          "Engineering"
-          "Marketing"
-          "IT"
-=======
 
         <!-- =====================================================
              DEPARTMENT TEAMS
@@ -268,34 +172,23 @@
           (dict "label" "Marketing"   "display" "Marketing")
           (dict "label" "IT"          "display" "IT")
           (dict "label" "P&C"         "display" "People & Culture")
->>>>>>> notion-hugo-migration
         }}
 
         {{ range $department := $departments }}
 
-<<<<<<< HEAD
           {{ $teamLeads := slice }}
-          {{ $teamMembers := slice }}
-
-=======
-          <!-- TEAM LEADS -->
-
-          {{ $teamLeads := slice }}
-
-          <!-- TEAM MEMBERS -->
-
           {{ $teamMembers := slice }}
 
           <!-- FIND MEMBERS IN THIS DEPARTMENT -->
 
->>>>>>> notion-hugo-migration
           {{ range $members }}
 
             {{ $memberDepartments := .Params.departments }}
             {{ $statuses := index .Params "administrative status" }}
 
-<<<<<<< HEAD
-            {{ if in $memberDepartments $department }}
+            {{ if in $memberDepartments $department.label }}
+
+              <!-- Use preferred name if set, otherwise full name -->
 
               {{ $name := .Title }}
 
@@ -303,51 +196,27 @@
                 {{ $name = . }}
               {{ end }}
 
-              {{ if in $statuses "Lead" }}
-                {{ $teamLeads = $teamLeads | append $name }}
-              {{ end }}
-
-              {{ if in $statuses "Member" }}
-                {{ $teamMembers = $teamMembers | append $name }}
-=======
-            {{ if in $memberDepartments $department.label }}
-
-              <!-- FULL NAME -->
-
-              {{ $name := .Title }}
-
               <!-- TEAM LEAD -->
 
               {{ if in $statuses "Lead" }}
-
                 {{ $teamLeads = $teamLeads | append $name }}
-
               {{ end }}
 
               <!-- TEAM MEMBER OR PROBATION -->
 
               {{ if or (in $statuses "Member") (in $statuses "Probation") }}
-
                 {{ $teamMembers = $teamMembers | append $name }}
-
->>>>>>> notion-hugo-migration
               {{ end }}
 
             {{ end }}
 
           {{ end }}
 
-<<<<<<< HEAD
-          {{ partial "department-team.html"
-            (dict
-              "name" $department
-=======
           <!-- DISPLAY DEPARTMENT -->
 
           {{ partial "department-team.html"
             (dict
               "name" $department.display
->>>>>>> notion-hugo-migration
               "leads" $teamLeads
               "members" $teamMembers
               "image" "images/about-us.webp"
@@ -356,11 +225,6 @@
 
         {{ end }}
 
-<<<<<<< HEAD
-      </section>
-
-      <!-- Contact Us -->
-=======
 
         <!-- =====================================================
              JOIN THE TEAM CTA
@@ -385,33 +249,13 @@
                 class="team-wave-orange"
                 d="
                   M 0 45
-
-                  C 180 24,
-                    350 24,
-                    520 45
-
-                  C 700 68,
-                    860 68,
-                    1040 45
-
-                  C 1200 25,
-                    1320 27,
-                    1440 45
-
+                  C 180 24, 350 24, 520 45
+                  C 700 68, 860 68, 1040 45
+                  C 1200 25, 1320 27, 1440 45
                   L 1440 65
-
-                  C 1320 47,
-                    1200 45,
-                    1040 65
-
-                  C 860 88,
-                    700 88,
-                    520 65
-
-                  C 350 44,
-                    180 44,
-                    0 65
-
+                  C 1320 47, 1200 45, 1040 65
+                  C 860 88, 700 88, 520 65
+                  C 350 44, 180 44, 0 65
                   Z
                 ">
               </path>
@@ -422,33 +266,13 @@
                 class="team-wave-cream"
                 d="
                   M 0 65
-
-                  C 180 44,
-                    350 44,
-                    520 65
-
-                  C 700 88,
-                    860 88,
-                    1040 65
-
-                  C 1200 45,
-                    1320 47,
-                    1440 65
-
+                  C 180 44, 350 44, 520 65
+                  C 700 88, 860 88, 1040 65
+                  C 1200 45, 1320 47, 1440 65
                   L 1440 120
-
-                  C 1280 100,
-                    1140 100,
-                    980 120
-
-                  C 810 142,
-                    640 142,
-                    470 120
-
-                  C 300 98,
-                    150 98,
-                    0 120
-
+                  C 1280 100, 1140 100, 980 120
+                  C 810 142, 640 142, 470 120
+                  C 300 98, 150 98, 0 120
                   Z
                 ">
               </path>
@@ -525,7 +349,6 @@
            CONTACT
       ====================================================== -->
 
->>>>>>> notion-hugo-migration
       <section
         id="contact"
         class="py-3"
@@ -537,12 +360,6 @@
 
     </main>
 
-<<<<<<< HEAD
-    {{ partial "footer.html" . }}
-
-  </body>
-</html>
-=======
     <!-- =====================================================
          FOOTER
     ====================================================== -->
@@ -551,4 +368,3 @@
 
   </body>
 </html>
->>>>>>> notion-hugo-migration

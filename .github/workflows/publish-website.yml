@@ -2,55 +2,19 @@ name: Publish Website
 
 on:
   workflow_dispatch:
+  # NEW: Publish automatically whenever code is pushed or merged into main,
+  # e.g. after a pull request is merged.
+  push:
+    branches: [main]
 
-permissions:
-  contents: read
-
-concurrency:
-  group: github-pages
-  cancel-in-progress: false
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-
-      - name: Install Node.js dependencies
-        run: npm ci
-
-      - name: Sync latest Notion content
-        run: npm start
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-
-      - name: Set up Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: "latest"
-          extended: true
-
-      - name: Build production website
-        run: hugo --minify
-
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@4
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=biom-website --branch=mainname: Publish Website
-
-on:
-  workflow_dispatch:
-
+  # NEW: Publish automatically on a timer, so edits made in Notion go live
+  # even if nobody pushes any code.
+  schedule:
+    # Cron format: minute hour day-of-month month day-of-week
+    # "0 */6 * * *" = at minute 0 of every 6th hour (00:00, 06:00, 12:00, 18:00 UTC),
+    # which is 11am, 5pm, 11pm and 5am in Melbourne during daylight saving.
+    # To run more often, use e.g. "0 */3 * * *" (every 3 hours).
+    - cron: "0 */6 * * *"
 permissions:
   contents: read
 

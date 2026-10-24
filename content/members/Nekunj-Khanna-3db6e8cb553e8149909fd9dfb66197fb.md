@@ -1,15 +1,15 @@
 ---
 title: "Nekunj Khanna"
 date: "2026-09-14T08:06:00.000Z"
-lastmod: "2026-09-21T09:27:00.000Z"
+lastmod: "2026-10-21T12:59:00.000Z"
 draft: false
 Administrative status:
-  - "Probation"
+  - "Member"
 Departments:
   - "IT"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8149-909f-d9dfb66197fb"
-  last_edited_time: "2026-09-21T09:27:00.000Z"
+  last_edited_time: "2026-10-21T12:59:00.000Z"
 MANAGED_BY_NOTION_HUGO: true
 
 ---
