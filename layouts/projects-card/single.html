@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+
+{{ partial "head.html" . }}
+
+{{/* Detect project theme: blue for St Kilda, green otherwise */}}
+{{ $isStKilda := or (in .Title "St Kilda") (eq (.Params.Theme | default "") "Blue") }}
+
+<body class="project-page{{ if $isStKilda }} theme-blue{{ end }}">
+
+    <!-- Project page stylesheets (on top of what head.html loads) -->
+    <link rel="stylesheet" href="{{ "css/articles.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/project.css" | relURL }}">
+
+    {{ partial "navbar.html" . }}
+
+    {{ $heroImg := .Params.banner | default .Params.featuredImage | default .Params.HeroImage }}
+
+    <!-- ==================== SECTION 1: HERO & SUMMARY ==================== -->
+
+    <!-- 1A: Top Band (Title + Tagline + Badge) -->
+    <section class="hero-top-band">
+        <div class="container" style="max-width: 1050px;">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h1 class="project-title">{{ .Title }}</h1>
+                    {{/* Tagline (under title) */}}
+                    <p class="project-tagline">
+                        {{ with .Params.tagline | default .Params.Tagline }}
+                        {{ . }}
+                        {{ else }}
+                        BiOM Conservation Technology Initiative
+                        {{ end }}
+                    </p>
+                </div>
+                <div class="col-md-5 text-end">
+                    {{/* Badge: extract a clean URL whether it's a string, list or Notion file object */}}
+                    {{ $badge := .Params.badge | default .Params.Badge }}
+                    {{ $badgeUrl := "" }}
+
+                    {{ if reflect.IsSlice $badge }}
+                    {{ $first := index $badge 0 }}
+                    {{ if reflect.IsMap $first }}
+                    {{ $badgeUrl = $first.url | default ($first.file.url | default "") }}
+                    {{ else }}
+                    {{ $badgeUrl = $first }}
+                    {{ end }}
+                    {{ else if reflect.IsMap $badge }}
+                    {{ $badgeUrl = $badge.url | default ($badge.file.url | default "") }}
+                    {{ else }}
+                    {{ $badgeUrl = $badge }}
+                    {{ end }}
+
+                    {{ $badgeUrl = strings.TrimPrefix "[" (strings.TrimSuffix "]" (string $badgeUrl)) }}
+
+                    {{ if and $badgeUrl (ne $badgeUrl "") }}
+                    <img src="{{ $badgeUrl | relURL }}" alt="{{ .Title }} Badge" class="hero-circle-illustration">
+                    {{ else }}
+                    <img src="{{ "images/BiOM-LogoTrans.webp" | relURL }}" alt="BiOM Badge"
+                        class="hero-circle-illustration">
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Torn Divider into 1B -->
+    <div class="torn-divider" style="background-color: var(--bg-sage-main);">
+        <svg viewBox="0 0 1200 30" preserveAspectRatio="none">
+            <path
+                d="M0,0 L0,10 Q60,25 120,8 Q180,28 240,12 Q300,26 360,9 Q420,27 480,14 Q540,29 600,10 Q660,26 720,15 Q780,30 840,11 Q900,25 960,13 Q1020,29 1080,10 Q1140,24 1200,8 L1200,30 L0,30 Z"
+                fill="var(--bg-sage-sub)"></path>
+        </svg>
+    </div>
+
+    <!-- 1B: Bottom Band (Photo + Long Summary Description) -->
+    <section class="hero-summary-band">
+        <div class="container" style="max-width: 1050px;">
+            <div class="row align-items-center g-5">
+                <div class="col-md-7">
+                    <img src="{{ $heroImg }}" alt="{{ .Title }}" class="summary-photo">
+                </div>
+                <div class="col-md-5">
+                    {{/* Long description (next to photo) */}}
+                    <p class="summary-text">
+                        {{ with .Params.description | default .Params.Description }}
+                        {{ . }}
+                        {{ end }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Torn Divider into Section 2 -->
+    <div class="torn-divider" style="background-color: var(--bg-sage-sub);">
+        <svg viewBox="0 0 1200 30" preserveAspectRatio="none">
+            <path
+                d="M0,0 L0,12 Q70,28 140,9 Q210,27 280,11 Q350,29 420,8 Q490,26 560,13 Q630,28 700,10 Q770,29 840,14 Q910,26 980,8 Q1050,27 1120,12 Q1170,25 1200,10 L1200,30 L0,30 Z"
+                fill="var(--bg-sage-main)"></path>
+        </svg>
+    </div>
+
+    <!-- ==================== SECTION 2: CHALLENGE, SOLUTION & STATS ==================== -->
+    <section class="section-two-band">
+        <div class="container" style="max-width: 1050px;">
+            <div class="mb-4">
+                <img src="{{ $heroImg }}" alt="Field Work" class="section-two-photo">
+            </div>
+
+            <div class="row text-center g-4 mb-5">
+                <div class="col-md-6">
+                    <h3 class="challenge-title">The Challenge</h3>
+                    <p class="challenge-text">{{ with .Params.Challenge }}{{ . }}{{ end }}</p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="challenge-title">Our Solution</h3>
+                    <p class="challenge-text">{{ with .Params.Solution }}{{ . }}{{ end }}</p>
+                </div>
+            </div>
+
+            <!-- 3 Impact Squares -->
+            <div class="row g-3 mb-4 text-center">
+                {{ if $isStKilda }}
+                <div class="col-4">
+                    <div class="impact-card-sampled">
+                        <span class="fs-3 fw-bold">1,536+ hrs</span>
+                        <small>Audio to process</small>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="impact-card-sampled">
+                        <span class="fs-3 fw-bold">200+ calls</span>
+                        <small>Target clean dataset</small>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="impact-card-sampled">
+                        <span class="fs-3 fw-bold">~40%</span>
+                        <small>AI model complete</small>
+                    </div>
+                </div>
+                {{ else }}
+                <div class="col-4">
+                    <div class="impact-card-sampled">
+                        <span class="fs-3 fw-bold">8+ years</span>
+                        <small>Long-term observation</small>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="impact-card-sampled">
+                        <span class="fs-3 fw-bold">160,000+</span>
+                        <small>Species detections</small>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="impact-card-sampled">
+                        <span class="fs-3 fw-bold">10+ years</span>
+                        <small>Target lifespan</small>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+
+            <!-- 3 Tall Vitals Cards -->
+            <div class="row g-3 text-center">
+                <div class="col-md-4">
+                    <div class="tall-stat-card-sampled">
+                        <h3>Status</h3>
+                        <div class="tall-stat-content mt-auto mb-3">
+                            {{ with .Params.Status }}{{ . }}{{ else }}Active{{ end }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tall-stat-card-sampled">
+                        <h3>Tech</h3>
+                        <div class="tall-stat-content mt-auto mb-3">
+                            {{ if .Params.TechStack }}
+                            {{ range .Params.TechStack }}
+                            <span class="badge bg-dark px-3 py-2 fs-6 mb-1">{{ . }}</span>
+                            {{ end }}
+                            {{ else }}
+                            <span>Sensor Hardware & Software</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tall-stat-card-sampled">
+                        <h3>Location</h3>
+                        <div class="tall-stat-content mt-auto mb-3">
+                            {{ with .Params.Location }}{{ . }}{{ else }}Victoria, Australia{{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Torn Divider into Section 3 (Timeline) -->
+    <div class="torn-divider" style="background-color: var(--bg-sage-main);">
+        <svg viewBox="0 0 1200 30" preserveAspectRatio="none">
+            <path
+                d="M0,0 L0,12 Q70,28 140,9 Q210,27 280,11 Q350,29 420,8 Q490,26 560,13 Q630,28 700,10 Q770,29 840,14 Q910,26 980,8 Q1050,27 1120,12 Q1170,25 1200,10 L1200,30 L0,30 Z"
+                fill="var(--bg-timeline)"></path>
+        </svg>
+    </div>
+
+    <!-- ==================== SECTION 3: PROJECT TIMELINE ==================== -->
+    <section class="section-timeline-band">
+        <div class="container" style="max-width: 1000px;">
+            <h2 class="timeline-outline-title">Project Timeline</h2>
+            <div class="d-flex flex-column gap-3">
+                {{ if $isStKilda }}
+                <div class="timeline-pill-sampled">
+                    <strong>Stage 1: Hardware & Tough Encasement</strong>
+                    <span>Deployment of rugged breakwater housings, Song Meter recorders, and sustainable autonomous
+                        power systems (SAPS).</span>
+                </div>
+                <div class="timeline-pill-sampled">
+                    <strong>Stage 2: Software Integration & Audio Pipeline</strong>
+                    <span>On-device audio preprocessing, Mel-spectrogram generation on Raspberry Pi, and latency
+                        testing.</span>
+                </div>
+                <div class="timeline-pill-sampled">
+                    <strong>Stage 3: AI Inference & Real-Time Classification</strong>
+                    <span>Completing the MVP AI model to separate overlapping calls and generate activity
+                        heatmaps.</span>
+                </div>
+                {{ else }}
+                <div class="timeline-pill-sampled">
+                    <strong>Stage 1: Visualisation Phase (MVP)</strong>
+                    <span>Excel to PostgreSQL data migration, interactive filterable map view, and species
+                        explorer.</span>
+                </div>
+                <div class="timeline-pill-sampled">
+                    <strong>Stage 2: Integration Phase</strong>
+                    <span>Data uploading workflows (Excel, API, web forms), online image tagging, and media
+                        management.</span>
+                </div>
+                <div class="timeline-pill-sampled">
+                    <strong>Stage 3: Community Science & Automated Reporting</strong>
+                    <span>Public observation uploads, educational features, and automated council report
+                        generation.</span>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <!-- Torn Divider into Section 4 (Contributions) -->
+    <div class="torn-divider" style="background-color: var(--bg-timeline);">
+        <svg viewBox="0 0 1200 30" preserveAspectRatio="none">
+            <path
+                d="M0,0 L0,10 Q60,25 120,8 Q180,28 240,12 Q300,26 360,9 Q420,27 480,14 Q540,29 600,10 Q660,26 720,15 Q780,30 840,11 Q900,25 960,13 Q1020,29 1080,10 Q1140,24 1200,8 L1200,30 L0,30 Z"
+                fill="var(--bg-sage-main)"></path>
+        </svg>
+    </div>
+
+    <!-- ==================== SECTION 4: 4 SUBSYSTEMS ==================== -->
+    <section class="section-contrib-band">
+        <div class="container" style="max-width: 1050px;">
+            <div class="row g-4">
+                {{ if $isStKilda }}
+                <div class="col-md-6">
+                    <div class="contrib-card-sampled h-100">
+                        <img src="{{ $heroImg }}" alt="Durable Systems">
+                        <div class="p-4">
+                            <h5>Durable Systems</h5>
+                            <p class="mb-0">Tough Encasement + Stable Internals: Designing a system to withstand harsh
+                                breakwater marine conditions using weighted matrix factors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contrib-card-sampled h-100">
+                        <img src="{{ $heroImg }}" alt="Electronic Systems">
+                        <div class="p-4">
+                            <h5>Electronic Systems</h5>
+                            <p class="mb-0">Signal Processing + Sustainable SAPS: Creating microphone, radio, and
+                                sustainable autonomous power components with custom circuit boards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contrib-card-sampled h-100">
+                        <img src="{{ $heroImg }}" alt="Software Integration">
+                        <div class="p-4">
+                            <h5>Software Integration</h5>
+                            <p class="mb-0">Embedded Systems + Digital Ecosystems: Audio preprocessing and
+                                Mel-spectrogram generation directly on Raspberry Pi with RAM and latency tuning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contrib-card-sampled h-100">
+                        <img src="{{ $heroImg }}" alt="Machine Learning">
+                        <div class="p-4">
+                            <h5>Machine Learning</h5>
+                            <p class="mb-0">AI Model Building + Deployment: Training models to count overlapping Little
+                                Penguin calls in real-time non-invasively.</p>
+                        </div>
+                    </div>
+                </div>
+                {{ else }}
+                <div class="col-md-6">
+                    <div class="contrib-card-sampled h-100">
+                        <img src="{{ $heroImg }}" alt="Frontend UI">
+                        <div class="p-4">
+                            <h5>Frontend UI & Map View</h5>
+                            <p class="mb-0">Interactive, filterable species map and explorer built with React,
+                                TypeScript, Vite, TailwindCSS, and Leaflet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contrib-card-sampled h-100">
+                        <img src="{{ $heroImg }}" alt="Backend Architecture">
+                        <div class="p-4">
+                            <h5>Backend & PostGIS Data Pipeline</h5>
+                            <p class="mb-0">High-performance stateless Go API with pgx + sqlc querying a PostgreSQL
+                                database with PostGIS for spatial coordinates.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contrib-card-sampled h-100">
+                        <img src="{{ $heroImg }}" alt="Council Reporting">
+                        <div class="p-4">
+                            <h5>Automated Reporting Generator</h5>
+                            <p class="mb-0">Direct graph and summary generation powered by Nivo charts, eliminating
+                                manual Excel spreadsheet handling for council staff.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contrib-card-sampled h-100">
+                        <img src="{{ $heroImg }}" alt="Audio & Bioacoustics">
+                        <div class="p-4">
+                            <h5>Bioacoustic Multimedia Integration</h5>
+                            <p class="mb-0">Spectrogram visualisation using Arbimon workflows and BirdNet audio
+                                recognition for species verification.</p>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <!-- Torn Divider into Section 5 (Team) -->
+    <div class="torn-divider" style="background-color: var(--bg-sage-main);">
+        <svg viewBox="0 0 1200 30" preserveAspectRatio="none">
+            <path
+                d="M0,0 L0,12 Q70,28 140,9 Q210,27 280,11 Q350,29 420,8 Q490,26 560,13 Q630,28 700,10 Q770,29 840,14 Q910,26 980,8 Q1050,27 1120,12 Q1170,25 1200,10 L1200,30 L0,30 Z"
+                fill="var(--bg-team)"></path>
+        </svg>
+    </div>
+
+    <!-- ==================== SECTION 5: PROJECT TEAM ==================== -->
+    <section class="section-team-band">
+        <div class="container" style="max-width: 1050px;">
+            <h2 class="team-title">Project Team</h2>
+
+            <div class="text-center mb-5">
+                <img src="{{ $heroImg }}" alt="Team" class="team-photo">
+            </div>
+
+            {{ partial "projects/project-team.html" . }}
+        </div>
+
+        <!-- Two-tone painted wave divider into Future Planning -->
+        <svg class="team-wave-divider" viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,45 C200,85 420,15 640,60 C860,95 1060,25 1260,65 C1360,80 1400,45 1440,55 L1440,100 L0,100 Z"
+                fill="var(--wave-dark)" />
+            <path d="M0,58 C220,92 440,30 660,72 C880,105 1070,42 1270,78 C1365,92 1405,62 1440,70 L1440,100 L0,100 Z"
+                fill="var(--wave-light)" opacity="0.85" />
+            <path d="M0,72 C230,100 450,48 680,85 C900,112 1080,58 1280,88 C1370,100 1410,78 1440,84 L1440,100 L0,100 Z"
+                fill="var(--bg-sage-main)" />
+        </svg>
+    </section>
+
+    <!-- ==================== SECTION 6: FUTURE PLANNING ==================== -->
+    <section class="section-future-band">
+        <div class="container future-planning-container">
+            <h3 class="future-title">Future Planning</h3>
+            <p class="future-body-text">
+                {{ with .Params.FuturePlanning }}{{ . }}{{ end }}
+            </p>
+
+            <!-- White Link Box (Left-Aligned) -->
+            {{ $resLink := .Params.LearnMoreLink | default .Params.link }}
+            {{ $resLogo := .Params.logo | default .Params.LearnMoreImage }}
+            {{ $resTitle := .Params.LearnMoreTitle | default (printf "For More Information About %s" .Title) }}
+
+            <div class="learn-more-card-figma p-3">
+                <div class="row g-0 align-items-center">
+                    {{ if $resLogo }}
+                    <div class="col-4 pe-2">
+                        <img src="{{ $resLogo }}" alt="Partner Logo">
+                    </div>
+                    {{ end }}
+                    <div class="{{ if $resLogo }}col-8{{ else }}col-12{{ end }} ps-3">
+                        <div class="learn-more-card-title">{{ $resTitle }}</div>
+                        <div class="text-muted small mb-2">—</div>
+                        {{ if $resLink }}
+                        <a href="{{ $resLink }}" target="_blank" rel="noopener noreferrer"
+                            class="learn-more-link-btn">Click here &rarr;</a>
+                        {{ else }}
+                        <span class="small text-muted">Link coming soon</span>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 7: SOCIALS ==================== -->
+    <section class="section-social-band">
+        <div class="container">
+            <h4 class="social-title">Connect With Us</h4>
+            <div class="social-icons-wrapper">
+                <a href="https://instagram.com" target="_blank" class="social-icon-link"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon-link"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:contact@biom.team" class="social-icon-link"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    {{ partial "footer.html" . }}
+
+</body>
+
+</html>

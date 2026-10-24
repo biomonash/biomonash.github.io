@@ -1,0 +1,28 @@
+{{ $link := .Params.LearnMoreLink | default .Params.link }}
+{{ $title := .Params.LearnMoreTitle | default (printf "More about %s" .Title) }}
+{{ $img := .Params.LearnMoreImage | default .Params.logo }}
+
+{{ if or $link $title }}
+<article class="my-4">
+    <div class="card border-0 shadow-sm overflow-hidden" style="border-radius: 24px; background-color: #ffffff;">
+        <div class="row g-0 align-items-center">
+            {{ if $img }}
+            <div class="col-md-4">
+                <img src="{{ $img }}" alt="{{ $title }}" class="img-fluid w-100" style="height: 180px; object-fit: cover;">
+            </div>
+            {{ end }}
+            <div class="{{ if $img }}col-md-8{{ else }}col-12{{ end }} p-4">
+                <h5 class="fw-bold mb-2" style="color: #0c2103; font-family: 'Poppins', sans-serif;">{{ $title }}</h5>
+                <p class="text-muted small mb-3">Explore external resources, data, and partner updates.</p>
+                {{ if $link }}
+                    <a href="{{ $link }}" target="_blank" rel="noopener noreferrer" class="biom-btn-orange">
+                        Visit Project Resource &rarr;
+                    </a>
+                {{ else }}
+                    <span class="text-muted small">Link coming soon</span>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</article>
+{{ end }}

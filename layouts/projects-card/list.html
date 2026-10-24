@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+  {{ partial "head.html" . }}
+
+  <body>
+
+    {{ partial "navbar.html" . }}
+
+    <main>
+
+      <section class="team-hero">
+        <div class="team-hero-content">
+
+          <div class="team-hero-frog">
+            <img
+              src="{{ "images/frog.png" | relURL }}"
+              alt="BiOM Frog"
+              data-aos="fade-in"
+              data-aos-duration="1100">
+          </div>
+
+          <h1 class="team-hero-title">
+            <span
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              style="display: inline-block;">
+              Our Projects
+            </span>
+          </h1>
+
+        </div>
+      </section>
+
+      {{ with .Content }}
+        <section class="team-intro team-intro--text-only">
+          <div class="team-intro-content">
+            <div
+              class="team-intro-text"
+              data-aos="fade-up"
+              data-aos-duration="900">
+              <div class="body-txt">{{ . }}</div>
+            </div>
+          </div>
+        </section>
+      {{ end }}
+
+      <section id="projects" class="container py-5" data-aos="fade-up">
+        {{ range sort .RegularPages "Title" }}
+          {{ partial "home/project-card.html" . }}
+        {{ end }}
+      </section>
+
+    </main>
+
+    {{ partial "footer.html" . }}
+
+  </body>
+
+</html>

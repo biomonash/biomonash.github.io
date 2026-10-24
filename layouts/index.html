@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  {{ partial "head.html" . }}
+
+  <body>
+    <!-- Header - this is the navigation bar at the top of the page -->
+    {{ partial "navbar.html" . }}
+
+    <main>
+
+      <!-- Hero section -->
+      <section id="home">
+        <img
+          src="{{ "images/logorec2.webp" }}"
+          alt="BiOM Logo"
+          class="main-logo fade-in-logo" />
+
+        <div class="banner-wrapper" data-aos="fade-up">
+          <p class="banner-text">
+            <span>
+              Student Powering the Future of Conservation &nbsp;
+              <img
+                src="{{ "images/green-flw.webp" | relURL }}"
+                style="width: 48px" />
+              &nbsp;
+            </span>
+
+            <span>
+              Student Powering the Future of Conservation &nbsp;
+              <img
+                src="{{ "images/green-flw.webp" | relURL }}"
+                style="width: 48px" />
+              &nbsp;
+            </span>
+
+            <span>
+              Student Powering the Future of Conservation &nbsp;
+              <img
+                src="{{ "images/green-flw.webp" | relURL }}"
+                style="width: 48px" />
+              &nbsp;
+            </span>
+
+            <span>
+              Student Powering the Future of Conservation &nbsp;
+              <img
+                src="{{ "images/green-flw.webp" | relURL }}"
+                style="width: 48px" />
+              &nbsp;
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Who we are section -->
+      {{ range where .Site.RegularPages "Title" "Who we are" }}
+      {{ if index .Params "Enabled" }}
+      {{ partial "home/who-we-are.html" . }}
+      {{ end }}
+      {{ end }}
+
+      <!-- Mission section -->
+      <section
+        id="mission"
+        class="d-flex justify-content-center my-5"
+        data-aos="zoom-in">
+
+        {{ range where .Site.RegularPages "Section" "sections-card" }}
+        {{ if eq .Title "Our Mission" }}
+        {{ partial "home/section-card.html" . }}
+        {{ end }}
+        {{ end }}
+
+      </section>
+
+      <!-- Projects section -->
+      <section id="projects" data-aos="fade-up">
+        <h1 class="header1-txt">Projects</h1>
+
+        {{ range where .Site.RegularPages "Section" "projects-card" }}
+        {{ partial "home/project-card.html" . }}
+        {{ end }}
+
+      </section>
+
+      <!-- Join Us section -->
+      <section
+        id="join-us"
+        data-aos="fade-appear"
+        class="py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+              {{ range where .Site.RegularPages "Section" "sections-card" }}
+              {{ if eq .Title "Join Us Today" }}
+              {{ partial "home/section-card.html" . }}
+              {{ end }}
+              {{ end }}
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Donate section -->
+      <section
+        id="donate"
+        class="d-flex justify-content-center my-5"
+        data-aos="zoom-out">
+
+        {{ range where .Site.RegularPages "Section" "sections-card" }}
+        {{ if eq .Title "Support Our Mission" }}
+        {{ partial "home/section-card.html" . }}
+        {{ end }}
+        {{ end }}
+
+      </section>
+
+    <!-- Video section -->
+    {{ range where .Site.RegularPages "Section" "sections-card" }}
+      {{ if and (eq .Title "Our Journey") (index .Params "Enabled") }}
+
+      <section
+        id="video"
+        data-aos="fade-appear">
+
+        <h1 class="header1-txt text-center">
+          {{ index .Params "Title" }}
+        </h1>
+
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="{{ index .Params "Video URL" }}?autoplay=1"
+            data-video-url="{{ index .Params "Video URL" }}"
+            allow="autoplay"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </section>
+
+      {{ end }}
+    {{ end }}
+
+      <!-- Contact Us section -->
+      <section
+        id="contact"
+        class="py-3"
+        data-aos="fade-appear">
+
+        {{ partial "contacts.html" . }}
+
+      </section>
+
+    </main>
+
+    {{ partial "footer.html" . }}
+
+  </body>
+</html>
