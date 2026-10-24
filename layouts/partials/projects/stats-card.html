@@ -1,0 +1,47 @@
+<section class="my-4">
+    <div class="row g-3 text-center">
+        <!-- Status Card -->
+        <div class="col-md-4">
+            <div class="p-4 h-100" style="background-color: #e4eedb; border-radius: 22px; border: 1px solid rgba(76, 127, 10, 0.15);">
+                <span class="text-uppercase tracking-wide fw-bold" style="color: #4c7f0a; font-size: 0.85rem;">Status</span>
+                <div class="fs-5 fw-bold mt-2" style="color: #0c2103;">
+                    {{ with .Params.Status }}
+                        {{ . }}
+                    {{ else }}
+                        <span class="text-muted fw-normal">Ongoing</span>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Card -->
+        <div class="col-md-4">
+            <div class="p-4 h-100" style="background-color: #e4eedb; border-radius: 22px; border: 1px solid rgba(76, 127, 10, 0.15);">
+                <span class="text-uppercase tracking-wide fw-bold" style="color: #4c7f0a; font-size: 0.85rem;">Tech Stack</span>
+                <div class="mt-2 d-flex flex-wrap justify-content-center gap-1">
+                    {{ if .Params.TechStack }}
+                        {{ range .Params.TechStack }}
+                            <span class="badge px-3 py-2" style="background-color: #0c2103; color: #fff4cf; border-radius: 50px; font-weight: 500;">{{ . }}</span>
+                        {{ end }}
+                    {{ else }}
+                        <span class="text-muted">Field Sensors, AI</span>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Location Card -->
+        <div class="col-md-4">
+            <div class="p-4 h-100" style="background-color: #e4eedb; border-radius: 22px; border: 1px solid rgba(76, 127, 10, 0.15);">
+                <span class="text-uppercase tracking-wide fw-bold" style="color: #4c7f0a; font-size: 0.85rem;">Location</span>
+                <div class="fs-5 fw-bold mt-2" style="color: #0c2103;">
+                    {{ with .Params.Location }}
+                        {{ . }}
+                    {{ else }}
+                        <span class="text-muted fw-normal">Victoria, Australia</span>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

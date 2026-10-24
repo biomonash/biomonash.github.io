@@ -1,0 +1,72 @@
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+            <a class="navbar-brand text-light" href="{{ "/" | relURL }}">
+                <img
+                    src="{{ "images/BiOM-LogoTrans.webp" | relURL }}"
+                    alt="BiOM Logo"
+                    style="width: 100px; height: auto; margin: 0.5em;" />
+            </a>
+
+            <button
+                class="navbar-toggler nav-hamburger"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#main-nav"
+                aria-controls="main-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="main-nav">
+
+                <div class="navbar-nav nav-links mx-auto align-items-lg-center">
+
+                    <div class="btn-group" id="projects-dropdown">
+                        <a class="nav-link nav-text"
+                            href="{{ "projects/" | relURL }}">Projects</a>
+
+                        <button type="button"
+                            class="nav-link nav-text dropdown-toggle dropdown-toggle-split nav-dropdown-btn"
+                            data-bs-toggle="dropdown"
+                            data-bs-display="static"
+                            aria-expanded="false">
+                            <span class="visually-hidden">Show projects</span>
+                        </button>
+
+                        <ul class="dropdown-menu nav-dropdown-menu">
+                            <li>
+                                <a class="dropdown-item nav-text"
+                                    href="{{ "projects/" | relURL }}">All projects</a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            {{ range sort (where site.RegularPages "Section" "projects-card") "Title" }}
+                                <li>
+                                    <a class="dropdown-item nav-text"
+                                        href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+
+                    <a class="nav-link nav-text"
+                        href="{{ "team/" | relURL }}">Team</a>
+                    <a class="nav-link nav-text"
+                        href="{{ "posts/" | relURL }}">Posts</a>
+                    <a class="nav-link nav-text"
+                        href="{{ "/#donate" | relURL }}">Donate</a>
+                </div>
+
+                <a
+                    href="{{ "join-us/" | relURL }}"
+                    class="join-us-btn btn-style text-decoration-none nav-text">
+                    Join Us
+                </a>
+
+            </div>
+        </div>
+    </nav>
+</header>
