@@ -1,0 +1,261 @@
+# Translations for German
+# Übersetzung auf Deutsch
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === baseof ==
+[backToTop]
+other = "nach oben"
+
+[viewComments]
+other = "Kommentare anzeigen"
+# === baseof ==
+
+# === Post ===
+[posts]
+other = "Artikel"
+# === Post ===
+
+# === Taxonomy ===
+[allSome]
+other = "Alle {{ .Some }}"
+
+[tag]
+other = "Tag"
+
+[tags]
+other = "Tags"
+
+[category]
+other = "Kategorie"
+
+[categories]
+other = "Kategorien"
+
+[series]
+other = "Serien"
+# === Taxonomy ===
+
+# === Section ===
+
+[recentlyUpdated]
+other = "Kürzlich aktualisiert"
+
+# === Section ===
+
+# === Pagination ===
+[more]
+other = "Mehr"
+# === Pagination ===
+
+# === partials/header.html ===
+[selectLanguage]
+other = "Sprache wählen"
+
+[switchTheme]
+other = "Theme wechseln"
+
+[Light]
+other = "Hell"
+
+[Dark]
+other = "Dunkel"
+
+[Black]
+other = "Schwarz"
+
+[Auto]
+other = "Auto"
+# === partials/header.html ===
+
+# === partials/footer.html ===
+[poweredBy]
+other = "Basiert auf {{ .Hugo }}"
+
+[hostedOn]
+other = "Gehostet auf {{ .Host }}"
+
+[theme]
+other = "Theme - {{ .Theme }}"
+# === partials/footer.html ===
+
+# === partials/comment.html ===
+[valineLang]
+other = "en"
+
+[valinePlaceholder]
+other = "Ihr Kommentar ..."
+
+[facebookLanguageCode]
+other = "de_DE"
+# === partials/comment.html ===
+
+# === partials/assets.html ===
+[search]
+other = "Suche"
+
+[searchPlaceholder]
+other = "Suche nach Titel oder Inhalt..."
+
+[clear]
+other = "Leeren"
+
+[cancel]
+other = "Abbrechen"
+
+[noResultsFound]
+other = "Keine Ergebnisse gefunden"
+
+[copyToClipboard]
+other = "In Zwischenablage kopieren"
+
+[cookieconsentMessage]
+other = "Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern."
+
+[cookieconsentDismiss]
+other = "Zustimmen"
+
+[cookieconsentLink]
+other = "Erfahren Sie mehr"
+# === partials/assets.html ===
+
+# === partials/plugin/share.html ===
+[shareOn]
+other = "Teilen auf"
+# === partials/plugin/share.html ===
+
+# === posts/single.html ===
+[contents]
+other = "Inhalte"
+
+[publishedOnDate]
+other = "Veröffentlicht am {{ .Date }}"
+
+[includedIn]
+other = "enthalten in"
+
+[includedInAnd]
+other = "und"
+
+[includedInCategories]
+one = "Kategorie {{ .Categories }}"
+other = "Kategorien {{ .Categories }}"
+
+[includedInSeries]
+other = "Serie {{ .Series }}"
+
+[wordCount]
+one = "Ein Wort"
+other = "{{ .Count }} Wörter"
+
+[readingTime]
+one = "Eine Minute"
+other = "{{ .Count }} Minuten"
+
+[views]
+other = "Aufrufe"
+
+[comments]
+other = "Kommentare"
+
+[author]
+other = "Autor"
+
+[updatedOnDate]
+other = "Aktualisiert am {{ .Date }}"
+
+[readMarkdown]
+other = "Markdown anzeigen"
+
+[viewSource]
+other = "Quelle anzeigen"
+
+[editThisPage]
+other = "Diese Seite bearbeiten"
+
+[reportThisPage]
+other = "Problem melden"
+
+[back]
+other = "Zurück"
+
+[home]
+other = "Startseite"
+
+[readMore]
+other = "Mehr lesen"
+
+[outdatedInfoWarningBefore]
+other = "Dieser Artikel wurde zuletzt aktualisiert am "
+
+[outdatedInfoWarningAfter]
+other = ", der Inhalt ist möglicherweiße nicht mehr aktuell."
+
+[sponsor]
+other = "Sponsor"
+
+[relatedContent]
+other = "ähnliche Inhalte"
+# === posts/single.html ===
+
+# === 404.html ===
+[pageNotFound]
+other = "Seite nicht gefunden"
+
+[pageNotFoundText]
+other = "Leider konnte die von Ihnen angeforderte Seite nicht aufgerufen werden."
+# === 404.html ===
+
+# === shortcodes/admonition.html ===
+[note]
+other = "Notiz"
+
+[abstract]
+other = "Ausblick"
+
+[info]
+other = "Info"
+
+[tip]
+other = "Tipp"
+
+[success]
+other = "Erfolg"
+
+[question]
+other = "Frage"
+
+[warning]
+other = "Warnung"
+
+[failure]
+other = "Fehler"
+
+[danger]
+other = "Gefahr"
+
+[bug]
+other = "Bug"
+
+[example]
+other = "Beispiel"
+
+[quote]
+other = "Zitat"
+# === shortcodes/admonition.html ===
+
+# === shortcodes/version.html ===
+[new]
+other = "NEU"
+
+[changed]
+other = "GEÄNDERT"
+
+[deleted]
+other = "GELÖSCHT"
+# === shortcodes/version.html ===
+
+[prefixPageNumber]
+other = "Seite"
+
+[suffixPageNumber]
+other = " "

@@ -1,0 +1,20 @@
+name: Update Dependencies
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - uses: HEIGE-PCloud/update-dependencies@v0.3.2
+        with:
+          reviewers: |
+            HEIGE-PCloud

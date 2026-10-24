@@ -1,0 +1,103 @@
+<section class="department-roles">
+
+  <div class="department-roles-content">
+
+    <!-- DEPARTMENT TITLE -->
+
+    <h2 class="department-roles-title">
+      {{ .name }}
+    </h2>
+
+
+    <!-- DEPARTMENT IMAGE + FROG -->
+
+    <div class="department-roles-image-wrapper">
+
+      {{ with .image }}
+
+        <img
+          class="department-roles-image"
+          src="{{ . | relURL }}"
+          alt="{{ $.name }} Department">
+
+      {{ end }}
+
+      <img
+        class="department-roles-frog"
+        src="{{ "images/frog.png" | relURL }}"
+        alt=""
+        aria-hidden="true">
+
+    </div>
+
+
+    <!-- ROLES TITLE -->
+
+    <h3 class="roles-heading">
+      Roles
+    </h3>
+
+
+    <!-- REUSABLE TAGS -->
+
+    {{ with .tags }}
+
+      <div class="role-tags">
+
+        {{ range . }}
+
+          {{ partial "role-tag.html" . }}
+
+        {{ end }}
+
+      </div>
+
+    {{ end }}
+
+
+    <!-- HORIZONTAL ROLE CAROUSEL -->
+
+    <div class="department-roles-carousel">
+
+      <div class="roles-list">
+
+        {{ range .roles }}
+
+          <div class="roles-carousel-item">
+            {{ partial "role-card.html" . }}
+          </div>
+
+        {{ end }}
+
+      </div>
+
+    </div>
+
+
+    <!-- CAROUSEL ARROWS -->
+
+    {{ if gt (len .roles) 0 }}
+
+      <div class="roles-carousel-controls">
+
+        <button
+          type="button"
+          class="roles-carousel-prev"
+          aria-label="Previous roles">
+          &#10094;
+        </button>
+
+        <button
+          type="button"
+          class="roles-carousel-next"
+          aria-label="Next roles">
+          &#10095;
+        </button>
+
+      </div>
+
+    {{ end }}
+
+  </div>
+
+</section>

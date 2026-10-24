@@ -1,0 +1,61 @@
+<section class="department-section">
+
+    <div class="department-team">
+
+        <h2
+            class="header1-txt team-section-title"
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aos-offset="80">
+            {{ .name }} Team
+        </h2>
+
+        {{ with .image }}
+            <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-offset="80">
+                <img
+                    class="department-image"
+                    src="{{ . | relURL }}"
+                    alt="{{ $.name }} Team">
+            </div>
+        {{ end }}
+
+        {{ with .leads }}
+            <div
+                class="team-leads"
+                data-aos="fade-up"
+                data-aos-duration="850"
+                data-aos-offset="60">
+
+                <h3 class="department-label">Team Leads</h3>
+
+                {{ range sort . }}
+                    <p>{{ . }}</p>
+                {{ end }}
+
+            </div>
+        {{ end }}
+
+        {{ with .members }}
+            <div
+                class="department-members"
+                data-aos="fade-up"
+                data-aos-duration="850"
+                data-aos-offset="60">
+
+                <h3 class="department-label">Members</h3>
+
+                <div class="members-grid">
+                    {{ range sort . }}
+                        <p class="team-name">{{ . }}</p>
+                    {{ end }}
+                </div>
+
+            </div>
+        {{ end }}
+
+    </div>
+
+</section>
