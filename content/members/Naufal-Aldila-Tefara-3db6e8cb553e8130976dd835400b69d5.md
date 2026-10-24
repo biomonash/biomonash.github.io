@@ -7,6 +7,9 @@ Administrative status:
   - "Member"
 Departments:
   - "IT"
+Projects:
+  - "St. Kilda"
+  - "Wildlife Structures"
 Preferred Name: "Naufal"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8130-976d-d835400b69d5"

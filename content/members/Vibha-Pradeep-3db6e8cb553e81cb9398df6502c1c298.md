@@ -7,6 +7,9 @@ Administrative status:
   - "Probation"
 Departments:
   - "Engineering"
+Projects:
+  - "St. Kilda"
+  - "Wildlife Structures"
 Preferred Name: "Vibha"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81cb-9398-df6502c1c298"

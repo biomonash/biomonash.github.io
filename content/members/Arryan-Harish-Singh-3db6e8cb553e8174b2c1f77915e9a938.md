@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "IT"
+Projects:
+  - "ForestPortal"
 Preferred Name: "Arryan"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8174-b2c1-f77915e9a938"

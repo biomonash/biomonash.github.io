@@ -7,6 +7,7 @@ Administrative status:
   - "Probation"
 Departments:
   - "IT"
+Projects: []
 Preferred Name: "Lubna"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8182-8f6a-d355ff681988"

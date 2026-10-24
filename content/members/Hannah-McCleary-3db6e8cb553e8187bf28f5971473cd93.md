@@ -7,6 +7,9 @@ Administrative status:
   - "Probation"
 Departments:
   - "Ecology"
+Projects:
+  - "St. Kilda"
+  - "Wildlife Structures"
 LinkedIn: "https://www.linkedin.com/in/hannah-mccleary-9696853b9/"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8187-bf28-f5971473cd93"

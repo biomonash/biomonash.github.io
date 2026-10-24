@@ -1,103 +1,7 @@
 <header>
-    <style>
-        #projects-dropdown {
-            position: relative;
-        }
-
-        #projects-dropdown .nav-dropdown-btn {
-            background: none;
-            border: none;
-            padding-left: 0.4rem;
-            padding-right: 0.4rem;
-        }
-
-        #projects-dropdown .nav-dropdown-btn::after {
-            transition: transform 0.3s ease;
-        }
-
-        #projects-dropdown .nav-dropdown-btn.show::after {
-            transform: rotate(180deg);
-        }
-
-        /* menu: always rendered, centered, rolled up until opened */
-        #projects-dropdown .nav-dropdown-menu {
-            display: block !important;
-            position: absolute !important;
-            top: 100% !important;
-            left: 50% !important;
-            right: auto !important;
-            inset: 100% auto auto 50% !important;
-            transform: translateX(-50%) !important;
-            margin: 0.4rem 0 0 0 !important;
-
-            min-width: 200px;
-            padding: 0.4rem 0 !important;
-            background-color: var(--main) !important;
-            border: none !important;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-            text-align: center;
-            z-index: 1050;
-
-            visibility: hidden;
-            opacity: 0;
-            clip-path: inset(0 0 100% 0);
-            transition:
-                clip-path 0.35s ease,
-                opacity 0.25s ease,
-                visibility 0s linear 0.35s;
-        }
-
-        #projects-dropdown .nav-dropdown-menu.show {
-            visibility: visible;
-            opacity: 1;
-            clip-path: inset(0 0 0 0);
-            transition:
-                clip-path 0.35s ease,
-                opacity 0.25s ease,
-                visibility 0s;
-        }
-
-        #projects-dropdown .nav-dropdown-menu li {
-            margin: 0 !important;
-            padding: 0 !important;
-            list-style: none;
-        }
-
-        #projects-dropdown .dropdown-item {
-            display: block;
-            color: var(--neutral) !important;
-            background: transparent;
-            padding: 0.5rem 1.25rem !important;
-            margin: 0 !important;
-            line-height: 1.4;
-            text-align: center;
-            transition: background-color 0.2s, color 0.2s;
-        }
-
-        #projects-dropdown .dropdown-item:hover,
-        #projects-dropdown .dropdown-item:focus {
-            background-color: var(--dark2) !important;
-            color: var(--secondary) !important;
-        }
-
-        #projects-dropdown .dropdown-divider {
-            margin: 0.3rem 1rem !important;
-            border-top: 1px solid rgba(255, 244, 207, 0.25) !important;
-            opacity: 1;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            #projects-dropdown .nav-dropdown-menu,
-            #projects-dropdown .nav-dropdown-menu.show,
-            #projects-dropdown .nav-dropdown-btn::after {
-                transition: none;
-            }
-        }
-    </style>
-
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
+
             <a class="navbar-brand text-light" href="{{ "/" | relURL }}">
                 <img
                     src="{{ "images/BiOM-LogoTrans.webp" | relURL }}"
@@ -105,49 +9,64 @@
                     style="width: 100px; height: auto; margin: 0.5em;" />
             </a>
 
-            <div class="mx-auto d-flex align-items-center">
+            <button
+                class="navbar-toggler nav-hamburger"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#main-nav"
+                aria-controls="main-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-                <div class="btn-group mx-3" id="projects-dropdown">
-                    <a class="nav-link nav-text"
-                        href="{{ "projects/" | relURL }}">Projects</a>
+            <div class="collapse navbar-collapse" id="main-nav">
 
-                    <button type="button"
-                        class="nav-link nav-text dropdown-toggle dropdown-toggle-split nav-dropdown-btn"
-                        data-bs-toggle="dropdown"
-                        data-bs-display="static"
-                        aria-expanded="false">
-                        <span class="visually-hidden">Show projects</span>
-                    </button>
+                <div class="navbar-nav nav-links mx-auto align-items-lg-center">
 
-                    <ul class="dropdown-menu nav-dropdown-menu">
-                        <li>
-                            <a class="dropdown-item nav-text"
-                                href="{{ "projects/" | relURL }}">All projects</a>
-                        </li>
-                        <li><hr class="dropdown-divider"></li>
+                    <div class="btn-group" id="projects-dropdown">
+                        <a class="nav-link nav-text"
+                            href="{{ "projects/" | relURL }}">Projects</a>
 
-                        {{ range sort (where site.RegularPages "Section" "projects-card") "Title" }}
+                        <button type="button"
+                            class="nav-link nav-text dropdown-toggle dropdown-toggle-split nav-dropdown-btn"
+                            data-bs-toggle="dropdown"
+                            data-bs-display="static"
+                            aria-expanded="false">
+                            <span class="visually-hidden">Show projects</span>
+                        </button>
+
+                        <ul class="dropdown-menu nav-dropdown-menu">
                             <li>
                                 <a class="dropdown-item nav-text"
-                                    href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                    href="{{ "projects/" | relURL }}">All projects</a>
                             </li>
-                        {{ end }}
-                    </ul>
+                            <li><hr class="dropdown-divider"></li>
+
+                            {{ range sort (where site.RegularPages "Section" "projects-card") "Title" }}
+                                <li>
+                                    <a class="dropdown-item nav-text"
+                                        href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+
+                    <a class="nav-link nav-text"
+                        href="{{ "team/" | relURL }}">Team</a>
+                    <a class="nav-link nav-text"
+                        href="{{ "posts/" | relURL }}">Posts</a>
+                    <a class="nav-link nav-text"
+                        href="{{ "/#donate" | relURL }}">Donate</a>
                 </div>
 
-                <a class="nav-link nav-text mx-3"
-                    href="{{ "team/" | relURL }}">Team</a>
-                <a class="nav-link nav-text mx-3"
-                    href="{{ "posts/" | relURL }}">Posts</a>
-                <a class="nav-link nav-text mx-3"
-                    href="{{ "/#donate" | relURL }}">Donate</a>
-            </div>
+                <a
+                    href="{{ "join-us/" | relURL }}"
+                    class="join-us-btn btn-style text-decoration-none nav-text">
+                    Join Us
+                </a>
 
-            <a
-                href="{{ "join-us/" | relURL }}"
-                class="join-us-btn btn-style text-decoration-none nav-text mx-2">
-                Join Us
-            </a>
+            </div>
         </div>
     </nav>
 </header>

@@ -8,6 +8,7 @@ Administrative status:
   - "Executive"
 Departments:
   - "Marketing"
+Projects: []
 Role: "Marketing Lead"
 NOTION_METADATA:
   id: "3256e8cb-553e-8143-b8f6-eb53d84bd942"

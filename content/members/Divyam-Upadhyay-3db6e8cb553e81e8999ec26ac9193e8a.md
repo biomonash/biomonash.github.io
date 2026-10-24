@@ -7,6 +7,7 @@ Administrative status:
   - "Probation"
 Departments:
   - "Marketing"
+Projects: []
 Preferred Name: "Divyam"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81e8-999e-c26ac9193e8a"

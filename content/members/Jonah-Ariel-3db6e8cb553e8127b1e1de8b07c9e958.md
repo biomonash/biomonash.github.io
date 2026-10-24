@@ -6,6 +6,7 @@ draft: false
 Administrative status:
   - "Probation"
 Departments: []
+Projects: []
 NOTION_METADATA:
   id: "3db6e8cb-553e-8127-b1e1-de8b07c9e958"
   last_edited_time: "2026-09-14T08:07:00.000Z"

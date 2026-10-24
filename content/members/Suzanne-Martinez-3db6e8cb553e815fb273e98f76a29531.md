@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Engineering"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Suzanne"
 NOTION_METADATA:
   id: "3db6e8cb-553e-815f-b273-e98f76a29531"

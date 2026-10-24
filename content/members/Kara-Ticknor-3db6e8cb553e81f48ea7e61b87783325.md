@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Engineering"
+Projects:
+  - "St. Kilda"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81f4-8ea7-e61b87783325"
   last_edited_time: "2026-09-16T02:35:00.000Z"

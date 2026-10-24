@@ -7,6 +7,7 @@ Administrative status:
   - "Probation"
 Departments:
   - "Marketing"
+Projects: []
 Preferred Name: "Brittany"
 NOTION_METADATA:
   id: "3db6e8cb-553e-812f-b61a-f0dfa3adf8be"

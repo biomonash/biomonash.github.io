@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Ecology"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Pat"
 LinkedIn: "https://www.linkedin.com/in/pattaradol-leerojanaprapa-6a55b426b/"
 NOTION_METADATA:

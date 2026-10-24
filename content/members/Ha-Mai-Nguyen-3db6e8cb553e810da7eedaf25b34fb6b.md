@@ -7,6 +7,7 @@ Administrative status:
   - "Probation"
 Departments:
   - "Marketing"
+Projects: []
 Preferred Name: "Hamai"
 NOTION_METADATA:
   id: "3db6e8cb-553e-810d-a7ee-daf25b34fb6b"

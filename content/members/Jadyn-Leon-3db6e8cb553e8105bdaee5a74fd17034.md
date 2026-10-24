@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "IT"
+Projects:
+  - "Website"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8105-bdae-e5a74fd17034"
   last_edited_time: "2026-10-17T09:31:00.000Z"

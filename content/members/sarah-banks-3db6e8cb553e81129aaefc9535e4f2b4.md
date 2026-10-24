@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Ecology"
+Projects:
+  - "St. Kilda"
 Preferred Name: "sarah"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8112-9aae-fc9535e4f2b4"

@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Engineering"
+Projects:
+  - "Wildlife Structures"
 NOTION_METADATA:
   id: "3c46e8cb-553e-81c3-a144-d8ee843b3969"
   last_edited_time: "2026-09-21T09:16:00.000Z"

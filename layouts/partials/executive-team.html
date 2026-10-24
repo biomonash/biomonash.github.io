@@ -10,13 +10,17 @@
         {{ .title }}
     </h2>
 
-    <!-- EXECUTIVE / ADVISOR CARDS -->
+    <!-- EXECUTIVE / ADVISOR CARDS
+         Each card sits in a .person-card-wrap. The wrap is what the grid
+         sizes, so the card and photo inside always get a real width. -->
 
     <div class="executive-grid">
 
         {{ range $index, $member := .members }}
 
             <div
+                class="person-card-wrap"
+                data-aos="fade-up"
                 data-aos-duration="800"
                 data-aos-delay="{{ mod (mul $index 100) 400 }}"
                 data-aos-offset="60">

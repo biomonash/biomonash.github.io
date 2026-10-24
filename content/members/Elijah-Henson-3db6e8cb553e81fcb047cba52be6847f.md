@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Engineering"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Elijah"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81fc-b047-cba52be6847f"

@@ -7,6 +7,7 @@ Administrative status:
   - "Probation"
 Departments:
   - "Marketing"
+Projects: []
 Preferred Name: "Desh"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81b2-b7ec-db0458dc2500"

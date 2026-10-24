@@ -9,6 +9,8 @@ Administrative status:
 Departments:
   - "Ecology"
   - "IT"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Peter"
 Role: "Deputy Lead (2IC)"
 LinkedIn: "https://www.linkedin.com/in/pcoo/"

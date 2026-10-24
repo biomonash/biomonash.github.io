@@ -8,6 +8,8 @@ Administrative status:
 Departments:
   - "Engineering"
   - "IT"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Karl"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8103-95be-d83bd7d14e48"

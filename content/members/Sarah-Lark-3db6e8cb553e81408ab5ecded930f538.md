@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Ecology"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Sarah"
 LinkedIn: "https://www.linkedin.com/in/sarah-lark-151a26309/"
 NOTION_METADATA:

@@ -7,6 +7,8 @@ Administrative status:
   - "Lead"
 Departments:
   - "IT"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Udhay"
 Role: "St Kilda Project Co-Lead"
 NOTION_METADATA:

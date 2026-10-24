@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Ecology"
+Projects:
+  - "Wildlife Structures"
 Preferred Name: "Ed"
 LinkedIn: "https://www.linkedin.com/in/edmund-hambridge-9413b9358/"
 NOTION_METADATA:

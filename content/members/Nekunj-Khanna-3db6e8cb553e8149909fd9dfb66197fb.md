@@ -7,6 +7,9 @@ Administrative status:
   - "Member"
 Departments:
   - "IT"
+Projects:
+  - "St. Kilda"
+  - "Wildlife Structures"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8149-909f-d9dfb66197fb"
   last_edited_time: "2026-10-21T12:59:00.000Z"

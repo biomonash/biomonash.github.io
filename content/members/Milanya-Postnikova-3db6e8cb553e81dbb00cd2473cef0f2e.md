@@ -7,6 +7,7 @@ Administrative status:
   - "Probation"
 Departments:
   - "Ecology"
+Projects: []
 Preferred Name: "Mil"
 LinkedIn: "https://www.linkedin.com/in/milanya-postnikova-a98a41235/"
 NOTION_METADATA:

@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Engineering"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Vineth"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8154-99b8-dbc5fb5eb865"

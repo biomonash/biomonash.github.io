@@ -8,6 +8,8 @@ Administrative status:
 Departments:
   - "Ecology"
   - "IT"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Lachie"
 Role: "Ecology & IT Member (St Kilda)"
 LinkedIn: "https://www.linkedin.com/in/lachlan-groves-7015a1429/"

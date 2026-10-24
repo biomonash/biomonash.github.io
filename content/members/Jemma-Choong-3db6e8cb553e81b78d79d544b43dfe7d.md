@@ -8,6 +8,8 @@ Administrative status:
 Departments:
   - "Engineering"
   - "P&C"
+Projects:
+  - "St. Kilda"
 LinkedIn: "https://www.linkedin.com/in/jemma-choong-5332b835b/"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81b7-8d79-d544b43dfe7d"

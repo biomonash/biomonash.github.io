@@ -7,6 +7,7 @@ Administrative status:
   - "Lead"
 Departments:
   - "P&C"
+Projects: []
 Preferred Name: "Val"
 Role: "P & C Lead"
 NOTION_METADATA:

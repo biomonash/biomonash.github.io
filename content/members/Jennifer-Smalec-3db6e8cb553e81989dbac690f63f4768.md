@@ -7,6 +7,7 @@ Administrative status:
   - "Probation"
 Departments:
   - "Ecology"
+Projects: []
 Preferred Name: "Jenn"
 LinkedIn: "https://www.linkedin.com/in/jennifer-smalec-4ba4662b8/"
 NOTION_METADATA:

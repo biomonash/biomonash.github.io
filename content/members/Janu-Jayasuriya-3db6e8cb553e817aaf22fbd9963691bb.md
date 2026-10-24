@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Engineering"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Janu"
 NOTION_METADATA:
   id: "3db6e8cb-553e-817a-af22-fbd9963691bb"

@@ -8,6 +8,8 @@ Administrative status:
 Departments:
   - "Marketing"
   - "Engineering"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Sam"
 Role: "Marketing Member"
 LinkedIn: "https://www.linkedin.com/in/samuel-see-350065398/"

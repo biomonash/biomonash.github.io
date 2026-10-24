@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "IT"
+Projects:
+  - "ForestPortal"
 Preferred Name: "Xu Zhi/Ryan"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81d2-b57c-f7b44bd54a31"

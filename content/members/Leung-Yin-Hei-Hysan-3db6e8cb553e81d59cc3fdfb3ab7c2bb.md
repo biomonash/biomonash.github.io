@@ -7,6 +7,7 @@ Administrative status:
   - "Probation"
 Departments:
   - "Engineering"
+Projects: []
 Preferred Name: "Hysan"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81d5-9cc3-fdfb3ab7c2bb"

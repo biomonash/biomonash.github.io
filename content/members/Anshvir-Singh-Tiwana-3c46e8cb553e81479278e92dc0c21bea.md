@@ -8,6 +8,8 @@ Administrative status:
 Departments:
   - "P&C"
   - "Engineering"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Anshvir"
 NOTION_METADATA:
   id: "3c46e8cb-553e-8147-9278-e92dc0c21bea"

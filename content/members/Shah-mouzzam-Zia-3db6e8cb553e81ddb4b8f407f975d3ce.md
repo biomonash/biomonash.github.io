@@ -7,6 +7,8 @@ Administrative status:
   - "Member"
 Departments:
   - "IT"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Shah"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81dd-b4b8-f407f975d3ce"

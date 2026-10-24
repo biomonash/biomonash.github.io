@@ -8,6 +8,7 @@ Administrative status:
 Departments:
   - "P&C"
   - "Marketing"
+Projects: []
 NOTION_METADATA:
   id: "3db6e8cb-553e-8134-99c7-e64589bdc3b6"
   last_edited_time: "2026-09-14T08:07:00.000Z"

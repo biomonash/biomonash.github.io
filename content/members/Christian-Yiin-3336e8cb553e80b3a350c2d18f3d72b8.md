@@ -8,6 +8,8 @@ Administrative status:
 Departments:
   - "Engineering"
   - "Ecology"
+Projects:
+  - "St. Kilda"
 Role: "Engineering Member (St Kilda)"
 LinkedIn: "https://www.linkedin.com/in/christian-yiin-2b7b202b5/"
 NOTION_METADATA:

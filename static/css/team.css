@@ -1,20 +1,28 @@
 /* =========================================================
- TEAM PAGE
+   TEAM PAGE
 ========================================================= */
 
-#team {
+#team,
+.team-hero,
+.team-intro {
     --team-dark: #082500;
     --team-light: #13330D;
     --team-circle: #406E09;
     --team-cream: #FFF4CF;
     --team-orange: #DB6912;
+}
 
+#team {
     width: 100%;
     margin: 0;
     padding: 0;
     background-color: var(--team-dark);
     color: var(--team-cream);
     font-family: "Poppins", sans-serif;
+
+    /* stops the oversized frogs causing sideways scrolling */
+    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 /* =========================================================
@@ -43,7 +51,8 @@
     width: 100%;
     height: 740px;
     background-color: var(--team-dark);
-    overflow: visible;
+    overflow-x: clip;
+    overflow-y: visible;
     z-index: 2;
 }
 
@@ -82,8 +91,9 @@
     font-family: "Calistoga", serif;
     font-size: clamp(120px, 13vw, 220px);
     font-weight: 400;
+    right: 3%;
     line-height: 1;
-    white-space: nowrap;
+    white-space: normal;
     color: var(--team-cream);
     z-index: 3;
 }
@@ -113,6 +123,11 @@
 
 .team-intro-text {
     min-width: 0;
+}
+
+.team-intro--text-only .team-intro-content {
+    width: min(900px, 86%);
+    grid-template-columns: 1fr;
 }
 
 .team-intro-text p {
@@ -152,10 +167,6 @@
     background-color: var(--team-light);
 }
 
-/* =========================================================
-   SECTION TITLES
-========================================================= */
-
 #team .team-section-title {
     margin: 0 0 65px;
     text-align: center;
@@ -166,23 +177,18 @@
     color: var(--team-cream);
 }
 
-/* =========================================================
-   EXECUTIVE CARDS - CENTERED INCOMPLETE ROWS
-========================================================= */
-
-.executive-grid {
-    width: min(1050px, 100%);
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* Cards wrap and incomplete rows stay centred */
+#team .executive-team .executive-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
     align-items: flex-start;
+    grid-template-columns: none !important;
+    width: min(1050px, 100%);
+    margin-left: auto;
+    margin-right: auto;
     column-gap: 80px;
     row-gap: 80px;
-}
-
-.executive-team + .executive-team .executive-grid {
-    justify-content: center;
 }
 
 /* =========================================================
@@ -190,11 +196,20 @@
 ========================================================= */
 
 .person-card {
-    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+/* The grid sizes the wrapper around each card; the card fills it */
+#team .executive-team .person-card-wrap {
+    flex: 0 0 250px;
+    width: 250px;
+}
+
+#team .executive-team .person-card {
+    width: 100%;
 }
 
 .person-photo {
@@ -277,10 +292,6 @@
     border-radius: 12px;
 }
 
-/* =========================================================
-   TEAM LEADS
-========================================================= */
-
 .team-leads {
     margin: 0 0 28px;
 }
@@ -302,10 +313,6 @@
     line-height: 1.55;
     color: var(--team-cream);
 }
-
-/* =========================================================
-   MEMBERS
-========================================================= */
 
 .department-members {
     width: 100%;
@@ -333,6 +340,11 @@
    JOIN THE TEAM SECTION
 ========================================================= */
 
+/*  Every size below is "desktop value OR the same proportion of the
+    screen width, whichever is smaller". So on smaller screens the whole
+    section shrinks as one piece and keeps the desktop layout
+    (text left, frog right) instead of stacking. Designed at 1280px wide. */
+
 .team-join-section {
     position: relative;
     width: 100%;
@@ -343,14 +355,10 @@
     box-sizing: border-box;
 }
 
-/* =========================================================
-   SVG WAVE
-========================================================= */
-
 .team-wave-wrapper {
     position: relative;
     width: 100%;
-    height: 180px;
+    height: min(180px, 14vw);
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -374,16 +382,12 @@
     fill: #FFF4CF;
 }
 
-/* =========================================================
-   JOIN CTA CONTENT
-========================================================= */
-
 .team-join-content {
     position: relative;
     width: min(1450px, 90%);
-    min-height: 650px;
+    min-height: min(650px, 50.8vw);
     margin: 0 auto;
-    padding: 15px 0 60px;
+    padding: min(15px, 1.2vw) 0 min(60px, 4.7vw);
     box-sizing: border-box;
 }
 
@@ -396,9 +400,9 @@
 }
 
 .team-join-heading {
-    margin: 0 0 28px;
+    margin: 0 0 min(28px, 2.2vw);
     font-family: "Calistoga", serif !important;
-    font-size: clamp(52px, 5.2vw, 76px);
+    font-size: min(66px, 5.2vw);
     font-weight: 400;
     line-height: 1;
     color: #FFF4CF;
@@ -410,43 +414,48 @@
     width: 100%;
 }
 
+/* biom-text.png has empty space around the word. The negative margins
+   trim it so the "?" sits right next to "BiOM". Change --logo-w to resize. */
 .team-join-biom-logo {
+    --logo-w: 92%;
     display: block;
-    width: min(560px, 82%);
+    width: var(--logo-w);
     height: auto;
     object-fit: contain;
+    margin:
+        calc(var(--logo-w) * -0.135)
+        calc(var(--logo-w) * -0.163)
+        calc(var(--logo-w) * -0.145)
+        calc(var(--logo-w) * -0.165);
 }
 
 .team-join-question {
     display: block;
     flex-shrink: 0;
-    margin-left: 25px;
-    margin-top: 30px;
+    align-self: flex-end;
+    margin-left: min(8px, 0.6vw);
     font-family: "Calistoga", serif;
-    font-size: clamp(60px, 6vw, 90px);
+    font-size: min(77px, 6vw);
     font-weight: 400;
     line-height: 1;
     color: #FFF4CF;
 }
 
-/* =========================================================
-   JOIN NOW BUTTON
-========================================================= */
-
 #team .team-join-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 410px;
-    height: 100px;
-    margin-top: 20px;
+    width: min(410px, 32vw);
+    max-width: 100%;
+    height: min(100px, 7.8vw);
+    margin-top: min(20px, 1.6vw);
     border: none;
-    border-radius: 55px;
+    border-radius: min(55px, 4.3vw);
     background-color: #13330D;
     font-family: "Poppins", sans-serif;
-    font-size: 42px;
+    font-size: min(42px, 3.3vw);
     font-weight: 700;
-    color: #DB6912;
+    color: #DB6912 !important; /* beats a { color: ... !important } in fonts.css */
     text-decoration: none;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.18);
     cursor: pointer;
@@ -459,20 +468,15 @@
 #team .team-join-button:hover {
     transform: translateY(-4px);
     background-color: #406E09;
-    color: #FFF4CF;
+    color: #FFF4CF !important;
     text-decoration: none;
 }
 
-/* =========================================================
-   CTA FROG
-========================================================= */
-
 .team-join-frog {
     position: absolute;
-    right: -30px;
-    bottom: -35px;
-    width: 780px;
-    max-width: 53vw;
+    right: max(-30px, -2.3vw);
+    bottom: max(-35px, -2.7vw);
+    width: min(780px, 53vw);
     z-index: 4;
     pointer-events: none;
     transform: scaleX(-1) rotate(-10deg);
@@ -486,381 +490,27 @@
     transform: scaleX(-1) rotate(-10deg);
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1000px) {
-
-    .team-hero {
-        height: 580px;
-    }
-
-    .team-hero-frog {
-        left: -55px;
-        top: 30px;
-        width: 590px;
-        height: 670px;
-    }
-
-    .team-hero-title {
-        left: 48%;
-        top: 43%;
-        font-size: clamp(70px, 10vw, 115px);
-    }
-
-    .team-intro {
-        padding-top: 105px;
-    }
-
-    .team-intro-content {
-        width: 88%;
-        gap: 55px;
-    }
-
-    .team-intro-text p {
-        font-size: 19px;
-    }
-
-    .team-intro-image img {
-        height: 340px;
-    }
-
-    #team .team-section-title {
-        font-size: 54px !important;
-    }
-
-    .executive-grid {
-        width: min(850px, 100%);
-        column-gap: 40px;
-    }
-
-    .person-card {
-        width: 210px;
-    }
-
-    .person-photo {
-        width: 175px;
-        height: 175px;
-    }
-
-    .person-name {
-        font-size: 18px;
-    }
-
-    .person-role {
-        font-size: 12px;
-    }
-
-    .department-image {
-        height: 390px;
-    }
-
-    .team-wave-wrapper {
-        height: 150px;
-    }
-
-    .team-join-content {
-        min-height: 600px;
-        padding: 15px 0 50px;
-    }
-
-    .team-join-text {
-        width: 57%;
-    }
-
-    .team-join-heading {
-        margin-bottom: 22px;
-        font-size: 54px;
-    }
-
-    .team-join-biom-logo {
-        width: 410px;
-        max-width: 82%;
-    }
-
-    .team-join-question {
-        margin-left: 18px;
-        margin-top: 22px;
-        font-size: 65px;
-    }
-
-    #team .team-join-button {
-        width: 320px;
-        height: 78px;
-        margin-top: 16px;
-        font-size: 32px;
-    }
-
-    .team-join-frog {
-        right: -60px;
-        bottom: -25px;
-        width: 640px;
-        max-width: 58vw;
-    }
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .team-hero {
-        height: 400px;
-    }
-
-    .team-hero-frog {
-        left: -35px;
-        top: 25px;
-        width: 410px;
-        height: 470px;
-    }
-
-    .team-hero-title {
-        left: 45%;
-        top: 43%;
-        font-size: clamp(48px, 10vw, 78px);
-    }
-
-    .team-intro {
-        padding: 75px 0 55px;
-    }
-
-    .team-intro-content {
-        width: 84%;
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .team-intro-text p {
-        font-size: 16px;
-    }
-
-    .team-intro-image img {
-        height: auto;
-        max-height: 390px;
-    }
-
-    .executive-team {
-        padding: 65px 5% 80px;
-    }
-
-    #team .team-section-title {
-        margin-bottom: 45px;
-        font-size: 40px !important;
-    }
-
-    .executive-grid,
-    .executive-team + .executive-team .executive-grid {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        column-gap: 12px;
-        row-gap: 45px;
-    }
-
-    .person-card {
-        width: 100%;
-        max-width: 150px;
-    }
-
-    .person-photo {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 14px;
-    }
-
-    .person-name {
-        font-size: 14px;
-    }
-
-    .person-role {
-        margin-top: 4px;
-        font-size: 10px;
-    }
-
-    .department-section {
-        padding: 65px 8% 80px;
-    }
-
-    .department-image {
-        width: 100%;
-        height: auto;
-        margin-bottom: 30px;
-    }
-
-    .department-label {
-        font-size: 16px;
-    }
-
-    .team-leads p,
-    .members-grid p,
-    .team-name {
-        font-size: 11px;
-    }
-
-    .members-grid {
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 12px;
-    }
-
-    .team-wave-wrapper {
-        height: 115px;
-    }
-
-    .team-join-content {
-        width: 88%;
-        min-height: 500px;
-        padding: 10px 0 35px;
-    }
-
-    .team-join-text {
-        width: 61%;
-    }
-
-    .team-join-heading {
-        margin-bottom: 17px;
-        font-size: 40px;
-    }
-
-    .team-join-biom-logo {
-        width: 280px;
-        max-width: 80%;
-    }
-
-    .team-join-question {
-        margin-left: 12px;
-        margin-top: 15px;
-        font-size: 46px;
-    }
-
-    #team .team-join-button {
-        width: 235px;
-        height: 62px;
-        margin-top: 14px;
-        border-radius: 35px;
-        font-size: 24px;
-    }
-
-    .team-join-frog {
-        right: -90px;
-        bottom: -15px;
-        width: 500px;
-        max-width: 67vw;
-    }
-}
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
+/* Very small phones: give the text a bit more room so the button
+   label and "Interested in" stay readable */
 @media (max-width: 480px) {
 
-    .team-hero {
-        height: 300px;
-    }
-
-    .team-hero-frog {
-        left: -35px;
-        top: 15px;
-        width: 295px;
-        height: 345px;
-    }
-
-    .team-hero-title {
-        left: 44%;
-        top: 43%;
-        font-size: clamp(35px, 9vw, 48px);
-    }
-
-    .team-intro {
-        padding-top: 60px;
-    }
-
-    .team-intro-text p {
-        font-size: 14px;
-    }
-
-    #team .team-section-title {
-        font-size: 32px !important;
-    }
-
-    .person-card {
-        max-width: 105px;
-    }
-
-    .person-photo {
-        width: 88px;
-        height: 88px;
-    }
-
-    .person-name {
-        font-size: 11px;
-    }
-
-    .person-role {
-        font-size: 8px;
-    }
-
-    .department-label {
-        font-size: 13px;
-    }
-
-    .team-leads p,
-    .members-grid p,
-    .team-name {
-        font-size: 9px;
-    }
-
-    .members-grid {
-        column-gap: 7px;
-    }
-
-    .team-wave-wrapper {
-        height: 85px;
-    }
-
-    .team-join-content {
-        width: 90%;
-        min-height: 430px;
-        padding: 8px 0 25px;
-    }
-
     .team-join-text {
-        width: 64%;
+        width: 60%;
     }
 
     .team-join-heading {
-        margin-bottom: 13px;
-        font-size: 30px;
-    }
-
-    .team-join-biom-logo {
-        width: 195px;
-        max-width: 78%;
+        font-size: 22px;
     }
 
     .team-join-question {
-        margin-left: 8px;
-        margin-top: 10px;
-        font-size: 32px;
+        font-size: 26px;
     }
 
     #team .team-join-button {
-        width: 175px;
-        height: 50px;
-        margin-top: 11px;
-        border-radius: 30px;
-        font-size: 19px;
-    }
-
-    .team-join-frog {
-        right: -80px;
-        bottom: -5px;
-        width: 380px;
-        max-width: 72vw;
+        width: 140px;
+        height: 40px;
+        border-radius: 22px;
+        font-size: 15px;
     }
 }
 
@@ -978,7 +628,229 @@
     }
 }
 
+/* =========================================================
+   TABLET (≤ 1000px)
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .team-hero {
+        height: clamp(230px, 56vw, 580px);
+    }
+
+    .team-hero-frog {
+        left: -8vw;
+        top: 4vw;
+        width: 46vw;
+        height: 52vw;
+    }
+
+    .team-hero-title {
+        left: 38vw;
+        top: 50%;
+        font-size: 11vw;
+    }
+
+    .team-intro {
+        padding-top: 105px;
+    }
+
+    .team-intro-content {
+        width: 88%;
+        gap: 55px;
+    }
+
+    .team-intro-text p {
+        font-size: 19px;
+    }
+
+    .team-intro-image img {
+        height: 340px;
+    }
+
+    #team .team-section-title {
+        font-size: 54px !important;
+    }
+
+    #team .executive-team .executive-grid {
+        width: min(850px, 100%);
+        column-gap: 40px;
+    }
+
+    #team .executive-team .person-card-wrap {
+        flex-basis: 210px;
+        width: 210px;
+    }
+
+    .person-photo {
+        width: 175px;
+        height: 175px;
+    }
+
+    .person-name {
+        font-size: 18px;
+    }
+
+    .person-role {
+        font-size: 13px;
+    }
+
+    .department-image {
+        height: 390px;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+    }
+
+}
+
+/* =========================================================
+   MOBILE (≤ 768px)
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .team-intro {
+        padding: 70px 0 55px;
+    }
+
+    .team-intro-content {
+        width: 86%;
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .team-intro-text p {
+        font-size: 16px;
+    }
+
+    .team-intro-image img {
+        height: auto;
+        max-height: 360px;
+    }
+
+    .executive-team {
+        padding: 60px 5% 75px;
+    }
+
+    #team .team-section-title {
+        margin-bottom: 40px;
+        font-size: 40px !important;
+    }
+
+    /* 3 cards per row */
+    #team .executive-team .executive-grid {
+        column-gap: 16px;
+        row-gap: 40px;
+    }
+
+    #team .executive-team .person-card-wrap {
+        flex: 0 0 calc(33.333% - 11px);
+        width: calc(33.333% - 11px);
+        max-width: 170px;
+    }
+
+    .person-photo {
+        width: min(130px, 100%);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 12px;
+    }
+
+    .person-name {
+        font-size: 15px;
+    }
+
+    .person-role {
+        margin-top: 4px;
+        font-size: 12px;
+    }
+
+    .department-section {
+        padding: 60px 7% 75px;
+    }
+
+    .department-image {
+        height: auto;
+        max-height: 300px;
+        margin-bottom: 28px;
+    }
+
+    .department-label {
+        font-size: 17px;
+    }
+
+    .team-leads p,
+    .members-grid p,
+    .team-name {
+        font-size: 14px;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 4px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE (≤ 480px)
+========================================================= */
+
 @media (max-width: 480px) {
+
+    .team-intro {
+        padding-top: 55px;
+    }
+
+    .team-intro-text p {
+        font-size: 15px;
+    }
+
+    #team .team-section-title {
+        font-size: 32px !important;
+    }
+
+    /* 2 cards per row */
+    #team .executive-team .executive-grid {
+        column-gap: 20px;
+        row-gap: 34px;
+    }
+
+    #team .executive-team .person-card-wrap {
+        flex: 0 0 calc(50% - 10px);
+        width: calc(50% - 10px);
+        max-width: 160px;
+    }
+
+    .person-photo {
+        width: min(115px, 100%);
+    }
+
+    .person-name {
+        font-size: 14px;
+    }
+
+    .person-role {
+        font-size: 12px;
+    }
+
+    .department-label {
+        font-size: 16px;
+    }
+
+    .team-leads p,
+    .members-grid p,
+    .team-name {
+        font-size: 13px;
+    }
+
+    .members-grid {
+        column-gap: 14px;
+    }
+
     .role-flip-card {
         max-width: 100%;
         height: 200px;
@@ -986,113 +858,5 @@
 
     .role-flip-front h3 {
         font-size: 20px;
-    }
-}
-
-/* =========================================================
-   CENTER EXECUTIVE CARDS ON INCOMPLETE ROWS
-========================================================= */
-
-#team .executive-team .executive-grid {
-    display: flex !important;
-    flex-wrap: wrap !important;
-
-    justify-content: center !important;
-    align-items: flex-start;
-
-    width: min(1050px, 100%);
-    margin-left: auto;
-    margin-right: auto;
-
-    column-gap: 80px;
-    row-gap: 80px;
-
-    grid-template-columns: none !important;
-}
-
-/* Keep three cards per full row on desktop */
-
-#team .executive-team .person-card {
-    flex: 0 0 250px;
-    width: 250px;
-}
-
-/* Tablet */
-
-@media (max-width: 1000px) {
-
-    #team .executive-team .executive-grid {
-        column-gap: 40px;
-    }
-
-    #team .executive-team .person-card {
-        flex-basis: 210px;
-        width: 210px;
-    }
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-
-    #team .executive-team .executive-grid {
-        column-gap: 12px;
-        row-gap: 45px;
-    }
-
-    #team .executive-team .person-card {
-        flex: 0 0 30%;
-        width: 30%;
-        max-width: 150px;
-    }
-}
-
-/* Small mobile */
-
-@media (max-width: 480px) {
-
-    #team .executive-team .person-card {
-        flex: 0 0 30%;
-        width: 30%;
-        max-width: 105px;
-    }
-}
-
-/* TABLET */
-@media (max-width: 1000px) {
-    .team-hero-frog {
-        left: -5%;
-        z-index: 5;
-    }
-
-    .team-hero-title {
-        left: 32%;
-        z-index: 3;
-    }
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .team-hero-frog {
-        left: -12%;
-        z-index: 5;
-    }
-
-    .team-hero-title {
-        left: 30%;
-        z-index: 3;
-    }
-}
-
-/* SMALL MOBILE */
-@media (max-width: 480px) {
-    .team-hero-frog {
-        left: -15%;
-        z-index: 5;
-    }
-
-    .team-hero-title {
-        left: 28%;
-        z-index: 3;
     }
 }

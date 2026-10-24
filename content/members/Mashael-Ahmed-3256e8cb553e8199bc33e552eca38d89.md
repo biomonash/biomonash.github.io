@@ -7,6 +7,8 @@ Administrative status:
   - "Member"
 Departments:
   - "IT"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Mashael"
 Role: "IT Member (St Kilda)"
 NOTION_METADATA:

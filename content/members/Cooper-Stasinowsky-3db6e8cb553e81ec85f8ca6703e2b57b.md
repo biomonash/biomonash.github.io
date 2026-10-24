@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "IT"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Cooper"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81ec-85f8-ca6703e2b57b"

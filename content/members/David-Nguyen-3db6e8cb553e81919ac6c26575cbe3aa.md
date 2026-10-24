@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Engineering"
+Projects:
+  - "St. Kilda"
 Preferred Name: "David"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8191-9ac6-c26575cbe3aa"

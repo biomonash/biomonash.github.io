@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "IT"
+Projects:
+  - "ForestPortal"
 Preferred Name: "Prabhav"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81b4-a28a-f6aa47bdf801"

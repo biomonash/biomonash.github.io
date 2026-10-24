@@ -7,6 +7,8 @@ Administrative status:
   - "Member"
 Departments:
   - "IT"
+Projects:
+  - "ForestPortal"
 Preferred Name: "Nulara"
 Role: "IT Member (Nillumbik)"
 NOTION_METADATA:

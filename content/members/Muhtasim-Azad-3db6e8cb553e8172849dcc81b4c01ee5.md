@@ -8,6 +8,7 @@ Administrative status:
 Departments:
   - "IT"
   - "Marketing"
+Projects: []
 NOTION_METADATA:
   id: "3db6e8cb-553e-8172-849d-cc81b4c01ee5"
   last_edited_time: "2026-09-21T01:40:00.000Z"

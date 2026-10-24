@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Engineering"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Ajay"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81e5-a686-c6d5c4386f07"

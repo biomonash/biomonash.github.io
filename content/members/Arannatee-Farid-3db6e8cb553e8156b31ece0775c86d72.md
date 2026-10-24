@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Ecology"
+Projects:
+  - "Wildlife Structures"
 Preferred Name: "Arannatee"
 LinkedIn: "https://www.linkedin.com/in/arannatee-farid-21a0ba301/"
 NOTION_METADATA:

@@ -7,6 +7,8 @@ Administrative status:
   - "Member"
 Departments:
   - "Engineering"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Dilaksiga or Dee "
 Role: "Engineering member (St Kilda)"
 LinkedIn: "https://www.linkedin.com/in/dilaksiga-selvachandran-b3123b330/?lipi=\

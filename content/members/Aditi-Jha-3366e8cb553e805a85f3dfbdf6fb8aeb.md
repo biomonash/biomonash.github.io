@@ -7,6 +7,7 @@ Administrative status:
   - "Probation"
 Departments:
   - "P&C"
+Projects: []
 Role: "P & C Member"
 NOTION_METADATA:
   id: "3366e8cb-553e-805a-85f3-dfbdf6fb8aeb"

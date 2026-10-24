@@ -7,6 +7,7 @@ Administrative status:
   - "Probation"
 Departments:
   - "Marketing"
+Projects: []
 Preferred Name: "Aus"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81ff-9ee3-cf1028da675f"

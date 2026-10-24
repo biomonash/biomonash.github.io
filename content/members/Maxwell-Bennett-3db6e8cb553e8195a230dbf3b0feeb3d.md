@@ -7,6 +7,8 @@ Administrative status:
   - "Member"
 Departments:
   - "IT"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Maxwell"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8195-a230-dbf3b0feeb3d"

@@ -7,6 +7,7 @@ Administrative status:
   - "Probation"
 Departments:
   - "Ecology"
+Projects: []
 Preferred Name: "Raahima"
 LinkedIn: "https://www.linkedin.com/in/raahima-k-39680126b/"
 NOTION_METADATA:

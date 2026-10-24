@@ -8,6 +8,9 @@ Administrative status:
   - "Member"
 Departments:
   - "Engineering"
+Projects:
+  - "St. Kilda"
+  - "Wildlife Structures"
 Preferred Name: "Katya"
 Role: "Engineering Lead"
 LinkedIn: "https://www.linkedin.com/in/katyahawkins/"

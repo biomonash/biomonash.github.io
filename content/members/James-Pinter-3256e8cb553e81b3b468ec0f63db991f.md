@@ -7,6 +7,8 @@ Administrative status:
   - "Lead"
 Departments:
   - "Engineering"
+Projects:
+  - "St. Kilda"
 Preferred Name: "James"
 Role: "Engineering Lead & St. Kilda Project Lead"
 LinkedIn: "https://www.linkedin.com/in/james-pinter-176884286/"

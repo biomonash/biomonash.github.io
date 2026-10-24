@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Engineering"
+Projects:
+  - "Wildlife Structures"
 Preferred Name: "Borcsa"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8132-9aab-c92f7cb6cc9a"

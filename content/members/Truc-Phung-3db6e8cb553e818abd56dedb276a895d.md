@@ -7,6 +7,7 @@ Administrative status:
   - "Probation"
 Departments:
   - "IT"
+Projects: []
 Preferred Name: "Linh"
 NOTION_METADATA:
   id: "3db6e8cb-553e-818a-bd56-dedb276a895d"

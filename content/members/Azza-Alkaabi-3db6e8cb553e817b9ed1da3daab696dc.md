@@ -8,6 +8,8 @@ Administrative status:
 Departments:
   - "Marketing"
   - "IT"
+Projects:
+  - "Website"
 Preferred Name: "‏Azza"
 NOTION_METADATA:
   id: "3db6e8cb-553e-817b-9ed1-da3daab696dc"

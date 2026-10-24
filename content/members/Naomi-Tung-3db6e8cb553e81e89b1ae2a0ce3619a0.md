@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "IT"
+Projects:
+  - "ForestPortal"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81e8-9b1a-e2a0ce3619a0"
   last_edited_time: "2026-09-14T08:09:00.000Z"

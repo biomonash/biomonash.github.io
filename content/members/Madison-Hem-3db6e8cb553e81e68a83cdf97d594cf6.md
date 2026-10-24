@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Engineering"
+Projects:
+  - "Wildlife Structures"
 Preferred Name: "Maddy"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81e6-8a83-cdf97d594cf6"

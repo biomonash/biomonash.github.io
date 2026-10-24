@@ -7,6 +7,8 @@ Administrative status:
   - "Probation"
 Departments:
   - "Ecology"
+Projects:
+  - "St. Kilda"
 Preferred Name: "Liz"
 NOTION_METADATA:
   id: "3db6e8cb-553e-81ea-bdf2-f445c9a53119"

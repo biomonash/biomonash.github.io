@@ -51,6 +51,7 @@ const PUBLIC_PROPERTIES: Record<string, string[]> = {
     "Departments",
     "Administrative Status",
     "LinkedIn",
+    "Projects"
   ],
   executives: ["FullName","Role", "Department", "Image", "Order"],
   advisors: ["Role", "Department", "Link", "Image"],

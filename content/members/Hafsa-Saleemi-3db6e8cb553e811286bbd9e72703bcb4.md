@@ -8,6 +8,9 @@ Administrative status:
 Departments:
   - "IT"
   - "Marketing"
+Projects:
+  - "St. Kilda"
+  - "Wildlife Structures"
 Preferred Name: "Hafsa"
 NOTION_METADATA:
   id: "3db6e8cb-553e-8112-86bb-d9e72703bcb4"
