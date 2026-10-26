@@ -78,7 +78,7 @@ baseURL = "http://example.org/"
 defaultContentLanguage = "en"
 # language code
 locale = "en"
-title = "My New Hugo Site"
+title = "Biological Observation Monash"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "DoIt"
@@ -196,9 +196,9 @@ Please open the code block below to view the complete sample configuration {{< f
   # {{< version 0.2.0 changed >}} DoIt theme version
   version = "0.4.X"
   # website title
-  title = "My New Hugo Site"
+  title = "Biological Observation Monash"
   # site description
-  description = "This is My New Hugo Site"
+  description = "Biological Observation Monash's Hugo Website"
   # site keywords
   keywords = ["Theme", "Hugo"]
   # {{< version 0.2.11 changed >}} site default theme ("light", "dark", "black", "auto")
@@ -363,7 +363,7 @@ Please open the code block below to view the complete sample configuration {{< f
       # {{< version 0.2.7 changed >}} title shown in home page (HTML format is supported)
       title = ""
       # subtitle shown in home page
-      subtitle = "This is My New Hugo Site"
+      subtitle = "Biological Observation Monash's new website"
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
@@ -1095,7 +1095,7 @@ defaultContentLanguage = "en"
 [languages]
   [languages.en]
     weight = 1
-    title = "My New Hugo Site"
+    title = "Biological Observation Monash"
     locale = "en"
     label = "English"
     [[languages.en.menu.main]]

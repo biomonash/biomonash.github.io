@@ -1096,7 +1096,7 @@ defaultContentLanguage = "zh-cn"
 [languages]
   [languages.en]
     weight = 1
-    title = "My New Hugo Site"
+    title = "Biological Observation Monash"
     locale = "en"
     label = "English"
     [[languages.en.menu.main]]
